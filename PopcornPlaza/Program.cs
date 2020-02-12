@@ -6,7 +6,7 @@ namespace PopcornPlaza
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello dassag dit is een test push!");
+            Console.WriteLine("Hello dassag!");
         }
     }
 }
