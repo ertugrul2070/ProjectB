@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopcornPlaza", "PopcornPlaza\PopcornPlaza.csproj", "{EA0CE385-3766-4855-AAB6-DFF88C9B49EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PopcornPlaza", "PopcornPlaza\PopcornPlaza.csproj", "{EA0CE385-3766-4855-AAB6-DFF88C9B49EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{3DA7F657-6318-45E8-83A3-55BB1393DAE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EA0CE385-3766-4855-AAB6-DFF88C9B49EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA0CE385-3766-4855-AAB6-DFF88C9B49EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA0CE385-3766-4855-AAB6-DFF88C9B49EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DA7F657-6318-45E8-83A3-55BB1393DAE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DA7F657-6318-45E8-83A3-55BB1393DAE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DA7F657-6318-45E8-83A3-55BB1393DAE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DA7F657-6318-45E8-83A3-55BB1393DAE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
