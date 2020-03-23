@@ -6,7 +6,8 @@ namespace PopcornPlaza
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello dassag!");
+            Console.WriteLine("Hello World!");
+            Console.WriteLine("KRIJG CORONA A MATTIE!!");
         }
     }
 }
