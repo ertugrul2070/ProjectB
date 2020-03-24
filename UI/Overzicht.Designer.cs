@@ -33,15 +33,16 @@
             this.Zwarte_Balk = new System.Windows.Forms.PictureBox();
             this.Rode_Balk = new System.Windows.Forms.PictureBox();
             this.Films_Knop = new System.Windows.Forms.Button();
-            this.Film_Midden_Foto = new System.Windows.Forms.PictureBox();
             this.Binnenkort_Tekst = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.searchInput = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.PopcornPlaza_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Zwarte_Balk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rode_Balk)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Film_Midden_Foto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -51,10 +52,10 @@
             // 
             this.PopcornPlaza_Tekst.AutoSize = true;
             this.PopcornPlaza_Tekst.BackColor = System.Drawing.SystemColors.Desktop;
-            this.PopcornPlaza_Tekst.Font = new System.Drawing.Font("Gill Sans Nova Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PopcornPlaza_Tekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PopcornPlaza_Tekst.Location = new System.Drawing.Point(69, 9);
             this.PopcornPlaza_Tekst.Name = "PopcornPlaza_Tekst";
-            this.PopcornPlaza_Tekst.Size = new System.Drawing.Size(113, 21);
+            this.PopcornPlaza_Tekst.Size = new System.Drawing.Size(124, 20);
             this.PopcornPlaza_Tekst.TabIndex = 10;
             this.PopcornPlaza_Tekst.Text = "Popcorn Plaza";
             // 
@@ -91,7 +92,7 @@
             this.Films_Knop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Films_Knop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Films_Knop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Films_Knop.Font = new System.Drawing.Font("Gill Sans Nova Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Films_Knop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Films_Knop.ForeColor = System.Drawing.SystemColors.Window;
             this.Films_Knop.Location = new System.Drawing.Point(12, 35);
             this.Films_Knop.Name = "Films_Knop";
@@ -100,23 +101,13 @@
             this.Films_Knop.Text = "Films";
             this.Films_Knop.UseVisualStyleBackColor = false;
             // 
-            // Film_Midden_Foto
-            // 
-            this.Film_Midden_Foto.Image = global::UI.Properties.Resources.Screenshot_1;
-            this.Film_Midden_Foto.Location = new System.Drawing.Point(226, 73);
-            this.Film_Midden_Foto.Name = "Film_Midden_Foto";
-            this.Film_Midden_Foto.Size = new System.Drawing.Size(355, 240);
-            this.Film_Midden_Foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Film_Midden_Foto.TabIndex = 13;
-            this.Film_Midden_Foto.TabStop = false;
-            // 
             // Binnenkort_Tekst
             // 
             this.Binnenkort_Tekst.AutoSize = true;
-            this.Binnenkort_Tekst.Font = new System.Drawing.Font("Gill Sans Nova Light", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Binnenkort_Tekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Binnenkort_Tekst.Location = new System.Drawing.Point(264, 332);
             this.Binnenkort_Tekst.Name = "Binnenkort_Tekst";
-            this.Binnenkort_Tekst.Size = new System.Drawing.Size(271, 29);
+            this.Binnenkort_Tekst.Size = new System.Drawing.Size(294, 26);
             this.Binnenkort_Tekst.TabIndex = 14;
             this.Binnenkort_Tekst.Text = "Binnenkort in de bioscoop:";
             // 
@@ -147,16 +138,44 @@
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
             // 
+            // searchInput
+            // 
+            this.searchInput.Location = new System.Drawing.Point(269, 64);
+            this.searchInput.Name = "searchInput";
+            this.searchInput.Size = new System.Drawing.Size(164, 20);
+            this.searchInput.TabIndex = 18;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(439, 64);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(269, 93);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(259, 236);
+            this.listView1.TabIndex = 20;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.searchInput);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Binnenkort_Tekst);
-            this.Controls.Add(this.Film_Midden_Foto);
             this.Controls.Add(this.Films_Knop);
             this.Controls.Add(this.PopcornPlaza_Logo);
             this.Controls.Add(this.PopcornPlaza_Tekst);
@@ -167,7 +186,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PopcornPlaza_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Zwarte_Balk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rode_Balk)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Film_Midden_Foto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -183,10 +201,12 @@
         private System.Windows.Forms.Label PopcornPlaza_Tekst;
         private System.Windows.Forms.PictureBox PopcornPlaza_Logo;
         private System.Windows.Forms.Button Films_Knop;
-        private System.Windows.Forms.PictureBox Film_Midden_Foto;
         private System.Windows.Forms.Label Binnenkort_Tekst;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox searchInput;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListView listView1;
     }
 }

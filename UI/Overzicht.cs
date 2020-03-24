@@ -16,5 +16,17 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (searchInput.Text != null)
+            {
+
+            } 
+            else
+            {
+                MessageBox.Show("Invalid Input");
+            }
+        }
     }
 }
