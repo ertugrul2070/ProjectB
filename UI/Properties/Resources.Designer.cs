@@ -179,5 +179,35 @@ namespace UI.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2020_03_25_at_10_15_58 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2020-03-25 at 10.15.58", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2020_03_25_at_10_16_03 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2020-03-25 at 10.16.03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2020_03_25_at_10_16_04 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2020-03-25 at 10.16.04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
