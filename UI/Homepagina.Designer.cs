@@ -36,6 +36,8 @@
             this.Actueel_2_Tekst = new System.Windows.Forms.Label();
             this.Actueel_3_Tekst = new System.Windows.Forms.Label();
             this.Actueel_4_Tekst = new System.Windows.Forms.Label();
+            this.Verwacht_1_Tekst = new System.Windows.Forms.Label();
+            this.Verwacht_2_Tekst = new System.Windows.Forms.Label();
             this.Verwacht_2_Foto = new System.Windows.Forms.PictureBox();
             this.Verwacht_1_Foto = new System.Windows.Forms.PictureBox();
             this.Actueel_4_Foto = new System.Windows.Forms.PictureBox();
@@ -46,8 +48,6 @@
             this.PopcornPlaza_Logo = new System.Windows.Forms.PictureBox();
             this.Zwarte_Balk = new System.Windows.Forms.PictureBox();
             this.Rode_Balk = new System.Windows.Forms.PictureBox();
-            this.Verwacht_1_Tekst = new System.Windows.Forms.Label();
-            this.Verwacht_2_Tekst = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Verwacht_2_Foto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Verwacht_1_Foto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actueel_4_Foto)).BeginInit();
@@ -63,10 +63,10 @@
             // Actueel_Tekst
             // 
             this.Actueel_Tekst.AutoSize = true;
-            this.Actueel_Tekst.Font = new System.Drawing.Font("Gill Sans Nova Cond", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Actueel_Tekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Actueel_Tekst.Location = new System.Drawing.Point(7, 63);
             this.Actueel_Tekst.Name = "Actueel_Tekst";
-            this.Actueel_Tekst.Size = new System.Drawing.Size(60, 26);
+            this.Actueel_Tekst.Size = new System.Drawing.Size(85, 25);
             this.Actueel_Tekst.TabIndex = 1;
             this.Actueel_Tekst.Text = "Actueel";
             this.Actueel_Tekst.Click += new System.EventHandler(this.label1_Click);
@@ -76,7 +76,7 @@
             this.Films_Knop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Films_Knop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Films_Knop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Films_Knop.Font = new System.Drawing.Font("Gill Sans Nova Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Films_Knop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Films_Knop.ForeColor = System.Drawing.SystemColors.Window;
             this.Films_Knop.Location = new System.Drawing.Point(12, 37);
             this.Films_Knop.Name = "Films_Knop";
@@ -90,10 +90,10 @@
             // 
             this.PopcornPlaza_Tekst.AutoSize = true;
             this.PopcornPlaza_Tekst.BackColor = System.Drawing.SystemColors.Desktop;
-            this.PopcornPlaza_Tekst.Font = new System.Drawing.Font("Gill Sans Nova Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PopcornPlaza_Tekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PopcornPlaza_Tekst.Location = new System.Drawing.Point(68, 9);
             this.PopcornPlaza_Tekst.Name = "PopcornPlaza_Tekst";
-            this.PopcornPlaza_Tekst.Size = new System.Drawing.Size(113, 21);
+            this.PopcornPlaza_Tekst.Size = new System.Drawing.Size(124, 20);
             this.PopcornPlaza_Tekst.TabIndex = 9;
             this.PopcornPlaza_Tekst.Text = "Popcorn Plaza";
             this.PopcornPlaza_Tekst.Click += new System.EventHandler(this.label1_Click_1);
@@ -101,10 +101,10 @@
             // Verwacht_Tekst
             // 
             this.Verwacht_Tekst.AutoSize = true;
-            this.Verwacht_Tekst.Font = new System.Drawing.Font("Gill Sans Nova Cond", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Verwacht_Tekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Verwacht_Tekst.Location = new System.Drawing.Point(7, 264);
             this.Verwacht_Tekst.Name = "Verwacht_Tekst";
-            this.Verwacht_Tekst.Size = new System.Drawing.Size(73, 26);
+            this.Verwacht_Tekst.Size = new System.Drawing.Size(102, 25);
             this.Verwacht_Tekst.TabIndex = 10;
             this.Verwacht_Tekst.Text = "Verwacht";
             // 
@@ -144,6 +144,24 @@
             this.Actueel_4_Tekst.Size = new System.Drawing.Size(59, 13);
             this.Actueel_4_Tekst.TabIndex = 19;
             this.Actueel_4_Tekst.Text = "Knives Out";
+            // 
+            // Verwacht_1_Tekst
+            // 
+            this.Verwacht_1_Tekst.AutoSize = true;
+            this.Verwacht_1_Tekst.Location = new System.Drawing.Point(15, 433);
+            this.Verwacht_1_Tekst.Name = "Verwacht_1_Tekst";
+            this.Verwacht_1_Tekst.Size = new System.Drawing.Size(96, 13);
+            this.Verwacht_1_Tekst.TabIndex = 22;
+            this.Verwacht_1_Tekst.Text = "David Attenboroug";
+            // 
+            // Verwacht_2_Tekst
+            // 
+            this.Verwacht_2_Tekst.AutoSize = true;
+            this.Verwacht_2_Tekst.Location = new System.Drawing.Point(151, 433);
+            this.Verwacht_2_Tekst.Name = "Verwacht_2_Tekst";
+            this.Verwacht_2_Tekst.Size = new System.Drawing.Size(68, 13);
+            this.Verwacht_2_Tekst.TabIndex = 23;
+            this.Verwacht_2_Tekst.Text = "Ballet Jewels";
             // 
             // Verwacht_2_Foto
             // 
@@ -242,30 +260,12 @@
             this.Rode_Balk.TabIndex = 2;
             this.Rode_Balk.TabStop = false;
             // 
-            // Verwacht_1_Tekst
-            // 
-            this.Verwacht_1_Tekst.AutoSize = true;
-            this.Verwacht_1_Tekst.Location = new System.Drawing.Point(15, 433);
-            this.Verwacht_1_Tekst.Name = "Verwacht_1_Tekst";
-            this.Verwacht_1_Tekst.Size = new System.Drawing.Size(96, 13);
-            this.Verwacht_1_Tekst.TabIndex = 22;
-            this.Verwacht_1_Tekst.Text = "David Attenboroug";
-            // 
-            // Verwacht_2_Tekst
-            // 
-            this.Verwacht_2_Tekst.AutoSize = true;
-            this.Verwacht_2_Tekst.Location = new System.Drawing.Point(151, 433);
-            this.Verwacht_2_Tekst.Name = "Verwacht_2_Tekst";
-            this.Verwacht_2_Tekst.Size = new System.Drawing.Size(68, 13);
-            this.Verwacht_2_Tekst.TabIndex = 23;
-            this.Verwacht_2_Tekst.Text = "Ballet Jewels";
-            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(817, 638);
             this.Controls.Add(this.Verwacht_2_Tekst);
             this.Controls.Add(this.Verwacht_1_Tekst);
             this.Controls.Add(this.Verwacht_2_Foto);

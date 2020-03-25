@@ -125,5 +125,19 @@
   <ItemGroup>
     <None Include="Resources\Screenshot_10.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Films.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2020-03-25 at 10.15.58.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2020-03-25 at 10.16.03.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2020-03-25 at 10.16.04.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
