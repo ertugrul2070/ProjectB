@@ -1,6 +1,6 @@
 ﻿namespace reserveren_form
 {
-    partial class Form1
+    partial class Reservering
     {
         /// <summary>
         /// Required designer variable.
@@ -542,12 +542,10 @@
             this.totaal_bedrag.Text = "€ 0,00";
             this.totaal_bedrag.Click += new System.EventHandler(this.label11_Click);
             // 
-            // Form1
+            // Reservering
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(674, 398);
             this.Controls.Add(this.totaal_bedrag);
             this.Controls.Add(this.totaal_label);
@@ -595,8 +593,8 @@
             this.Controls.Add(this.reserveer);
             this.Controls.Add(this.back_button);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Reservering";
+            this.Text = "Reservering";
             this.red_bovenkant.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
