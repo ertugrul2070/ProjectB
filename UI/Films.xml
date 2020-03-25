@@ -1,0 +1,50 @@
+﻿<root>
+  <movie name="A History of Violence">
+    <year>2005</year>
+    <country>USA</country>
+    <genre>Crime</genre>
+    <summary>Tom Stall, a humble family man and owner of a popular neighborhood restaurant, lives a quiet but fulfilling existence in the Midwest. One night Tom foils a crime at his place of business and, to his chagrin, is plastered all over the news for his heroics. Following this, mysterious people follow the Stalls' every move, concerning Tom more than anyone else. As this situation is confronted, more lurks out over where all these occurrences have stemmed from compromising his marriage, family relationship and the main characters' former relations in the process.</summary>
+  </movie>
+  <movie name="no time to die">
+    <year>2020</year>
+    <country>Pakistan</country>
+    <genre>Habiba</genre>
+    <summary>habiba gaat op rijs</summary>
+  </movie>
+  <movie name="dit is een film">
+    <year>2043</year>
+    <country>Nederland</country>
+    <genre>Geert</genre>
+    <summary>Alle buitenlanders het land uit</summary>
+  </movie>
+  <movie name="golderpower">
+    <year>2000</year>
+    <country>Marokko</country>
+    <genre>Diefstal</genre>
+    <summary>Mo'tje word verdacht van stelen</summary>
+  </movie>
+  <movie name="hallo">
+    <year>2010</year>
+    <country>Hogeschool Rotterdam</country>
+    <genre>Nakijken</genre>
+    <summary>Hallo degene die nakijkt</summary>
+  </movie>
+  <movie name="geenzin">
+    <year>2017</year>
+    <country>TSL</country>
+    <genre>gangster</genre>
+    <summary>Oorlog tussen TSL en PWG. Wie zal er winnen???????????????</summary>
+  </movie>
+  <movie name="a">
+    <year>a</year>
+    <country>a</country>
+    <genre>a</genre>
+    <summary>a</summary>
+  </movie>
+  <movie name="mulan">
+    <year>2020</year>
+    <country>Japan</country>
+    <genre></genre>
+    <summary>a</summary>
+  </movie>
+</root>
