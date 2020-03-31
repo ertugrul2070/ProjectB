@@ -46,17 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Overzicht.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Overzicht.Designer.cs">
-      <DependentUpon>Overzicht.cs</DependentUpon>
-    </Compile>
     <Compile Include="Homepagina.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Homepagina.Designer.cs">
       <DependentUpon>Homepagina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Overzicht.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Overzicht.Designer.cs">
+      <DependentUpon>Overzicht.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,11 +66,11 @@
     <Compile Include="Reserveer scherm.Designer.cs">
       <DependentUpon>Reserveer scherm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Overzicht.resx">
-      <DependentUpon>Overzicht.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Homepagina.resx">
       <DependentUpon>Homepagina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Overzicht.resx">
+      <DependentUpon>Overzicht.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
