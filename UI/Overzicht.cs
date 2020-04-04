@@ -11,9 +11,9 @@ using System.Xml;
 
 namespace UI
 {
-    public partial class Form1 : Form
+    public partial class Overzicht : Form
     {
-        public Form1()
+        public Overzicht()
         {
             InitializeComponent();
         }

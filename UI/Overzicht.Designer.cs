@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class Form1
+    partial class Overzicht
     {
         /// <summary>
         /// Required designer variable.
@@ -168,7 +168,7 @@
             this.Rode_Balk.TabIndex = 3;
             this.Rode_Balk.TabStop = false;
             // 
-            // Form1
+            // Overzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -186,7 +186,7 @@
             this.Controls.Add(this.PopcornPlaza_Tekst);
             this.Controls.Add(this.Zwarte_Balk);
             this.Controls.Add(this.Rode_Balk);
-            this.Name = "Form1";
+            this.Name = "Overzicht";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
