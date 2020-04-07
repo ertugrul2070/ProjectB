@@ -18,32 +18,63 @@ namespace UI
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Overzicht_Load(object sender, EventArgs e)
         {
-            if (searchInput.Text != null)
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Films.xml");
+            int afilm = 0;
+            foreach (XmlNode node in doc.DocumentElement)
             {
-                searchResult.Items.Clear();
-                XmlDocument doc = new XmlDocument();
-                doc.Load("Films.xml");
-
-                foreach(XmlNode node in doc.DocumentElement)
+                string name = node.Attributes[0].InnerText;
+                List<string> dataUrl = new List<string>();
+                foreach (XmlNode child in node.ChildNodes)
                 {
-                    string name = node.Attributes[0].InnerText;
-                    if (name == searchInput.Text)
-                    {
-                        foreach(XmlNode child in node.ChildNodes)
-                        {
-                            searchResult.Items.Add(child.InnerText);
-                        }
-                    }
+                    dataUrl.Add(child.InnerText);
                 }
-            } 
-            else
-            {
-                MessageBox.Show("Invalid Input");
-                searchInput.Text = string.Empty;
-                searchInput.Focus();
+                PictureBox l = addlabel(afilm, name, dataUrl);
+                filmPanel1.Controls.Add(l);
+                l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
+                afilm = afilm + 1;
             }
+        }
+        public static string chosenName = "";
+        public static string chosenPic = "";
+
+        private void labelDoubleClick(object sender, EventArgs e)
+        {
+            PictureBox currentlabel = (PictureBox)sender;
+
+            chosenName = currentlabel.Text;
+            chosenPic = currentlabel.ImageLocation;
+
+            FilmDetails frm2 = new FilmDetails();
+            frm2.Show();
+
+        }
+
+        PictureBox addlabel(int i, string name, List<string> dataUrl)
+        {
+
+            PictureBox l = new PictureBox();
+            l.Name = "pBox" + i.ToString();
+            l.Text = name;
+            l.BackColor = Color.Green;
+            l.ImageLocation = dataUrl[1];
+            l.Width = 135;
+            l.Height = 191;
+            l.SizeMode = PictureBoxSizeMode.Zoom;
+            //l.Location = new Point(start, end);
+            l.Margin = new Padding(13);
+
+            return l;
+        }
+
+        private void Films_Knop_Click(object sender, EventArgs e)
+        {
+            Homepage nextForm = new Homepage();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
         }
     }
 }

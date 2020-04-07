@@ -83,7 +83,7 @@
             this.back_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.back_button.ForeColor = System.Drawing.SystemColors.ControlText;
             this.back_button.Location = new System.Drawing.Point(21, 58);
-            this.back_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.back_button.Margin = new System.Windows.Forms.Padding(2);
             this.back_button.Name = "back_button";
             this.back_button.Size = new System.Drawing.Size(76, 39);
             this.back_button.TabIndex = 0;
@@ -118,7 +118,7 @@
             // 
             this.black_panel.BackColor = System.Drawing.Color.Black;
             this.black_panel.Location = new System.Drawing.Point(0, 40);
-            this.black_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.black_panel.Margin = new System.Windows.Forms.Padding(2);
             this.black_panel.Name = "black_panel";
             this.black_panel.Size = new System.Drawing.Size(675, 14);
             this.black_panel.TabIndex = 3;
@@ -127,7 +127,7 @@
             // 
             this.Red_onderkant.BackColor = System.Drawing.Color.DarkRed;
             this.Red_onderkant.Location = new System.Drawing.Point(-2, 366);
-            this.Red_onderkant.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Red_onderkant.Margin = new System.Windows.Forms.Padding(2);
             this.Red_onderkant.Name = "Red_onderkant";
             this.Red_onderkant.Size = new System.Drawing.Size(675, 32);
             this.Red_onderkant.TabIndex = 4;
@@ -137,7 +137,7 @@
             this.red_bovenkant.BackColor = System.Drawing.Color.DarkRed;
             this.red_bovenkant.Controls.Add(this.black_panel);
             this.red_bovenkant.Location = new System.Drawing.Point(-2, 0);
-            this.red_bovenkant.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.red_bovenkant.Margin = new System.Windows.Forms.Padding(2);
             this.red_bovenkant.Name = "red_bovenkant";
             this.red_bovenkant.Size = new System.Drawing.Size(675, 54);
             this.red_bovenkant.TabIndex = 5;
@@ -284,7 +284,7 @@
             // amount_normal
             // 
             this.amount_normal.Location = new System.Drawing.Point(214, 157);
-            this.amount_normal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.amount_normal.Margin = new System.Windows.Forms.Padding(2);
             this.amount_normal.Name = "amount_normal";
             this.amount_normal.Size = new System.Drawing.Size(24, 20);
             this.amount_normal.TabIndex = 19;
@@ -292,7 +292,7 @@
             // amount_kind
             // 
             this.amount_kind.Location = new System.Drawing.Point(214, 179);
-            this.amount_kind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.amount_kind.Margin = new System.Windows.Forms.Padding(2);
             this.amount_kind.Name = "amount_kind";
             this.amount_kind.Size = new System.Drawing.Size(24, 20);
             this.amount_kind.TabIndex = 20;
@@ -300,7 +300,7 @@
             // amount_60plus
             // 
             this.amount_60plus.Location = new System.Drawing.Point(214, 202);
-            this.amount_60plus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.amount_60plus.Margin = new System.Windows.Forms.Padding(2);
             this.amount_60plus.Name = "amount_60plus";
             this.amount_60plus.Size = new System.Drawing.Size(24, 20);
             this.amount_60plus.TabIndex = 21;
@@ -308,7 +308,7 @@
             // amount_popcornpass
             // 
             this.amount_popcornpass.Location = new System.Drawing.Point(208, 264);
-            this.amount_popcornpass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.amount_popcornpass.Margin = new System.Windows.Forms.Padding(2);
             this.amount_popcornpass.Name = "amount_popcornpass";
             this.amount_popcornpass.Size = new System.Drawing.Size(24, 20);
             this.amount_popcornpass.TabIndex = 22;
@@ -316,7 +316,7 @@
             // amount_silverpass
             // 
             this.amount_silverpass.Location = new System.Drawing.Point(208, 288);
-            this.amount_silverpass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.amount_silverpass.Margin = new System.Windows.Forms.Padding(2);
             this.amount_silverpass.Name = "amount_silverpass";
             this.amount_silverpass.Size = new System.Drawing.Size(24, 20);
             this.amount_silverpass.TabIndex = 23;
@@ -324,7 +324,7 @@
             // amount_goldpass
             // 
             this.amount_goldpass.Location = new System.Drawing.Point(208, 312);
-            this.amount_goldpass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.amount_goldpass.Margin = new System.Windows.Forms.Padding(2);
             this.amount_goldpass.Name = "amount_goldpass";
             this.amount_goldpass.Size = new System.Drawing.Size(24, 20);
             this.amount_goldpass.TabIndex = 24;
@@ -470,7 +470,7 @@
             // amount_popcorn
             // 
             this.amount_popcorn.Location = new System.Drawing.Point(518, 156);
-            this.amount_popcorn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.amount_popcorn.Margin = new System.Windows.Forms.Padding(2);
             this.amount_popcorn.Name = "amount_popcorn";
             this.amount_popcorn.Size = new System.Drawing.Size(24, 20);
             this.amount_popcorn.TabIndex = 38;
@@ -478,7 +478,7 @@
             // amount_limonade
             // 
             this.amount_limonade.Location = new System.Drawing.Point(518, 178);
-            this.amount_limonade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.amount_limonade.Margin = new System.Windows.Forms.Padding(2);
             this.amount_limonade.Name = "amount_limonade";
             this.amount_limonade.Size = new System.Drawing.Size(24, 20);
             this.amount_limonade.TabIndex = 39;
@@ -486,7 +486,7 @@
             // amount_chips
             // 
             this.amount_chips.Location = new System.Drawing.Point(518, 206);
-            this.amount_chips.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.amount_chips.Margin = new System.Windows.Forms.Padding(2);
             this.amount_chips.Name = "amount_chips";
             this.amount_chips.Size = new System.Drawing.Size(24, 20);
             this.amount_chips.TabIndex = 40;
@@ -494,7 +494,7 @@
             // amount_comfort
             // 
             this.amount_comfort.Location = new System.Drawing.Point(518, 292);
-            this.amount_comfort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.amount_comfort.Margin = new System.Windows.Forms.Padding(2);
             this.amount_comfort.Name = "amount_comfort";
             this.amount_comfort.Size = new System.Drawing.Size(24, 20);
             this.amount_comfort.TabIndex = 41;
@@ -502,7 +502,7 @@
             // amount_loveseat
             // 
             this.amount_loveseat.Location = new System.Drawing.Point(518, 315);
-            this.amount_loveseat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.amount_loveseat.Margin = new System.Windows.Forms.Padding(2);
             this.amount_loveseat.Name = "amount_loveseat";
             this.amount_loveseat.Size = new System.Drawing.Size(24, 20);
             this.amount_loveseat.TabIndex = 42;
@@ -512,7 +512,7 @@
             this.next_button.BackColor = System.Drawing.Color.Khaki;
             this.next_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.next_button.Location = new System.Drawing.Point(581, 301);
-            this.next_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.next_button.Margin = new System.Windows.Forms.Padding(2);
             this.next_button.Name = "next_button";
             this.next_button.Size = new System.Drawing.Size(83, 46);
             this.next_button.TabIndex = 43;
@@ -592,9 +592,10 @@
             this.Controls.Add(this.film_naam);
             this.Controls.Add(this.reserveer);
             this.Controls.Add(this.back_button);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Reservering";
             this.Text = "Reservering";
+            this.Load += new System.EventHandler(this.Reservering_Load);
             this.red_bovenkant.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
