@@ -78,6 +78,12 @@
     <Compile Include="ReserveerScherm.Designer.cs">
       <DependentUpon>ReserveerScherm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reserveerscherm1Gegevens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reserveerscherm1Gegevens.Designer.cs">
+      <DependentUpon>Reserveerscherm1Gegevens.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FilmDetails.resx">
       <DependentUpon>FilmDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +108,9 @@
     </Compile>
     <EmbeddedResource Include="ReserveerScherm.resx">
       <DependentUpon>ReserveerScherm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reserveerscherm1Gegevens.resx">
+      <DependentUpon>Reserveerscherm1Gegevens.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -165,6 +174,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WhatsApp Image 2020-03-25 at 10.16.04.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Engine\Engine.csproj">
+      <Project>{19387e78-20ea-4dd1-b867-e15899ad6f9f}</Project>
+      <Name>Engine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

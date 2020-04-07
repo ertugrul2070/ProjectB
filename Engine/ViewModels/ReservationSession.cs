@@ -9,17 +9,20 @@ namespace Engine.ViewModels
 {
     public class ReservationSession
     {
-        public Person CurrentReservation { get; set; }
+        public Person CurrentPerson { get; set; }
+        public Custommer CurrentCustommer { get; set; }
 
         public ReservationSession()
         {
-            CurrentReservation = new Person();
-            CurrentReservation.gender = "Male";
-            CurrentReservation.name = "Homer";
-            CurrentReservation.surname = "Simpson";
-            CurrentReservation.streetAdress = "Pyong yang 17";
-            CurrentReservation.city = "Kim Jong Simpson";
-            CurrentReservation.phoneNumber = 0612345678;
+            CurrentPerson = new Person();
+            CurrentPerson.gender = "Male";
+            CurrentPerson.name = "Homer";
+            CurrentPerson.surname = "Simpson";
+            CurrentPerson.streetAdress = "Pyong yang 17";
+            CurrentPerson.postcode = "3213SC";
+            CurrentPerson.city = "Kim Jong Simpson";
+            CurrentPerson.phoneNumber = 0612345678;
+            CurrentCustommer.email = "kimsimpson@gemmm.com";
         }
     }
 }

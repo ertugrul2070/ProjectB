@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Engine.Models;
 
 namespace Engine.Models
 {
-    class Custommer
+    public class Custommer
     {
-        int ID { get; set; }
-        int email { get; set; }
+        public int ID { get; set; }
+        public string email { get; set; }
     }
 }

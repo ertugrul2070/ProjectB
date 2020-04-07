@@ -46,5 +46,15 @@ namespace reserveren_form
         {
 
         }
+
+        private void amount_normal_TextChanged(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void Reservering_TextChanged(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
