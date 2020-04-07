@@ -41,5 +41,10 @@ namespace reserveren_form
         {
 
         }
+
+        private void Reservering_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
