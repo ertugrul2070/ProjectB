@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Homepagina.cs">
+    <Compile Include="FilmDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Homepagina.Designer.cs">
-      <DependentUpon>Homepagina.cs</DependentUpon>
+    <Compile Include="FilmDetails.Designer.cs">
+      <DependentUpon>FilmDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
     <Compile Include="Overzicht.cs">
       <SubType>Form</SubType>
@@ -58,19 +64,37 @@
     <Compile Include="Overzicht.Designer.cs">
       <DependentUpon>Overzicht.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reserveer scherm.cs">
+    <Compile Include="Homepagina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reserveer scherm.Designer.cs">
-      <DependentUpon>Reserveer scherm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Homepagina.resx">
+    <Compile Include="Homepagina.Designer.cs">
       <DependentUpon>Homepagina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReserveerScherm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReserveerScherm.Designer.cs">
+      <DependentUpon>ReserveerScherm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reserveerscherm1Gegevens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reserveerscherm1Gegevens.Designer.cs">
+      <DependentUpon>Reserveerscherm1Gegevens.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FilmDetails.resx">
+      <DependentUpon>FilmDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Overzicht.resx">
       <DependentUpon>Overzicht.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepagina.resx">
+      <DependentUpon>Homepagina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,8 +106,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reserveer scherm.resx">
-      <DependentUpon>Reserveer scherm.cs</DependentUpon>
+    <EmbeddedResource Include="ReserveerScherm.resx">
+      <DependentUpon>ReserveerScherm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reserveerscherm1Gegevens.resx">
+      <DependentUpon>Reserveerscherm1Gegevens.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -147,6 +174,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WhatsApp Image 2020-03-25 at 10.16.04.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Engine\Engine.csproj">
+      <Project>{19387e78-20ea-4dd1-b867-e15899ad6f9f}</Project>
+      <Name>Engine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
