@@ -39,7 +39,7 @@ namespace UI
 
         private void nButton_Click(object sender, EventArgs e)
         {
-            Form3 nextForm = new Form3();
+            Reserveerscherm7Tijden nextForm = new Reserveerscherm7Tijden();
             this.Hide();
             nextForm.ShowDialog();
             this.Close();

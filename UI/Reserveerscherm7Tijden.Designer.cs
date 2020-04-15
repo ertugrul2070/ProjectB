@@ -32,21 +32,21 @@
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
             this.FormLoad = new System.Windows.Forms.Panel();
+            this.Time3 = new System.Windows.Forms.CheckBox();
+            this.Time2 = new System.Windows.Forms.CheckBox();
+            this.Time1 = new System.Windows.Forms.CheckBox();
+            this.Date3 = new System.Windows.Forms.CheckBox();
+            this.Date2 = new System.Windows.Forms.CheckBox();
+            this.Date1 = new System.Windows.Forms.CheckBox();
+            this.Cinema3 = new System.Windows.Forms.CheckBox();
+            this.Cinema2 = new System.Windows.Forms.CheckBox();
+            this.Cinema1 = new System.Windows.Forms.CheckBox();
             this.Cinema = new System.Windows.Forms.Label();
             this.Information = new System.Windows.Forms.Label();
             this.Time = new System.Windows.Forms.Label();
             this.Date = new System.Windows.Forms.Label();
             this.Next = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
-            this.Cinema1 = new System.Windows.Forms.CheckBox();
-            this.Cinema2 = new System.Windows.Forms.CheckBox();
-            this.Cinema3 = new System.Windows.Forms.CheckBox();
-            this.Date1 = new System.Windows.Forms.CheckBox();
-            this.Date2 = new System.Windows.Forms.CheckBox();
-            this.Date3 = new System.Windows.Forms.CheckBox();
-            this.Time1 = new System.Windows.Forms.CheckBox();
-            this.Time2 = new System.Windows.Forms.CheckBox();
-            this.Time3 = new System.Windows.Forms.CheckBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
             this.SuspendLayout();
@@ -103,6 +103,98 @@
             this.FormLoad.TabIndex = 17;
             this.FormLoad.Paint += new System.Windows.Forms.PaintEventHandler(this.FormLoad_Paint);
             // 
+            // Time3
+            // 
+            this.Time3.AutoSize = true;
+            this.Time3.Location = new System.Drawing.Point(251, 189);
+            this.Time3.Name = "Time3";
+            this.Time3.Size = new System.Drawing.Size(49, 17);
+            this.Time3.TabIndex = 31;
+            this.Time3.Text = "Tijd3";
+            this.Time3.UseVisualStyleBackColor = true;
+            // 
+            // Time2
+            // 
+            this.Time2.AutoSize = true;
+            this.Time2.Location = new System.Drawing.Point(251, 151);
+            this.Time2.Name = "Time2";
+            this.Time2.Size = new System.Drawing.Size(49, 17);
+            this.Time2.TabIndex = 30;
+            this.Time2.Text = "Tijd2";
+            this.Time2.UseVisualStyleBackColor = true;
+            // 
+            // Time1
+            // 
+            this.Time1.AutoSize = true;
+            this.Time1.Location = new System.Drawing.Point(251, 116);
+            this.Time1.Name = "Time1";
+            this.Time1.Size = new System.Drawing.Size(49, 17);
+            this.Time1.TabIndex = 29;
+            this.Time1.Text = "Tijd1";
+            this.Time1.UseVisualStyleBackColor = true;
+            this.Time1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
+            // 
+            // Date3
+            // 
+            this.Date3.AutoSize = true;
+            this.Date3.Location = new System.Drawing.Point(146, 190);
+            this.Date3.Name = "Date3";
+            this.Date3.Size = new System.Drawing.Size(63, 17);
+            this.Date3.TabIndex = 28;
+            this.Date3.Text = "Datum3";
+            this.Date3.UseVisualStyleBackColor = true;
+            // 
+            // Date2
+            // 
+            this.Date2.AutoSize = true;
+            this.Date2.Location = new System.Drawing.Point(146, 151);
+            this.Date2.Name = "Date2";
+            this.Date2.Size = new System.Drawing.Size(63, 17);
+            this.Date2.TabIndex = 27;
+            this.Date2.Text = "Datum2";
+            this.Date2.UseVisualStyleBackColor = true;
+            // 
+            // Date1
+            // 
+            this.Date1.AutoSize = true;
+            this.Date1.Location = new System.Drawing.Point(146, 116);
+            this.Date1.Name = "Date1";
+            this.Date1.Size = new System.Drawing.Size(63, 17);
+            this.Date1.TabIndex = 26;
+            this.Date1.Text = "Datum1";
+            this.Date1.UseVisualStyleBackColor = true;
+            // 
+            // Cinema3
+            // 
+            this.Cinema3.AutoSize = true;
+            this.Cinema3.Location = new System.Drawing.Point(46, 189);
+            this.Cinema3.Name = "Cinema3";
+            this.Cinema3.Size = new System.Drawing.Size(78, 17);
+            this.Cinema3.TabIndex = 25;
+            this.Cinema3.Text = "Amsterdam";
+            this.Cinema3.UseVisualStyleBackColor = true;
+            // 
+            // Cinema2
+            // 
+            this.Cinema2.AutoSize = true;
+            this.Cinema2.Location = new System.Drawing.Point(46, 151);
+            this.Cinema2.Name = "Cinema2";
+            this.Cinema2.Size = new System.Drawing.Size(75, 17);
+            this.Cinema2.TabIndex = 24;
+            this.Cinema2.Text = "Den Haag";
+            this.Cinema2.UseVisualStyleBackColor = true;
+            // 
+            // Cinema1
+            // 
+            this.Cinema1.AutoSize = true;
+            this.Cinema1.Location = new System.Drawing.Point(46, 116);
+            this.Cinema1.Name = "Cinema1";
+            this.Cinema1.Size = new System.Drawing.Size(75, 17);
+            this.Cinema1.TabIndex = 23;
+            this.Cinema1.Text = "Rotterdam";
+            this.Cinema1.UseVisualStyleBackColor = true;
+            this.Cinema1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Cinema
             // 
             this.Cinema.Location = new System.Drawing.Point(43, 79);
@@ -144,6 +236,7 @@
             this.Next.TabIndex = 9;
             this.Next.Text = "Verder";
             this.Next.UseVisualStyleBackColor = false;
+            this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // Back
             // 
@@ -154,98 +247,7 @@
             this.Back.TabIndex = 8;
             this.Back.Text = "Terug";
             this.Back.UseVisualStyleBackColor = false;
-            // 
-            // Cinema1
-            // 
-            this.Cinema1.AutoSize = true;
-            this.Cinema1.Location = new System.Drawing.Point(46, 116);
-            this.Cinema1.Name = "Cinema1";
-            this.Cinema1.Size = new System.Drawing.Size(75, 17);
-            this.Cinema1.TabIndex = 23;
-            this.Cinema1.Text = "Rotterdam";
-            this.Cinema1.UseVisualStyleBackColor = true;
-            this.Cinema1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // Cinema2
-            // 
-            this.Cinema2.AutoSize = true;
-            this.Cinema2.Location = new System.Drawing.Point(46, 151);
-            this.Cinema2.Name = "Cinema2";
-            this.Cinema2.Size = new System.Drawing.Size(75, 17);
-            this.Cinema2.TabIndex = 24;
-            this.Cinema2.Text = "Den Haag";
-            this.Cinema2.UseVisualStyleBackColor = true;
-            // 
-            // Cinema3
-            // 
-            this.Cinema3.AutoSize = true;
-            this.Cinema3.Location = new System.Drawing.Point(46, 189);
-            this.Cinema3.Name = "Cinema3";
-            this.Cinema3.Size = new System.Drawing.Size(78, 17);
-            this.Cinema3.TabIndex = 25;
-            this.Cinema3.Text = "Amsterdam";
-            this.Cinema3.UseVisualStyleBackColor = true;
-            // 
-            // Date1
-            // 
-            this.Date1.AutoSize = true;
-            this.Date1.Location = new System.Drawing.Point(146, 116);
-            this.Date1.Name = "Date1";
-            this.Date1.Size = new System.Drawing.Size(63, 17);
-            this.Date1.TabIndex = 26;
-            this.Date1.Text = "Datum1";
-            this.Date1.UseVisualStyleBackColor = true;
-            // 
-            // Date2
-            // 
-            this.Date2.AutoSize = true;
-            this.Date2.Location = new System.Drawing.Point(146, 151);
-            this.Date2.Name = "Date2";
-            this.Date2.Size = new System.Drawing.Size(63, 17);
-            this.Date2.TabIndex = 27;
-            this.Date2.Text = "Datum2";
-            this.Date2.UseVisualStyleBackColor = true;
-            // 
-            // Date3
-            // 
-            this.Date3.AutoSize = true;
-            this.Date3.Location = new System.Drawing.Point(146, 190);
-            this.Date3.Name = "Date3";
-            this.Date3.Size = new System.Drawing.Size(63, 17);
-            this.Date3.TabIndex = 28;
-            this.Date3.Text = "Datum3";
-            this.Date3.UseVisualStyleBackColor = true;
-            // 
-            // Time1
-            // 
-            this.Time1.AutoSize = true;
-            this.Time1.Location = new System.Drawing.Point(251, 116);
-            this.Time1.Name = "Time1";
-            this.Time1.Size = new System.Drawing.Size(49, 17);
-            this.Time1.TabIndex = 29;
-            this.Time1.Text = "Tijd1";
-            this.Time1.UseVisualStyleBackColor = true;
-            this.Time1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
-            // 
-            // Time2
-            // 
-            this.Time2.AutoSize = true;
-            this.Time2.Location = new System.Drawing.Point(251, 151);
-            this.Time2.Name = "Time2";
-            this.Time2.Size = new System.Drawing.Size(49, 17);
-            this.Time2.TabIndex = 30;
-            this.Time2.Text = "Tijd2";
-            this.Time2.UseVisualStyleBackColor = true;
-            // 
-            // Time3
-            // 
-            this.Time3.AutoSize = true;
-            this.Time3.Location = new System.Drawing.Point(251, 189);
-            this.Time3.Name = "Time3";
-            this.Time3.Size = new System.Drawing.Size(49, 17);
-            this.Time3.TabIndex = 31;
-            this.Time3.Text = "Tijd3";
-            this.Time3.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // Reserveerscherm7Tijden
             // 

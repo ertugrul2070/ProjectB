@@ -94,6 +94,7 @@
             this.Next.TabIndex = 9;
             this.Next.Text = "Verder";
             this.Next.UseVisualStyleBackColor = false;
+            this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // Back
             // 
@@ -104,6 +105,7 @@
             this.Back.TabIndex = 8;
             this.Back.Text = "Terug";
             this.Back.UseVisualStyleBackColor = false;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // Red_onderkant
             // 

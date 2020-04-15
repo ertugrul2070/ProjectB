@@ -22,7 +22,7 @@ namespace Engine.ViewModels
             CurrentPerson.postcode = "3213SC";
             CurrentPerson.city = "Kim Jong Simpson";
             CurrentPerson.phoneNumber = 0612345678;
-            CurrentCustommer.email = "kimsimpson@gemmm.com";
+            CurrentCustommer.email = "hhh@hotmail.com";
         }
     }
 }

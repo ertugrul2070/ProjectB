@@ -36,5 +36,21 @@ namespace UI
         {
 
         }
+
+        private void Next_Click(object sender, EventArgs e)
+        {
+            Reserveerscherm1Gegevens nextForm = new Reserveerscherm1Gegevens();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Reserveerscherm3Stoelen nextForm = new Reserveerscherm3Stoelen();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
+        }
     }
 }
