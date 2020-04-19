@@ -43,7 +43,7 @@
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -67,7 +67,7 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.FormLoad.Controls.Add(this.Information);
             this.FormLoad.Controls.Add(this.Next);
             this.FormLoad.Controls.Add(this.Back);
@@ -75,6 +75,7 @@
             this.FormLoad.Name = "FormLoad";
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
             this.FormLoad.TabIndex = 12;
+            this.FormLoad.Paint += new System.Windows.Forms.PaintEventHandler(this.FormLoad_Paint);
             // 
             // Information
             // 
@@ -87,7 +88,7 @@
             // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
             this.Next.Location = new System.Drawing.Point(221, 294);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -98,7 +99,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
             this.Back.Location = new System.Drawing.Point(18, 294);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -118,7 +119,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.panel1.Controls.Add(this.Receipt);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(568, 67);
@@ -136,7 +137,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
             this.button1.Location = new System.Drawing.Point(221, 294);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 37);
@@ -147,7 +148,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image) (resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(23, 67);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 166);
@@ -170,23 +171,22 @@
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel red_bovenkant;
+        private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Panel black_panel;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel FormLoad;
         private System.Windows.Forms.Label Information;
         private System.Windows.Forms.Button Next;
-        private System.Windows.Forms.Button Back;
-        private System.Windows.Forms.Panel Red_onderkant;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label Receipt;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label Receipt;
+        private System.Windows.Forms.Panel red_bovenkant;
+        private System.Windows.Forms.Panel Red_onderkant;
+
+        #endregion
     }
 }

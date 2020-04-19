@@ -60,7 +60,7 @@
             this.red_bovenkant.SuspendLayout();
             this.Receipt1.SuspendLayout();
             this.FormLoad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -93,7 +93,7 @@
             // 
             // Receipt1
             // 
-            this.Receipt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.Receipt1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.Receipt1.Controls.Add(this.Receipt);
             this.Receipt1.Controls.Add(this.button1);
             this.Receipt1.Location = new System.Drawing.Point(566, 69);
@@ -111,7 +111,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
             this.button1.Location = new System.Drawing.Point(221, 294);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 37);
@@ -121,7 +121,7 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.FormLoad.Controls.Add(this.Toevoegen6);
             this.FormLoad.Controls.Add(this.Toevoegen5);
             this.FormLoad.Controls.Add(this.Toevoegen4);
@@ -146,6 +146,7 @@
             this.FormLoad.Name = "FormLoad";
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
             this.FormLoad.TabIndex = 16;
+            this.FormLoad.Paint += new System.Windows.Forms.PaintEventHandler(this.FormLoad_Paint);
             // 
             // Toevoegen6
             // 
@@ -306,7 +307,7 @@
             // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
             this.Next.Location = new System.Drawing.Point(221, 294);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -317,7 +318,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
             this.Back.Location = new System.Drawing.Point(18, 294);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -329,7 +330,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image) (resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(21, 69);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 166);
@@ -352,40 +353,39 @@
             this.red_bovenkant.ResumeLayout(false);
             this.Receipt1.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel red_bovenkant;
+        private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Panel black_panel;
-        private System.Windows.Forms.Panel Red_onderkant;
-        private System.Windows.Forms.Panel Receipt1;
-        private System.Windows.Forms.Label Receipt;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label Drink1;
+        private System.Windows.Forms.Label Drinks;
         private System.Windows.Forms.Panel FormLoad;
         private System.Windows.Forms.Label Information;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Next;
-        private System.Windows.Forms.Button Back;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Popcorn;
         private System.Windows.Forms.Label Popcorn1;
-        private System.Windows.Forms.Label Popcorn3;
         private System.Windows.Forms.Label Popcorn2;
+        private System.Windows.Forms.Label Popcorn3;
+        private System.Windows.Forms.Label Receipt;
+        private System.Windows.Forms.Panel Receipt1;
+        private System.Windows.Forms.Panel red_bovenkant;
+        private System.Windows.Forms.Panel Red_onderkant;
         private System.Windows.Forms.ComboBox Soort1;
-        private System.Windows.Forms.ComboBox Soort3;
         private System.Windows.Forms.ComboBox Soort2;
-        private System.Windows.Forms.Button Toevoegen6;
-        private System.Windows.Forms.Button Toevoegen5;
-        private System.Windows.Forms.Button Toevoegen4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Drink1;
-        private System.Windows.Forms.Label Drinks;
-        private System.Windows.Forms.Button Toevoegen3;
-        private System.Windows.Forms.Button Toevoegen2;
+        private System.Windows.Forms.ComboBox Soort3;
         private System.Windows.Forms.Button Toevoegen1;
+        private System.Windows.Forms.Button Toevoegen2;
+        private System.Windows.Forms.Button Toevoegen3;
+        private System.Windows.Forms.Button Toevoegen4;
+        private System.Windows.Forms.Button Toevoegen5;
+        private System.Windows.Forms.Button Toevoegen6;
+
+        #endregion
     }
 }

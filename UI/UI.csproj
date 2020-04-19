@@ -78,12 +78,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReserveerScherm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReserveerScherm.Designer.cs">
-      <DependentUpon>ReserveerScherm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reserveerscherm1Gegevens.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,9 +136,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ReserveerScherm.resx">
-      <DependentUpon>ReserveerScherm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reserveerscherm1Gegevens.resx">
       <DependentUpon>Reserveerscherm1Gegevens.cs</DependentUpon>
     </EmbeddedResource>

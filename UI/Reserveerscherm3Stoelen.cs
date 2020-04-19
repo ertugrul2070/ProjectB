@@ -37,5 +37,10 @@ namespace UI
             nextForm.ShowDialog();
             this.Close();
         }
+
+        private void FormLoad_Paint(object sender, PaintEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
