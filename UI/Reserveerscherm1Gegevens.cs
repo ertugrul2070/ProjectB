@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Windows.Forms;
 using Engine.Models;
+using Engine.ViewModels;
 
 
 namespace UI
 {
     public partial class Reserveerscherm1Gegevens : Form
     {
-        public Custommer _personSession;
+        public ReservationSession _ReservationSession;
         
         public Reserveerscherm1Gegevens()
         {
             InitializeComponent();
+            _ReservationSession = new ReservationSession();
 
         }
 
@@ -79,7 +81,9 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            _personSession = new Custommer(EmailField.Text, GenderField.Text,NameField.Text,SurnameField.Text,AddressField.Text,PostcodeField.Text,CityField.Text, Int32.Parse(PhonenumberField.Text));
+            // _ReservationSession.CurrentReservation = new ReservationAdministration();
+            _ReservationSession.CurrentReservation.AddCustomer(EmailField.Text, GenderField.Text,NameField.Text,SurnameField.Text,
+                AddressField.Text,PostcodeField.Text,CityField.Text, Int32.Parse(PhonenumberField.Text));
             Reserveerschem2Tickets nextForm = new Reserveerschem2Tickets();
             this.Hide();
             nextForm.ShowDialog();

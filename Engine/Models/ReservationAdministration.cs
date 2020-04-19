@@ -6,16 +6,17 @@ namespace Engine.Models
     {
         public string[] custommers;
         public string[] reservations;
+        public Custommer custommer;
 
         public ReservationAdministration()
         {
             
         }
 
-        public void addCustomer(string email, string gender, string name, string surname, string streetadress, string postcode, string city,
+        public void AddCustomer(string email, string gender, string name, string surname, string streetadress, string postcode, string city,
             int phonenumber)
         {
-            Custommer cust = new Custommer(email, gender, name, surname, streetadress, postcode, city, phonenumber);
+           custommer = new Custommer(email, gender, name, surname, streetadress, postcode, city, phonenumber);
         }
 
     }
