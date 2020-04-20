@@ -63,6 +63,7 @@ namespace UI
             l.Width = 135;
             l.Height = 191;
             l.SizeMode = PictureBoxSizeMode.Zoom;
+            //l.Location = new Point(start, end);
             l.Margin = new Padding(13);
 
             return l;

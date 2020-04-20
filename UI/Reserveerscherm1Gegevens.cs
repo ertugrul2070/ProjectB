@@ -112,10 +112,5 @@ namespace UI
             _personSession.CurrentCustommer.email = EmailField.Text;
 
         }
-
-        private void Reserveerscherm1Gegevens_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

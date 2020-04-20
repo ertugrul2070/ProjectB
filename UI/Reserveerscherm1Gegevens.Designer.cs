@@ -290,7 +290,6 @@ namespace UI
             this.Controls.Add(this.Red_onderkant);
             this.Name = "Reserveerscherm1Gegevens";
             this.Text = "Reserveerscherm1Gegevens";
-            this.Load += new System.EventHandler(this.Reserveerscherm1Gegevens_Load);
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
