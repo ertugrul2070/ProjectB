@@ -76,7 +76,10 @@ namespace UI
 
         private void Films_Knop_Click(object sender, EventArgs e)
         {
-
+            Overzicht nextForm = new Overzicht();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
         }
 
         private void label1_Click_1(object sender, EventArgs e)
