@@ -39,7 +39,7 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            Reserveerscherm1Gegevens nextForm = new Reserveerscherm1Gegevens();
+            Reserveerscherm5Betalen nextForm = new Reserveerscherm5Betalen();
             this.Hide();
             nextForm.ShowDialog();
             this.Close();
@@ -47,10 +47,15 @@ namespace UI
 
         private void Back_Click(object sender, EventArgs e)
         {
-            Reserveerscherm3Stoelen nextForm = new Reserveerscherm3Stoelen();
+            Reserveerscherm5Betalen nextForm = new Reserveerscherm5Betalen();
             this.Hide();
             nextForm.ShowDialog();
             this.Close();
+        }
+
+        private void FormLoad_Paint(object sender, PaintEventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

@@ -16,5 +16,13 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void Next_Click(object sender, EventArgs e)
+        {
+            Reserveerscherm7Tijden nextForm = new Reserveerscherm7Tijden();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
+        }
     }
 }

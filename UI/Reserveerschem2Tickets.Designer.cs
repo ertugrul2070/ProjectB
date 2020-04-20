@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.FormLoad = new System.Windows.Forms.Panel();
+            this.Next = new System.Windows.Forms.Button();
             this.Price3 = new System.Windows.Forms.Label();
             this.Price2 = new System.Windows.Forms.Label();
             this.Price1 = new System.Windows.Forms.Label();
@@ -43,14 +44,13 @@
             this.red_bovenkant = new System.Windows.Forms.Panel();
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
-            this.Next = new System.Windows.Forms.Button();
             this.FormLoad.SuspendLayout();
             this.red_bovenkant.SuspendLayout();
             this.SuspendLayout();
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.FormLoad.Controls.Add(this.Next);
             this.FormLoad.Controls.Add(this.Price3);
             this.FormLoad.Controls.Add(this.Price2);
@@ -67,6 +67,17 @@
             this.FormLoad.Name = "FormLoad";
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
             this.FormLoad.TabIndex = 9;
+            // 
+            // Next
+            // 
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.Next.Location = new System.Drawing.Point(209, 259);
+            this.Next.Name = "Next";
+            this.Next.Size = new System.Drawing.Size(118, 37);
+            this.Next.TabIndex = 22;
+            this.Next.Text = "Verder";
+            this.Next.UseVisualStyleBackColor = false;
+            this.Next.Click += new System.EventHandler(this.Next_Click);
             // 
             // Price3
             // 
@@ -128,7 +139,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
             this.Back.Location = new System.Drawing.Point(18, 259);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -186,17 +197,6 @@
             this.Red_onderkant.Size = new System.Drawing.Size(801, 32);
             this.Red_onderkant.TabIndex = 11;
             // 
-            // Next
-            // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
-            this.Next.Location = new System.Drawing.Point(209, 259);
-            this.Next.Name = "Next";
-            this.Next.Size = new System.Drawing.Size(118, 37);
-            this.Next.TabIndex = 22;
-            this.Next.Text = "Verder";
-            this.Next.UseVisualStyleBackColor = false;
-            this.Next.Click += new System.EventHandler(this.Next_Click);
-            // 
             // Reserveerschem2Tickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,26 +211,25 @@
             this.FormLoad.PerformLayout();
             this.red_bovenkant.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel FormLoad;
-        private System.Windows.Forms.Label Information;
-        private System.Windows.Forms.Label Senior;
-        private System.Windows.Forms.Label Child;
-        private System.Windows.Forms.Label Normal;
         private System.Windows.Forms.Button Back;
-        private System.Windows.Forms.TextBox SurnameField;
-        private System.Windows.Forms.TextBox NameField;
-        private System.Windows.Forms.TextBox GenderField;
-        private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel black_panel;
-        private System.Windows.Forms.Panel Red_onderkant;
-        private System.Windows.Forms.Label Price1;
-        private System.Windows.Forms.Label Price3;
-        private System.Windows.Forms.Label Price2;
+        private System.Windows.Forms.Label Child;
+        private System.Windows.Forms.Panel FormLoad;
+        private System.Windows.Forms.TextBox GenderField;
+        private System.Windows.Forms.Label Information;
+        private System.Windows.Forms.TextBox NameField;
         private System.Windows.Forms.Button Next;
+        private System.Windows.Forms.Label Normal;
+        private System.Windows.Forms.Label Price1;
+        private System.Windows.Forms.Label Price2;
+        private System.Windows.Forms.Label Price3;
+        private System.Windows.Forms.Panel red_bovenkant;
+        private System.Windows.Forms.Panel Red_onderkant;
+        private System.Windows.Forms.Label Senior;
+        private System.Windows.Forms.TextBox SurnameField;
+
+        #endregion
     }
 }
