@@ -56,7 +56,7 @@ namespace UI
             chosenName = currentlabel.Text;
             chosenPic = currentlabel.ImageLocation;
 
-            FilmDetails frm2 = new FilmDetails();
+            FilmDetails frm2 = new FilmDetails(chosenName,chosenPic);
             frm2.Show();
 
         }

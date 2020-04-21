@@ -13,15 +13,20 @@ namespace UI
 {
     public partial class FilmDetails : Form
     {
-        public FilmDetails()
+        public string chosenName;
+        public string chosenPic;
+        public FilmDetails(string filmName,string filmPic)
         {
+            
+            this.chosenName = filmName;
+            this.chosenPic = filmPic;
             InitializeComponent();
         }
 
         private void FilmDetails_Load(object sender, EventArgs e)
         {
-            label1.Text = Overzicht.chosenName;
-            pictureBox1.ImageLocation = Overzicht.chosenPic;
+            label1.Text = chosenName; 
+            pictureBox1.ImageLocation = chosenPic;
             XmlDocument doc = new XmlDocument();
             doc.Load("Films.xml");
             foreach (XmlNode node in doc.DocumentElement)
@@ -29,7 +34,7 @@ namespace UI
                 string name = node.Attributes[0].InnerText;
                 foreach (XmlNode child in node.ChildNodes[2])
                 {
-                    if (name == Overzicht.chosenName)
+                    if (name == chosenName)
                     {
                         label2.Text = child.InnerText;
                     }

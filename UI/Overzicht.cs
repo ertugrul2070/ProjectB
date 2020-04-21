@@ -48,13 +48,10 @@ namespace UI
         private void labelDoubleClick(object sender, EventArgs e)
         {
             PictureBox currentlabel = (PictureBox)sender;
-
             chosenName = currentlabel.Text;
             chosenPic = currentlabel.ImageLocation;
-
-            FilmDetails frm2 = new FilmDetails();
+            FilmDetails frm2 = new FilmDetails(chosenName,chosenPic);
             frm2.Show();
-
         }
 
         PictureBox addlabel(int i, string name, List<string> dataUrl)
