@@ -44,7 +44,7 @@ namespace UI
         }
         public static string chosenName = "";
         public static string chosenPic = "";
-
+        
         private void labelDoubleClick(object sender, EventArgs e)
         {
             PictureBox currentlabel = (PictureBox)sender;
