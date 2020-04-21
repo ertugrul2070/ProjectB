@@ -26,15 +26,21 @@ namespace UI
             foreach (XmlNode node in doc.DocumentElement)
             {
                 string name = node.Attributes[0].InnerText;
+                var today = Convert.ToDateTime(DateTime.Now.ToShortDateString());
                 List<string> dataUrl = new List<string>();
                 foreach (XmlNode child in node.ChildNodes)
                 {
                     dataUrl.Add(child.InnerText);
+                    
                 }
+                
+                var mDate = Convert.ToDateTime(dataUrl[3]);
+                if (mDate > today) { 
                 PictureBox l = addlabel(afilm, name, dataUrl);
                 filmPanel1.Controls.Add(l);
                 l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
                 afilm = afilm + 1;
+                }
             }
         }
         public static string chosenName = "";

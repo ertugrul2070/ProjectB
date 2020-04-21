@@ -34,7 +34,7 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            Reserveerscherm3Stoelen nextForm = new Reserveerscherm3Stoelen();
+            Reserveerscherm7Tijden nextForm = new Reserveerscherm7Tijden();
             this.Hide();
             nextForm.ShowDialog();
             this.Close();
@@ -43,7 +43,7 @@ namespace UI
 
         private void Back_Click(object sender, EventArgs e)
         {
-            Reserveerscherm7Tijden nextForm = new Reserveerscherm7Tijden();
+            Reserveerscherm1Gegevens nextForm = new Reserveerscherm1Gegevens();
             this.Hide();
             nextForm.ShowDialog();
             this.Close();

@@ -39,7 +39,7 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            Reserveerschem2Tickets nextForm = new Reserveerschem2Tickets();
+            Reserveerscherm3Stoelen nextForm = new Reserveerscherm3Stoelen();
             this.Hide();
             nextForm.ShowDialog();
             this.Close();
@@ -47,6 +47,9 @@ namespace UI
 
         private void Back_Click(object sender, EventArgs e)
         {
+            Reserveerschem2Tickets nextForm = new Reserveerschem2Tickets();
+            this.Hide();
+            nextForm.ShowDialog();
             this.Close();
         }
     }
