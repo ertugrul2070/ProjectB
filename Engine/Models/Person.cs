@@ -1,20 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Engine.Models;
-
-namespace Engine.Models
+﻿namespace Engine.Models
 {
     public class Person
     {
-        public string gender { get; set; }
-        public string name { get; set; }
-        public string surname { get; set; }
-        public string streetAdress { get; set; }
-        public string postcode { get; set; }
-        public string city { get; set; }
-        public int phoneNumber { get; set; }
+        public string Gender;
+        public string Name;
+        public string Surname;
+        public string StreetAdress;
+        public string Postcode;
+        public string City;
+        public int PhoneNumber;
+
+        public Person(string gender, string name, string surname, string streetadress, string postcode, string city, int phonenumber)
+        {
+            this.Gender = gender;
+            this.Name = name;
+            this.Surname = surname;
+            this.StreetAdress = streetadress;
+            this.Postcode = postcode;
+            this.City = city;
+            this.PhoneNumber = phonenumber;
+
+        }
     }
 }

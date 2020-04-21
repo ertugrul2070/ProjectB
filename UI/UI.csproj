@@ -52,6 +52,12 @@
     <Compile Include="FilmDetails.Designer.cs">
       <DependentUpon>FilmDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reserveerschem2Tickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reserveerschem2Tickets.Designer.cs">
+      <DependentUpon>Reserveerschem2Tickets.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,17 +78,41 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReserveerScherm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReserveerScherm.Designer.cs">
-      <DependentUpon>ReserveerScherm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reserveerscherm1Gegevens.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reserveerscherm1Gegevens.Designer.cs">
       <DependentUpon>Reserveerscherm1Gegevens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reserveerscherm3Stoelen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reserveerscherm3Stoelen.Designer.cs">
+      <DependentUpon>Reserveerscherm3Stoelen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reserveerscherm4Snacks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reserveerscherm4Snacks.Designer.cs">
+      <DependentUpon>Reserveerscherm4Snacks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reserveerscherm5Betalen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reserveerscherm5Betalen.Designer.cs">
+      <DependentUpon>Reserveerscherm5Betalen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reserveerscherm6Bevestiging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reserveerscherm6Bevestiging.Designer.cs">
+      <DependentUpon>Reserveerscherm6Bevestiging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reserveerscherm7Tijden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reserveerscherm7Tijden.Designer.cs">
+      <DependentUpon>Reserveerscherm7Tijden.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FilmDetails.resx">
       <DependentUpon>FilmDetails.cs</DependentUpon>
@@ -106,11 +136,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ReserveerScherm.resx">
-      <DependentUpon>ReserveerScherm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reserveerscherm1Gegevens.resx">
       <DependentUpon>Reserveerscherm1Gegevens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reserveerschem2Tickets.resx">
+      <DependentUpon>Reserveerschem2Tickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reserveerscherm3Stoelen.resx">
+      <DependentUpon>Reserveerscherm3Stoelen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reserveerscherm4Snacks.resx">
+      <DependentUpon>Reserveerscherm4Snacks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reserveerscherm5Betalen.resx">
+      <DependentUpon>Reserveerscherm5Betalen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reserveerscherm6Bevestiging.resx">
+      <DependentUpon>Reserveerscherm6Bevestiging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reserveerscherm7Tijden.resx">
+      <DependentUpon>Reserveerscherm7Tijden.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
