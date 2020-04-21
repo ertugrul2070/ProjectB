@@ -33,7 +33,6 @@ namespace UI
                     dataUrl.Add(child.InnerText);
                     
                 }
-                
                 var mDate = Convert.ToDateTime(dataUrl[3]);
                 if (mDate > today) { 
                 PictureBox l = addlabel(afilm, name, dataUrl);
