@@ -16,5 +16,20 @@ namespace UI
         {
             InitializeComponent();
         }
+
+ 
+
+        private void Reserveerscherm6Bevestiging_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void Next_Click(object sender, EventArgs e)
+        { 
+            
+            this.Close();
+        }
     }
 }

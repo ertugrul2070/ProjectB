@@ -40,10 +40,10 @@
             this.Place = new System.Windows.Forms.Label();
             this.Time = new System.Windows.Forms.Label();
             this.Movie = new System.Windows.Forms.Label();
-            this.Homepage = new System.Windows.Forms.Button();
+            this.Terug = new System.Windows.Forms.Button();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -76,7 +76,7 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
             this.FormLoad.Controls.Add(this.Thanks);
             this.FormLoad.Controls.Add(this.pictureBox1);
             this.FormLoad.Controls.Add(this.Zaal);
@@ -84,7 +84,7 @@
             this.FormLoad.Controls.Add(this.Place);
             this.FormLoad.Controls.Add(this.Time);
             this.FormLoad.Controls.Add(this.Movie);
-            this.FormLoad.Controls.Add(this.Homepage);
+            this.FormLoad.Controls.Add(this.Terug);
             this.FormLoad.Location = new System.Drawing.Point(220, 58);
             this.FormLoad.Name = "FormLoad";
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
@@ -96,12 +96,13 @@
             this.Thanks.Name = "Thanks";
             this.Thanks.Size = new System.Drawing.Size(181, 42);
             this.Thanks.TabIndex = 23;
-            this.Thanks.Text = "Hartelijk dank voor uw reservering. Wij wensen u alvast een prettige voorstelling" + "!";
+            this.Thanks.Text = "Hartelijk dank voor uw reservering. Wij wensen u alvast een prettige voorstelling" +
+    "!";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image) (resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(22, 57);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 166);
@@ -149,15 +150,16 @@
             this.Movie.TabIndex = 10;
             this.Movie.Text = "Film:";
             // 
-            // Homepage
+            // Terug
             // 
-            this.Homepage.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
-            this.Homepage.Location = new System.Drawing.Point(98, 267);
-            this.Homepage.Name = "Homepage";
-            this.Homepage.Size = new System.Drawing.Size(161, 37);
-            this.Homepage.TabIndex = 9;
-            this.Homepage.Text = "Terug naar startpagina";
-            this.Homepage.UseVisualStyleBackColor = false;
+            this.Terug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.Terug.Location = new System.Drawing.Point(98, 267);
+            this.Terug.Name = "Terug";
+            this.Terug.Size = new System.Drawing.Size(161, 37);
+            this.Terug.TabIndex = 9;
+            this.Terug.Text = "Terug naar startpagina";
+            this.Terug.UseVisualStyleBackColor = false;
+            this.Terug.Click += new System.EventHandler(this.Next_Click);
             // 
             // Reserveerscherm6Bevestiging
             // 
@@ -169,15 +171,17 @@
             this.Controls.Add(this.red_bovenkant);
             this.Name = "Reserveerscherm6Bevestiging";
             this.Text = "Reserveerscherm6Bevestiging";
+            this.Load += new System.EventHandler(this.Reserveerscherm6Bevestiging_Load);
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Panel black_panel;
         private System.Windows.Forms.Panel FormLoad;
-        private System.Windows.Forms.Button Homepage;
+        private System.Windows.Forms.Button Terug;
         private System.Windows.Forms.Label Information;
         private System.Windows.Forms.Label Movie;
         private System.Windows.Forms.PictureBox pictureBox1;

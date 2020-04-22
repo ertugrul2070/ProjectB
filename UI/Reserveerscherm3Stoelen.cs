@@ -52,5 +52,35 @@ namespace UI
         {
 
         }
+        
+        ComboBox addCB(int i)
+        {
+            var Data = new string[] { "hoi", "doei", "kak", "ertu" };
+            ComboBox l = new ComboBox();
+            l.Name = "DD" + i.ToString();
+            l.Margin = new Padding(6);
+            l.Height = 21;
+            l.Width = 40;
+            l.DropDownStyle = ComboBoxStyle.DropDownList;
+            l.DataSource = Data;
+
+
+            return l;
+        }
+
+        private void Reserveerscherm3Stoelen_Load(object sender, EventArgs e)
+        {
+            int acb = Program._ReservationSession.CurrentReservation.ticketDictionary.Count;
+
+            for (int i = acb; i > 0; i--)
+            {
+                ComboBox l = addCB(i);
+                DD_loop.Controls.Add(l);
+            }              
+               
+          
+        }
+
+        
     }
 }
