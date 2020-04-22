@@ -26,13 +26,22 @@ namespace UI
             foreach (XmlNode node in doc.DocumentElement)
             {
                 string name = node.Attributes[0].InnerText;
+                var today = Convert.ToDateTime(DateTime.Now.ToShortDateString());
                 List<string> dataUrl = new List<string>();
                 foreach (XmlNode child in node.ChildNodes)
                 {
                     dataUrl.Add(child.InnerText);
                 }
                 PictureBox l = addlabel(afilm, name, dataUrl);
-                flowLayoutPanelActueel.Controls.Add(l);
+                var mDate = Convert.ToDateTime(dataUrl[3]);
+                if (mDate > today)
+                {
+                    flowLayoutPanelActueel.Controls.Add(l);
+                }
+                else
+                {
+                    flowLayoutPanelVerwacht.Controls.Add(l);
+                }
                 l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
                 afilm = afilm + 1;
             }
@@ -47,7 +56,7 @@ namespace UI
             chosenName = currentlabel.Text;
             chosenPic = currentlabel.ImageLocation;
 
-            FilmDetails frm2 = new FilmDetails();
+            FilmDetails frm2 = new FilmDetails(chosenName,chosenPic);
             frm2.Show();
 
         }
@@ -60,8 +69,9 @@ namespace UI
             l.Text = name;
             l.BackColor = Color.Green;
             l.ImageLocation = dataUrl[1];
-            l.Width = 135;
-            l.Height = 191;
+            //l.Width = 135;
+            //l.Height = 191;
+            l.Size = new System.Drawing.Size(105, 150);
             l.SizeMode = PictureBoxSizeMode.Zoom;
             //l.Location = new Point(start, end);
             l.Margin = new Padding(13);
@@ -76,7 +86,10 @@ namespace UI
 
         private void Films_Knop_Click(object sender, EventArgs e)
         {
-
+            Overzicht nextForm = new Overzicht();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
         }
 
         private void label1_Click_1(object sender, EventArgs e)
