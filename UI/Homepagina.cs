@@ -34,7 +34,7 @@ namespace UI
                 }
                 PictureBox l = addlabel(afilm, name, dataUrl);
                 var mDate = Convert.ToDateTime(dataUrl[3]);
-                if (mDate > today)
+                if (mDate < today)
                 {
                     flowLayoutPanelActueel.Controls.Add(l);
                 }
@@ -44,6 +44,14 @@ namespace UI
                 }
                 l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
                 afilm = afilm + 1;
+                if (flowLayoutPanelActueel.Controls.Count > 5)
+                {
+                    flowLayoutPanelActueel.AutoScroll = true;
+                }
+                if (flowLayoutPanelVerwacht.Controls.Count > 5)
+                {
+                    flowLayoutPanelVerwacht.AutoScroll = true;
+                }
             }
         }
         public static string chosenName = "";
@@ -71,7 +79,7 @@ namespace UI
             l.ImageLocation = dataUrl[1];
             //l.Width = 135;
             //l.Height = 191;
-            l.Size = new System.Drawing.Size(105, 150);
+            l.Size = new System.Drawing.Size(110, 150);
             l.SizeMode = PictureBoxSizeMode.Zoom;
             //l.Location = new Point(start, end);
             l.Margin = new Padding(13);
