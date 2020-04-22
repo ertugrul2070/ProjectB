@@ -157,6 +157,7 @@
     <EmbeddedResource Include="Reserveerscherm7Tijden.resx">
       <DependentUpon>Reserveerscherm7Tijden.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DB_Json.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -225,6 +226,9 @@
       <Project>{19387e78-20ea-4dd1-b867-e15899ad6f9f}</Project>
       <Name>Engine</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Test_text.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
