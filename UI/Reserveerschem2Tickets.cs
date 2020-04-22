@@ -81,7 +81,6 @@ namespace UI
                     Program._ReservationSession.CurrentReservation.AddTickets(IDS, 8.0);
                 }
             }
-            Program._ReservationSession.CurrentReservation.AddTickets("Test", 8.0);
 
         }
     }
