@@ -40,7 +40,17 @@ namespace UI
 
         private void FormLoad_Paint(object sender, PaintEventArgs e)
         {
-            throw new System.NotImplementedException();
+            
+        }
+
+        private void Schermtekst_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void S1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
