@@ -44,6 +44,7 @@ namespace UI
                 }
                 l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
                 afilm = afilm + 1;
+                
                 if (flowLayoutPanelActueel.Controls.Count > 5)
                 {
                     flowLayoutPanelActueel.AutoScroll = true;
@@ -105,9 +106,45 @@ namespace UI
 
         }
 
-        private void Actueel_1_Tekst_Click(object sender, EventArgs e)
+        private void SearchFilm_KeyDown(object sender, KeyEventArgs e)
         {
+            flowLayoutPanelSearch.Controls.Clear();
+            flowLayoutPanelSearch.Visible = false;
+            string nameFilm = SearchFilm.Text;
+            if (e.KeyCode == Keys.Enter && SearchFilm.Text != "")
+            {
+                nameFilm = char.ToUpper(nameFilm[0]) + nameFilm.Substring(1);
+                Search_Film(nameFilm);
+            }
+        }
 
+        private void Search_Film(string nameFilm)
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Films.xml");
+            int afilm = 0;
+            foreach (XmlNode node in doc.DocumentElement)
+            {
+                string naam = node.Attributes[0].InnerText;
+                if (naam.Contains(nameFilm))
+                {
+                    List<string> dataUrl = new List<string>();
+                    foreach (XmlNode child in node.ChildNodes)
+                    {
+                        dataUrl.Add(child.InnerText);
+                    }
+                    PictureBox l = addlabel(afilm, naam, dataUrl);
+                    flowLayoutPanelSearch.Controls.Add(l);
+                    l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
+                }
+            }
+            if (flowLayoutPanelSearch.Controls.Count < 1 || nameFilm == "")
+            {
+                flowLayoutPanelSearch.Controls.Clear();
+            } else
+            {
+                flowLayoutPanelSearch.Visible = true;
+            }
         }
     }
 }
