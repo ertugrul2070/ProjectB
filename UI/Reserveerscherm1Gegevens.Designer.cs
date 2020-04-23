@@ -34,14 +34,6 @@ namespace UI
             this.red_bovenkant = new System.Windows.Forms.Panel();
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
-            this.GenderField = new System.Windows.Forms.TextBox();
-            this.NameField = new System.Windows.Forms.TextBox();
-            this.SurnameField = new System.Windows.Forms.TextBox();
-            this.AddressField = new System.Windows.Forms.TextBox();
-            this.PostcodeField = new System.Windows.Forms.TextBox();
-            this.CityField = new System.Windows.Forms.TextBox();
-            this.PhonenumberField = new System.Windows.Forms.TextBox();
-            this.EmailField = new System.Windows.Forms.TextBox();
             this.Back = new System.Windows.Forms.Button();
             this.Next = new System.Windows.Forms.Button();
             this.Gender = new System.Windows.Forms.Label();
@@ -54,6 +46,16 @@ namespace UI
             this.Email = new System.Windows.Forms.Label();
             this.Information = new System.Windows.Forms.Label();
             this.FormLoad = new System.Windows.Forms.Panel();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.GenderField = new System.Windows.Forms.TextBox();
+            this.NameField = new System.Windows.Forms.TextBox();
+            this.SurnameField = new System.Windows.Forms.TextBox();
+            this.AddressField = new System.Windows.Forms.TextBox();
+            this.PostcodeField = new System.Windows.Forms.TextBox();
+            this.CityField = new System.Windows.Forms.TextBox();
+            this.PhonenumberField = new System.Windows.Forms.TextBox();
+            this.EmailField = new System.Windows.Forms.TextBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
             this.SuspendLayout();
@@ -86,75 +88,10 @@ namespace UI
             this.Red_onderkant.Size = new System.Drawing.Size(801, 32);
             this.Red_onderkant.TabIndex = 6;
             // 
-            // GenderField
-            // 
-            this.GenderField.Location = new System.Drawing.Point(146, 45);
-            this.GenderField.Name = "GenderField";
-            this.GenderField.Size = new System.Drawing.Size(96, 20);
-            this.GenderField.TabIndex = 0;
-            this.GenderField.TextChanged += new System.EventHandler(this.GenderField_TextChanged);
-            // 
-            // NameField
-            // 
-            this.NameField.Location = new System.Drawing.Point(146, 70);
-            this.NameField.Name = "NameField";
-            this.NameField.Size = new System.Drawing.Size(96, 20);
-            this.NameField.TabIndex = 1;
-            this.NameField.TextChanged += new System.EventHandler(this.NameField_TextChanged);
-            // 
-            // SurnameField
-            // 
-            this.SurnameField.Location = new System.Drawing.Point(146, 95);
-            this.SurnameField.Name = "SurnameField";
-            this.SurnameField.Size = new System.Drawing.Size(96, 20);
-            this.SurnameField.TabIndex = 2;
-            this.SurnameField.TextChanged += new System.EventHandler(this.SurnameField_TextChanged);
-            // 
-            // AddressField
-            // 
-            this.AddressField.Location = new System.Drawing.Point(146, 120);
-            this.AddressField.Name = "AddressField";
-            this.AddressField.Size = new System.Drawing.Size(96, 20);
-            this.AddressField.TabIndex = 3;
-            this.AddressField.TextChanged += new System.EventHandler(this.AddressField_TextChanged);
-            // 
-            // PostcodeField
-            // 
-            this.PostcodeField.Location = new System.Drawing.Point(146, 146);
-            this.PostcodeField.Name = "PostcodeField";
-            this.PostcodeField.Size = new System.Drawing.Size(96, 20);
-            this.PostcodeField.TabIndex = 4;
-            this.PostcodeField.TextChanged += new System.EventHandler(this.PostcodeField_TextChanged);
-            // 
-            // CityField
-            // 
-            this.CityField.Location = new System.Drawing.Point(146, 171);
-            this.CityField.Name = "CityField";
-            this.CityField.Size = new System.Drawing.Size(96, 20);
-            this.CityField.TabIndex = 5;
-            this.CityField.TextChanged += new System.EventHandler(this.CityField_TextChanged);
-            // 
-            // PhonenumberField
-            // 
-            this.PhonenumberField.Location = new System.Drawing.Point(146, 196);
-            this.PhonenumberField.Name = "PhonenumberField";
-            this.PhonenumberField.Size = new System.Drawing.Size(96, 20);
-            this.PhonenumberField.TabIndex = 6;
-            this.PhonenumberField.TextChanged += new System.EventHandler(this.PhonenumberField_TextChanged);
-            this.PhonenumberField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PhonenumberField_KeyPress);
-            // 
-            // EmailField
-            // 
-            this.EmailField.Location = new System.Drawing.Point(146, 221);
-            this.EmailField.Name = "EmailField";
-            this.EmailField.Size = new System.Drawing.Size(96, 20);
-            this.EmailField.TabIndex = 7;
-            this.EmailField.TextChanged += new System.EventHandler(this.EmailField_TextChanged);
-            // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
-            this.Back.Location = new System.Drawing.Point(18, 259);
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Back.Location = new System.Drawing.Point(18, 247);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
             this.Back.TabIndex = 8;
@@ -164,8 +101,8 @@ namespace UI
             // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
-            this.Next.Location = new System.Drawing.Point(219, 259);
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.Next.Location = new System.Drawing.Point(219, 247);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
             this.Next.TabIndex = 9;
@@ -255,7 +192,17 @@ namespace UI
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.Controls.Add(this.EmailField);
+            this.FormLoad.Controls.Add(this.PhonenumberField);
+            this.FormLoad.Controls.Add(this.CityField);
+            this.FormLoad.Controls.Add(this.PostcodeField);
+            this.FormLoad.Controls.Add(this.AddressField);
+            this.FormLoad.Controls.Add(this.SurnameField);
+            this.FormLoad.Controls.Add(this.NameField);
+            this.FormLoad.Controls.Add(this.GenderField);
+            this.FormLoad.Controls.Add(this.btnRegister);
+            this.FormLoad.Controls.Add(this.btnLogin);
             this.FormLoad.Controls.Add(this.Information);
             this.FormLoad.Controls.Add(this.Email);
             this.FormLoad.Controls.Add(this.Phonenumber);
@@ -267,19 +214,88 @@ namespace UI
             this.FormLoad.Controls.Add(this.Gender);
             this.FormLoad.Controls.Add(this.Next);
             this.FormLoad.Controls.Add(this.Back);
-            this.FormLoad.Controls.Add(this.EmailField);
-            this.FormLoad.Controls.Add(this.PhonenumberField);
-            this.FormLoad.Controls.Add(this.CityField);
-            this.FormLoad.Controls.Add(this.PostcodeField);
-            this.FormLoad.Controls.Add(this.AddressField);
-            this.FormLoad.Controls.Add(this.SurnameField);
-            this.FormLoad.Controls.Add(this.NameField);
-            this.FormLoad.Controls.Add(this.GenderField);
             this.FormLoad.Location = new System.Drawing.Point(214, 59);
             this.FormLoad.Name = "FormLoad";
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
             this.FormLoad.TabIndex = 8;
             this.FormLoad.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.btnLogin.Location = new System.Drawing.Point(219, 290);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(118, 37);
+            this.btnLogin.TabIndex = 19;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.btnRegister.Location = new System.Drawing.Point(18, 290);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(118, 37);
+            this.btnRegister.TabIndex = 20;
+            this.btnRegister.Text = "Registreer";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // GenderField
+            // 
+            this.GenderField.Location = new System.Drawing.Point(157, 45);
+            this.GenderField.Name = "GenderField";
+            this.GenderField.Size = new System.Drawing.Size(100, 20);
+            this.GenderField.TabIndex = 21;
+            // 
+            // NameField
+            // 
+            this.NameField.Location = new System.Drawing.Point(157, 70);
+            this.NameField.Name = "NameField";
+            this.NameField.Size = new System.Drawing.Size(100, 20);
+            this.NameField.TabIndex = 22;
+            // 
+            // SurnameField
+            // 
+            this.SurnameField.Location = new System.Drawing.Point(157, 95);
+            this.SurnameField.Name = "SurnameField";
+            this.SurnameField.Size = new System.Drawing.Size(100, 20);
+            this.SurnameField.TabIndex = 23;
+            // 
+            // AddressField
+            // 
+            this.AddressField.Location = new System.Drawing.Point(157, 121);
+            this.AddressField.Name = "AddressField";
+            this.AddressField.Size = new System.Drawing.Size(100, 20);
+            this.AddressField.TabIndex = 24;
+            // 
+            // PostcodeField
+            // 
+            this.PostcodeField.Location = new System.Drawing.Point(157, 145);
+            this.PostcodeField.Name = "PostcodeField";
+            this.PostcodeField.Size = new System.Drawing.Size(100, 20);
+            this.PostcodeField.TabIndex = 25;
+            // 
+            // CityField
+            // 
+            this.CityField.Location = new System.Drawing.Point(157, 170);
+            this.CityField.Name = "CityField";
+            this.CityField.Size = new System.Drawing.Size(100, 20);
+            this.CityField.TabIndex = 26;
+            // 
+            // PhonenumberField
+            // 
+            this.PhonenumberField.Location = new System.Drawing.Point(157, 193);
+            this.PhonenumberField.Name = "PhonenumberField";
+            this.PhonenumberField.Size = new System.Drawing.Size(100, 20);
+            this.PhonenumberField.TabIndex = 27;
+            // 
+            // EmailField
+            // 
+            this.EmailField.Location = new System.Drawing.Point(157, 218);
+            this.EmailField.Name = "EmailField";
+            this.EmailField.Size = new System.Drawing.Size(100, 20);
+            this.EmailField.TabIndex = 28;
             // 
             // Reserveerscherm1Gegevens
             // 
@@ -291,36 +307,41 @@ namespace UI
             this.Controls.Add(this.Red_onderkant);
             this.Name = "Reserveerscherm1Gegevens";
             this.Text = "Reserveerscherm1Gegevens";
+            this.Load += new System.EventHandler(this.Reserveerscherm1Gegevens_Load);
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Label address;
-        private System.Windows.Forms.TextBox AddressField;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Panel black_panel;
         private System.Windows.Forms.Label City;
-        private System.Windows.Forms.TextBox CityField;
         private System.Windows.Forms.Label Email;
-        private System.Windows.Forms.TextBox EmailField;
         private System.Windows.Forms.Panel FormLoad;
         private System.Windows.Forms.Label Gender;
-        private System.Windows.Forms.TextBox GenderField;
         private System.Windows.Forms.Label Information;
-        private System.Windows.Forms.TextBox NameField;
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.Label Phonenumber;
-        private System.Windows.Forms.TextBox PhonenumberField;
         private System.Windows.Forms.Label Postcode;
-        private System.Windows.Forms.TextBox PostcodeField;
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
         private System.Windows.Forms.Label Surname;
-        private System.Windows.Forms.TextBox SurnameField;
         private System.Windows.Forms.Label UserName;
 
         #endregion
+
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Button btnLogin;
+        public System.Windows.Forms.TextBox AddressField;
+        public System.Windows.Forms.TextBox SurnameField;
+        public System.Windows.Forms.TextBox NameField;
+        public System.Windows.Forms.TextBox GenderField;
+        public System.Windows.Forms.TextBox EmailField;
+        public System.Windows.Forms.TextBox PhonenumberField;
+        public System.Windows.Forms.TextBox CityField;
+        public System.Windows.Forms.TextBox PostcodeField;
     }
 }

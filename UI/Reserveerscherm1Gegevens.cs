@@ -1,13 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using Engine.Models;
 using Engine.ViewModels;
-
+using MySql.Data.MySqlClient;
 
 namespace UI
 {
     public partial class Reserveerscherm1Gegevens : Form
     {
+
+        DatabaseConnection dbc = new DatabaseConnection();
+
+        List<string> listEmails = new List<string>();
+        public string _password;
 
         public Reserveerscherm1Gegevens()
         {
@@ -119,6 +126,122 @@ namespace UI
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            string userEmail = EmailField.Text;
+
+            if (GenderField.Text != "" && NameField.Text != "" && SurnameField.Text != "" && AddressField.Text != "" && PostcodeField.Text != "" && CityField.Text != "" && PhonenumberField.Text != "" && EmailField.Text != "")
+            {
+                RegisterUser(userEmail);
+            }
+            else
+            {
+                MessageBox.Show("Vul alle velden in AUB");
+            }
+        }
+
+        private bool CheckIfUserExists(string inputEmail)
+        {
+            try
+            {
+                dbc.cnn.Open();
+
+                string selectQuery = "SELECT * FROM `customers`.`custromers`";
+                MySqlCommand command = new MySqlCommand(selectQuery, dbc.cnn);
+
+                MySqlDataReader dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    string email = dataReader.GetString("email");
+
+                    listEmails.Add(email);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                dbc.cnn.Close();
+            }
+
+            bool inDatabase = false;
+
+
+
+            foreach (string mail in listEmails)
+            {
+                if (mail == inputEmail)
+                {
+                    inDatabase = true;
+                }
+            }
+
+            return inDatabase;
+        }
+
+        private void RegisterUser(string userEmail)
+        {
+            // Alle variabelen uit fields halen
+            string firstName = NameField.Text;
+            string lastName = SurnameField.Text;
+            string gender = GenderField.Text;
+            string address = AddressField.Text;
+            string zipcode = PostcodeField.Text;
+            string city = CityField.Text;
+            string phonenumber = PhonenumberField.Text;
+
+            PasswordScreen();
+
+            if (!CheckIfUserExists(userEmail))
+            {
+                try
+                {
+                    dbc.cnn.Open();
+
+                    string query = "INSERT INTO `customers`.`custromers` (`firstName`, `lastName`, `gender`, `adress`, `zipCode`, `city`, `phoneNumber`, `email`, `password`) VALUES ('"+ firstName + "', '"+ lastName + "', '"+ gender + "', '"+ address + "', '"+ zipcode + "', '"+ city + "', '"+ phonenumber +"', '" + userEmail + "', '"+ _password +"');";
+
+                    MySqlCommand command = new MySqlCommand(query, dbc.cnn);
+
+                    if (command.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("User Added");
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR");
+                    }
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                finally
+                {
+                    dbc.cnn.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("USER ALREADY EXISTS, TRY LOGGING IN");
+            }
+        }
+
+        public void PasswordScreen()
+        {
+            Registreerscherm rgt = new Registreerscherm(this);
+            rgt.ShowDialog();
+        }
+
+        private void Reserveerscherm1Gegevens_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
