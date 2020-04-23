@@ -32,6 +32,7 @@
             this.red_bovenkant = new System.Windows.Forms.Panel();
             this.black_panel = new System.Windows.Forms.Panel();
             this.FormLoad = new System.Windows.Forms.Panel();
+            this.DD_loop = new System.Windows.Forms.FlowLayoutPanel();
             this.Information = new System.Windows.Forms.Label();
             this.Next = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
@@ -40,11 +41,12 @@
             this.Receipt = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.DD_loop = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -69,6 +71,7 @@
             // FormLoad
             // 
             this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.Controls.Add(this.pictureBox2);
             this.FormLoad.Controls.Add(this.DD_loop);
             this.FormLoad.Controls.Add(this.Information);
             this.FormLoad.Controls.Add(this.Next);
@@ -78,6 +81,13 @@
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
             this.FormLoad.TabIndex = 12;
             this.FormLoad.Paint += new System.Windows.Forms.PaintEventHandler(this.FormLoad_Paint);
+            // 
+            // DD_loop
+            // 
+            this.DD_loop.Location = new System.Drawing.Point(18, 246);
+            this.DD_loop.Name = "DD_loop";
+            this.DD_loop.Size = new System.Drawing.Size(321, 42);
+            this.DD_loop.TabIndex = 20;
             // 
             // Information
             // 
@@ -158,12 +168,16 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // DD_loop
+            // pictureBox2
             // 
-            this.DD_loop.Location = new System.Drawing.Point(18, 246);
-            this.DD_loop.Name = "DD_loop";
-            this.DD_loop.Size = new System.Drawing.Size(321, 42);
-            this.DD_loop.TabIndex = 20;
+            this.pictureBox2.Image = global::UI.Properties.Resources.bioscoopplat;
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(18, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(321, 217);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
             // 
             // Reserveerscherm3Stoelen
             // 
@@ -182,6 +196,7 @@
             this.FormLoad.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -201,5 +216,6 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel DD_loop;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
