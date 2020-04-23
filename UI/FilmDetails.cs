@@ -15,6 +15,7 @@ namespace UI
     {
         public string chosenName;
         public string chosenPic;
+        public string chosenTrailer;
         public FilmDetails(string filmName,string filmPic)
         {
             
@@ -25,7 +26,15 @@ namespace UI
 
         private void FilmDetails_Load(object sender, EventArgs e)
         {
-            label1.Text = chosenName; 
+            var embed = "<html><head>"+
+                        "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"/>"+
+                        "</head><body>" +
+                        "<iframe width=\"300\" height=\"200\" src=\"{0}\"" +
+                        "frameborder = \"0\" allow = \"autoplay; encrypted-media\" allowfullscreen></iframe>" +
+                        "</body></html>";
+            var url = "https://www.youtube.com/embed/CpzbJ7OdXcA?start=192";
+            this.webBrowser1.DocumentText = string.Format(embed, url);
+            label1.Text = chosenName;
             pictureBox1.ImageLocation = chosenPic;
             XmlDocument doc = new XmlDocument();
             doc.Load("Films.xml");
