@@ -16,6 +16,8 @@ namespace UI
     public partial class Loginscherm : Form
     {
         private Reserveerscherm1Gegevens mainform = null;
+        
+        public bool loggedIn = false;
 
         DatabaseConnection connection = new DatabaseConnection();
 
@@ -27,8 +29,6 @@ namespace UI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //SendUserData();
-
             string inputtedEmail = txtEmail.Text;
             string inputtedPassword = txtPassword.Text;
 
@@ -36,32 +36,31 @@ namespace UI
             {     
                 connection.cnn.Open();
 
-                string command = "SELECT COUNT(*) as account FROM `customers`.`custromers` WHERE email = '@email' AND password = '@password';";
+                string query = "SELECT COUNT(*) as account FROM `customers`.`custromers` WHERE email = '"+ inputtedEmail +"' AND password = '"+ inputtedPassword +"';";
+                MySqlCommand command = new MySqlCommand(query, connection.cnn);
 
-                MySqlCommand com = new MySqlCommand(command, connection.cnn);
-                com.Parameters.AddWithValue("@email", inputtedEmail);
-                com.Parameters.AddWithValue("@password", inputtedPassword);
+                MySqlDataReader reader = command.ExecuteReader();
 
-                MySqlDataReader dataReader = com.ExecuteReader();
-
-                while(dataReader.Read())
+                while (reader.Read())
                 {
-
-                    int komtvoor = dataReader.GetInt32("account");
-
-                    if (dataReader.GetInt16(0) == 1)
+                    if (reader.GetInt32("account") == 1)
                     {
-                        DialogResult = DialogResult.OK;
-                        SendUserData();
-                        this.Close();
+                        loggedIn = true;
+                        MessageBox.Show("U bent nu ingelogd!");
                     }
                     else
                     {
-                        MessageBox.Show("Login is incorrect");
+                        MessageBox.Show("Gebruiker niet gevonden, probeer een ander wachtwoord of registreer.");
                     }
-
                 }
-                dataReader.Close();
+                reader.Close();
+
+                if (loggedIn)
+                {
+                    SendUserData(inputtedEmail, inputtedPassword);
+                    this.Close();
+                }
+
             }
             catch (Exception)
             {
@@ -74,17 +73,13 @@ namespace UI
             }
         }
 
-        public void SendUserData()
+        public void SendUserData(string email, string password)
         {
-            connection.cnn.Open();
+            string query = "SELECT * FROM `customers`.`custromers` WHERE email = '" + email + "' AND password = '" + password + "';";
+            MySqlCommand command = new MySqlCommand(query, connection.cnn);
 
-            string command = "SELECT * FROM `customers`.`custromers` WHERE email = '@email' AND password = '@password'; ";
-            
-            MySqlCommand com = new MySqlCommand(command, connection.cnn);
-            com.Parameters.AddWithValue("@email", txtEmail.Text.ToString());
-            com.Parameters.AddWithValue("@password", txtPassword.Text.ToString());
+            MySqlDataReader dataReader = command.ExecuteReader();
 
-            MySqlDataReader dataReader = com.ExecuteReader();
             while (dataReader.Read())
             {
                 this.mainform.firstName = dataReader.GetString("firstName");
@@ -94,8 +89,7 @@ namespace UI
                 this.mainform.zipcode = dataReader.GetString("zipCode");
                 this.mainform.city = dataReader.GetString("city");
                 this.mainform.phonenumber = dataReader.GetString("phoneNumber");
-
-                string naam = dataReader.GetString("password");
+                this.mainform.email = dataReader.GetString("email");
             }
 
             connection.cnn.Close();

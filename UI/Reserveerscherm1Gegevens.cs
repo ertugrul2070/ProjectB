@@ -22,6 +22,7 @@ namespace UI
         public string zipcode;
         public string city;
         public string phonenumber;
+        public string email;
 
         public Reserveerscherm1Gegevens()
         {
@@ -202,7 +203,7 @@ namespace UI
             string firstName = NameField.Text;
             string lastName = SurnameField.Text;
             string gender = GenderField.Text;
-            string inputAdress = AddressField.Text;
+            string inputAddress = AddressField.Text;
             string zipcode = PostcodeField.Text;
             string city = CityField.Text;
             string phonenumber = PhonenumberField.Text;
@@ -215,7 +216,7 @@ namespace UI
                 {
                     dbc.cnn.Open();
 
-                    string query = "INSERT INTO `customers`.`custromers` (`firstName`, `lastName`, `gender`, `adress`, `zipCode`, `city`, `phoneNumber`, `email`, `password`) VALUES ('"+ firstName + "', '"+ lastName + "', '"+ gender + "', '"+ address + "', '"+ zipcode + "', '"+ city + "', '"+ phonenumber +"', '" + userEmail + "', '"+ _password +"');";
+                    string query = "INSERT INTO `customers`.`custromers` (`firstName`, `lastName`, `gender`, `adress`, `zipCode`, `city`, `phoneNumber`, `email`, `password`) VALUES ('"+ firstName + "', '"+ lastName + "', '"+ gender + "', '"+ inputAddress + "', '"+ zipcode + "', '"+ city + "', '"+ phonenumber +"', '" + userEmail + "', '"+ _password +"');";
 
                     MySqlCommand command = new MySqlCommand(query, dbc.cnn);
 
@@ -254,6 +255,24 @@ namespace UI
         {
             Loginscherm lgn = new Loginscherm(this);
             lgn.ShowDialog();
+
+            if (lgn.loggedIn)
+            {
+                autoFill();
+            }
+
+        }
+
+        private void autoFill()
+        {
+            NameField.Text = firstName;
+            SurnameField.Text = lastName;
+            GenderField.Text = gender;
+            AddressField.Text = inputAddress;
+            PostcodeField.Text = zipcode;
+            CityField.Text = city;
+            PhonenumberField.Text = phonenumber;
+            EmailField.Text = email;
         }
     }
 }
