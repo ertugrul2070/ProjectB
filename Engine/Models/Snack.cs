@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using System;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace Engine.Models
@@ -21,16 +22,16 @@ namespace Engine.Models
         public void SaveSnack()
         {
             
-            XDocument snacksDocument= XDocument.Load(@"F:\ProjectB\Engine\Resources\snacks.xml");
+            XDocument snacksDocument= XDocument.Load("Snacks.xml");
             
             snacksDocument.Element("Snacks").Add(
-                new XElement("snack", new XAttribute("ID", this.ID),
+                new XElement("snack", new XAttribute("ID",this.ID),
                     new XElement("Name", this.Name),
                     new XElement("Price", this.Price),
                     new XElement("Type", this.Type)
                     ));
 
-            snacksDocument.Save(@"F:\ProjectB\Engine\Resources\Snacks.xml");
+            snacksDocument.Save("Snacks.xml");
 
 
         }

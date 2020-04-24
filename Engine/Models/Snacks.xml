@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Snacks>
+  <snack ID="1000">
+    <Name>Popcorn</Name>
+    <Price>3,00</Price>
+    <Type>Small</Type>
+  </snack>
+</Snacks>
