@@ -98,7 +98,7 @@
             this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser2.Name = "webBrowser2";
             this.webBrowser2.ScrollBarsEnabled = false;
-            this.webBrowser2.Size = new System.Drawing.Size(358, 224);
+            this.webBrowser2.Size = new System.Drawing.Size(358, 366);
             this.webBrowser2.TabIndex = 9;
             // 
             // FilmDetails

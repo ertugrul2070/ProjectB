@@ -52,7 +52,7 @@ namespace UI
             chosenName = currentlabel.Text;
             chosenPic = currentlabel.ImageLocation;
             chosenLink = currentlabel.Name;
-            MessageBox.Show(chosenLink);
+            
             FilmDetails frm2 = new FilmDetails(chosenName,chosenPic, chosenLink);
             frm2.Show();
         }
