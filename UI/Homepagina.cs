@@ -67,7 +67,7 @@ namespace UI
         {
 
             PictureBox l = new PictureBox();
-            l.Name = "pBox" + i.ToString();
+            l.Name = dataUrl[4];
             l.Text = name;
             l.BackColor = Color.Green;
             l.ImageLocation = dataUrl[1];
