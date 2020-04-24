@@ -28,16 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilmDetails));
             this.nButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.YTplayer = new AxShockwaveFlashObjects.AxShockwaveFlash();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.YTplayer)).BeginInit();
             this.SuspendLayout();
             // 
             // nButton
@@ -85,21 +83,20 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "label1";
             // 
-            // YTplayer
+            // webBrowser1
             // 
-            this.YTplayer.Enabled = true;
-            this.YTplayer.Location = new System.Drawing.Point(417, 12);
-            this.YTplayer.Name = "YTplayer";
-            this.YTplayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("YTplayer.OcxState")));
-            this.YTplayer.Size = new System.Drawing.Size(371, 229);
-            this.YTplayer.TabIndex = 8;
+            this.webBrowser1.Location = new System.Drawing.Point(401, 12);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(387, 250);
+            this.webBrowser1.TabIndex = 8;
             // 
             // FilmDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.YTplayer);
+            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.nButton);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pictureBox1);
@@ -110,7 +107,6 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.YTplayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,6 +120,6 @@
 
         #endregion
 
-        private AxShockwaveFlashObjects.AxShockwaveFlash YTplayer;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
