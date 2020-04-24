@@ -15,11 +15,13 @@ namespace UI
     {
         public string chosenName;
         public string chosenPic;
-        public FilmDetails(string filmName,string filmPic)
+        public string chosenLink;
+        public FilmDetails(string filmName,string filmPic, string filmLink)
         {
             
             this.chosenName = filmName;
             this.chosenPic = filmPic;
+            this.chosenLink = filmLink;
             InitializeComponent();
         }
 
@@ -27,6 +29,14 @@ namespace UI
         {
             label1.Text = chosenName;
             pictureBox1.ImageLocation = chosenPic;
+            //YTplayer.Movie = chosenLink;
+            var embed = "<html><head>" +
+                        "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"/>" +
+                        "</head><body>" +
+                        "<iframe width=\"300\" height=\"200\" src=\"{0}\"" +
+                        "frameborder = \"0\" allow = \"autoplay; encrypted-media\" allowfullscreen></iframe>" +
+                        "</body></html>";
+            this.webBrowser2.DocumentText = string.Format(embed, chosenLink);
             XmlDocument doc = new XmlDocument();
             doc.Load("Films.xml");
             foreach (XmlNode node in doc.DocumentElement)
