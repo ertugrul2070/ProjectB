@@ -36,8 +36,7 @@ namespace UI
                         "<iframe width=\"300\" height=\"200\" src=\"{0}\"" +
                         "frameborder = \"0\" allow = \"autoplay; encrypted-media\" allowfullscreen></iframe>" +
                         "</body></html>";
-            
-            this.webBrowser1.DocumentText = string.Format(embed, chosenLink);
+            this.webBrowser2.DocumentText = string.Format(embed, chosenLink);
             XmlDocument doc = new XmlDocument();
             doc.Load("Films.xml");
             foreach (XmlNode node in doc.DocumentElement)
