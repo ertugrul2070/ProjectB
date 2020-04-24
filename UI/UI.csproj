@@ -74,6 +74,12 @@
     <Compile Include="FilmDetails.Designer.cs">
       <DependentUpon>FilmDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Loginscherm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loginscherm.Designer.cs">
+      <DependentUpon>Loginscherm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registreerscherm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loginscherm.resx">
+      <DependentUpon>Loginscherm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Overzicht.resx">
       <DependentUpon>Overzicht.cs</DependentUpon>

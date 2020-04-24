@@ -46,16 +46,16 @@ namespace UI
             this.Email = new System.Windows.Forms.Label();
             this.Information = new System.Windows.Forms.Label();
             this.FormLoad = new System.Windows.Forms.Panel();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.GenderField = new System.Windows.Forms.TextBox();
-            this.NameField = new System.Windows.Forms.TextBox();
-            this.SurnameField = new System.Windows.Forms.TextBox();
-            this.AddressField = new System.Windows.Forms.TextBox();
-            this.PostcodeField = new System.Windows.Forms.TextBox();
-            this.CityField = new System.Windows.Forms.TextBox();
-            this.PhonenumberField = new System.Windows.Forms.TextBox();
             this.EmailField = new System.Windows.Forms.TextBox();
+            this.PhonenumberField = new System.Windows.Forms.TextBox();
+            this.CityField = new System.Windows.Forms.TextBox();
+            this.PostcodeField = new System.Windows.Forms.TextBox();
+            this.AddressField = new System.Windows.Forms.TextBox();
+            this.SurnameField = new System.Windows.Forms.TextBox();
+            this.NameField = new System.Windows.Forms.TextBox();
+            this.GenderField = new System.Windows.Forms.TextBox();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
             this.SuspendLayout();
@@ -220,15 +220,61 @@ namespace UI
             this.FormLoad.TabIndex = 8;
             this.FormLoad.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // btnLogin
+            // EmailField
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
-            this.btnLogin.Location = new System.Drawing.Point(219, 290);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(118, 37);
-            this.btnLogin.TabIndex = 19;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.EmailField.Location = new System.Drawing.Point(157, 218);
+            this.EmailField.Name = "EmailField";
+            this.EmailField.Size = new System.Drawing.Size(100, 20);
+            this.EmailField.TabIndex = 28;
+            // 
+            // PhonenumberField
+            // 
+            this.PhonenumberField.Location = new System.Drawing.Point(157, 193);
+            this.PhonenumberField.Name = "PhonenumberField";
+            this.PhonenumberField.Size = new System.Drawing.Size(100, 20);
+            this.PhonenumberField.TabIndex = 27;
+            // 
+            // CityField
+            // 
+            this.CityField.Location = new System.Drawing.Point(157, 170);
+            this.CityField.Name = "CityField";
+            this.CityField.Size = new System.Drawing.Size(100, 20);
+            this.CityField.TabIndex = 26;
+            // 
+            // PostcodeField
+            // 
+            this.PostcodeField.Location = new System.Drawing.Point(157, 145);
+            this.PostcodeField.Name = "PostcodeField";
+            this.PostcodeField.Size = new System.Drawing.Size(100, 20);
+            this.PostcodeField.TabIndex = 25;
+            // 
+            // AddressField
+            // 
+            this.AddressField.Location = new System.Drawing.Point(157, 121);
+            this.AddressField.Name = "AddressField";
+            this.AddressField.Size = new System.Drawing.Size(100, 20);
+            this.AddressField.TabIndex = 24;
+            // 
+            // SurnameField
+            // 
+            this.SurnameField.Location = new System.Drawing.Point(157, 95);
+            this.SurnameField.Name = "SurnameField";
+            this.SurnameField.Size = new System.Drawing.Size(100, 20);
+            this.SurnameField.TabIndex = 23;
+            // 
+            // NameField
+            // 
+            this.NameField.Location = new System.Drawing.Point(157, 70);
+            this.NameField.Name = "NameField";
+            this.NameField.Size = new System.Drawing.Size(100, 20);
+            this.NameField.TabIndex = 22;
+            // 
+            // GenderField
+            // 
+            this.GenderField.Location = new System.Drawing.Point(157, 45);
+            this.GenderField.Name = "GenderField";
+            this.GenderField.Size = new System.Drawing.Size(100, 20);
+            this.GenderField.TabIndex = 21;
             // 
             // btnRegister
             // 
@@ -241,61 +287,16 @@ namespace UI
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // GenderField
+            // btnLogin
             // 
-            this.GenderField.Location = new System.Drawing.Point(157, 45);
-            this.GenderField.Name = "GenderField";
-            this.GenderField.Size = new System.Drawing.Size(100, 20);
-            this.GenderField.TabIndex = 21;
-            // 
-            // NameField
-            // 
-            this.NameField.Location = new System.Drawing.Point(157, 70);
-            this.NameField.Name = "NameField";
-            this.NameField.Size = new System.Drawing.Size(100, 20);
-            this.NameField.TabIndex = 22;
-            // 
-            // SurnameField
-            // 
-            this.SurnameField.Location = new System.Drawing.Point(157, 95);
-            this.SurnameField.Name = "SurnameField";
-            this.SurnameField.Size = new System.Drawing.Size(100, 20);
-            this.SurnameField.TabIndex = 23;
-            // 
-            // AddressField
-            // 
-            this.AddressField.Location = new System.Drawing.Point(157, 121);
-            this.AddressField.Name = "AddressField";
-            this.AddressField.Size = new System.Drawing.Size(100, 20);
-            this.AddressField.TabIndex = 24;
-            // 
-            // PostcodeField
-            // 
-            this.PostcodeField.Location = new System.Drawing.Point(157, 145);
-            this.PostcodeField.Name = "PostcodeField";
-            this.PostcodeField.Size = new System.Drawing.Size(100, 20);
-            this.PostcodeField.TabIndex = 25;
-            // 
-            // CityField
-            // 
-            this.CityField.Location = new System.Drawing.Point(157, 170);
-            this.CityField.Name = "CityField";
-            this.CityField.Size = new System.Drawing.Size(100, 20);
-            this.CityField.TabIndex = 26;
-            // 
-            // PhonenumberField
-            // 
-            this.PhonenumberField.Location = new System.Drawing.Point(157, 193);
-            this.PhonenumberField.Name = "PhonenumberField";
-            this.PhonenumberField.Size = new System.Drawing.Size(100, 20);
-            this.PhonenumberField.TabIndex = 27;
-            // 
-            // EmailField
-            // 
-            this.EmailField.Location = new System.Drawing.Point(157, 218);
-            this.EmailField.Name = "EmailField";
-            this.EmailField.Size = new System.Drawing.Size(100, 20);
-            this.EmailField.TabIndex = 28;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.btnLogin.Location = new System.Drawing.Point(219, 290);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(118, 37);
+            this.btnLogin.TabIndex = 19;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // Reserveerscherm1Gegevens
             // 

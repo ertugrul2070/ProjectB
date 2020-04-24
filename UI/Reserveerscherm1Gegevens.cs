@@ -15,10 +15,21 @@ namespace UI
 
         List<string> listEmails = new List<string>();
         public string _password;
+        public string firstName;
+        public string lastName;
+        public string gender;
+        public string inputAddress;
+        public string zipcode;
+        public string city;
+        public string phonenumber;
 
         public Reserveerscherm1Gegevens()
         {
             InitializeComponent();
+        }
+        private void Reserveerscherm1Gegevens_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -191,7 +202,7 @@ namespace UI
             string firstName = NameField.Text;
             string lastName = SurnameField.Text;
             string gender = GenderField.Text;
-            string address = AddressField.Text;
+            string inputAdress = AddressField.Text;
             string zipcode = PostcodeField.Text;
             string city = CityField.Text;
             string phonenumber = PhonenumberField.Text;
@@ -239,9 +250,10 @@ namespace UI
             rgt.ShowDialog();
         }
 
-        private void Reserveerscherm1Gegevens_Load(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            Loginscherm lgn = new Loginscherm(this);
+            lgn.ShowDialog();
         }
     }
 }
