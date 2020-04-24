@@ -41,14 +41,12 @@
     <ItemGroup>
         <Compile Include="Models\Custommer.cs" />
         <Compile Include="Models\Person.cs" />
+        <Compile Include="Models\Reservation.cs" />
         <Compile Include="Models\ReservationAdministration.cs" />
         <Compile Include="Models\Snack.cs" />
         <Compile Include="Models\SnackCatalog.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="ViewModels\ReservationSession.cs" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Resources" />
     </ItemGroup>
     <ItemGroup>
       <Content Include="Models\Snacks.xml" />
