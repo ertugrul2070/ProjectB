@@ -15,11 +15,13 @@ namespace UI
     {
         public string chosenName;
         public string chosenPic;
-        public FilmDetails(string filmName,string filmPic)
+        public string chosenLink;
+        public FilmDetails(string filmName,string filmPic, string filmLink)
         {
             
             this.chosenName = filmName;
             this.chosenPic = filmPic;
+            this.chosenLink = filmLink;
             InitializeComponent();
         }
 
@@ -27,6 +29,7 @@ namespace UI
         {
             label1.Text = chosenName; 
             pictureBox1.ImageLocation = chosenPic;
+            //YTplayer.Movie = chosenLink;
             XmlDocument doc = new XmlDocument();
             doc.Load("Films.xml");
             foreach (XmlNode node in doc.DocumentElement)

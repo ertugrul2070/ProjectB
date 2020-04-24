@@ -1,56 +1,65 @@
 ﻿<root>
   <films name ="Film1">
     <year>2015</year>
-    <img>C:\Users\m_cel\source\repos\ertugrul2070\ProjectB\UI\Resources\FilmCover\picca0.jpg</img>
+    <img>C:\Users\ertug\source\repos\PopcornPlaza\UI\Resources\FilmCover\picca0.jpg</img>
     <desc>Hasan trouwt met zijn habiba, fatima</desc>
     <date>20-4-2020</date>
+    <link>https://www.youtube.com/v/QxbbUiPeW5E</link>
   </films>
   <films name ="Film2">
     <year>2012</year>
-    <img>C:\Users\m_cel\source\repos\ertugrul2070\ProjectB\UI\Resources\FilmCover\picca1.jpg</img>
+    <img>C:\Users\ertug\source\repos\PopcornPlaza\UI\Resources\FilmCover\picca1.jpg</img>
     <desc>Fatima bedriegd hasan met donermes</desc>
     <date>21-4-2020</date>
+    <link>https://www.youtube.com/v/QxbbUiPeW5E</link>
   </films>
   <films name ="Film3">
     <year>2009</year>
-    <img>C:\Users\m_cel\source\repos\ertugrul2070\ProjectB\UI\Resources\FilmCover\picca2.jpg</img>
+    <img>C:\Users\ertug\source\repos\PopcornPlaza\UI\Resources\FilmCover\picca2.jpg</img>
     <desc>Hasan is bedrijfs leieder geworden</desc>
     <date>19-4-2020</date>
+    <link>https://www.youtube.com/v/QxbbUiPeW5E</link>
   </films>
   <films name ="Film4">
     <year>2020</year>
-    <img>C:\Users\m_cel\source\repos\ertugrul2070\ProjectB\UI\Resources\FilmCover\picca3.jpg</img>
+    <img>C:\Users\ertug\source\repos\PopcornPlaza\UI\Resources\FilmCover\picca3.jpg</img>
     <desc>Hasan heeft super doner kracht</desc>
     <date>20-4-2020</date>
+    <link>https://www.youtube.com/v/QxbbUiPeW5E</link>
   </films>
   <films name ="Film4">
     <year>2020</year>
-    <img>C:\Users\m_cel\source\repos\ertugrul2070\ProjectB\UI\Resources\FilmCover\picca4.jpg</img>
+    <img>C:\Users\ertug\source\repos\PopcornPlaza\UI\Resources\FilmCover\picca4.jpg</img>
     <desc>Erenaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</desc>
     <date>20-4-2020</date>
+    <link>https://www.youtube.com/v/QxbbUiPeW5E</link>
   </films>
   <films name ="Film5">
     <year>2020</year>
-    <img>C:\Users\m_cel\source\repos\ertugrul2070\ProjectB\UI\Resources\FilmCover\picca5.jpg</img>
+    <img>C:\Users\ertug\source\repos\PopcornPlaza\UI\Resources\FilmCover\picca5.jpg</img>
     <desc>Erenaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</desc>
     <date>20-6-2020</date>
+    <link>https://www.youtube.com/v/QxbbUiPeW5E</link>
   </films>
   <films name ="Film6">
     <year>2020</year>
-    <img>C:\Users\m_cel\source\repos\ertugrul2070\ProjectB\UI\Resources\FilmCover\picca6.jpg</img>
+    <img>C:\Users\ertug\source\repos\PopcornPlaza\UI\Resources\FilmCover\picca6.jpg</img>
     <desc>Erenaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</desc>
     <date>11-5-2020</date>
+    <link>https://www.youtube.com/v/QxbbUiPeW5E</link>
   </films>
   <films name ="Film7">
     <year>2020</year>
-    <img>C:\Users\m_cel\source\repos\ertugrul2070\ProjectB\UI\Resources\FilmCover\picca7.jpg</img>
+    <img>C:\Users\ertug\source\repos\PopcornPlaza\UI\Resources\FilmCover\picca7.jpg</img>
     <desc>Erenaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</desc>
     <date>13-7-2020</date>
+    <link>https://www.youtube.com/v/QxbbUiPeW5E</link>
   </films>
   <films name ="Film8">
     <year>2020</year>
-    <img>C:\Users\m_cel\source\repos\ertugrul2070\ProjectB\UI\Resources\FilmCover\picca8.jpg</img>
+    <img>C:\Users\ertug\source\repos\PopcornPlaza\UI\Resources\FilmCover\picca8.jpg</img>
     <desc>Erenaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</desc>
     <date>21-10-2021</date>
+    <link>https://www.youtube.com/v/QxbbUiPeW5E</link>
   </films>
 </root>

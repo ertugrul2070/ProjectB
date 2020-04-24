@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilmDetails));
             this.nButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.YTplayer = new AxShockwaveFlashObjects.AxShockwaveFlash();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YTplayer)).BeginInit();
             this.SuspendLayout();
             // 
             // nButton
@@ -49,9 +52,9 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.flowLayoutPanel1.Controls.Add(this.label2);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(221, 12);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(198, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(197, 305);
             this.flowLayoutPanel1.TabIndex = 6;
@@ -67,7 +70,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(35, 63);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 43);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(180, 254);
             this.pictureBox1.TabIndex = 5;
@@ -82,11 +85,21 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "label1";
             // 
+            // YTplayer
+            // 
+            this.YTplayer.Enabled = true;
+            this.YTplayer.Location = new System.Drawing.Point(417, 12);
+            this.YTplayer.Name = "YTplayer";
+            this.YTplayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("YTplayer.OcxState")));
+            this.YTplayer.Size = new System.Drawing.Size(371, 229);
+            this.YTplayer.TabIndex = 8;
+            // 
             // FilmDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.YTplayer);
             this.Controls.Add(this.nButton);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pictureBox1);
@@ -96,9 +109,11 @@
             this.Load += new System.EventHandler(this.FilmDetails_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YTplayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
@@ -108,5 +123,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
 
         #endregion
+
+        private AxShockwaveFlashObjects.AxShockwaveFlash YTplayer;
     }
 }
