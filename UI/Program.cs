@@ -11,6 +11,7 @@ namespace UI
     public static class Program
     {
         public static ReservationSession _ReservationSession = new ReservationSession();
+        public static DatabaseConnection dbc = new DatabaseConnection();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
