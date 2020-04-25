@@ -48,7 +48,7 @@ namespace UI
         }
         public static string chosenName = "";
         public static string chosenPic = "";
-        public static string chosenTrailer = "";
+        public static string chosenLink = "";
 
         private void labelDoubleClick(object sender, EventArgs e)
         {
@@ -56,8 +56,9 @@ namespace UI
 
             chosenName = currentlabel.Text;
             chosenPic = currentlabel.ImageLocation;
+            chosenLink = currentlabel.Name;
 
-            FilmDetails frm2 = new FilmDetails(chosenName,chosenPic);
+            FilmDetails frm2 = new FilmDetails(chosenName,chosenPic,chosenLink);
             frm2.Show();
 
         }
@@ -66,7 +67,7 @@ namespace UI
         {
 
             PictureBox l = new PictureBox();
-            l.Name = "pBox" + i;
+            l.Name = dataUrl[4];
             l.Text = name;
             l.BackColor = Color.Green;
             l.ImageLocation = dataUrl[1];
