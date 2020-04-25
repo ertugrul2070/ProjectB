@@ -27,7 +27,7 @@ namespace UI
 
         private void FilmDetails_Load(object sender, EventArgs e)
         {
-            label1.Text = chosenName; 
+            label1.Text = chosenName;
             pictureBox1.ImageLocation = chosenPic;
             //YTplayer.Movie = chosenLink;
             var embed = "<html><head>" +

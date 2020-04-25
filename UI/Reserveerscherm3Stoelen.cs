@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,7 +41,59 @@ namespace UI
 
         private void FormLoad_Paint(object sender, PaintEventArgs e)
         {
-            throw new System.NotImplementedException();
+            
         }
+
+        private void Schermtekst_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void S1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+        ComboBox addCB(int i,string[] jsnd)
+        {
+            List<string> dataUrl = new List<string>();
+
+            foreach (var line in jsnd) 
+            {
+                dataUrl.Add(line);            
+            }
+
+            
+            ComboBox l = new ComboBox();
+            l.Name = "DD" + i.ToString();
+            l.Margin = new Padding(6);
+            l.Height = 21;
+            l.Width = 40;
+            l.DropDownStyle = ComboBoxStyle.DropDownList;
+            l.DataSource = dataUrl;
+
+
+            return l;
+        }
+
+        private void Reserveerscherm3Stoelen_Load(object sender, EventArgs e)
+        {
+
+            string[] jsnd = File.ReadAllLines("Test_text.txt");
+            
+
+
+            int acb = Program._ReservationSession.CurrentReservation.ticketDictionary.Count;
+
+            for (int i = acb; i > 0; i--)
+            {
+                ComboBox l = addCB(i,jsnd);
+                DD_loop.Controls.Add(l);
+            }              
+               
+          
+        }
+
+       
     }
 }

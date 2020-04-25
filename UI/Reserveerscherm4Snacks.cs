@@ -55,7 +55,7 @@ namespace UI
 
         private void FormLoad_Paint(object sender, PaintEventArgs e)
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

@@ -32,6 +32,8 @@
             this.red_bovenkant = new System.Windows.Forms.Panel();
             this.black_panel = new System.Windows.Forms.Panel();
             this.FormLoad = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.DD_loop = new System.Windows.Forms.FlowLayoutPanel();
             this.Information = new System.Windows.Forms.Label();
             this.Next = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
@@ -42,6 +44,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +71,8 @@
             // FormLoad
             // 
             this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.FormLoad.Controls.Add(this.pictureBox2);
+            this.FormLoad.Controls.Add(this.DD_loop);
             this.FormLoad.Controls.Add(this.Information);
             this.FormLoad.Controls.Add(this.Next);
             this.FormLoad.Controls.Add(this.Back);
@@ -76,6 +81,23 @@
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
             this.FormLoad.TabIndex = 12;
             this.FormLoad.Paint += new System.Windows.Forms.PaintEventHandler(this.FormLoad_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.InitialImage = ((System.Drawing.Image) (resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(18, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(321, 217);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
+            // 
+            // DD_loop
+            // 
+            this.DD_loop.Location = new System.Drawing.Point(18, 246);
+            this.DD_loop.Name = "DD_loop";
+            this.DD_loop.Size = new System.Drawing.Size(321, 42);
+            this.DD_loop.TabIndex = 20;
             // 
             // Information
             // 
@@ -129,7 +151,7 @@
             // 
             // Receipt
             // 
-            this.Receipt.Location = new System.Drawing.Point(95, 8);
+            this.Receipt.Location = new System.Drawing.Point(87, 8);
             this.Receipt.Name = "Receipt";
             this.Receipt.Size = new System.Drawing.Size(88, 21);
             this.Receipt.TabIndex = 18;
@@ -168,8 +190,10 @@
             this.Controls.Add(this.red_bovenkant);
             this.Name = "Reserveerscherm3Stoelen";
             this.Text = "Reserveerscherm3Stoelen";
+            this.Load += new System.EventHandler(this.Reserveerscherm3Stoelen_Load);
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -178,11 +202,13 @@
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Panel black_panel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FlowLayoutPanel DD_loop;
         private System.Windows.Forms.Panel FormLoad;
         private System.Windows.Forms.Label Information;
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label Receipt;
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;

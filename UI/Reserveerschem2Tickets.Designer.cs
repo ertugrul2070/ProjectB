@@ -38,9 +38,9 @@
             this.Child = new System.Windows.Forms.Label();
             this.Normal = new System.Windows.Forms.Label();
             this.Back = new System.Windows.Forms.Button();
-            this.SurnameField = new System.Windows.Forms.TextBox();
-            this.NameField = new System.Windows.Forms.TextBox();
-            this.GenderField = new System.Windows.Forms.TextBox();
+            this.NormalField = new System.Windows.Forms.TextBox();
+            this.ChildField = new System.Windows.Forms.TextBox();
+            this.BoomerField = new System.Windows.Forms.TextBox();
             this.red_bovenkant = new System.Windows.Forms.Panel();
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
@@ -60,9 +60,9 @@
             this.FormLoad.Controls.Add(this.Child);
             this.FormLoad.Controls.Add(this.Normal);
             this.FormLoad.Controls.Add(this.Back);
-            this.FormLoad.Controls.Add(this.SurnameField);
-            this.FormLoad.Controls.Add(this.NameField);
-            this.FormLoad.Controls.Add(this.GenderField);
+            this.FormLoad.Controls.Add(this.NormalField);
+            this.FormLoad.Controls.Add(this.ChildField);
+            this.FormLoad.Controls.Add(this.BoomerField);
             this.FormLoad.Location = new System.Drawing.Point(211, 58);
             this.FormLoad.Name = "FormLoad";
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
@@ -148,26 +148,26 @@
             this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
-            // SurnameField
+            // NormalField
             // 
-            this.SurnameField.Location = new System.Drawing.Point(231, 84);
-            this.SurnameField.Name = "SurnameField";
-            this.SurnameField.Size = new System.Drawing.Size(96, 20);
-            this.SurnameField.TabIndex = 2;
+            this.NormalField.Location = new System.Drawing.Point(231, 84);
+            this.NormalField.Name = "NormalField";
+            this.NormalField.Size = new System.Drawing.Size(96, 20);
+            this.NormalField.TabIndex = 2;
             // 
-            // NameField
+            // ChildField
             // 
-            this.NameField.Location = new System.Drawing.Point(231, 135);
-            this.NameField.Name = "NameField";
-            this.NameField.Size = new System.Drawing.Size(96, 20);
-            this.NameField.TabIndex = 1;
+            this.ChildField.Location = new System.Drawing.Point(231, 135);
+            this.ChildField.Name = "ChildField";
+            this.ChildField.Size = new System.Drawing.Size(96, 20);
+            this.ChildField.TabIndex = 1;
             // 
-            // GenderField
+            // BoomerField
             // 
-            this.GenderField.Location = new System.Drawing.Point(231, 194);
-            this.GenderField.Name = "GenderField";
-            this.GenderField.Size = new System.Drawing.Size(96, 20);
-            this.GenderField.TabIndex = 0;
+            this.BoomerField.Location = new System.Drawing.Point(231, 194);
+            this.BoomerField.Name = "BoomerField";
+            this.BoomerField.Size = new System.Drawing.Size(96, 20);
+            this.BoomerField.TabIndex = 0;
             // 
             // red_bovenkant
             // 
@@ -215,20 +215,20 @@
 
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Panel black_panel;
+        private System.Windows.Forms.TextBox BoomerField;
         private System.Windows.Forms.Label Child;
+        private System.Windows.Forms.TextBox ChildField;
         private System.Windows.Forms.Panel FormLoad;
-        private System.Windows.Forms.TextBox GenderField;
         private System.Windows.Forms.Label Information;
-        private System.Windows.Forms.TextBox NameField;
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.Label Normal;
+        private System.Windows.Forms.TextBox NormalField;
         private System.Windows.Forms.Label Price1;
         private System.Windows.Forms.Label Price2;
         private System.Windows.Forms.Label Price3;
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
         private System.Windows.Forms.Label Senior;
-        private System.Windows.Forms.TextBox SurnameField;
 
         #endregion
     }

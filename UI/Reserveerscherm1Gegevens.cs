@@ -8,13 +8,10 @@ namespace UI
 {
     public partial class Reserveerscherm1Gegevens : Form
     {
-        public ReservationSession _ReservationSession;
-        
+
         public Reserveerscherm1Gegevens()
         {
             InitializeComponent();
-            _ReservationSession = new ReservationSession();
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -81,8 +78,7 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            // _ReservationSession.CurrentReservation = new ReservationAdministration();
-            _ReservationSession.CurrentReservation.AddCustomer(EmailField.Text, GenderField.Text,NameField.Text,SurnameField.Text,
+            Program._ReservationSession.CurrentReservation.AddCustomer(EmailField.Text, GenderField.Text,NameField.Text,SurnameField.Text,
                 AddressField.Text,PostcodeField.Text,CityField.Text, Int32.Parse(PhonenumberField.Text));
             Reserveerschem2Tickets nextForm = new Reserveerschem2Tickets();
             this.Hide();

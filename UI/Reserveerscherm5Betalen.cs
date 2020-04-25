@@ -19,7 +19,7 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            Reserveerscherm7Tijden nextForm = new Reserveerscherm7Tijden();
+            Reserveerscherm6Bevestiging nextForm = new Reserveerscherm6Bevestiging();
             this.Hide();
             nextForm.ShowDialog();
             this.Close();
