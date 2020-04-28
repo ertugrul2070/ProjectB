@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class Reserveerscherm3Stoelen
+    partial class Reserveerscherm7Tijden
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reserveerscherm3Stoelen));
             this.red_bovenkant = new System.Windows.Forms.Panel();
             this.black_panel = new System.Windows.Forms.Panel();
+            this.Red_onderkant = new System.Windows.Forms.Panel();
             this.FormLoad = new System.Windows.Forms.Panel();
+            this.Cinema = new System.Windows.Forms.Label();
             this.Information = new System.Windows.Forms.Label();
+            this.Time = new System.Windows.Forms.Label();
+            this.Date = new System.Windows.Forms.Label();
             this.Next = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
-            this.Red_onderkant = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Receipt = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.DD_loop = new System.Windows.Forms.FlowLayoutPanel();
+            this.cbCity = new System.Windows.Forms.ComboBox();
+            this.cbDate = new System.Windows.Forms.ComboBox();
+            this.cbTime = new System.Windows.Forms.ComboBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
             // 
             this.red_bovenkant.BackColor = System.Drawing.Color.DarkRed;
             this.red_bovenkant.Controls.Add(this.black_panel);
-            this.red_bovenkant.Location = new System.Drawing.Point(-4, 0);
+            this.red_bovenkant.Location = new System.Drawing.Point(1, 1);
             this.red_bovenkant.Margin = new System.Windows.Forms.Padding(2);
             this.red_bovenkant.Name = "red_bovenkant";
             this.red_bovenkant.Size = new System.Drawing.Size(828, 54);
-            this.red_bovenkant.TabIndex = 11;
+            this.red_bovenkant.TabIndex = 14;
             // 
             // black_panel
             // 
@@ -66,32 +64,69 @@
             this.black_panel.Size = new System.Drawing.Size(806, 14);
             this.black_panel.TabIndex = 3;
             // 
+            // Red_onderkant
+            // 
+            this.Red_onderkant.BackColor = System.Drawing.Color.DarkRed;
+            this.Red_onderkant.Location = new System.Drawing.Point(1, 420);
+            this.Red_onderkant.Margin = new System.Windows.Forms.Padding(2);
+            this.Red_onderkant.Name = "Red_onderkant";
+            this.Red_onderkant.Size = new System.Drawing.Size(801, 32);
+            this.Red_onderkant.TabIndex = 16;
+            // 
             // FormLoad
             // 
             this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
-            this.FormLoad.Controls.Add(this.DD_loop);
+            this.FormLoad.Controls.Add(this.cbTime);
+            this.FormLoad.Controls.Add(this.cbDate);
+            this.FormLoad.Controls.Add(this.cbCity);
+            this.FormLoad.Controls.Add(this.Cinema);
             this.FormLoad.Controls.Add(this.Information);
+            this.FormLoad.Controls.Add(this.Time);
+            this.FormLoad.Controls.Add(this.Date);
             this.FormLoad.Controls.Add(this.Next);
             this.FormLoad.Controls.Add(this.Back);
-            this.FormLoad.Location = new System.Drawing.Point(170, 67);
+            this.FormLoad.Location = new System.Drawing.Point(220, 58);
             this.FormLoad.Name = "FormLoad";
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
-            this.FormLoad.TabIndex = 12;
+            this.FormLoad.TabIndex = 17;
             this.FormLoad.Paint += new System.Windows.Forms.PaintEventHandler(this.FormLoad_Paint);
+            // 
+            // Cinema
+            // 
+            this.Cinema.Location = new System.Drawing.Point(43, 79);
+            this.Cinema.Name = "Cinema";
+            this.Cinema.Size = new System.Drawing.Size(88, 21);
+            this.Cinema.TabIndex = 22;
+            this.Cinema.Text = "Bioscoop:";
             // 
             // Information
             // 
-            this.Information.Location = new System.Drawing.Point(154, 8);
+            this.Information.Location = new System.Drawing.Point(154, 12);
             this.Information.Name = "Information";
             this.Information.Size = new System.Drawing.Size(88, 21);
             this.Information.TabIndex = 18;
-            this.Information.Text = "Stoelen";
-            this.Information.Click += new System.EventHandler(this.Information_Click);
+            this.Information.Text = "Reserveren";
+            // 
+            // Time
+            // 
+            this.Time.Location = new System.Drawing.Point(248, 79);
+            this.Time.Name = "Time";
+            this.Time.Size = new System.Drawing.Size(79, 21);
+            this.Time.TabIndex = 11;
+            this.Time.Text = "Tijd:";
+            // 
+            // Date
+            // 
+            this.Date.Location = new System.Drawing.Point(154, 79);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(79, 21);
+            this.Date.TabIndex = 10;
+            this.Date.Text = "Datum:";
             // 
             // Next
             // 
             this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
-            this.Next.Location = new System.Drawing.Point(221, 294);
+            this.Next.Location = new System.Drawing.Point(219, 259);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
             this.Next.TabIndex = 9;
@@ -102,7 +137,7 @@
             // Back
             // 
             this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Back.Location = new System.Drawing.Point(18, 294);
+            this.Back.Location = new System.Drawing.Point(18, 259);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
             this.Back.TabIndex = 8;
@@ -110,96 +145,61 @@
             this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
-            // Red_onderkant
+            // cbCity
             // 
-            this.Red_onderkant.BackColor = System.Drawing.Color.DarkRed;
-            this.Red_onderkant.Location = new System.Drawing.Point(1, 416);
-            this.Red_onderkant.Margin = new System.Windows.Forms.Padding(2);
-            this.Red_onderkant.Name = "Red_onderkant";
-            this.Red_onderkant.Size = new System.Drawing.Size(801, 32);
-            this.Red_onderkant.TabIndex = 13;
+            this.cbCity.FormattingEnabled = true;
+            this.cbCity.Location = new System.Drawing.Point(46, 104);
+            this.cbCity.Name = "cbCity";
+            this.cbCity.Size = new System.Drawing.Size(85, 21);
+            this.cbCity.TabIndex = 23;
             // 
-            // panel1
+            // cbDate
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
-            this.panel1.Controls.Add(this.Receipt);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(568, 67);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(207, 334);
-            this.panel1.TabIndex = 14;
+            this.cbDate.FormattingEnabled = true;
+            this.cbDate.Location = new System.Drawing.Point(148, 104);
+            this.cbDate.Name = "cbDate";
+            this.cbDate.Size = new System.Drawing.Size(85, 21);
+            this.cbDate.TabIndex = 24;
             // 
-            // Receipt
+            // cbTime
             // 
-            this.Receipt.Location = new System.Drawing.Point(87, 8);
-            this.Receipt.Name = "Receipt";
-            this.Receipt.Size = new System.Drawing.Size(88, 21);
-            this.Receipt.TabIndex = 18;
-            this.Receipt.Text = "Bon";
+            this.cbTime.FormattingEnabled = true;
+            this.cbTime.Location = new System.Drawing.Point(251, 104);
+            this.cbTime.Name = "cbTime";
+            this.cbTime.Size = new System.Drawing.Size(85, 21);
+            this.cbTime.TabIndex = 25;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
-            this.button1.Location = new System.Drawing.Point(221, 294);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 37);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Verder";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(23, 67);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 166);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // DD_loop
-            // 
-            this.DD_loop.Location = new System.Drawing.Point(18, 246);
-            this.DD_loop.Name = "DD_loop";
-            this.DD_loop.Size = new System.Drawing.Size(321, 42);
-            this.DD_loop.TabIndex = 20;
-            // 
-            // Reserveerscherm3Stoelen
+            // Reserveerscherm7Tijden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.FormLoad);
+            this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
-            this.Name = "Reserveerscherm3Stoelen";
-            this.Text = "Reserveerscherm3Stoelen";
-            this.Load += new System.EventHandler(this.Reserveerscherm3Stoelen_Load);
+            this.Name = "Reserveerscherm7Tijden";
+            this.Text = "Reserveerscherm7Tijden";
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Panel black_panel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label Cinema;
+        private System.Windows.Forms.Label Date;
         private System.Windows.Forms.Panel FormLoad;
         private System.Windows.Forms.Label Information;
         private System.Windows.Forms.Button Next;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label Receipt;
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
+        private System.Windows.Forms.Label Time;
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel DD_loop;
+        private System.Windows.Forms.ComboBox cbTime;
+        private System.Windows.Forms.ComboBox cbDate;
+        private System.Windows.Forms.ComboBox cbCity;
     }
 }

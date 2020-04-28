@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -53,16 +54,23 @@ namespace UI
 
         }
         
-        ComboBox addCB(int i)
+        ComboBox addCB(int i,string[] jsnd)
         {
-            var Data = new string[] { "hoi", "doei", "kak", "ertu" };
+            List<string> dataUrl = new List<string>();
+
+            foreach (var line in jsnd) 
+            {
+                dataUrl.Add(line);            
+            }
+
+            
             ComboBox l = new ComboBox();
             l.Name = "DD" + i.ToString();
             l.Margin = new Padding(6);
             l.Height = 21;
             l.Width = 40;
             l.DropDownStyle = ComboBoxStyle.DropDownList;
-            l.DataSource = Data;
+            l.DataSource = dataUrl;
 
 
             return l;
@@ -70,17 +78,22 @@ namespace UI
 
         private void Reserveerscherm3Stoelen_Load(object sender, EventArgs e)
         {
+
+            string[] jsnd = File.ReadAllLines("Test_text.txt");
+            
+
+
             int acb = Program._ReservationSession.CurrentReservation.ticketDictionary.Count;
 
             for (int i = acb; i > 0; i--)
             {
-                ComboBox l = addCB(i);
+                ComboBox l = addCB(i,jsnd);
                 DD_loop.Controls.Add(l);
             }              
                
           
         }
 
-        
+       
     }
 }

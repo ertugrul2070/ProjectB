@@ -90,7 +90,7 @@ namespace UI
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Back.Location = new System.Drawing.Point(18, 247);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -101,7 +101,7 @@ namespace UI
             // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
             this.Next.Location = new System.Drawing.Point(219, 247);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -192,7 +192,7 @@ namespace UI
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
             this.FormLoad.Controls.Add(this.EmailField);
             this.FormLoad.Controls.Add(this.PhonenumberField);
             this.FormLoad.Controls.Add(this.CityField);
@@ -278,7 +278,7 @@ namespace UI
             // 
             // btnRegister
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
             this.btnRegister.Location = new System.Drawing.Point(18, 290);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(118, 37);
@@ -289,7 +289,7 @@ namespace UI
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
             this.btnLogin.Location = new System.Drawing.Point(219, 290);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(118, 37);
@@ -313,34 +313,36 @@ namespace UI
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Label address;
-        public System.Windows.Forms.TextBox AddressField;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Panel black_panel;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Label City;
-        public System.Windows.Forms.TextBox CityField;
         private System.Windows.Forms.Label Email;
-        public System.Windows.Forms.TextBox EmailField;
         private System.Windows.Forms.Panel FormLoad;
         private System.Windows.Forms.Label Gender;
-        public System.Windows.Forms.TextBox GenderField;
         private System.Windows.Forms.Label Information;
-        public System.Windows.Forms.TextBox NameField;
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.Label Phonenumber;
-        public System.Windows.Forms.TextBox PhonenumberField;
         private System.Windows.Forms.Label Postcode;
-        public System.Windows.Forms.TextBox PostcodeField;
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
         private System.Windows.Forms.Label Surname;
-        public System.Windows.Forms.TextBox SurnameField;
         private System.Windows.Forms.Label UserName;
 
         #endregion
+
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Button btnLogin;
+        public System.Windows.Forms.TextBox AddressField;
+        public System.Windows.Forms.TextBox SurnameField;
+        public System.Windows.Forms.TextBox NameField;
+        public System.Windows.Forms.TextBox GenderField;
+        public System.Windows.Forms.TextBox EmailField;
+        public System.Windows.Forms.TextBox PhonenumberField;
+        public System.Windows.Forms.TextBox CityField;
+        public System.Windows.Forms.TextBox PostcodeField;
     }
 }

@@ -50,7 +50,7 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.FormLoad.Controls.Add(this.Next);
             this.FormLoad.Controls.Add(this.Price3);
             this.FormLoad.Controls.Add(this.Price2);
@@ -70,7 +70,7 @@
             // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
             this.Next.Location = new System.Drawing.Point(209, 259);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -139,7 +139,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
             this.Back.Location = new System.Drawing.Point(18, 259);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -211,25 +211,24 @@
             this.FormLoad.PerformLayout();
             this.red_bovenkant.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Panel black_panel;
-        private System.Windows.Forms.Label Child;
-        private System.Windows.Forms.Panel FormLoad;
         private System.Windows.Forms.TextBox BoomerField;
-        private System.Windows.Forms.Label Information;
+        private System.Windows.Forms.Label Child;
         private System.Windows.Forms.TextBox ChildField;
+        private System.Windows.Forms.Panel FormLoad;
+        private System.Windows.Forms.Label Information;
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.Label Normal;
+        private System.Windows.Forms.TextBox NormalField;
         private System.Windows.Forms.Label Price1;
         private System.Windows.Forms.Label Price2;
         private System.Windows.Forms.Label Price3;
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
         private System.Windows.Forms.Label Senior;
-        private System.Windows.Forms.TextBox NormalField;
 
         #endregion
     }

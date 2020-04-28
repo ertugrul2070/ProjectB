@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Snacks>
+  <snack ID="1000">
+    <Name>Popcorn</Name>
+    <Price>3,00</Price>
+    <Type>Small</Type>
+  </snack>
+  <snack ID="1001">
+    <Name>Popcorn</Name>
+    <Price>3,00</Price>
+    <Type>Medium</Type>
+  </snack>
+  <snack ID="1002">
+    <Name>Popcorn</Name>
+    <Price>3,00</Price>
+    <Type>Large</Type>
+  </snack>
+  <snack ID="1003">
+    <Name>Cola</Name>
+    <Price>3,00</Price>
+    <Type>Large</Type>
+  </snack>
+  <snack ID="1004">
+    <Name>Fanta</Name>
+    <Price>3,00</Price>
+    <Type>Large</Type>
+  </snack>
+  <snack ID="1005">
+    <Name>Water</Name>
+    <Price>3,00</Price>
+    <Type>Large</Type>
+  </snack>
+</Snacks>

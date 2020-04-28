@@ -12,9 +12,15 @@ namespace UI
 {
     public partial class Reserveerscherm7Tijden : Form
     {
+
+        public List<string> cinemaList = new List<string>();
+        public List<DateTime> dateLis = new List<DateTime>();
+
+
         public Reserveerscherm7Tijden()
         {
             InitializeComponent();
+            fillBoxes();
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -51,6 +57,11 @@ namespace UI
             this.Hide();
             nextForm.ShowDialog();
             this.Close();
+        }
+
+        private void fillBoxes()
+        {
+            //Vul de combobexes met juiste plekken en tijden voor de gekozen film
         }
     }
 }
