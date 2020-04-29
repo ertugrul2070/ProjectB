@@ -54,8 +54,9 @@ namespace UI
 
         }
         
-        ComboBox addCB(int i,string[] jsnd)
+        ComboBox addCB(int i)
         {
+            /*
             List<string> dataUrl = new List<string>();
 
             foreach (var line in jsnd) 
@@ -71,24 +72,22 @@ namespace UI
             l.Width = 40;
             l.DropDownStyle = ComboBoxStyle.DropDownList;
             l.DataSource = dataUrl;
+            */
 
-
+            ComboBox l = new ComboBox();
             return l;
+            
         }
 
         private void Reserveerscherm3Stoelen_Load(object sender, EventArgs e)
         {
-
-            string[] jsnd = File.ReadAllLines("Test_text.txt");
             
-
-
             int acb = Program._ReservationSession.CurrentReservation.ticketDictionary.Count;
 
             for (int i = acb; i > 0; i--)
             {
-                ComboBox l = addCB(i,jsnd);
-                DD_loop.Controls.Add(l);
+                //ComboBox l = addCB(i);
+                //DD_loop.Controls.Add(l);
             }              
                
           

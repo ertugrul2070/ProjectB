@@ -97,12 +97,19 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            Program._ReservationSession.CurrentReservation.AddCustomer(EmailField.Text, GenderField.Text,NameField.Text,SurnameField.Text,
-                AddressField.Text,PostcodeField.Text,CityField.Text, Int32.Parse(PhonenumberField.Text));
-            Reserveerschem2Tickets nextForm = new Reserveerschem2Tickets();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            if (GenderField.Text != "" && NameField.Text != "" && SurnameField.Text != "" && AddressField.Text != "" && PostcodeField.Text != "" && CityField.Text != "" && PhonenumberField.Text != "" && EmailField.Text != "")
+            {
+                Program._ReservationSession.CurrentReservation.AddCustomer(EmailField.Text, GenderField.Text, NameField.Text, SurnameField.Text,
+                AddressField.Text, PostcodeField.Text, CityField.Text, Int32.Parse(PhonenumberField.Text));
+                Reserveerschem2Tickets nextForm = new Reserveerschem2Tickets();
+                this.Hide();
+                nextForm.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Vul alle velden in AUB");
+            }
         }
 
         private void NameField_TextChanged(object sender, EventArgs e)

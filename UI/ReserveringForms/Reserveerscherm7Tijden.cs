@@ -13,14 +13,9 @@ namespace UI
     public partial class Reserveerscherm7Tijden : Form
     {
 
-        public List<string> cinemaList = new List<string>();
-        public List<DateTime> dateLis = new List<DateTime>();
-
-
         public Reserveerscherm7Tijden()
         {
             InitializeComponent();
-            fillBoxes();
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -45,10 +40,19 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            Reserveerscherm3Stoelen nextForm = new Reserveerscherm3Stoelen();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            if (cbCity.SelectedIndex > -1 && cbDate.SelectedIndex > -1 && cbTime.SelectedIndex > -1)
+            {
+                Program._ReservationSession.CurrentReservation.AddPlaceDateTime(cbCity.Text, cbDate.Text, cbTime.Text);
+
+                Reserveerscherm3Stoelen nextForm = new Reserveerscherm3Stoelen();
+                this.Hide();
+                nextForm.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Zorg aub dat u alles geselecteerd heeft.");
+            }
         }
 
         private void Back_Click(object sender, EventArgs e)
@@ -57,11 +61,6 @@ namespace UI
             this.Hide();
             nextForm.ShowDialog();
             this.Close();
-        }
-
-        private void fillBoxes()
-        {
-            //Vul de combobexes met juiste plekken en tijden voor de gekozen film
         }
     }
 }
