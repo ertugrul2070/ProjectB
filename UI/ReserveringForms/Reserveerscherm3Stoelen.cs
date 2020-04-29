@@ -54,14 +54,10 @@ namespace UI
 
         }
         
-        ComboBox addCB(int i,string[] jsnd)
+        ComboBox addCB(int i)
         {
             List<string> dataUrl = new List<string>();
 
-            foreach (var line in jsnd) 
-            {
-                dataUrl.Add(line);            
-            }
 
             
             ComboBox l = new ComboBox();
@@ -79,7 +75,7 @@ namespace UI
         private void Reserveerscherm3Stoelen_Load(object sender, EventArgs e)
         {
 
-            string[] jsnd = File.ReadAllLines("Test_text.txt");
+           
             
 
 
@@ -87,7 +83,7 @@ namespace UI
 
             for (int i = acb; i > 0; i--)
             {
-                ComboBox l = addCB(i,jsnd);
+                ComboBox l = addCB(i);
                 DD_loop.Controls.Add(l);
             }              
                
