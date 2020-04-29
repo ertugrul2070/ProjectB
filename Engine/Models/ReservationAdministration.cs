@@ -10,6 +10,11 @@ namespace Engine.Models
         public Custommer custommer;
         public Dictionary<string, double> ticketDictionary= new Dictionary<string, double>();
 
+        public string location;
+        public string date;
+        public string time;
+
+
         public ReservationAdministration()
         {
             
@@ -21,9 +26,11 @@ namespace Engine.Models
            this.custommer = new Custommer(email, gender, name, surname, streetadress, postcode, city, phonenumber);
         }
 
-        public void AddPlaceDateTime(string location, string date, int time)
+        public void AddPlaceDateTime(string location, string date, string time)
         {
-
+            this.location = location;
+            this.date = date;
+            this.time = time;
         }
 
         public void AddTickets(string ID, double price)
