@@ -30,7 +30,7 @@ namespace Engine.ViewModels
             {
                 dbc.cnn.Open();
 
-                string query = "SELECT COUNT(*) as newResID FROM `reservations`.`reservationstable`";
+                string query = "SELECT COUNT(*) as newResID FROM `mydb`.`reservations`";
 
                 MySqlCommand command = new MySqlCommand(query, dbc.cnn);
                 MySqlDataReader reader = command.ExecuteReader();

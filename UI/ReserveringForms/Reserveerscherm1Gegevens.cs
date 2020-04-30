@@ -97,12 +97,19 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            Program._ReservationSession.CurrentReservation.AddCustomer(EmailField.Text, GenderField.Text,NameField.Text,SurnameField.Text,
-                AddressField.Text,PostcodeField.Text,CityField.Text, Int32.Parse(PhonenumberField.Text));
-            Reserveerschem2Tickets nextForm = new Reserveerschem2Tickets();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            if (GenderField.Text != "" && NameField.Text != "" && SurnameField.Text != "" && AddressField.Text != "" && PostcodeField.Text != "" && CityField.Text != "" && PhonenumberField.Text != "" && EmailField.Text != "")
+            {
+                Program._ReservationSession.CurrentReservation.AddCustomer(EmailField.Text, GenderField.Text, NameField.Text, SurnameField.Text,
+                AddressField.Text, PostcodeField.Text, CityField.Text, Int32.Parse(PhonenumberField.Text));
+                Reserveerschem2Tickets nextForm = new Reserveerschem2Tickets();
+                this.Hide();
+                nextForm.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Vul alle velden in AUB");
+            }
         }
 
         private void NameField_TextChanged(object sender, EventArgs e)
@@ -132,12 +139,6 @@ namespace UI
             {
                 e.Handled = true;
             }
-            
-            // If you want, you can allow decimal (float) numbers
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -160,7 +161,7 @@ namespace UI
             {
                 dbc.cnn.Open();
 
-                string selectQuery = "SELECT * FROM `customers`.`custromers`";
+                string selectQuery = "SELECT * FROM `mydb`.`customers`";
                 MySqlCommand command = new MySqlCommand(selectQuery, dbc.cnn);
 
                 MySqlDataReader dataReader = command.ExecuteReader();
@@ -208,15 +209,15 @@ namespace UI
             string city = CityField.Text;
             string phonenumber = PhonenumberField.Text;
 
-            PasswordScreen();
-
             if (!CheckIfUserExists(userEmail))
             {
+                PasswordScreen();
+
                 try
                 {
                     dbc.cnn.Open();
 
-                    string query = "INSERT INTO `customers`.`custromers` (`firstName`, `lastName`, `gender`, `adress`, `zipCode`, `city`, `phoneNumber`, `email`, `password`) VALUES ('"+ firstName + "', '"+ lastName + "', '"+ gender + "', '"+ inputAddress + "', '"+ zipcode + "', '"+ city + "', '"+ phonenumber +"', '" + userEmail + "', '"+ _password +"');";
+                    string query = "INSERT INTO `mydb`.`customers` (`firstName`, `lastName`, `gender`, `adress`, `zipCode`, `city`, `phoneNumber`, `email`, `password`) VALUES ('"+ firstName + "', '"+ lastName + "', '"+ gender + "', '"+ inputAddress + "', '"+ zipcode + "', '"+ city + "', '"+ phonenumber +"', '" + userEmail + "', '"+ _password +"');";
 
                     MySqlCommand command = new MySqlCommand(query, dbc.cnn);
 

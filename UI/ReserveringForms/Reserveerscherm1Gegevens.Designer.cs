@@ -233,6 +233,7 @@ namespace UI
             this.PhonenumberField.Name = "PhonenumberField";
             this.PhonenumberField.Size = new System.Drawing.Size(100, 20);
             this.PhonenumberField.TabIndex = 27;
+            this.PhonenumberField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PhonenumberField_KeyPress);
             // 
             // CityField
             // 
