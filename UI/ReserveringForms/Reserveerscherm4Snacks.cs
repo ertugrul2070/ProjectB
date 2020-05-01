@@ -14,11 +14,13 @@ namespace UI
     {
         public List<string> snacks = new List<string>();
         public double totaal;
+        public Dictionary<string, double> snackDict = new Dictionary<string, double>();
 
         public Reserveerscherm4Snacks()
         {
             InitializeComponent();
             UpdateTotaal();
+            FillSnackDict();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -149,6 +151,40 @@ namespace UI
         private void UpdateBon()
         {
             rtbBon.Lines = snacks.ToArray();
+        }
+
+        private void FillSnackDict()
+        {
+            snackDict.Add("Popcorn Zoet Klein", 3.5);
+            snackDict.Add("Popcorn Zout Klein", 3.5);
+            snackDict.Add("Popcorn Mix Klein", 3.5);
+            snackDict.Add("Popcorn Zoet Middel", 4.5);
+            snackDict.Add("Popcorn Zout Middel", 4.5);
+            snackDict.Add("Popcorn Mix Middel", 4.5);
+            snackDict.Add("Popcorn Zoet Groot", 5.5);
+            snackDict.Add("Popcorn Zout Groot", 5.5);
+            snackDict.Add("Popcorn Mix Groot", 5.5);
+            snackDict.Add("Cola", 3.5);
+            snackDict.Add("Fanta", 3.5);
+            snackDict.Add("Water", 2.5);
+        }
+
+        private void btnDeleteItem_Click(object sender, EventArgs e)
+        {
+            int snacksAmount = snacks.Count - 1;
+            string snackToRemove = snacks[snacksAmount];
+
+            snacks.RemoveAt(snacksAmount);
+
+            double removedSnackPrice;
+
+            if (snackDict.TryGetValue(snackToRemove, out removedSnackPrice))
+            {
+                totaal -= removedSnackPrice;
+            }
+
+            UpdateTotaal();
+            UpdateBon();
         }
     }
 }

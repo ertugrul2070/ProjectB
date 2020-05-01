@@ -33,6 +33,8 @@
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
             this.Receipt1 = new System.Windows.Forms.Panel();
+            this.rtbTotaal = new System.Windows.Forms.RichTextBox();
+            this.rtbBon = new System.Windows.Forms.RichTextBox();
             this.Receipt = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.FormLoad = new System.Windows.Forms.Panel();
@@ -57,8 +59,7 @@
             this.Next = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rtbBon = new System.Windows.Forms.RichTextBox();
-            this.rtbTotaal = new System.Windows.Forms.RichTextBox();
+            this.btnDeleteItem = new System.Windows.Forms.Button();
             this.red_bovenkant.SuspendLayout();
             this.Receipt1.SuspendLayout();
             this.FormLoad.SuspendLayout();
@@ -96,6 +97,7 @@
             // Receipt1
             // 
             this.Receipt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.Receipt1.Controls.Add(this.btnDeleteItem);
             this.Receipt1.Controls.Add(this.rtbTotaal);
             this.Receipt1.Controls.Add(this.rtbBon);
             this.Receipt1.Controls.Add(this.Receipt);
@@ -104,6 +106,26 @@
             this.Receipt1.Name = "Receipt1";
             this.Receipt1.Size = new System.Drawing.Size(207, 334);
             this.Receipt1.TabIndex = 15;
+            // 
+            // rtbTotaal
+            // 
+            this.rtbTotaal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.rtbTotaal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbTotaal.Location = new System.Drawing.Point(4, 262);
+            this.rtbTotaal.Name = "rtbTotaal";
+            this.rtbTotaal.Size = new System.Drawing.Size(200, 36);
+            this.rtbTotaal.TabIndex = 20;
+            this.rtbTotaal.Text = "";
+            // 
+            // rtbBon
+            // 
+            this.rtbBon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.rtbBon.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbBon.Location = new System.Drawing.Point(4, 29);
+            this.rtbBon.Name = "rtbBon";
+            this.rtbBon.Size = new System.Drawing.Size(200, 227);
+            this.rtbBon.TabIndex = 19;
+            this.rtbBon.Text = "";
             // 
             // Receipt
             // 
@@ -360,25 +382,16 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
-            // rtbBon
+            // btnDeleteItem
             // 
-            this.rtbBon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
-            this.rtbBon.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbBon.Location = new System.Drawing.Point(4, 29);
-            this.rtbBon.Name = "rtbBon";
-            this.rtbBon.Size = new System.Drawing.Size(200, 270);
-            this.rtbBon.TabIndex = 19;
-            this.rtbBon.Text = "";
-            // 
-            // rtbTotaal
-            // 
-            this.rtbTotaal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
-            this.rtbTotaal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbTotaal.Location = new System.Drawing.Point(4, 294);
-            this.rtbTotaal.Name = "rtbTotaal";
-            this.rtbTotaal.Size = new System.Drawing.Size(200, 37);
-            this.rtbTotaal.TabIndex = 20;
-            this.rtbTotaal.Text = "";
+            this.btnDeleteItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDeleteItem.Location = new System.Drawing.Point(0, 304);
+            this.btnDeleteItem.Name = "btnDeleteItem";
+            this.btnDeleteItem.Size = new System.Drawing.Size(204, 27);
+            this.btnDeleteItem.TabIndex = 36;
+            this.btnDeleteItem.Text = "Verwijder laatste item";
+            this.btnDeleteItem.UseVisualStyleBackColor = false;
+            this.btnDeleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
             // 
             // Reserveerscherm4Snacks
             // 
@@ -433,5 +446,6 @@
 
         private System.Windows.Forms.RichTextBox rtbBon;
         private System.Windows.Forms.RichTextBox rtbTotaal;
+        private System.Windows.Forms.Button btnDeleteItem;
     }
 }
