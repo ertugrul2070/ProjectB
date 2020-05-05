@@ -35,9 +35,11 @@
             this.PopcornPlaza_Logo = new System.Windows.Forms.PictureBox();
             this.Zwarte_Balk = new System.Windows.Forms.PictureBox();
             this.Rode_Balk = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize) (this.PopcornPlaza_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.Zwarte_Balk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.Rode_Balk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PopcornPlaza_Tekst
@@ -70,7 +72,7 @@
             // 
             this.Binnenkort_Tekst.AutoSize = true;
             this.Binnenkort_Tekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.Binnenkort_Tekst.Location = new System.Drawing.Point(264, 332);
+            this.Binnenkort_Tekst.Location = new System.Drawing.Point(260, 357);
             this.Binnenkort_Tekst.Name = "Binnenkort_Tekst";
             this.Binnenkort_Tekst.Size = new System.Drawing.Size(294, 26);
             this.Binnenkort_Tekst.TabIndex = 14;
@@ -82,15 +84,19 @@
             this.filmPanel1.Name = "filmPanel1";
             this.filmPanel1.Size = new System.Drawing.Size(807, 201);
             this.filmPanel1.TabIndex = 18;
+            this.filmPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.filmPanel1_Paint);
             // 
             // PopcornPlaza_Logo
             // 
+            this.PopcornPlaza_Logo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PopcornPlaza_Logo.ImageLocation = "https://i.imgur.com/OPnRgAV.png";
             this.PopcornPlaza_Logo.Location = new System.Drawing.Point(12, 0);
             this.PopcornPlaza_Logo.Name = "PopcornPlaza_Logo";
             this.PopcornPlaza_Logo.Size = new System.Drawing.Size(41, 39);
             this.PopcornPlaza_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PopcornPlaza_Logo.TabIndex = 11;
             this.PopcornPlaza_Logo.TabStop = false;
+            this.PopcornPlaza_Logo.Click += new System.EventHandler(this.PopcornPlaza_Logo_Click);
             // 
             // Zwarte_Balk
             // 
@@ -110,12 +116,24 @@
             this.Rode_Balk.TabIndex = 3;
             this.Rode_Balk.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ImageLocation = "https://i.imgur.com/OnxfcML.jpg";
+            this.pictureBox1.Location = new System.Drawing.Point(25, 74);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(780, 255);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Overzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(831, 618);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.filmPanel1);
             this.Controls.Add(this.Binnenkort_Tekst);
             this.Controls.Add(this.Films_Knop);
@@ -129,6 +147,7 @@
             ((System.ComponentModel.ISupportInitialize) (this.PopcornPlaza_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.Zwarte_Balk)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.Rode_Balk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
@@ -136,6 +155,7 @@
         private System.Windows.Forms.Label Binnenkort_Tekst;
         private System.Windows.Forms.FlowLayoutPanel filmPanel1;
         private System.Windows.Forms.Button Films_Knop;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox PopcornPlaza_Logo;
         private System.Windows.Forms.Label PopcornPlaza_Tekst;
         private System.Windows.Forms.PictureBox Rode_Balk;

@@ -62,7 +62,7 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.FormLoad.Controls.Add(this.btnrRegister);
             this.FormLoad.Controls.Add(this.txtPassword2);
             this.FormLoad.Controls.Add(this.txtPassword);
@@ -116,7 +116,7 @@
             // 
             // Information
             // 
-            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.Information.Location = new System.Drawing.Point(41, 12);
             this.Information.Name = "Information";
             this.Information.Size = new System.Drawing.Size(161, 25);
@@ -147,20 +147,19 @@
             this.FormLoad.PerformLayout();
             this.red_bovenkant.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel Red_onderkant;
         private System.Windows.Forms.Panel black_panel;
-        private System.Windows.Forms.Panel FormLoad;
         private System.Windows.Forms.Button btnrRegister;
-        private System.Windows.Forms.TextBox txtPassword2;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel FormLoad;
         private System.Windows.Forms.Label Information;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel red_bovenkant;
+        private System.Windows.Forms.Panel Red_onderkant;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtPassword2;
+
+        #endregion
     }
 }

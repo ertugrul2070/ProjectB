@@ -81,5 +81,17 @@ namespace UI
             nextForm.ShowDialog();
             this.Close();
         }
+
+        private void filmPanel1_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void PopcornPlaza_Logo_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

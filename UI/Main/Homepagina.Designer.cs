@@ -92,6 +92,8 @@
             // 
             // PopcornPlaza_Logo
             // 
+            this.PopcornPlaza_Logo.BackColor = System.Drawing.SystemColors.WindowText;
+            this.PopcornPlaza_Logo.ImageLocation = "https://i.imgur.com/OPnRgAV.png";
             this.PopcornPlaza_Logo.Location = new System.Drawing.Point(12, 0);
             this.PopcornPlaza_Logo.Name = "PopcornPlaza_Logo";
             this.PopcornPlaza_Logo.Size = new System.Drawing.Size(41, 39);
