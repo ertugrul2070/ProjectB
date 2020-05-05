@@ -34,6 +34,12 @@
             this.FormLoad = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.DD_loop = new System.Windows.Forms.FlowLayoutPanel();
+            this.CB1 = new System.Windows.Forms.ComboBox();
+            this.CB2 = new System.Windows.Forms.ComboBox();
+            this.CB3 = new System.Windows.Forms.ComboBox();
+            this.CB4 = new System.Windows.Forms.ComboBox();
+            this.CB5 = new System.Windows.Forms.ComboBox();
+            this.CB6 = new System.Windows.Forms.ComboBox();
             this.Information = new System.Windows.Forms.Label();
             this.Next = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
@@ -44,9 +50,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.DD_loop.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -70,7 +77,7 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
             this.FormLoad.Controls.Add(this.pictureBox2);
             this.FormLoad.Controls.Add(this.DD_loop);
             this.FormLoad.Controls.Add(this.Information);
@@ -84,7 +91,8 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.InitialImage = ((System.Drawing.Image) (resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Image = global::UI.Properties.Resources.bioscoopplat;
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
             this.pictureBox2.Location = new System.Drawing.Point(18, 23);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(321, 217);
@@ -94,10 +102,142 @@
             // 
             // DD_loop
             // 
+            this.DD_loop.Controls.Add(this.CB1);
+            this.DD_loop.Controls.Add(this.CB2);
+            this.DD_loop.Controls.Add(this.CB3);
+            this.DD_loop.Controls.Add(this.CB4);
+            this.DD_loop.Controls.Add(this.CB5);
+            this.DD_loop.Controls.Add(this.CB6);
             this.DD_loop.Location = new System.Drawing.Point(18, 246);
             this.DD_loop.Name = "DD_loop";
             this.DD_loop.Size = new System.Drawing.Size(321, 42);
             this.DD_loop.TabIndex = 20;
+            // 
+            // CB1
+            // 
+            this.CB1.FormattingEnabled = true;
+            this.CB1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.CB1.Location = new System.Drawing.Point(3, 3);
+            this.CB1.Name = "CB1";
+            this.CB1.Size = new System.Drawing.Size(41, 21);
+            this.CB1.TabIndex = 0;
+            this.CB1.Text = "0";
+            this.CB1.Visible = false;
+            // 
+            // CB2
+            // 
+            this.CB2.FormattingEnabled = true;
+            this.CB2.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.CB2.Location = new System.Drawing.Point(50, 3);
+            this.CB2.Name = "CB2";
+            this.CB2.Size = new System.Drawing.Size(41, 21);
+            this.CB2.TabIndex = 1;
+            this.CB2.Text = "0";
+            this.CB2.Visible = false;
+            // 
+            // CB3
+            // 
+            this.CB3.FormattingEnabled = true;
+            this.CB3.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.CB3.Location = new System.Drawing.Point(97, 3);
+            this.CB3.Name = "CB3";
+            this.CB3.Size = new System.Drawing.Size(41, 21);
+            this.CB3.TabIndex = 2;
+            this.CB3.Text = "0";
+            this.CB3.Visible = false;
+            // 
+            // CB4
+            // 
+            this.CB4.FormattingEnabled = true;
+            this.CB4.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.CB4.Location = new System.Drawing.Point(144, 3);
+            this.CB4.Name = "CB4";
+            this.CB4.Size = new System.Drawing.Size(41, 21);
+            this.CB4.TabIndex = 3;
+            this.CB4.Text = "0";
+            this.CB4.Visible = false;
+            // 
+            // CB5
+            // 
+            this.CB5.FormattingEnabled = true;
+            this.CB5.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.CB5.Location = new System.Drawing.Point(191, 3);
+            this.CB5.Name = "CB5";
+            this.CB5.Size = new System.Drawing.Size(41, 21);
+            this.CB5.TabIndex = 4;
+            this.CB5.Text = "0";
+            this.CB5.Visible = false;
+            // 
+            // CB6
+            // 
+            this.CB6.FormattingEnabled = true;
+            this.CB6.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.CB6.Location = new System.Drawing.Point(238, 3);
+            this.CB6.Name = "CB6";
+            this.CB6.Size = new System.Drawing.Size(41, 21);
+            this.CB6.TabIndex = 5;
+            this.CB6.Text = "0";
+            this.CB6.Visible = false;
             // 
             // Information
             // 
@@ -110,7 +250,7 @@
             // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
             this.Next.Location = new System.Drawing.Point(221, 294);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -121,7 +261,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Back.Location = new System.Drawing.Point(18, 294);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -141,7 +281,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
             this.panel1.Controls.Add(this.Receipt);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(568, 67);
@@ -159,7 +299,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
             this.button1.Location = new System.Drawing.Point(221, 294);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 37);
@@ -170,7 +310,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image) (resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(23, 67);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 166);
@@ -194,10 +334,12 @@
             this.Load += new System.EventHandler(this.Reserveerscherm3Stoelen_Load);
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.DD_loop.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Button Back;
@@ -215,5 +357,12 @@
         private System.Windows.Forms.Panel Red_onderkant;
 
         #endregion
+
+        private System.Windows.Forms.ComboBox CB1;
+        private System.Windows.Forms.ComboBox CB2;
+        private System.Windows.Forms.ComboBox CB3;
+        private System.Windows.Forms.ComboBox CB4;
+        private System.Windows.Forms.ComboBox CB5;
+        private System.Windows.Forms.ComboBox CB6;
     }
 }
