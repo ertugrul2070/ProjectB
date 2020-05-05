@@ -47,7 +47,7 @@ namespace UI
 
         private void Back_Click(object sender, EventArgs e)
         {
-            Reserveerscherm5Betalen nextForm = new Reserveerscherm5Betalen();
+            Reserveerscherm3Stoelen nextForm = new Reserveerscherm3Stoelen();
             this.Hide();
             nextForm.ShowDialog();
             this.Close();
