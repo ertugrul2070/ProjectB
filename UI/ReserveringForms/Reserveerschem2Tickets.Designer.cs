@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.FormLoad = new System.Windows.Forms.Panel();
+            this.tickets = new System.Windows.Forms.Label();
             this.Next = new System.Windows.Forms.Button();
             this.Price3 = new System.Windows.Forms.Label();
             this.Price2 = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@
             // FormLoad
             // 
             this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.FormLoad.Controls.Add(this.tickets);
             this.FormLoad.Controls.Add(this.Next);
             this.FormLoad.Controls.Add(this.Price3);
             this.FormLoad.Controls.Add(this.Price2);
@@ -67,6 +69,16 @@
             this.FormLoad.Name = "FormLoad";
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
             this.FormLoad.TabIndex = 9;
+            // 
+            // tickets
+            // 
+            this.tickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.tickets.ForeColor = System.Drawing.Color.Red;
+            this.tickets.Location = new System.Drawing.Point(57, 45);
+            this.tickets.Name = "tickets";
+            this.tickets.Size = new System.Drawing.Size(285, 21);
+            this.tickets.TabIndex = 23;
+            this.tickets.Text = "LET OP: MAXIMAAL 6 TICKETS IN TOTAAL PER BESTELLING";
             // 
             // Next
             // 
@@ -111,6 +123,7 @@
             this.Information.Size = new System.Drawing.Size(88, 21);
             this.Information.TabIndex = 18;
             this.Information.Text = "Tickets";
+            this.Information.Click += new System.EventHandler(this.Information_Click);
             // 
             // Senior
             // 
@@ -154,6 +167,7 @@
             this.NormalField.Name = "NormalField";
             this.NormalField.Size = new System.Drawing.Size(96, 20);
             this.NormalField.TabIndex = 2;
+            this.NormalField.Text = "0";
             // 
             // ChildField
             // 
@@ -161,6 +175,7 @@
             this.ChildField.Name = "ChildField";
             this.ChildField.Size = new System.Drawing.Size(96, 20);
             this.ChildField.TabIndex = 1;
+            this.ChildField.Text = "0";
             // 
             // BoomerField
             // 
@@ -168,6 +183,7 @@
             this.BoomerField.Name = "BoomerField";
             this.BoomerField.Size = new System.Drawing.Size(96, 20);
             this.BoomerField.TabIndex = 0;
+            this.BoomerField.Text = "0";
             // 
             // red_bovenkant
             // 
@@ -230,9 +246,8 @@
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
         private System.Windows.Forms.Label Senior;
+        private System.Windows.Forms.Label tickets;
 
         #endregion
-
-        private System.Windows.Forms.Label tickets;
     }
 }
