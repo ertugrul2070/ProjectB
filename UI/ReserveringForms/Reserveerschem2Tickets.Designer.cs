@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.FormLoad = new System.Windows.Forms.Panel();
-            this.tickets = new System.Windows.Forms.Label();
             this.Next = new System.Windows.Forms.Button();
             this.Price3 = new System.Windows.Forms.Label();
             this.Price2 = new System.Windows.Forms.Label();
@@ -45,13 +44,14 @@
             this.red_bovenkant = new System.Windows.Forms.Panel();
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
+            this.tickets = new System.Windows.Forms.Label();
             this.FormLoad.SuspendLayout();
             this.red_bovenkant.SuspendLayout();
             this.SuspendLayout();
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
             this.FormLoad.Controls.Add(this.tickets);
             this.FormLoad.Controls.Add(this.Next);
             this.FormLoad.Controls.Add(this.Price3);
@@ -70,19 +70,9 @@
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
             this.FormLoad.TabIndex = 9;
             // 
-            // tickets
-            // 
-            this.tickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.tickets.ForeColor = System.Drawing.Color.Red;
-            this.tickets.Location = new System.Drawing.Point(57, 45);
-            this.tickets.Name = "tickets";
-            this.tickets.Size = new System.Drawing.Size(285, 21);
-            this.tickets.TabIndex = 23;
-            this.tickets.Text = "LET OP: MAXIMAAL 6 TICKETS IN TOTAAL PER BESTELLING";
-            // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
             this.Next.Location = new System.Drawing.Point(209, 259);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -152,7 +142,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Back.Location = new System.Drawing.Point(18, 259);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -213,6 +203,16 @@
             this.Red_onderkant.Size = new System.Drawing.Size(801, 32);
             this.Red_onderkant.TabIndex = 11;
             // 
+            // tickets
+            // 
+            this.tickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tickets.ForeColor = System.Drawing.Color.Red;
+            this.tickets.Location = new System.Drawing.Point(57, 45);
+            this.tickets.Name = "tickets";
+            this.tickets.Size = new System.Drawing.Size(285, 21);
+            this.tickets.TabIndex = 23;
+            this.tickets.Text = "LET OP: MAXIMAAL 6 TICKETS IN TOTAAL PER BESTELLING";
+            // 
             // Reserveerschem2Tickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,6 +228,7 @@
             this.FormLoad.PerformLayout();
             this.red_bovenkant.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Button Back;
@@ -246,8 +247,9 @@
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
         private System.Windows.Forms.Label Senior;
-        private System.Windows.Forms.Label tickets;
 
         #endregion
+
+        private System.Windows.Forms.Label tickets;
     }
 }
