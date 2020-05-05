@@ -43,7 +43,7 @@
             this.Terug = new System.Windows.Forms.Button();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -76,7 +76,7 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.FormLoad.Controls.Add(this.Thanks);
             this.FormLoad.Controls.Add(this.pictureBox1);
             this.FormLoad.Controls.Add(this.Zaal);
@@ -96,13 +96,12 @@
             this.Thanks.Name = "Thanks";
             this.Thanks.Size = new System.Drawing.Size(181, 42);
             this.Thanks.TabIndex = 23;
-            this.Thanks.Text = "Hartelijk dank voor uw reservering. Wij wensen u alvast een prettige voorstelling" +
-    "!";
+            this.Thanks.Text = "Hartelijk dank voor uw reservering. Wij wensen u alvast een prettige voorstelling" + "!";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image) (resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(22, 57);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 166);
@@ -152,7 +151,7 @@
             // 
             // Terug
             // 
-            this.Terug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.Terug.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
             this.Terug.Location = new System.Drawing.Point(98, 267);
             this.Terug.Name = "Terug";
             this.Terug.Size = new System.Drawing.Size(161, 37);
@@ -170,24 +169,24 @@
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
             this.Name = "Reserveerscherm6Bevestiging";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reserveerscherm6Bevestiging";
             this.Load += new System.EventHandler(this.Reserveerscherm6Bevestiging_Load);
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         private System.Windows.Forms.Panel black_panel;
         private System.Windows.Forms.Panel FormLoad;
-        private System.Windows.Forms.Button Terug;
         private System.Windows.Forms.Label Information;
         private System.Windows.Forms.Label Movie;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Place;
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
+        private System.Windows.Forms.Button Terug;
         private System.Windows.Forms.Label Thanks;
         private System.Windows.Forms.Label Time;
         private System.Windows.Forms.Label Zaal;

@@ -189,6 +189,7 @@
             this.Controls.Add(this.FormLoad);
             this.Controls.Add(this.red_bovenkant);
             this.Name = "Reserveerscherm3Stoelen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reserveerscherm3Stoelen";
             this.Load += new System.EventHandler(this.Reserveerscherm3Stoelen_Load);
             this.red_bovenkant.ResumeLayout(false);

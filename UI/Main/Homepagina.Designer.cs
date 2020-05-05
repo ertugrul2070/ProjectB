@@ -151,6 +151,7 @@
             this.Controls.Add(this.Rode_Balk);
             this.Controls.Add(this.Actueel_Tekst);
             this.Name = "Homepage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Popcorn Plaza";
             this.Load += new System.EventHandler(this.Homepage_Load);
             ((System.ComponentModel.ISupportInitialize) (this.PopcornPlaza_Logo)).EndInit();
