@@ -31,8 +31,7 @@ namespace UI
         {
 
         }
-        
-        
+
         private void Next_Click(object sender, EventArgs e)
         {
             addTickets();
