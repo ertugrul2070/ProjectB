@@ -105,6 +105,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Name = "FilmDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FilmDetails";
             this.Load += new System.EventHandler(this.FilmDetails_Load);
             this.flowLayoutPanel1.ResumeLayout(false);

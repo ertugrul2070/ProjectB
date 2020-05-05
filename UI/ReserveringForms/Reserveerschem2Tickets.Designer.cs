@@ -206,6 +206,7 @@
             this.Controls.Add(this.red_bovenkant);
             this.Controls.Add(this.FormLoad);
             this.Name = "Reserveerschem2Tickets";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();

@@ -198,6 +198,7 @@
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
             this.Name = "Reserveerscherm5Betalen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reserveerscherm5Betalen";
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
