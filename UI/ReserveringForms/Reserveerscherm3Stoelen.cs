@@ -32,10 +32,28 @@ namespace UI
         }
 
         private void Next_Click(object sender, EventArgs e)
-        { 
+        {
+            int abc = Program._ReservationSession.CurrentReservation.ticketDictionary.Count;
+            bool check = true;
+
+            int [] cbarray = { CB1.SelectedIndex, CB2.SelectedIndex, CB3.SelectedIndex, CB4.SelectedIndex, CB5.SelectedIndex, CB6.SelectedIndex };
 
 
-            if (CB1.SelectedIndex > -1 && CB2.SelectedIndex > -1 && CB3.SelectedIndex > -1 && CB4.SelectedIndex > -1 && CB5.SelectedIndex > -1  && CB6.SelectedIndex > -1)
+            for (int i = 0; i < abc; i++)
+            {
+                if (cbarray[i] > -1)
+                {
+                    check = check && true;
+
+                }
+
+                else
+                {
+                    check = check && false;
+                }
+            }
+
+            if (check)
             {
 
                 string[] CB = { CB1.Text, CB2.Text, CB3.Text, CB4.Text, CB5.Text, CB6.Text };
@@ -44,6 +62,7 @@ namespace UI
                 {
                     MessageBox.Show("U heeft dubbele stoelen gekozen. Kies opnieuw.");
                 }
+
 
                 else
                 {
