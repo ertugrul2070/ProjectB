@@ -40,7 +40,7 @@
             // 
             // nButton
             // 
-            this.nButton.Location = new System.Drawing.Point(103, 610);
+            this.nButton.Location = new System.Drawing.Point(90, 549);
             this.nButton.Name = "nButton";
             this.nButton.Size = new System.Drawing.Size(256, 54);
             this.nButton.TabIndex = 7;
@@ -55,7 +55,7 @@
             this.flowLayoutPanel1.Controls.Add(this.label2);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(198, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(197, 305);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(238, 285);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // label2
@@ -86,7 +86,7 @@
             // 
             // webBrowser2
             // 
-            this.webBrowser2.Location = new System.Drawing.Point(51, 348);
+            this.webBrowser2.Location = new System.Drawing.Point(53, 303);
             this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser2.Name = "webBrowser2";
             this.webBrowser2.ScrollBarsEnabled = false;
@@ -98,7 +98,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 724);
+            this.ClientSize = new System.Drawing.Size(448, 615);
             this.Controls.Add(this.webBrowser2);
             this.Controls.Add(this.nButton);
             this.Controls.Add(this.flowLayoutPanel1);
