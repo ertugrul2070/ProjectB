@@ -31,15 +31,30 @@ namespace UI
         {
 
         }
-
+        
+        
         private void Next_Click(object sender, EventArgs e)
         {
             addTickets();
 
-            Reserveerscherm7Tijden nextForm = new Reserveerscherm7Tijden();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            if (Convert.ToInt32(NormalField.Text) < 0 || Convert.ToInt32(ChildField.Text) < 0 || Convert.ToInt32(BoomerField.Text) < 0)
+            {
+                MessageBox.Show("Kies aub tussen 1 en 6 tickets.");
+
+               
+            }
+            
+            
+
+            else
+            {
+                Reserveerscherm7Tijden nextForm = new Reserveerscherm7Tijden();
+                this.Hide();
+                nextForm.ShowDialog();
+                this.Close();
+            }
+
+ 
             
         }
 
@@ -81,6 +96,11 @@ namespace UI
                     Program._ReservationSession.CurrentReservation.AddTickets(IDS, 8.0);
                 }
             }
+
+        }
+
+        private void Information_Click(object sender, EventArgs e)
+        {
 
         }
     }

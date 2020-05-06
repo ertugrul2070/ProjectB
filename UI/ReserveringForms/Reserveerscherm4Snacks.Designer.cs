@@ -404,6 +404,7 @@
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
             this.Name = "Reserveerscherm4Snacks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reserveerscherm4Snacks";
             this.red_bovenkant.ResumeLayout(false);
             this.Receipt1.ResumeLayout(false);
