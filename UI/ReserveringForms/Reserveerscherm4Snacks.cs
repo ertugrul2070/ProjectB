@@ -55,7 +55,7 @@ namespace UI
         {
             snacks.Clear();
 
-            Reserveerscherm5Betalen nextForm = new Reserveerscherm5Betalen();
+            Reserveerscherm3Stoelen nextForm = new Reserveerscherm3Stoelen();
             this.Hide();
             nextForm.ShowDialog();
             this.Close();
