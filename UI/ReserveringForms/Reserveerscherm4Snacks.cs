@@ -45,6 +45,8 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
+            // stuur de snacklijst door naar reservation administration
+
             Reserveerscherm5Betalen nextForm = new Reserveerscherm5Betalen();
             this.Hide();
             nextForm.ShowDialog();
