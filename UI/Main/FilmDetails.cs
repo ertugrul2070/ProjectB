@@ -54,7 +54,12 @@ namespace UI
 
         private void nButton_Click(object sender, EventArgs e)
         {
-            Reserveerscherm1Gegevens nextForm = new Reserveerscherm1Gegevens();
+            /*Reserveerscherm1Gegevens nextForm = new Reserveerscherm1Gegevens();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();*/
+
+            Reserveerscherm7Tijden nextForm = new Reserveerscherm7Tijden();
             this.Hide();
             nextForm.ShowDialog();
             this.Close();

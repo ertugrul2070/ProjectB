@@ -46,6 +46,7 @@ namespace UI
             this.Email = new System.Windows.Forms.Label();
             this.Information = new System.Windows.Forms.Label();
             this.FormLoad = new System.Windows.Forms.Panel();
+            this.genderBox = new System.Windows.Forms.ComboBox();
             this.EmailField = new System.Windows.Forms.TextBox();
             this.PhonenumberField = new System.Windows.Forms.TextBox();
             this.CityField = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@ namespace UI
             this.NameField = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.genderBox = new System.Windows.Forms.ComboBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
             this.SuspendLayout();
@@ -220,6 +220,20 @@ namespace UI
             this.FormLoad.TabIndex = 8;
             this.FormLoad.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // genderBox
+            // 
+            this.genderBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.genderBox.FormattingEnabled = true;
+            this.genderBox.Items.AddRange(new object[] {
+            "Man",
+            "Vrouw",
+            "Anders",
+            "Wil ik niet zeggen"});
+            this.genderBox.Location = new System.Drawing.Point(157, 43);
+            this.genderBox.Name = "genderBox";
+            this.genderBox.Size = new System.Drawing.Size(100, 21);
+            this.genderBox.TabIndex = 30;
+            // 
             // EmailField
             // 
             this.EmailField.Location = new System.Drawing.Point(157, 218);
@@ -246,6 +260,7 @@ namespace UI
             // PostcodeField
             // 
             this.PostcodeField.Location = new System.Drawing.Point(157, 145);
+            this.PostcodeField.MaxLength = 6;
             this.PostcodeField.Name = "PostcodeField";
             this.PostcodeField.Size = new System.Drawing.Size(100, 20);
             this.PostcodeField.TabIndex = 25;
@@ -292,19 +307,6 @@ namespace UI
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // genderBox
-            // 
-            this.genderBox.FormattingEnabled = true;
-            this.genderBox.Items.AddRange(new object[] {
-            "Man",
-            "Vrouw",
-            "Anders",
-            "WIl ik niet zeggen"});
-            this.genderBox.Location = new System.Drawing.Point(157, 48);
-            this.genderBox.Name = "genderBox";
-            this.genderBox.Size = new System.Drawing.Size(100, 21);
-            this.genderBox.TabIndex = 29;
             // 
             // Reserveerscherm1Gegevens
             // 
