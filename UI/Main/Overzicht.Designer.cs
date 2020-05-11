@@ -36,17 +36,17 @@
             this.Zwarte_Balk = new System.Windows.Forms.PictureBox();
             this.Rode_Balk = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize) (this.PopcornPlaza_Logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.Zwarte_Balk)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.Rode_Balk)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PopcornPlaza_Logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Zwarte_Balk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rode_Balk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PopcornPlaza_Tekst
             // 
             this.PopcornPlaza_Tekst.AutoSize = true;
             this.PopcornPlaza_Tekst.BackColor = System.Drawing.SystemColors.Desktop;
-            this.PopcornPlaza_Tekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.PopcornPlaza_Tekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PopcornPlaza_Tekst.Location = new System.Drawing.Point(69, 9);
             this.PopcornPlaza_Tekst.Name = "PopcornPlaza_Tekst";
             this.PopcornPlaza_Tekst.Size = new System.Drawing.Size(124, 20);
@@ -55,10 +55,10 @@
             // 
             // Films_Knop
             // 
-            this.Films_Knop.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (64)))), ((int) (((byte) (64)))), ((int) (((byte) (64)))));
-            this.Films_Knop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (64)))), ((int) (((byte) (64)))), ((int) (((byte) (64)))));
+            this.Films_Knop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Films_Knop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Films_Knop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Films_Knop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.Films_Knop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Films_Knop.ForeColor = System.Drawing.SystemColors.Window;
             this.Films_Knop.Location = new System.Drawing.Point(12, 35);
             this.Films_Knop.Name = "Films_Knop";
@@ -71,12 +71,12 @@
             // Binnenkort_Tekst
             // 
             this.Binnenkort_Tekst.AutoSize = true;
-            this.Binnenkort_Tekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.Binnenkort_Tekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Binnenkort_Tekst.Location = new System.Drawing.Point(260, 357);
             this.Binnenkort_Tekst.Name = "Binnenkort_Tekst";
-            this.Binnenkort_Tekst.Size = new System.Drawing.Size(294, 26);
+            this.Binnenkort_Tekst.Size = new System.Drawing.Size(210, 26);
             this.Binnenkort_Tekst.TabIndex = 14;
-            this.Binnenkort_Tekst.Text = "Binnenkort in de bioscoop:";
+            this.Binnenkort_Tekst.Text = "Nu in de bioscoop:";
             // 
             // filmPanel1
             // 
@@ -145,12 +145,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Overzicht_Load);
-            ((System.ComponentModel.ISupportInitialize) (this.PopcornPlaza_Logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.Zwarte_Balk)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.Rode_Balk)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PopcornPlaza_Logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Zwarte_Balk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rode_Balk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.Label Binnenkort_Tekst;
