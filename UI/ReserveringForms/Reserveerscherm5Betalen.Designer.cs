@@ -42,11 +42,11 @@
             this.Back = new System.Windows.Forms.Button();
             this.SurnameField = new System.Windows.Forms.TextBox();
             this.NameField = new System.Windows.Forms.TextBox();
-            this.GenderField = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -79,7 +79,8 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.Controls.Add(this.comboBox1);
             this.FormLoad.Controls.Add(this.Creditcard);
             this.FormLoad.Controls.Add(this.Information);
             this.FormLoad.Controls.Add(this.Valid);
@@ -89,7 +90,6 @@
             this.FormLoad.Controls.Add(this.Back);
             this.FormLoad.Controls.Add(this.SurnameField);
             this.FormLoad.Controls.Add(this.NameField);
-            this.FormLoad.Controls.Add(this.GenderField);
             this.FormLoad.Location = new System.Drawing.Point(223, 60);
             this.FormLoad.Name = "FormLoad";
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
@@ -125,7 +125,7 @@
             this.CVC.Name = "CVC";
             this.CVC.Size = new System.Drawing.Size(79, 21);
             this.CVC.TabIndex = 11;
-            this.CVC.Text = "CVC:";
+            this.CVC.Text = "CVV:";
             // 
             // Passnumber
             // 
@@ -137,7 +137,7 @@
             // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
             this.Next.Location = new System.Drawing.Point(219, 259);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -148,7 +148,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Back.Location = new System.Drawing.Point(18, 259);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -159,34 +159,55 @@
             // SurnameField
             // 
             this.SurnameField.Location = new System.Drawing.Point(157, 84);
+            this.SurnameField.MaxLength = 19;
             this.SurnameField.Name = "SurnameField";
             this.SurnameField.Size = new System.Drawing.Size(180, 20);
             this.SurnameField.TabIndex = 2;
+            this.SurnameField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SurnameField_KeyPress);
             // 
             // NameField
             // 
             this.NameField.Location = new System.Drawing.Point(157, 135);
+            this.NameField.MaxLength = 3;
             this.NameField.Name = "NameField";
             this.NameField.Size = new System.Drawing.Size(72, 20);
             this.NameField.TabIndex = 1;
             // 
-            // GenderField
-            // 
-            this.GenderField.Location = new System.Drawing.Point(157, 195);
-            this.GenderField.Name = "GenderField";
-            this.GenderField.Size = new System.Drawing.Size(72, 20);
-            this.GenderField.TabIndex = 0;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image) (resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(49, 72);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 166);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026",
+            "2027",
+            "2028",
+            "2029",
+            "2030",
+            "2031",
+            "2032",
+            "2033",
+            "2034",
+            "2035"});
+            this.comboBox1.Location = new System.Drawing.Point(157, 193);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 23;
             // 
             // Reserveerscherm5Betalen
             // 
@@ -203,8 +224,9 @@
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Button Back;
@@ -212,7 +234,6 @@
         private System.Windows.Forms.Label Creditcard;
         private System.Windows.Forms.Label CVC;
         private System.Windows.Forms.Panel FormLoad;
-        private System.Windows.Forms.TextBox GenderField;
         private System.Windows.Forms.Label Information;
         private System.Windows.Forms.TextBox NameField;
         private System.Windows.Forms.Button Next;
@@ -224,5 +245,7 @@
         private System.Windows.Forms.Label Valid;
 
         #endregion
+
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
