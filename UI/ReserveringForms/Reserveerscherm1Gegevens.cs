@@ -101,7 +101,7 @@ namespace UI
             {
                 Program._ReservationSession.CurrentReservation.AddCustomer(EmailField.Text, genderBox.Text, NameField.Text, SurnameField.Text,
                 AddressField.Text, PostcodeField.Text, CityField.Text, Int32.Parse(PhonenumberField.Text));
-                Reserveerschem2Tickets nextForm = new Reserveerschem2Tickets();
+                Reserveerscherm5Betalen nextForm = new Reserveerscherm5Betalen();
                 this.Hide();
                 nextForm.ShowDialog();
                 this.Close();
