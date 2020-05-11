@@ -142,6 +142,7 @@
             this.Controls.Add(this.FormLoad);
             this.Controls.Add(this.red_bovenkant);
             this.Name = "Loginscherm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginScreen";
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();

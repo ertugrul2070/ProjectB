@@ -21,34 +21,6 @@ namespace Engine.ViewModels
             CurrentReservation.AddCustomer("hhh@hotmail.com","Male", "Homer", "Simpson", 
                 "Pyong Yang 17", "321312","Parkweg", 061345665);
 
-            makeReservationID();
-        }
-
-        private void makeReservationID()
-        {
-            try
-            {
-                dbc.cnn.Open();
-
-                string query = "SELECT COUNT(*) as newResID FROM `mydb`.`reservations`";
-
-                MySqlCommand command = new MySqlCommand(query, dbc.cnn);
-                MySqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    _reservationID = reader.GetInt32("newResID") + 1;
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            finally
-            {
-                dbc.cnn.Close();
-            }
         }
     }
 }
