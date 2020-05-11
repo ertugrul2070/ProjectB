@@ -43,7 +43,9 @@
             this.SurnameField = new System.Windows.Forms.TextBox();
             this.NameField = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dagBox = new System.Windows.Forms.ComboBox();
+            this.maandBox = new System.Windows.Forms.ComboBox();
+            this.jaarBox = new System.Windows.Forms.ComboBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,7 +82,9 @@
             // FormLoad
             // 
             this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
-            this.FormLoad.Controls.Add(this.comboBox1);
+            this.FormLoad.Controls.Add(this.jaarBox);
+            this.FormLoad.Controls.Add(this.maandBox);
+            this.FormLoad.Controls.Add(this.dagBox);
             this.FormLoad.Controls.Add(this.Creditcard);
             this.FormLoad.Controls.Add(this.Information);
             this.FormLoad.Controls.Add(this.Valid);
@@ -184,11 +188,75 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
-            // comboBox1
+            // dagBox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.dagBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dagBox.FormattingEnabled = true;
+            this.dagBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.dagBox.Location = new System.Drawing.Point(157, 191);
+            this.dagBox.Name = "dagBox";
+            this.dagBox.Size = new System.Drawing.Size(48, 21);
+            this.dagBox.TabIndex = 24;
+            // 
+            // maandBox
+            // 
+            this.maandBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.maandBox.FormattingEnabled = true;
+            this.maandBox.Items.AddRange(new object[] {
+            "Januari",
+            "Februari",
+            "Maart",
+            "April",
+            "Mei",
+            "Juni",
+            "Juli",
+            "Augustus",
+            "September",
+            "Oktober",
+            "November",
+            "December"});
+            this.maandBox.Location = new System.Drawing.Point(211, 191);
+            this.maandBox.Name = "maandBox";
+            this.maandBox.Size = new System.Drawing.Size(72, 21);
+            this.maandBox.TabIndex = 25;
+            // 
+            // jaarBox
+            // 
+            this.jaarBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.jaarBox.FormattingEnabled = true;
+            this.jaarBox.Items.AddRange(new object[] {
+            "2020",
             "2021",
             "2022",
             "2023",
@@ -204,10 +272,10 @@
             "2033",
             "2034",
             "2035"});
-            this.comboBox1.Location = new System.Drawing.Point(157, 193);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 23;
+            this.jaarBox.Location = new System.Drawing.Point(289, 191);
+            this.jaarBox.Name = "jaarBox";
+            this.jaarBox.Size = new System.Drawing.Size(48, 21);
+            this.jaarBox.TabIndex = 26;
             // 
             // Reserveerscherm5Betalen
             // 
@@ -245,7 +313,8 @@
         private System.Windows.Forms.Label Valid;
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox dagBox;
+        private System.Windows.Forms.ComboBox maandBox;
+        private System.Windows.Forms.ComboBox jaarBox;
     }
 }
