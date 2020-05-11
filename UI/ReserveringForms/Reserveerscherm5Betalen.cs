@@ -53,5 +53,13 @@ namespace UI
         {
 
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Reserveerscherm4Snacks nextForm = new Reserveerscherm4Snacks();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
+        }
     }
 }

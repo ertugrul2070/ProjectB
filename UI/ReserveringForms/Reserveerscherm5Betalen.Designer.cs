@@ -33,6 +33,9 @@
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
             this.FormLoad = new System.Windows.Forms.Panel();
+            this.jaarBox = new System.Windows.Forms.ComboBox();
+            this.maandBox = new System.Windows.Forms.ComboBox();
+            this.dagBox = new System.Windows.Forms.ComboBox();
             this.Creditcard = new System.Windows.Forms.Label();
             this.Information = new System.Windows.Forms.Label();
             this.Valid = new System.Windows.Forms.Label();
@@ -43,9 +46,6 @@
             this.SurnameField = new System.Windows.Forms.TextBox();
             this.NameField = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dagBox = new System.Windows.Forms.ComboBox();
-            this.maandBox = new System.Windows.Forms.ComboBox();
-            this.jaarBox = new System.Windows.Forms.ComboBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -98,6 +98,95 @@
             this.FormLoad.Name = "FormLoad";
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
             this.FormLoad.TabIndex = 16;
+            // 
+            // jaarBox
+            // 
+            this.jaarBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.jaarBox.FormattingEnabled = true;
+            this.jaarBox.Items.AddRange(new object[] {
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026",
+            "2027",
+            "2028",
+            "2029",
+            "2030",
+            "2031",
+            "2032",
+            "2033",
+            "2034",
+            "2035"});
+            this.jaarBox.Location = new System.Drawing.Point(289, 191);
+            this.jaarBox.Name = "jaarBox";
+            this.jaarBox.Size = new System.Drawing.Size(48, 21);
+            this.jaarBox.TabIndex = 26;
+            // 
+            // maandBox
+            // 
+            this.maandBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.maandBox.FormattingEnabled = true;
+            this.maandBox.Items.AddRange(new object[] {
+            "Januari",
+            "Februari",
+            "Maart",
+            "April",
+            "Mei",
+            "Juni",
+            "Juli",
+            "Augustus",
+            "September",
+            "Oktober",
+            "November",
+            "December"});
+            this.maandBox.Location = new System.Drawing.Point(211, 191);
+            this.maandBox.Name = "maandBox";
+            this.maandBox.Size = new System.Drawing.Size(72, 21);
+            this.maandBox.TabIndex = 25;
+            // 
+            // dagBox
+            // 
+            this.dagBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dagBox.FormattingEnabled = true;
+            this.dagBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.dagBox.Location = new System.Drawing.Point(157, 191);
+            this.dagBox.Name = "dagBox";
+            this.dagBox.Size = new System.Drawing.Size(48, 21);
+            this.dagBox.TabIndex = 24;
             // 
             // Creditcard
             // 
@@ -159,6 +248,7 @@
             this.Back.TabIndex = 8;
             this.Back.Text = "Terug";
             this.Back.UseVisualStyleBackColor = false;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // SurnameField
             // 
@@ -187,95 +277,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
-            // 
-            // dagBox
-            // 
-            this.dagBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dagBox.FormattingEnabled = true;
-            this.dagBox.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.dagBox.Location = new System.Drawing.Point(157, 191);
-            this.dagBox.Name = "dagBox";
-            this.dagBox.Size = new System.Drawing.Size(48, 21);
-            this.dagBox.TabIndex = 24;
-            // 
-            // maandBox
-            // 
-            this.maandBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.maandBox.FormattingEnabled = true;
-            this.maandBox.Items.AddRange(new object[] {
-            "Januari",
-            "Februari",
-            "Maart",
-            "April",
-            "Mei",
-            "Juni",
-            "Juli",
-            "Augustus",
-            "September",
-            "Oktober",
-            "November",
-            "December"});
-            this.maandBox.Location = new System.Drawing.Point(211, 191);
-            this.maandBox.Name = "maandBox";
-            this.maandBox.Size = new System.Drawing.Size(72, 21);
-            this.maandBox.TabIndex = 25;
-            // 
-            // jaarBox
-            // 
-            this.jaarBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.jaarBox.FormattingEnabled = true;
-            this.jaarBox.Items.AddRange(new object[] {
-            "2020",
-            "2021",
-            "2022",
-            "2023",
-            "2024",
-            "2025",
-            "2026",
-            "2027",
-            "2028",
-            "2029",
-            "2030",
-            "2031",
-            "2032",
-            "2033",
-            "2034",
-            "2035"});
-            this.jaarBox.Location = new System.Drawing.Point(289, 191);
-            this.jaarBox.Name = "jaarBox";
-            this.jaarBox.Size = new System.Drawing.Size(48, 21);
-            this.jaarBox.TabIndex = 26;
             // 
             // Reserveerscherm5Betalen
             // 
