@@ -33,18 +33,23 @@
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
             this.FormLoad = new System.Windows.Forms.Panel();
+            this.Stoelen = new System.Windows.Forms.Label();
             this.Thanks = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblZaal = new System.Windows.Forms.Label();
+            this.pbMovie = new System.Windows.Forms.PictureBox();
+            this.Zaal = new System.Windows.Forms.Label();
             this.Information = new System.Windows.Forms.Label();
-            this.lblPlaats = new System.Windows.Forms.Label();
-            this.lblTijd = new System.Windows.Forms.Label();
-            this.lblFilm = new System.Windows.Forms.Label();
+            this.Plaats = new System.Windows.Forms.Label();
+            this.Tijd = new System.Windows.Forms.Label();
+            this.Film = new System.Windows.Forms.Label();
             this.Terug = new System.Windows.Forms.Button();
+            this.lblFilm = new System.Windows.Forms.Label();
+            this.lblZaal = new System.Windows.Forms.Label();
+            this.lblTijd = new System.Windows.Forms.Label();
+            this.lblPlaats = new System.Windows.Forms.Label();
             this.lblStoelen = new System.Windows.Forms.Label();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -79,18 +84,31 @@
             // 
             this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
             this.FormLoad.Controls.Add(this.lblStoelen);
-            this.FormLoad.Controls.Add(this.Thanks);
-            this.FormLoad.Controls.Add(this.pictureBox1);
-            this.FormLoad.Controls.Add(this.lblZaal);
-            this.FormLoad.Controls.Add(this.Information);
             this.FormLoad.Controls.Add(this.lblPlaats);
             this.FormLoad.Controls.Add(this.lblTijd);
+            this.FormLoad.Controls.Add(this.lblZaal);
             this.FormLoad.Controls.Add(this.lblFilm);
+            this.FormLoad.Controls.Add(this.Stoelen);
+            this.FormLoad.Controls.Add(this.Thanks);
+            this.FormLoad.Controls.Add(this.pbMovie);
+            this.FormLoad.Controls.Add(this.Zaal);
+            this.FormLoad.Controls.Add(this.Information);
+            this.FormLoad.Controls.Add(this.Plaats);
+            this.FormLoad.Controls.Add(this.Tijd);
+            this.FormLoad.Controls.Add(this.Film);
             this.FormLoad.Controls.Add(this.Terug);
             this.FormLoad.Location = new System.Drawing.Point(220, 58);
             this.FormLoad.Name = "FormLoad";
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
             this.FormLoad.TabIndex = 17;
+            // 
+            // Stoelen
+            // 
+            this.Stoelen.Location = new System.Drawing.Point(154, 141);
+            this.Stoelen.Name = "Stoelen";
+            this.Stoelen.Size = new System.Drawing.Size(57, 21);
+            this.Stoelen.TabIndex = 24;
+            this.Stoelen.Text = "Stoelen:";
             // 
             // Thanks
             // 
@@ -101,24 +119,24 @@
             this.Thanks.Text = "Hartelijk dank voor uw reservering. Wij wensen u alvast een prettige voorstelling" +
     "!";
             // 
-            // pictureBox1
+            // pbMovie
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 57);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 166);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
+            this.pbMovie.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pbMovie.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbMovie.InitialImage")));
+            this.pbMovie.Location = new System.Drawing.Point(22, 57);
+            this.pbMovie.Name = "pbMovie";
+            this.pbMovie.Size = new System.Drawing.Size(117, 166);
+            this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMovie.TabIndex = 19;
+            this.pbMovie.TabStop = false;
             // 
-            // lblZaal
+            // Zaal
             // 
-            this.lblZaal.Location = new System.Drawing.Point(154, 78);
-            this.lblZaal.Name = "lblZaal";
-            this.lblZaal.Size = new System.Drawing.Size(42, 21);
-            this.lblZaal.TabIndex = 22;
-            this.lblZaal.Text = "Zaal:";
+            this.Zaal.Location = new System.Drawing.Point(154, 78);
+            this.Zaal.Name = "Zaal";
+            this.Zaal.Size = new System.Drawing.Size(42, 21);
+            this.Zaal.TabIndex = 22;
+            this.Zaal.Text = "Zaal:";
             // 
             // Information
             // 
@@ -128,29 +146,29 @@
             this.Information.TabIndex = 18;
             this.Information.Text = "Bevestiging";
             // 
-            // lblPlaats
+            // Plaats
             // 
-            this.lblPlaats.Location = new System.Drawing.Point(154, 120);
-            this.lblPlaats.Name = "lblPlaats";
-            this.lblPlaats.Size = new System.Drawing.Size(42, 21);
-            this.lblPlaats.TabIndex = 12;
-            this.lblPlaats.Text = "Plaats:";
+            this.Plaats.Location = new System.Drawing.Point(154, 120);
+            this.Plaats.Name = "Plaats";
+            this.Plaats.Size = new System.Drawing.Size(42, 21);
+            this.Plaats.TabIndex = 12;
+            this.Plaats.Text = "Plaats:";
             // 
-            // lblTijd
+            // Tijd
             // 
-            this.lblTijd.Location = new System.Drawing.Point(154, 99);
-            this.lblTijd.Name = "lblTijd";
-            this.lblTijd.Size = new System.Drawing.Size(42, 21);
-            this.lblTijd.TabIndex = 11;
-            this.lblTijd.Text = "Tijd:";
+            this.Tijd.Location = new System.Drawing.Point(154, 99);
+            this.Tijd.Name = "Tijd";
+            this.Tijd.Size = new System.Drawing.Size(42, 21);
+            this.Tijd.TabIndex = 11;
+            this.Tijd.Text = "Tijd:";
             // 
-            // lblFilm
+            // Film
             // 
-            this.lblFilm.Location = new System.Drawing.Point(154, 57);
-            this.lblFilm.Name = "lblFilm";
-            this.lblFilm.Size = new System.Drawing.Size(42, 21);
-            this.lblFilm.TabIndex = 10;
-            this.lblFilm.Text = "Film:";
+            this.Film.Location = new System.Drawing.Point(154, 57);
+            this.Film.Name = "Film";
+            this.Film.Size = new System.Drawing.Size(42, 21);
+            this.Film.TabIndex = 10;
+            this.Film.Text = "Film:";
             // 
             // Terug
             // 
@@ -163,13 +181,50 @@
             this.Terug.UseVisualStyleBackColor = false;
             this.Terug.Click += new System.EventHandler(this.Next_Click);
             // 
+            // lblFilm
+            // 
+            this.lblFilm.AutoSize = true;
+            this.lblFilm.Location = new System.Drawing.Point(203, 57);
+            this.lblFilm.Name = "lblFilm";
+            this.lblFilm.Size = new System.Drawing.Size(9, 13);
+            this.lblFilm.TabIndex = 25;
+            this.lblFilm.Text = "|";
+            // 
+            // lblZaal
+            // 
+            this.lblZaal.AutoSize = true;
+            this.lblZaal.Location = new System.Drawing.Point(203, 78);
+            this.lblZaal.Name = "lblZaal";
+            this.lblZaal.Size = new System.Drawing.Size(9, 13);
+            this.lblZaal.TabIndex = 26;
+            this.lblZaal.Text = "|";
+            // 
+            // lblTijd
+            // 
+            this.lblTijd.AutoSize = true;
+            this.lblTijd.Location = new System.Drawing.Point(203, 99);
+            this.lblTijd.Name = "lblTijd";
+            this.lblTijd.Size = new System.Drawing.Size(9, 13);
+            this.lblTijd.TabIndex = 27;
+            this.lblTijd.Text = "|";
+            // 
+            // lblPlaats
+            // 
+            this.lblPlaats.AutoSize = true;
+            this.lblPlaats.Location = new System.Drawing.Point(202, 120);
+            this.lblPlaats.Name = "lblPlaats";
+            this.lblPlaats.Size = new System.Drawing.Size(9, 13);
+            this.lblPlaats.TabIndex = 28;
+            this.lblPlaats.Text = "|";
+            // 
             // lblStoelen
             // 
-            this.lblStoelen.Location = new System.Drawing.Point(154, 141);
+            this.lblStoelen.AutoSize = true;
+            this.lblStoelen.Location = new System.Drawing.Point(202, 141);
             this.lblStoelen.Name = "lblStoelen";
-            this.lblStoelen.Size = new System.Drawing.Size(57, 21);
-            this.lblStoelen.TabIndex = 24;
-            this.lblStoelen.Text = "Stoelen:";
+            this.lblStoelen.Size = new System.Drawing.Size(9, 13);
+            this.lblStoelen.TabIndex = 29;
+            this.lblStoelen.Text = "|";
             // 
             // Reserveerscherm6Bevestiging
             // 
@@ -185,7 +240,8 @@
             this.Load += new System.EventHandler(this.Reserveerscherm6Bevestiging_Load);
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.FormLoad.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -193,18 +249,23 @@
         private System.Windows.Forms.Panel black_panel;
         private System.Windows.Forms.Panel FormLoad;
         private System.Windows.Forms.Label Information;
-        private System.Windows.Forms.Label lblFilm;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblPlaats;
+        private System.Windows.Forms.Label Film;
+        private System.Windows.Forms.PictureBox pbMovie;
+        private System.Windows.Forms.Label Plaats;
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
         private System.Windows.Forms.Button Terug;
         private System.Windows.Forms.Label Thanks;
-        private System.Windows.Forms.Label lblTijd;
-        private System.Windows.Forms.Label lblZaal;
+        private System.Windows.Forms.Label Tijd;
+        private System.Windows.Forms.Label Zaal;
 
         #endregion
 
+        private System.Windows.Forms.Label Stoelen;
         private System.Windows.Forms.Label lblStoelen;
+        private System.Windows.Forms.Label lblPlaats;
+        private System.Windows.Forms.Label lblTijd;
+        private System.Windows.Forms.Label lblZaal;
+        private System.Windows.Forms.Label lblFilm;
     }
 }

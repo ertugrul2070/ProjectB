@@ -15,6 +15,7 @@ namespace UI
         public Reserveerscherm6Bevestiging()
         {
             InitializeComponent();
+            InitializeLabels();
         }
 
  
@@ -30,6 +31,16 @@ namespace UI
         { 
             
             this.Close();
+        }
+
+        private void InitializeLabels()
+        {
+            pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
+
+            lblFilm.Text = Program._ReservationSession.CurrentReservation.movie;
+            lblTijd.Text = Program._ReservationSession.CurrentReservation.time;
+            lblPlaats.Text = Program._ReservationSession.CurrentReservation.location;
+
         }
     }
 }

@@ -88,7 +88,7 @@ namespace UI
         {
             if (Soort2.SelectedIndex > -1)
             {
-                string snack = "Popcorn " + Soort3.Text + " Middel";
+                string snack = "Popcorn " + Soort2.Text + " Middel";
                 AddSnackToList(snack);
                 totaal += 4.5;
                 UpdateTotaal();
