@@ -33,6 +33,7 @@
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
             this.Receipt1 = new System.Windows.Forms.Panel();
+            this.btnDeleteItem = new System.Windows.Forms.Button();
             this.rtbTotaal = new System.Windows.Forms.RichTextBox();
             this.rtbBon = new System.Windows.Forms.RichTextBox();
             this.Receipt = new System.Windows.Forms.Label();
@@ -59,11 +60,10 @@
             this.Next = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnDeleteItem = new System.Windows.Forms.Button();
             this.red_bovenkant.SuspendLayout();
             this.Receipt1.SuspendLayout();
             this.FormLoad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -96,7 +96,7 @@
             // 
             // Receipt1
             // 
-            this.Receipt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.Receipt1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.Receipt1.Controls.Add(this.btnDeleteItem);
             this.Receipt1.Controls.Add(this.rtbTotaal);
             this.Receipt1.Controls.Add(this.rtbBon);
@@ -107,9 +107,20 @@
             this.Receipt1.Size = new System.Drawing.Size(207, 334);
             this.Receipt1.TabIndex = 15;
             // 
+            // btnDeleteItem
+            // 
+            this.btnDeleteItem.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
+            this.btnDeleteItem.Location = new System.Drawing.Point(0, 304);
+            this.btnDeleteItem.Name = "btnDeleteItem";
+            this.btnDeleteItem.Size = new System.Drawing.Size(204, 27);
+            this.btnDeleteItem.TabIndex = 36;
+            this.btnDeleteItem.Text = "Verwijder laatste item";
+            this.btnDeleteItem.UseVisualStyleBackColor = false;
+            this.btnDeleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
+            // 
             // rtbTotaal
             // 
-            this.rtbTotaal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.rtbTotaal.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.rtbTotaal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbTotaal.Location = new System.Drawing.Point(4, 262);
             this.rtbTotaal.Name = "rtbTotaal";
@@ -119,7 +130,7 @@
             // 
             // rtbBon
             // 
-            this.rtbBon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.rtbBon.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.rtbBon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbBon.Location = new System.Drawing.Point(4, 29);
             this.rtbBon.Name = "rtbBon";
@@ -137,7 +148,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
             this.button1.Location = new System.Drawing.Point(221, 294);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 37);
@@ -147,7 +158,7 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.FormLoad.Controls.Add(this.Toevoegen6);
             this.FormLoad.Controls.Add(this.Toevoegen5);
             this.FormLoad.Controls.Add(this.Toevoegen4);
@@ -269,10 +280,7 @@
             // Soort3
             // 
             this.Soort3.FormattingEnabled = true;
-            this.Soort3.Items.AddRange(new object[] {
-            "Zoet",
-            "Zout",
-            "Mix"});
+            this.Soort3.Items.AddRange(new object[] {"Zoet", "Zout", "Mix"});
             this.Soort3.Location = new System.Drawing.Point(142, 129);
             this.Soort3.Name = "Soort3";
             this.Soort3.Size = new System.Drawing.Size(63, 21);
@@ -282,10 +290,7 @@
             // Soort2
             // 
             this.Soort2.FormattingEnabled = true;
-            this.Soort2.Items.AddRange(new object[] {
-            "Zoet",
-            "Zout",
-            "Mix"});
+            this.Soort2.Items.AddRange(new object[] {"Zoet", "Zout", "Mix"});
             this.Soort2.Location = new System.Drawing.Point(142, 96);
             this.Soort2.Name = "Soort2";
             this.Soort2.Size = new System.Drawing.Size(63, 21);
@@ -295,10 +300,7 @@
             // Soort1
             // 
             this.Soort1.FormattingEnabled = true;
-            this.Soort1.Items.AddRange(new object[] {
-            "Zoet",
-            "Zout",
-            "Mix"});
+            this.Soort1.Items.AddRange(new object[] {"Zoet", "Zout", "Mix"});
             this.Soort1.Location = new System.Drawing.Point(142, 65);
             this.Soort1.Name = "Soort1";
             this.Soort1.Size = new System.Drawing.Size(63, 21);
@@ -351,7 +353,7 @@
             // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
             this.Next.Location = new System.Drawing.Point(221, 294);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -362,7 +364,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
             this.Back.Location = new System.Drawing.Point(18, 294);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -374,24 +376,13 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image) (resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(21, 69);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 166);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnDeleteItem
-            // 
-            this.btnDeleteItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDeleteItem.Location = new System.Drawing.Point(0, 304);
-            this.btnDeleteItem.Name = "btnDeleteItem";
-            this.btnDeleteItem.Size = new System.Drawing.Size(204, 27);
-            this.btnDeleteItem.TabIndex = 36;
-            this.btnDeleteItem.Text = "Verwijder laatste item";
-            this.btnDeleteItem.UseVisualStyleBackColor = false;
-            this.btnDeleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
             // 
             // Reserveerscherm4Snacks
             // 
@@ -409,13 +400,13 @@
             this.red_bovenkant.ResumeLayout(false);
             this.Receipt1.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Panel black_panel;
+        private System.Windows.Forms.Button btnDeleteItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label Drink1;
         private System.Windows.Forms.Label Drinks;
@@ -433,6 +424,8 @@
         private System.Windows.Forms.Panel Receipt1;
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
+        private System.Windows.Forms.RichTextBox rtbBon;
+        private System.Windows.Forms.RichTextBox rtbTotaal;
         private System.Windows.Forms.ComboBox Soort1;
         private System.Windows.Forms.ComboBox Soort2;
         private System.Windows.Forms.ComboBox Soort3;
@@ -444,9 +437,5 @@
         private System.Windows.Forms.Button Toevoegen6;
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox rtbBon;
-        private System.Windows.Forms.RichTextBox rtbTotaal;
-        private System.Windows.Forms.Button btnDeleteItem;
     }
 }
