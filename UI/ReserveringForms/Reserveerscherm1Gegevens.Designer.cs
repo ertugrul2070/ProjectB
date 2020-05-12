@@ -46,6 +46,7 @@ namespace UI
             this.Email = new System.Windows.Forms.Label();
             this.Information = new System.Windows.Forms.Label();
             this.FormLoad = new System.Windows.Forms.Panel();
+            this.genderBox = new System.Windows.Forms.ComboBox();
             this.EmailField = new System.Windows.Forms.TextBox();
             this.PhonenumberField = new System.Windows.Forms.TextBox();
             this.CityField = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@ namespace UI
             this.NameField = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.genderBox = new System.Windows.Forms.ComboBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
             this.SuspendLayout();
@@ -90,7 +90,7 @@ namespace UI
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
             this.Back.Location = new System.Drawing.Point(18, 247);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -101,7 +101,7 @@ namespace UI
             // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
             this.Next.Location = new System.Drawing.Point(219, 247);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -192,7 +192,7 @@ namespace UI
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.FormLoad.Controls.Add(this.genderBox);
             this.FormLoad.Controls.Add(this.EmailField);
             this.FormLoad.Controls.Add(this.PhonenumberField);
@@ -220,6 +220,16 @@ namespace UI
             this.FormLoad.TabIndex = 8;
             this.FormLoad.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // genderBox
+            // 
+            this.genderBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.genderBox.FormattingEnabled = true;
+            this.genderBox.Items.AddRange(new object[] {"Man", "Vrouw", "Anders", "Wil ik niet zeggen", "Man", "Vrouw", "Anders", "WIl ik niet zeggen"});
+            this.genderBox.Location = new System.Drawing.Point(157, 48);
+            this.genderBox.Name = "genderBox";
+            this.genderBox.Size = new System.Drawing.Size(100, 21);
+            this.genderBox.TabIndex = 29;
+            // 
             // EmailField
             // 
             this.EmailField.Location = new System.Drawing.Point(157, 218);
@@ -246,6 +256,7 @@ namespace UI
             // PostcodeField
             // 
             this.PostcodeField.Location = new System.Drawing.Point(157, 145);
+            this.PostcodeField.MaxLength = 6;
             this.PostcodeField.Name = "PostcodeField";
             this.PostcodeField.Size = new System.Drawing.Size(100, 20);
             this.PostcodeField.TabIndex = 25;
@@ -273,7 +284,7 @@ namespace UI
             // 
             // btnRegister
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
             this.btnRegister.Location = new System.Drawing.Point(18, 290);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(118, 37);
@@ -284,7 +295,7 @@ namespace UI
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
             this.btnLogin.Location = new System.Drawing.Point(219, 290);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(118, 37);
@@ -292,19 +303,6 @@ namespace UI
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // genderBox
-            // 
-            this.genderBox.FormattingEnabled = true;
-            this.genderBox.Items.AddRange(new object[] {
-            "Man",
-            "Vrouw",
-            "Anders",
-            "WIl ik niet zeggen"});
-            this.genderBox.Location = new System.Drawing.Point(157, 48);
-            this.genderBox.Name = "genderBox";
-            this.genderBox.Size = new System.Drawing.Size(100, 21);
-            this.genderBox.TabIndex = 29;
             // 
             // Reserveerscherm1Gegevens
             // 
@@ -322,7 +320,6 @@ namespace UI
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         private System.Windows.Forms.Label address;
@@ -337,6 +334,7 @@ namespace UI
         public System.Windows.Forms.TextBox EmailField;
         private System.Windows.Forms.Panel FormLoad;
         private System.Windows.Forms.Label Gender;
+        private System.Windows.Forms.ComboBox genderBox;
         private System.Windows.Forms.Label Information;
         public System.Windows.Forms.TextBox NameField;
         private System.Windows.Forms.Button Next;
@@ -351,7 +349,5 @@ namespace UI
         private System.Windows.Forms.Label UserName;
 
         #endregion
-
-        private System.Windows.Forms.ComboBox genderBox;
     }
 }

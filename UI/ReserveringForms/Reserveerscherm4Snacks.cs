@@ -47,7 +47,7 @@ namespace UI
         {
             // stuur de snacklijst door naar reservation administration
 
-            Reserveerscherm5Betalen nextForm = new Reserveerscherm5Betalen();
+            Reserveerscherm1Gegevens nextForm = new Reserveerscherm1Gegevens();
             this.Hide();
             nextForm.ShowDialog();
             this.Close();

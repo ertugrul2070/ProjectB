@@ -33,6 +33,9 @@
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
             this.FormLoad = new System.Windows.Forms.Panel();
+            this.jaarBox = new System.Windows.Forms.ComboBox();
+            this.maandBox = new System.Windows.Forms.ComboBox();
+            this.dagBox = new System.Windows.Forms.ComboBox();
             this.Creditcard = new System.Windows.Forms.Label();
             this.Information = new System.Windows.Forms.Label();
             this.Valid = new System.Windows.Forms.Label();
@@ -42,11 +45,10 @@
             this.Back = new System.Windows.Forms.Button();
             this.SurnameField = new System.Windows.Forms.TextBox();
             this.NameField = new System.Windows.Forms.TextBox();
-            this.GenderField = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -79,7 +81,10 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.Controls.Add(this.jaarBox);
+            this.FormLoad.Controls.Add(this.maandBox);
+            this.FormLoad.Controls.Add(this.dagBox);
             this.FormLoad.Controls.Add(this.Creditcard);
             this.FormLoad.Controls.Add(this.Information);
             this.FormLoad.Controls.Add(this.Valid);
@@ -89,11 +94,99 @@
             this.FormLoad.Controls.Add(this.Back);
             this.FormLoad.Controls.Add(this.SurnameField);
             this.FormLoad.Controls.Add(this.NameField);
-            this.FormLoad.Controls.Add(this.GenderField);
             this.FormLoad.Location = new System.Drawing.Point(223, 60);
             this.FormLoad.Name = "FormLoad";
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
             this.FormLoad.TabIndex = 16;
+            // 
+            // jaarBox
+            // 
+            this.jaarBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.jaarBox.FormattingEnabled = true;
+            this.jaarBox.Items.AddRange(new object[] {
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026",
+            "2027",
+            "2028",
+            "2029",
+            "2030",
+            "2031",
+            "2032",
+            "2033",
+            "2034",
+            "2035"});
+            this.jaarBox.Location = new System.Drawing.Point(289, 191);
+            this.jaarBox.Name = "jaarBox";
+            this.jaarBox.Size = new System.Drawing.Size(48, 21);
+            this.jaarBox.TabIndex = 26;
+            // 
+            // maandBox
+            // 
+            this.maandBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.maandBox.FormattingEnabled = true;
+            this.maandBox.Items.AddRange(new object[] {
+            "Januari",
+            "Februari",
+            "Maart",
+            "April",
+            "Mei",
+            "Juni",
+            "Juli",
+            "Augustus",
+            "September",
+            "Oktober",
+            "November",
+            "December"});
+            this.maandBox.Location = new System.Drawing.Point(211, 191);
+            this.maandBox.Name = "maandBox";
+            this.maandBox.Size = new System.Drawing.Size(72, 21);
+            this.maandBox.TabIndex = 25;
+            // 
+            // dagBox
+            // 
+            this.dagBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dagBox.FormattingEnabled = true;
+            this.dagBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.dagBox.Location = new System.Drawing.Point(157, 191);
+            this.dagBox.Name = "dagBox";
+            this.dagBox.Size = new System.Drawing.Size(48, 21);
+            this.dagBox.TabIndex = 24;
             // 
             // Creditcard
             // 
@@ -125,7 +218,7 @@
             this.CVC.Name = "CVC";
             this.CVC.Size = new System.Drawing.Size(79, 21);
             this.CVC.TabIndex = 11;
-            this.CVC.Text = "CVC:";
+            this.CVC.Text = "CVV:";
             // 
             // Passnumber
             // 
@@ -137,7 +230,7 @@
             // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
             this.Next.Location = new System.Drawing.Point(219, 259);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -148,39 +241,36 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Back.Location = new System.Drawing.Point(18, 259);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
             this.Back.TabIndex = 8;
             this.Back.Text = "Terug";
             this.Back.UseVisualStyleBackColor = false;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // SurnameField
             // 
             this.SurnameField.Location = new System.Drawing.Point(157, 84);
+            this.SurnameField.MaxLength = 19;
             this.SurnameField.Name = "SurnameField";
             this.SurnameField.Size = new System.Drawing.Size(180, 20);
             this.SurnameField.TabIndex = 2;
+            this.SurnameField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SurnameField_KeyPress);
             // 
             // NameField
             // 
             this.NameField.Location = new System.Drawing.Point(157, 135);
+            this.NameField.MaxLength = 3;
             this.NameField.Name = "NameField";
             this.NameField.Size = new System.Drawing.Size(72, 20);
             this.NameField.TabIndex = 1;
             // 
-            // GenderField
-            // 
-            this.GenderField.Location = new System.Drawing.Point(157, 195);
-            this.GenderField.Name = "GenderField";
-            this.GenderField.Size = new System.Drawing.Size(72, 20);
-            this.GenderField.TabIndex = 0;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image) (resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(49, 72);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 166);
@@ -203,8 +293,9 @@
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Button Back;
@@ -212,7 +303,6 @@
         private System.Windows.Forms.Label Creditcard;
         private System.Windows.Forms.Label CVC;
         private System.Windows.Forms.Panel FormLoad;
-        private System.Windows.Forms.TextBox GenderField;
         private System.Windows.Forms.Label Information;
         private System.Windows.Forms.TextBox NameField;
         private System.Windows.Forms.Button Next;
@@ -224,5 +314,8 @@
         private System.Windows.Forms.Label Valid;
 
         #endregion
+        private System.Windows.Forms.ComboBox dagBox;
+        private System.Windows.Forms.ComboBox maandBox;
+        private System.Windows.Forms.ComboBox jaarBox;
     }
 }

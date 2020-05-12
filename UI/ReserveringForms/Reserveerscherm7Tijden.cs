@@ -44,7 +44,7 @@ namespace UI
             {
                 Program._ReservationSession.CurrentReservation.AddPlaceDateTime(cbCity.Text, cbDate.Text, cbTime.Text);
 
-                Reserveerscherm3Stoelen nextForm = new Reserveerscherm3Stoelen();
+                Reserveerschem2Tickets nextForm = new Reserveerschem2Tickets();
                 this.Hide();
                 nextForm.ShowDialog();
                 this.Close();

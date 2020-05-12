@@ -19,7 +19,44 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            Reserveerscherm6Bevestiging nextForm = new Reserveerscherm6Bevestiging();
+
+             if (SurnameField.Text.Length < 13 || SurnameField.Text.Length > 19)
+            {
+                MessageBox.Show("Uw pasnummer moet tussen de 13 en 19 tekens zijn.");
+            }
+            else if (NameField.Text.Length != 3)
+            {
+                MessageBox.Show("Uw CVV nummer moet 3 cijfers hebben.");
+            }
+
+            else
+            {
+                Reserveerscherm6Bevestiging nextForm = new Reserveerscherm6Bevestiging();
+                this.Hide();
+                nextForm.ShowDialog();
+                this.Close();
+            }
+
+        }
+
+        private void SurnameField_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Enkel nummers 
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void jaarBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Reserveerscherm4Snacks nextForm = new Reserveerscherm4Snacks();
             this.Hide();
             nextForm.ShowDialog();
             this.Close();
