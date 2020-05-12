@@ -17,7 +17,7 @@ namespace Engine.Models
         public string date;
         public string time;
 
-
+        public List<string> chosenSnacks = new List<string>();
 
         public ReservationAdministration()
         {

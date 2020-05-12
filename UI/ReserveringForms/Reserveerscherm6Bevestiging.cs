@@ -41,6 +41,7 @@ namespace UI
             lblTijd.Text = Program._ReservationSession.CurrentReservation.time;
             lblPlaats.Text = Program._ReservationSession.CurrentReservation.location;
 
+            lblExtra.Text = String.Join(",\n",Program._ReservationSession.CurrentReservation.chosenSnacks.ToArray());
         }
     }
 }

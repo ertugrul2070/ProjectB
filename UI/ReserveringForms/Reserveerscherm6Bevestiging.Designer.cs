@@ -33,6 +33,13 @@
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
             this.FormLoad = new System.Windows.Forms.Panel();
+            this.lblExtra = new System.Windows.Forms.RichTextBox();
+            this.extras = new System.Windows.Forms.Label();
+            this.lblStoelen = new System.Windows.Forms.Label();
+            this.lblPlaats = new System.Windows.Forms.Label();
+            this.lblTijd = new System.Windows.Forms.Label();
+            this.lblZaal = new System.Windows.Forms.Label();
+            this.lblFilm = new System.Windows.Forms.Label();
             this.Stoelen = new System.Windows.Forms.Label();
             this.Thanks = new System.Windows.Forms.Label();
             this.pbMovie = new System.Windows.Forms.PictureBox();
@@ -42,11 +49,6 @@
             this.Tijd = new System.Windows.Forms.Label();
             this.Film = new System.Windows.Forms.Label();
             this.Terug = new System.Windows.Forms.Button();
-            this.lblFilm = new System.Windows.Forms.Label();
-            this.lblZaal = new System.Windows.Forms.Label();
-            this.lblTijd = new System.Windows.Forms.Label();
-            this.lblPlaats = new System.Windows.Forms.Label();
-            this.lblStoelen = new System.Windows.Forms.Label();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).BeginInit();
@@ -74,7 +76,7 @@
             // Red_onderkant
             // 
             this.Red_onderkant.BackColor = System.Drawing.Color.DarkRed;
-            this.Red_onderkant.Location = new System.Drawing.Point(1, 417);
+            this.Red_onderkant.Location = new System.Drawing.Point(1, 453);
             this.Red_onderkant.Margin = new System.Windows.Forms.Padding(2);
             this.Red_onderkant.Name = "Red_onderkant";
             this.Red_onderkant.Size = new System.Drawing.Size(801, 32);
@@ -83,6 +85,8 @@
             // FormLoad
             // 
             this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.Controls.Add(this.lblExtra);
+            this.FormLoad.Controls.Add(this.extras);
             this.FormLoad.Controls.Add(this.lblStoelen);
             this.FormLoad.Controls.Add(this.lblPlaats);
             this.FormLoad.Controls.Add(this.lblTijd);
@@ -99,8 +103,74 @@
             this.FormLoad.Controls.Add(this.Terug);
             this.FormLoad.Location = new System.Drawing.Point(220, 58);
             this.FormLoad.Name = "FormLoad";
-            this.FormLoad.Size = new System.Drawing.Size(360, 334);
+            this.FormLoad.Size = new System.Drawing.Size(360, 390);
             this.FormLoad.TabIndex = 17;
+            // 
+            // lblExtra
+            // 
+            this.lblExtra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.lblExtra.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblExtra.Location = new System.Drawing.Point(206, 166);
+            this.lblExtra.Name = "lblExtra";
+            this.lblExtra.ReadOnly = true;
+            this.lblExtra.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.lblExtra.Size = new System.Drawing.Size(151, 133);
+            this.lblExtra.TabIndex = 32;
+            this.lblExtra.Text = "|";
+            // 
+            // extras
+            // 
+            this.extras.AutoSize = true;
+            this.extras.Location = new System.Drawing.Point(157, 166);
+            this.extras.Name = "extras";
+            this.extras.Size = new System.Drawing.Size(44, 13);
+            this.extras.TabIndex = 30;
+            this.extras.Text = "Extra\'s :";
+            // 
+            // lblStoelen
+            // 
+            this.lblStoelen.AutoSize = true;
+            this.lblStoelen.Location = new System.Drawing.Point(203, 141);
+            this.lblStoelen.Name = "lblStoelen";
+            this.lblStoelen.Size = new System.Drawing.Size(9, 13);
+            this.lblStoelen.TabIndex = 29;
+            this.lblStoelen.Text = "|";
+            // 
+            // lblPlaats
+            // 
+            this.lblPlaats.AutoSize = true;
+            this.lblPlaats.Location = new System.Drawing.Point(203, 120);
+            this.lblPlaats.Name = "lblPlaats";
+            this.lblPlaats.Size = new System.Drawing.Size(9, 13);
+            this.lblPlaats.TabIndex = 28;
+            this.lblPlaats.Text = "|";
+            // 
+            // lblTijd
+            // 
+            this.lblTijd.AutoSize = true;
+            this.lblTijd.Location = new System.Drawing.Point(203, 99);
+            this.lblTijd.Name = "lblTijd";
+            this.lblTijd.Size = new System.Drawing.Size(9, 13);
+            this.lblTijd.TabIndex = 27;
+            this.lblTijd.Text = "|";
+            // 
+            // lblZaal
+            // 
+            this.lblZaal.AutoSize = true;
+            this.lblZaal.Location = new System.Drawing.Point(203, 78);
+            this.lblZaal.Name = "lblZaal";
+            this.lblZaal.Size = new System.Drawing.Size(9, 13);
+            this.lblZaal.TabIndex = 26;
+            this.lblZaal.Text = "|";
+            // 
+            // lblFilm
+            // 
+            this.lblFilm.AutoSize = true;
+            this.lblFilm.Location = new System.Drawing.Point(203, 57);
+            this.lblFilm.Name = "lblFilm";
+            this.lblFilm.Size = new System.Drawing.Size(9, 13);
+            this.lblFilm.TabIndex = 25;
+            this.lblFilm.Text = "|";
             // 
             // Stoelen
             // 
@@ -112,7 +182,7 @@
             // 
             // Thanks
             // 
-            this.Thanks.Location = new System.Drawing.Point(154, 222);
+            this.Thanks.Location = new System.Drawing.Point(157, 302);
             this.Thanks.Name = "Thanks";
             this.Thanks.Size = new System.Drawing.Size(181, 42);
             this.Thanks.TabIndex = 23;
@@ -173,7 +243,7 @@
             // Terug
             // 
             this.Terug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
-            this.Terug.Location = new System.Drawing.Point(98, 267);
+            this.Terug.Location = new System.Drawing.Point(88, 347);
             this.Terug.Name = "Terug";
             this.Terug.Size = new System.Drawing.Size(161, 37);
             this.Terug.TabIndex = 9;
@@ -181,56 +251,11 @@
             this.Terug.UseVisualStyleBackColor = false;
             this.Terug.Click += new System.EventHandler(this.Next_Click);
             // 
-            // lblFilm
-            // 
-            this.lblFilm.AutoSize = true;
-            this.lblFilm.Location = new System.Drawing.Point(203, 57);
-            this.lblFilm.Name = "lblFilm";
-            this.lblFilm.Size = new System.Drawing.Size(9, 13);
-            this.lblFilm.TabIndex = 25;
-            this.lblFilm.Text = "|";
-            // 
-            // lblZaal
-            // 
-            this.lblZaal.AutoSize = true;
-            this.lblZaal.Location = new System.Drawing.Point(203, 78);
-            this.lblZaal.Name = "lblZaal";
-            this.lblZaal.Size = new System.Drawing.Size(9, 13);
-            this.lblZaal.TabIndex = 26;
-            this.lblZaal.Text = "|";
-            // 
-            // lblTijd
-            // 
-            this.lblTijd.AutoSize = true;
-            this.lblTijd.Location = new System.Drawing.Point(203, 99);
-            this.lblTijd.Name = "lblTijd";
-            this.lblTijd.Size = new System.Drawing.Size(9, 13);
-            this.lblTijd.TabIndex = 27;
-            this.lblTijd.Text = "|";
-            // 
-            // lblPlaats
-            // 
-            this.lblPlaats.AutoSize = true;
-            this.lblPlaats.Location = new System.Drawing.Point(202, 120);
-            this.lblPlaats.Name = "lblPlaats";
-            this.lblPlaats.Size = new System.Drawing.Size(9, 13);
-            this.lblPlaats.TabIndex = 28;
-            this.lblPlaats.Text = "|";
-            // 
-            // lblStoelen
-            // 
-            this.lblStoelen.AutoSize = true;
-            this.lblStoelen.Location = new System.Drawing.Point(202, 141);
-            this.lblStoelen.Name = "lblStoelen";
-            this.lblStoelen.Size = new System.Drawing.Size(9, 13);
-            this.lblStoelen.TabIndex = 29;
-            this.lblStoelen.Text = "|";
-            // 
             // Reserveerscherm6Bevestiging
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 485);
             this.Controls.Add(this.FormLoad);
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
@@ -267,5 +292,7 @@
         private System.Windows.Forms.Label lblTijd;
         private System.Windows.Forms.Label lblZaal;
         private System.Windows.Forms.Label lblFilm;
+        private System.Windows.Forms.Label extras;
+        private System.Windows.Forms.RichTextBox lblExtra;
     }
 }
