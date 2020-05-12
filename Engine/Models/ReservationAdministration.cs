@@ -10,10 +10,14 @@ namespace Engine.Models
         public Custommer custommer;
         public Dictionary<string, double> ticketDictionary= new Dictionary<string, double>();
 
+        public string movie;
+        public string dataUrl;
+
         public string location;
         public string date;
         public string time;
 
+        public List<string> chosenSnacks = new List<string>();
 
         public ReservationAdministration()
         {
