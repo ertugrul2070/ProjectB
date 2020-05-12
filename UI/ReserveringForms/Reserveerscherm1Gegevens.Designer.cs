@@ -224,11 +224,11 @@ namespace UI
             // 
             this.genderBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.genderBox.FormattingEnabled = true;
-            this.genderBox.Items.AddRange(new object[] {"Man", "Vrouw", "Anders", "Wil ik niet zeggen", "Man", "Vrouw", "Anders", "WIl ik niet zeggen"});
-            this.genderBox.Location = new System.Drawing.Point(157, 48);
+            this.genderBox.Items.AddRange(new object[] {"Man", "Vrouw", "Anders", "Wil ik niet zeggen"});
+            this.genderBox.Location = new System.Drawing.Point(157, 43);
             this.genderBox.Name = "genderBox";
             this.genderBox.Size = new System.Drawing.Size(100, 21);
-            this.genderBox.TabIndex = 29;
+            this.genderBox.TabIndex = 30;
             // 
             // EmailField
             // 

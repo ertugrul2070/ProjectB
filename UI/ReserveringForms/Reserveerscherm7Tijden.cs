@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Engine.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,15 +8,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI;
+using MySql.Data.MySqlClient;
+
 
 namespace UI
 {
     public partial class Reserveerscherm7Tijden : Form
     {
-
+        DatabaseConnection dbcr = Program.dbc;
         public Reserveerscherm7Tijden()
         {
             InitializeComponent();
+            try
+            {
+                dbcr.cnn.Open();
+
+                string selectQuery = "SELECT * FROM `mydb`.`cinema`";
+                MySqlCommand command = new MySqlCommand(selectQuery, dbcr.cnn);
+
+                MySqlDataReader dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    string cinema = dataReader.GetString("place");
+
+                    cbCity.Items.Add(cinema);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                dbcr.cnn.Close();
+            }
+            
+        }
+
+        void Fillcombo()
+        {
+            
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -61,6 +95,67 @@ namespace UI
             this.Hide();
             nextForm.ShowDialog();
             this.Close();
+        }
+
+
+        private void cbCity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                dbcr.cnn.Open();
+
+                string selectQuery = "SELECT * FROM `mydb`.`time`";
+                MySqlCommand command = new MySqlCommand(selectQuery, dbcr.cnn);
+
+                MySqlDataReader dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    string cinema = dataReader.GetString("date");
+
+                    cbDate.Items.Add(cinema);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                dbcr.cnn.Close();
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                dbcr.cnn.Open();
+
+                string selectQuery = "SELECT * FROM `mydb`.`time`";
+                MySqlCommand command = new MySqlCommand(selectQuery, dbcr.cnn);
+
+                MySqlDataReader dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    string cinema = dataReader.GetString("time");
+
+                    cbTime.Items.Add(cinema);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                dbcr.cnn.Close();
+            }
         }
     }
 }
