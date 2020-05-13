@@ -60,7 +60,7 @@ namespace UI
             this.pbMovie = new System.Windows.Forms.PictureBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -93,7 +93,7 @@ namespace UI
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Back.Location = new System.Drawing.Point(18, 247);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -104,7 +104,7 @@ namespace UI
             // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
             this.Next.Location = new System.Drawing.Point(219, 247);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -195,7 +195,7 @@ namespace UI
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
             this.FormLoad.Controls.Add(this.genderBox);
             this.FormLoad.Controls.Add(this.EmailField);
             this.FormLoad.Controls.Add(this.PhonenumberField);
@@ -227,7 +227,11 @@ namespace UI
             // 
             this.genderBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.genderBox.FormattingEnabled = true;
-            this.genderBox.Items.AddRange(new object[] {"Man", "Vrouw", "Anders", "Wil ik niet zeggen"});
+            this.genderBox.Items.AddRange(new object[] {
+            "Man",
+            "Vrouw",
+            "Anders",
+            "Wil ik niet zeggen"});
             this.genderBox.Location = new System.Drawing.Point(157, 43);
             this.genderBox.Name = "genderBox";
             this.genderBox.Size = new System.Drawing.Size(100, 21);
@@ -287,7 +291,7 @@ namespace UI
             // 
             // btnRegister
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
             this.btnRegister.Location = new System.Drawing.Point(18, 290);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(118, 37);
@@ -298,7 +302,7 @@ namespace UI
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
             this.btnLogin.Location = new System.Drawing.Point(219, 290);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(118, 37);
@@ -310,7 +314,7 @@ namespace UI
             // pbMovie
             // 
             this.pbMovie.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pbMovie.InitialImage = ((System.Drawing.Image) (resources.GetObject("pbMovie.InitialImage")));
+            this.pbMovie.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbMovie.InitialImage")));
             this.pbMovie.Location = new System.Drawing.Point(37, 83);
             this.pbMovie.Name = "pbMovie";
             this.pbMovie.Size = new System.Drawing.Size(117, 166);
@@ -329,13 +333,14 @@ namespace UI
             this.Controls.Add(this.Red_onderkant);
             this.Name = "Reserveerscherm1Gegevens";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reserveerscherm1Gegevens";
+            this.Text = "POPCORN PLAZA";
             this.Load += new System.EventHandler(this.Reserveerscherm1Gegevens_Load);
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Label address;

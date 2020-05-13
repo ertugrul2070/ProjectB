@@ -119,7 +119,7 @@ namespace UI
                 {
                     string cinema = dataReader.GetString("date");
 
-                    cbDate.Items.Add(cinema);
+                    cbDate.Items.Add(cinema.Remove(10));
                 }
             }
             catch (Exception)
@@ -147,7 +147,7 @@ namespace UI
                 {
                     string cinema = dataReader.GetString("time");
 
-                    cbTime.Items.Add(cinema);
+                    cbTime.Items.Add(cinema.Remove(5));
                 }
             }
             catch (Exception)

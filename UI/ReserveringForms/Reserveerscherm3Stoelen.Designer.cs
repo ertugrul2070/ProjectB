@@ -50,10 +50,10 @@
             this.pbMovie = new System.Windows.Forms.PictureBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.DD_loop.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -77,7 +77,7 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
             this.FormLoad.Controls.Add(this.pictureBox2);
             this.FormLoad.Controls.Add(this.DD_loop);
             this.FormLoad.Controls.Add(this.Information);
@@ -92,7 +92,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::UI.Properties.Resources.bioscoopplat;
-            this.pictureBox2.InitialImage = ((System.Drawing.Image) (resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
             this.pictureBox2.Location = new System.Drawing.Point(18, 23);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(321, 217);
@@ -116,7 +116,17 @@
             // CB1
             // 
             this.CB1.FormattingEnabled = true;
-            this.CB1.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"});
+            this.CB1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.CB1.Location = new System.Drawing.Point(3, 3);
             this.CB1.Name = "CB1";
             this.CB1.Size = new System.Drawing.Size(41, 21);
@@ -127,7 +137,17 @@
             // CB2
             // 
             this.CB2.FormattingEnabled = true;
-            this.CB2.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"});
+            this.CB2.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.CB2.Location = new System.Drawing.Point(50, 3);
             this.CB2.Name = "CB2";
             this.CB2.Size = new System.Drawing.Size(41, 21);
@@ -138,7 +158,17 @@
             // CB3
             // 
             this.CB3.FormattingEnabled = true;
-            this.CB3.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"});
+            this.CB3.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.CB3.Location = new System.Drawing.Point(97, 3);
             this.CB3.Name = "CB3";
             this.CB3.Size = new System.Drawing.Size(41, 21);
@@ -149,7 +179,17 @@
             // CB4
             // 
             this.CB4.FormattingEnabled = true;
-            this.CB4.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"});
+            this.CB4.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.CB4.Location = new System.Drawing.Point(144, 3);
             this.CB4.Name = "CB4";
             this.CB4.Size = new System.Drawing.Size(41, 21);
@@ -160,7 +200,17 @@
             // CB5
             // 
             this.CB5.FormattingEnabled = true;
-            this.CB5.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"});
+            this.CB5.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.CB5.Location = new System.Drawing.Point(191, 3);
             this.CB5.Name = "CB5";
             this.CB5.Size = new System.Drawing.Size(41, 21);
@@ -171,7 +221,17 @@
             // CB6
             // 
             this.CB6.FormattingEnabled = true;
-            this.CB6.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"});
+            this.CB6.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.CB6.Location = new System.Drawing.Point(238, 3);
             this.CB6.Name = "CB6";
             this.CB6.Size = new System.Drawing.Size(41, 21);
@@ -190,7 +250,7 @@
             // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
             this.Next.Location = new System.Drawing.Point(221, 294);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -201,7 +261,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Back.Location = new System.Drawing.Point(18, 294);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -221,7 +281,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
             this.panel1.Controls.Add(this.Receipt);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(568, 67);
@@ -239,7 +299,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
             this.button1.Location = new System.Drawing.Point(221, 294);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 37);
@@ -250,11 +310,11 @@
             // pbMovie
             // 
             this.pbMovie.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pbMovie.InitialImage = ((System.Drawing.Image) (resources.GetObject("pbMovie.InitialImage")));
+            this.pbMovie.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbMovie.InitialImage")));
             this.pbMovie.Location = new System.Drawing.Point(23, 67);
             this.pbMovie.Name = "pbMovie";
             this.pbMovie.Size = new System.Drawing.Size(117, 166);
-            this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMovie.TabIndex = 15;
             this.pbMovie.TabStop = false;
             // 
@@ -270,15 +330,16 @@
             this.Controls.Add(this.red_bovenkant);
             this.Name = "Reserveerscherm3Stoelen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reserveerscherm3Stoelen";
+            this.Text = "POPCORN PLAZA";
             this.Load += new System.EventHandler(this.Reserveerscherm3Stoelen_Load);
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.DD_loop.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Button Back;
