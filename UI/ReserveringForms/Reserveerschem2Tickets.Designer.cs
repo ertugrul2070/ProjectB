@@ -49,12 +49,12 @@
             this.pbMovie = new System.Windows.Forms.PictureBox();
             this.FormLoad.SuspendLayout();
             this.red_bovenkant.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).BeginInit();
             this.SuspendLayout();
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
             this.FormLoad.Controls.Add(this.tickets);
             this.FormLoad.Controls.Add(this.Next);
             this.FormLoad.Controls.Add(this.Price3);
@@ -75,7 +75,7 @@
             // 
             // tickets
             // 
-            this.tickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.tickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tickets.ForeColor = System.Drawing.Color.Red;
             this.tickets.Location = new System.Drawing.Point(57, 45);
             this.tickets.Name = "tickets";
@@ -85,7 +85,7 @@
             // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
             this.Next.Location = new System.Drawing.Point(209, 259);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -155,7 +155,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Back.Location = new System.Drawing.Point(18, 259);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -219,11 +219,11 @@
             // pbMovie
             // 
             this.pbMovie.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pbMovie.InitialImage = ((System.Drawing.Image) (resources.GetObject("pbMovie.InitialImage")));
+            this.pbMovie.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbMovie.InitialImage")));
             this.pbMovie.Location = new System.Drawing.Point(23, 66);
             this.pbMovie.Name = "pbMovie";
             this.pbMovie.Size = new System.Drawing.Size(117, 166);
-            this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMovie.TabIndex = 16;
             this.pbMovie.TabStop = false;
             // 
@@ -238,12 +238,13 @@
             this.Controls.Add(this.FormLoad);
             this.Name = "Reserveerschem2Tickets";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "POPCORN PLAZA";
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
             this.red_bovenkant.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Button Back;

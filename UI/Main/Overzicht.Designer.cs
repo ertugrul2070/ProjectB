@@ -143,7 +143,7 @@
             this.Controls.Add(this.Rode_Balk);
             this.Name = "Overzicht";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "POPCORN PLAZA";
             this.Load += new System.EventHandler(this.Overzicht_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PopcornPlaza_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Zwarte_Balk)).EndInit();

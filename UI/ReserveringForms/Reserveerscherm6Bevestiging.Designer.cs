@@ -51,7 +51,7 @@
             this.Terug = new System.Windows.Forms.Button();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -84,7 +84,7 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
             this.FormLoad.Controls.Add(this.lblExtra);
             this.FormLoad.Controls.Add(this.extras);
             this.FormLoad.Controls.Add(this.lblStoelen);
@@ -108,7 +108,7 @@
             // 
             // lblExtra
             // 
-            this.lblExtra.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.lblExtra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
             this.lblExtra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblExtra.Location = new System.Drawing.Point(206, 166);
             this.lblExtra.Name = "lblExtra";
@@ -186,12 +186,13 @@
             this.Thanks.Name = "Thanks";
             this.Thanks.Size = new System.Drawing.Size(181, 42);
             this.Thanks.TabIndex = 23;
-            this.Thanks.Text = "Hartelijk dank voor uw reservering. Wij wensen u alvast een prettige voorstelling" + "!";
+            this.Thanks.Text = "Hartelijk dank voor uw reservering. Wij wensen u alvast een prettige voorstelling" +
+    "!";
             // 
             // pbMovie
             // 
             this.pbMovie.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pbMovie.InitialImage = ((System.Drawing.Image) (resources.GetObject("pbMovie.InitialImage")));
+            this.pbMovie.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbMovie.InitialImage")));
             this.pbMovie.Location = new System.Drawing.Point(22, 57);
             this.pbMovie.Name = "pbMovie";
             this.pbMovie.Size = new System.Drawing.Size(117, 166);
@@ -242,7 +243,7 @@
             // 
             // Terug
             // 
-            this.Terug.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.Terug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
             this.Terug.Location = new System.Drawing.Point(88, 347);
             this.Terug.Name = "Terug";
             this.Terug.Size = new System.Drawing.Size(161, 37);
@@ -261,13 +262,14 @@
             this.Controls.Add(this.red_bovenkant);
             this.Name = "Reserveerscherm6Bevestiging";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reserveerscherm6Bevestiging";
+            this.Text = "POPCORN PLAZA";
             this.Load += new System.EventHandler(this.Reserveerscherm6Bevestiging_Load);
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Panel black_panel;
