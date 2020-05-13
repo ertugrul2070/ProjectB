@@ -105,17 +105,13 @@ namespace UI
                 MessageBox.Show("Vul alle velden in AUB");
             }
 
-            else if (PostcodeField.Text.Length < 6)
-                {
-                    MessageBox.Show("Postcode is niet volledig.");
-                }
 
             
 
             else if ((chars[0] < '0' || chars[0] > '9') || (chars[1] < '0' || chars[1] > '9') || (chars[2] < '0' || chars[2] > '9') || (chars[3] < '0' || chars[3] > '9') ||
-            (chars[4] < 'A' || chars[4] > 'Z') || (chars[5] < 'A' || chars[5] > 'Z'))
+            (chars[4] < 'A' || chars[4] > 'Z') || (chars[5] < 'A' || chars[5] > 'Z') || PostcodeField.Text.Length < 6)
                 {
-                    MessageBox.Show("Postcode is niet volledig.");
+                    MessageBox.Show("Postcode is onjuist.");
                 }
 
             else
