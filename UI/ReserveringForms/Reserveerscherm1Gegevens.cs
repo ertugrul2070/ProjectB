@@ -82,7 +82,7 @@ namespace UI
             throw new System.NotImplementedException();
         }
 
-        private void GenderField_TextChanged(object sender, EventArgs e)
+        private void genderBox_TextChanged(object sender, EventArgs e)
         {
             
         }
@@ -97,9 +97,9 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            if (GenderField.Text != "" && NameField.Text != "" && SurnameField.Text != "" && AddressField.Text != "" && PostcodeField.Text != "" && CityField.Text != "" && PhonenumberField.Text != "" && EmailField.Text != "")
+            if (genderBox.Text != "" && NameField.Text != "" && SurnameField.Text != "" && AddressField.Text != "" && PostcodeField.Text != "" && CityField.Text != "" && PhonenumberField.Text != "" && EmailField.Text != "")
             {
-                Program._ReservationSession.CurrentReservation.AddCustomer(EmailField.Text, GenderField.Text, NameField.Text, SurnameField.Text,
+                Program._ReservationSession.CurrentReservation.AddCustomer(EmailField.Text, genderBox.Text, NameField.Text, SurnameField.Text,
                 AddressField.Text, PostcodeField.Text, CityField.Text, Int32.Parse(PhonenumberField.Text));
                 Reserveerschem2Tickets nextForm = new Reserveerschem2Tickets();
                 this.Hide();
@@ -145,7 +145,7 @@ namespace UI
         {
             string userEmail = EmailField.Text;
 
-            if (GenderField.Text != "" && NameField.Text != "" && SurnameField.Text != "" && AddressField.Text != "" && PostcodeField.Text != "" && CityField.Text != "" && PhonenumberField.Text != "" && EmailField.Text != "")
+            if (genderBox.Text != "" && NameField.Text != "" && SurnameField.Text != "" && AddressField.Text != "" && PostcodeField.Text != "" && CityField.Text != "" && PhonenumberField.Text != "" && EmailField.Text != "")
             {
                 RegisterUser(userEmail);
             }
@@ -203,7 +203,7 @@ namespace UI
             // Alle variabelen uit fields halen
             string firstName = NameField.Text;
             string lastName = SurnameField.Text;
-            string gender = GenderField.Text;
+            string gender = genderBox.Text;
             string inputAddress = AddressField.Text;
             string zipcode = PostcodeField.Text;
             string city = CityField.Text;
@@ -268,7 +268,7 @@ namespace UI
         {
             NameField.Text = firstName;
             SurnameField.Text = lastName;
-            GenderField.Text = gender;
+            genderBox.Text = gender;
             AddressField.Text = inputAddress;
             PostcodeField.Text = zipcode;
             CityField.Text = city;

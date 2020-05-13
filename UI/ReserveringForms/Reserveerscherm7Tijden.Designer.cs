@@ -75,7 +75,7 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.FormLoad.Controls.Add(this.cbTime);
             this.FormLoad.Controls.Add(this.cbDate);
             this.FormLoad.Controls.Add(this.cbCity);
@@ -94,13 +94,7 @@
             // cbTime
             // 
             this.cbTime.FormattingEnabled = true;
-            this.cbTime.Items.AddRange(new object[] {
-            "14:45",
-            "16:00",
-            "17:35",
-            "19:00",
-            "21:30",
-            "23:15"});
+            this.cbTime.Items.AddRange(new object[] {"14:45", "16:00", "17:35", "19:00", "21:30", "23:15"});
             this.cbTime.Location = new System.Drawing.Point(251, 104);
             this.cbTime.Name = "cbTime";
             this.cbTime.Size = new System.Drawing.Size(85, 21);
@@ -109,12 +103,7 @@
             // cbDate
             // 
             this.cbDate.FormattingEnabled = true;
-            this.cbDate.Items.AddRange(new object[] {
-            "13/08/2020",
-            "15/08/2020",
-            "19/08/2020",
-            "25/08/2020",
-            "01/09/2020"});
+            this.cbDate.Items.AddRange(new object[] {"13/08/2020", "15/08/2020", "19/08/2020", "25/08/2020", "01/09/2020"});
             this.cbDate.Location = new System.Drawing.Point(148, 104);
             this.cbDate.Name = "cbDate";
             this.cbDate.Size = new System.Drawing.Size(85, 21);
@@ -123,12 +112,7 @@
             // cbCity
             // 
             this.cbCity.FormattingEnabled = true;
-            this.cbCity.Items.AddRange(new object[] {
-            "Rotterdam",
-            "Amsterdam",
-            "Den Haag",
-            "Leiden",
-            "Groningen"});
+            this.cbCity.Items.AddRange(new object[] {"Rotterdam", "Amsterdam", "Den Haag", "Leiden", "Groningen"});
             this.cbCity.Location = new System.Drawing.Point(46, 104);
             this.cbCity.Name = "cbCity";
             this.cbCity.Size = new System.Drawing.Size(85, 21);
@@ -168,7 +152,7 @@
             // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
             this.Next.Location = new System.Drawing.Point(219, 259);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -179,7 +163,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
             this.Back.Location = new System.Drawing.Point(18, 259);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -197,15 +181,18 @@
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
             this.Name = "Reserveerscherm7Tijden";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reserveerscherm7Tijden";
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Panel black_panel;
+        private System.Windows.Forms.ComboBox cbCity;
+        private System.Windows.Forms.ComboBox cbDate;
+        private System.Windows.Forms.ComboBox cbTime;
         private System.Windows.Forms.Label Cinema;
         private System.Windows.Forms.Label Date;
         private System.Windows.Forms.Panel FormLoad;
@@ -216,9 +203,5 @@
         private System.Windows.Forms.Label Time;
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cbTime;
-        private System.Windows.Forms.ComboBox cbDate;
-        private System.Windows.Forms.ComboBox cbCity;
     }
 }

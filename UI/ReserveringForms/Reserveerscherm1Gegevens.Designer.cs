@@ -53,9 +53,9 @@ namespace UI
             this.AddressField = new System.Windows.Forms.TextBox();
             this.SurnameField = new System.Windows.Forms.TextBox();
             this.NameField = new System.Windows.Forms.TextBox();
-            this.GenderField = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.genderBox = new System.Windows.Forms.ComboBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
             this.SuspendLayout();
@@ -193,6 +193,7 @@ namespace UI
             // FormLoad
             // 
             this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.Controls.Add(this.genderBox);
             this.FormLoad.Controls.Add(this.EmailField);
             this.FormLoad.Controls.Add(this.PhonenumberField);
             this.FormLoad.Controls.Add(this.CityField);
@@ -200,7 +201,6 @@ namespace UI
             this.FormLoad.Controls.Add(this.AddressField);
             this.FormLoad.Controls.Add(this.SurnameField);
             this.FormLoad.Controls.Add(this.NameField);
-            this.FormLoad.Controls.Add(this.GenderField);
             this.FormLoad.Controls.Add(this.btnRegister);
             this.FormLoad.Controls.Add(this.btnLogin);
             this.FormLoad.Controls.Add(this.Information);
@@ -230,6 +230,7 @@ namespace UI
             // PhonenumberField
             // 
             this.PhonenumberField.Location = new System.Drawing.Point(157, 193);
+            this.PhonenumberField.MaxLength = 10;
             this.PhonenumberField.Name = "PhonenumberField";
             this.PhonenumberField.Size = new System.Drawing.Size(100, 20);
             this.PhonenumberField.TabIndex = 27;
@@ -270,13 +271,6 @@ namespace UI
             this.NameField.Size = new System.Drawing.Size(100, 20);
             this.NameField.TabIndex = 22;
             // 
-            // GenderField
-            // 
-            this.GenderField.Location = new System.Drawing.Point(157, 45);
-            this.GenderField.Name = "GenderField";
-            this.GenderField.Size = new System.Drawing.Size(100, 20);
-            this.GenderField.TabIndex = 21;
-            // 
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
@@ -299,6 +293,19 @@ namespace UI
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // genderBox
+            // 
+            this.genderBox.FormattingEnabled = true;
+            this.genderBox.Items.AddRange(new object[] {
+            "Man",
+            "Vrouw",
+            "Anders",
+            "WIl ik niet zeggen"});
+            this.genderBox.Location = new System.Drawing.Point(157, 48);
+            this.genderBox.Name = "genderBox";
+            this.genderBox.Size = new System.Drawing.Size(100, 21);
+            this.genderBox.TabIndex = 29;
+            // 
             // Reserveerscherm1Gegevens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,6 +315,7 @@ namespace UI
             this.Controls.Add(this.red_bovenkant);
             this.Controls.Add(this.Red_onderkant);
             this.Name = "Reserveerscherm1Gegevens";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reserveerscherm1Gegevens";
             this.Load += new System.EventHandler(this.Reserveerscherm1Gegevens_Load);
             this.red_bovenkant.ResumeLayout(false);
@@ -318,32 +326,32 @@ namespace UI
         }
 
         private System.Windows.Forms.Label address;
+        public System.Windows.Forms.TextBox AddressField;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Panel black_panel;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Label City;
+        public System.Windows.Forms.TextBox CityField;
         private System.Windows.Forms.Label Email;
+        public System.Windows.Forms.TextBox EmailField;
         private System.Windows.Forms.Panel FormLoad;
         private System.Windows.Forms.Label Gender;
         private System.Windows.Forms.Label Information;
+        public System.Windows.Forms.TextBox NameField;
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.Label Phonenumber;
+        public System.Windows.Forms.TextBox PhonenumberField;
         private System.Windows.Forms.Label Postcode;
+        public System.Windows.Forms.TextBox PostcodeField;
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
         private System.Windows.Forms.Label Surname;
+        public System.Windows.Forms.TextBox SurnameField;
         private System.Windows.Forms.Label UserName;
 
         #endregion
 
-        private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Button btnLogin;
-        public System.Windows.Forms.TextBox AddressField;
-        public System.Windows.Forms.TextBox SurnameField;
-        public System.Windows.Forms.TextBox NameField;
-        public System.Windows.Forms.TextBox GenderField;
-        public System.Windows.Forms.TextBox EmailField;
-        public System.Windows.Forms.TextBox PhonenumberField;
-        public System.Windows.Forms.TextBox CityField;
-        public System.Windows.Forms.TextBox PostcodeField;
+        private System.Windows.Forms.ComboBox genderBox;
     }
 }
