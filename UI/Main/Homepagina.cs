@@ -45,8 +45,6 @@ namespace UI
                 {
                     comp = naam.Contains(SearchFilm.Text.ToUpper());
                 }
-                Console.WriteLine("HAHA bongalonga");
-                Console.WriteLine(dataUrl[5]);
                 bool GenreFilt = ((string)GenreFilter.SelectedItem == dataUrl[5]);
                 if (GenreFilter.SelectedItem == null ||(string)GenreFilter.SelectedItem == "Alle")
                 {
