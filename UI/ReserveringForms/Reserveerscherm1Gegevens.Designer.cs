@@ -115,16 +115,16 @@ namespace UI
             // 
             // Gender
             // 
-            this.Gender.Location = new System.Drawing.Point(77, 48);
+            this.Gender.Location = new System.Drawing.Point(73, 97);
             this.Gender.Name = "Gender";
             this.Gender.Size = new System.Drawing.Size(63, 21);
             this.Gender.TabIndex = 10;
-            this.Gender.Text = "Gelsacht:";
+            this.Gender.Text = "Geslacht";
             this.Gender.Click += new System.EventHandler(this.label1_Click);
             // 
             // UserName
             // 
-            this.UserName.Location = new System.Drawing.Point(87, 73);
+            this.UserName.Location = new System.Drawing.Point(87, 45);
             this.UserName.Name = "UserName";
             this.UserName.Size = new System.Drawing.Size(38, 21);
             this.UserName.TabIndex = 11;
@@ -133,7 +133,7 @@ namespace UI
             // 
             // Surname
             // 
-            this.Surname.Location = new System.Drawing.Point(57, 98);
+            this.Surname.Location = new System.Drawing.Point(57, 68);
             this.Surname.Name = "Surname";
             this.Surname.Size = new System.Drawing.Size(68, 21);
             this.Surname.TabIndex = 12;
@@ -232,7 +232,7 @@ namespace UI
             "Vrouw",
             "Anders",
             "Wil ik niet zeggen"});
-            this.genderBox.Location = new System.Drawing.Point(157, 43);
+            this.genderBox.Location = new System.Drawing.Point(157, 94);
             this.genderBox.Name = "genderBox";
             this.genderBox.Size = new System.Drawing.Size(100, 21);
             this.genderBox.TabIndex = 30;
@@ -277,14 +277,14 @@ namespace UI
             // 
             // SurnameField
             // 
-            this.SurnameField.Location = new System.Drawing.Point(157, 95);
+            this.SurnameField.Location = new System.Drawing.Point(157, 68);
             this.SurnameField.Name = "SurnameField";
             this.SurnameField.Size = new System.Drawing.Size(100, 20);
             this.SurnameField.TabIndex = 23;
             // 
             // NameField
             // 
-            this.NameField.Location = new System.Drawing.Point(157, 70);
+            this.NameField.Location = new System.Drawing.Point(157, 42);
             this.NameField.Name = "NameField";
             this.NameField.Size = new System.Drawing.Size(100, 20);
             this.NameField.TabIndex = 22;
