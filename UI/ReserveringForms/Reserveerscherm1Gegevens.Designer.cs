@@ -31,6 +31,7 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reserveerscherm1Gegevens));
             this.red_bovenkant = new System.Windows.Forms.Panel();
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
@@ -56,8 +57,10 @@ namespace UI
             this.NameField = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.pbMovie = new System.Windows.Forms.PictureBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -304,11 +307,23 @@ namespace UI
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // pbMovie
+            // 
+            this.pbMovie.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pbMovie.InitialImage = ((System.Drawing.Image) (resources.GetObject("pbMovie.InitialImage")));
+            this.pbMovie.Location = new System.Drawing.Point(37, 83);
+            this.pbMovie.Name = "pbMovie";
+            this.pbMovie.Size = new System.Drawing.Size(117, 166);
+            this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbMovie.TabIndex = 16;
+            this.pbMovie.TabStop = false;
+            // 
             // Reserveerscherm1Gegevens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbMovie);
             this.Controls.Add(this.FormLoad);
             this.Controls.Add(this.red_bovenkant);
             this.Controls.Add(this.Red_onderkant);
@@ -319,6 +334,7 @@ namespace UI
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).EndInit();
             this.ResumeLayout(false);
         }
 
@@ -338,6 +354,7 @@ namespace UI
         private System.Windows.Forms.Label Information;
         public System.Windows.Forms.TextBox NameField;
         private System.Windows.Forms.Button Next;
+        private System.Windows.Forms.PictureBox pbMovie;
         private System.Windows.Forms.Label Phonenumber;
         public System.Windows.Forms.TextBox PhonenumberField;
         private System.Windows.Forms.Label Postcode;

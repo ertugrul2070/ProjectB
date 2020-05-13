@@ -27,6 +27,8 @@ namespace UI
         public Reserveerscherm1Gegevens()
         {
             InitializeComponent();
+            pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
+
         }
         private void Reserveerscherm1Gegevens_Load(object sender, EventArgs e)
         {

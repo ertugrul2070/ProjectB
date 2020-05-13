@@ -15,6 +15,8 @@ namespace UI
         public Reserveerscherm5Betalen()
         {
             InitializeComponent();
+            pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
+
         }
 
         private void Next_Click(object sender, EventArgs e)

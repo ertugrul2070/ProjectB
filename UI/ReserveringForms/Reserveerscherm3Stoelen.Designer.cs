@@ -47,13 +47,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Receipt = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbMovie = new System.Windows.Forms.PictureBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             this.DD_loop.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -247,23 +247,23 @@
             this.button1.Text = "Verder";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // pbMovie
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image) (resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(23, 67);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 166);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.pbMovie.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pbMovie.InitialImage = ((System.Drawing.Image) (resources.GetObject("pbMovie.InitialImage")));
+            this.pbMovie.Location = new System.Drawing.Point(23, 67);
+            this.pbMovie.Name = "pbMovie";
+            this.pbMovie.Size = new System.Drawing.Size(117, 166);
+            this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbMovie.TabIndex = 15;
+            this.pbMovie.TabStop = false;
             // 
             // Reserveerscherm3Stoelen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbMovie);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.FormLoad);
@@ -277,7 +277,7 @@
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             this.DD_loop.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).EndInit();
             this.ResumeLayout(false);
         }
 
@@ -295,7 +295,7 @@
         private System.Windows.Forms.Label Information;
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbMovie;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label Receipt;
         private System.Windows.Forms.Panel red_bovenkant;

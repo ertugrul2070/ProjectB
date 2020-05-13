@@ -15,6 +15,7 @@ namespace UI
         public Reserveerschem2Tickets()
         {
             InitializeComponent();
+            pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
         }
 
         private void City_Click(object sender, EventArgs e)

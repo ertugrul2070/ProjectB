@@ -51,7 +51,7 @@
             this.Terug = new System.Windows.Forms.Button();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -84,7 +84,7 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.FormLoad.Controls.Add(this.lblExtra);
             this.FormLoad.Controls.Add(this.extras);
             this.FormLoad.Controls.Add(this.lblStoelen);
@@ -108,7 +108,7 @@
             // 
             // lblExtra
             // 
-            this.lblExtra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.lblExtra.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.lblExtra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblExtra.Location = new System.Drawing.Point(206, 166);
             this.lblExtra.Name = "lblExtra";
@@ -186,19 +186,19 @@
             this.Thanks.Name = "Thanks";
             this.Thanks.Size = new System.Drawing.Size(181, 42);
             this.Thanks.TabIndex = 23;
-            this.Thanks.Text = "Hartelijk dank voor uw reservering. Wij wensen u alvast een prettige voorstelling" +
-    "!";
+            this.Thanks.Text = "Hartelijk dank voor uw reservering. Wij wensen u alvast een prettige voorstelling" + "!";
             // 
             // pbMovie
             // 
             this.pbMovie.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pbMovie.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbMovie.InitialImage")));
+            this.pbMovie.InitialImage = ((System.Drawing.Image) (resources.GetObject("pbMovie.InitialImage")));
             this.pbMovie.Location = new System.Drawing.Point(22, 57);
             this.pbMovie.Name = "pbMovie";
             this.pbMovie.Size = new System.Drawing.Size(117, 166);
             this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMovie.TabIndex = 19;
             this.pbMovie.TabStop = false;
+            this.pbMovie.Click += new System.EventHandler(this.pbMovie_Click);
             // 
             // Zaal
             // 
@@ -242,7 +242,7 @@
             // 
             // Terug
             // 
-            this.Terug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.Terug.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
             this.Terug.Location = new System.Drawing.Point(88, 347);
             this.Terug.Name = "Terug";
             this.Terug.Size = new System.Drawing.Size(161, 37);
@@ -266,33 +266,31 @@
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         private System.Windows.Forms.Panel black_panel;
+        private System.Windows.Forms.Label extras;
+        private System.Windows.Forms.Label Film;
         private System.Windows.Forms.Panel FormLoad;
         private System.Windows.Forms.Label Information;
-        private System.Windows.Forms.Label Film;
+        private System.Windows.Forms.RichTextBox lblExtra;
+        private System.Windows.Forms.Label lblFilm;
+        private System.Windows.Forms.Label lblPlaats;
+        private System.Windows.Forms.Label lblStoelen;
+        private System.Windows.Forms.Label lblTijd;
+        private System.Windows.Forms.Label lblZaal;
         private System.Windows.Forms.PictureBox pbMovie;
         private System.Windows.Forms.Label Plaats;
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
+        private System.Windows.Forms.Label Stoelen;
         private System.Windows.Forms.Button Terug;
         private System.Windows.Forms.Label Thanks;
         private System.Windows.Forms.Label Tijd;
         private System.Windows.Forms.Label Zaal;
 
         #endregion
-
-        private System.Windows.Forms.Label Stoelen;
-        private System.Windows.Forms.Label lblStoelen;
-        private System.Windows.Forms.Label lblPlaats;
-        private System.Windows.Forms.Label lblTijd;
-        private System.Windows.Forms.Label lblZaal;
-        private System.Windows.Forms.Label lblFilm;
-        private System.Windows.Forms.Label extras;
-        private System.Windows.Forms.RichTextBox lblExtra;
     }
 }

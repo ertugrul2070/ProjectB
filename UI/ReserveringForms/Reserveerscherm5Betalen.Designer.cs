@@ -45,10 +45,10 @@
             this.Back = new System.Windows.Forms.Button();
             this.SurnameField = new System.Windows.Forms.TextBox();
             this.NameField = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbMovie = new System.Windows.Forms.PictureBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -81,7 +81,7 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.FormLoad.Controls.Add(this.jaarBox);
             this.FormLoad.Controls.Add(this.maandBox);
             this.FormLoad.Controls.Add(this.dagBox);
@@ -103,23 +103,7 @@
             // 
             this.jaarBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.jaarBox.FormattingEnabled = true;
-            this.jaarBox.Items.AddRange(new object[] {
-            "2020",
-            "2021",
-            "2022",
-            "2023",
-            "2024",
-            "2025",
-            "2026",
-            "2027",
-            "2028",
-            "2029",
-            "2030",
-            "2031",
-            "2032",
-            "2033",
-            "2034",
-            "2035"});
+            this.jaarBox.Items.AddRange(new object[] {"2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035"});
             this.jaarBox.Location = new System.Drawing.Point(289, 191);
             this.jaarBox.Name = "jaarBox";
             this.jaarBox.Size = new System.Drawing.Size(48, 21);
@@ -129,19 +113,7 @@
             // 
             this.maandBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.maandBox.FormattingEnabled = true;
-            this.maandBox.Items.AddRange(new object[] {
-            "Januari",
-            "Februari",
-            "Maart",
-            "April",
-            "Mei",
-            "Juni",
-            "Juli",
-            "Augustus",
-            "September",
-            "Oktober",
-            "November",
-            "December"});
+            this.maandBox.Items.AddRange(new object[] {"Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December"});
             this.maandBox.Location = new System.Drawing.Point(211, 191);
             this.maandBox.Name = "maandBox";
             this.maandBox.Size = new System.Drawing.Size(72, 21);
@@ -151,38 +123,7 @@
             // 
             this.dagBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dagBox.FormattingEnabled = true;
-            this.dagBox.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
+            this.dagBox.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"});
             this.dagBox.Location = new System.Drawing.Point(157, 191);
             this.dagBox.Name = "dagBox";
             this.dagBox.Size = new System.Drawing.Size(48, 21);
@@ -230,7 +171,7 @@
             // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
             this.Next.Location = new System.Drawing.Point(219, 259);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -241,7 +182,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
             this.Back.Location = new System.Drawing.Point(18, 259);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -267,23 +208,23 @@
             this.NameField.Size = new System.Drawing.Size(72, 20);
             this.NameField.TabIndex = 1;
             // 
-            // pictureBox1
+            // pbMovie
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(49, 72);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 166);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.pbMovie.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pbMovie.InitialImage = ((System.Drawing.Image) (resources.GetObject("pbMovie.InitialImage")));
+            this.pbMovie.Location = new System.Drawing.Point(49, 72);
+            this.pbMovie.Name = "pbMovie";
+            this.pbMovie.Size = new System.Drawing.Size(117, 166);
+            this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbMovie.TabIndex = 18;
+            this.pbMovie.TabStop = false;
             // 
             // Reserveerscherm5Betalen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbMovie);
             this.Controls.Add(this.FormLoad);
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
@@ -293,29 +234,28 @@
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Panel black_panel;
         private System.Windows.Forms.Label Creditcard;
         private System.Windows.Forms.Label CVC;
+        private System.Windows.Forms.ComboBox dagBox;
         private System.Windows.Forms.Panel FormLoad;
         private System.Windows.Forms.Label Information;
+        private System.Windows.Forms.ComboBox jaarBox;
+        private System.Windows.Forms.ComboBox maandBox;
         private System.Windows.Forms.TextBox NameField;
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.Label Passnumber;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbMovie;
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
         private System.Windows.Forms.TextBox SurnameField;
         private System.Windows.Forms.Label Valid;
 
         #endregion
-        private System.Windows.Forms.ComboBox dagBox;
-        private System.Windows.Forms.ComboBox maandBox;
-        private System.Windows.Forms.ComboBox jaarBox;
     }
 }

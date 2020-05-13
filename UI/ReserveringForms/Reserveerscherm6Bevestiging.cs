@@ -43,5 +43,10 @@ namespace UI
 
             lblExtra.Text = String.Join(",\n",Program._ReservationSession.CurrentReservation.chosenSnacks.ToArray());
         }
+
+        private void pbMovie_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -20,6 +20,8 @@ namespace UI
         public Reserveerscherm7Tijden()
         {
             InitializeComponent();
+            pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
+
             try
             {
                 dbcr.cnn.Open();

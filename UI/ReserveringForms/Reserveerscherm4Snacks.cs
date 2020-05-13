@@ -19,6 +19,7 @@ namespace UI
         public Reserveerscherm4Snacks()
         {
             InitializeComponent();
+            pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
             UpdateTotaal();
             FillSnackDict();
         }

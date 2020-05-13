@@ -16,6 +16,7 @@ namespace UI
         public Reserveerscherm3Stoelen()
         {
             InitializeComponent();
+            pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
         }
 
         private void Information_Click(object sender, EventArgs e)
