@@ -39,6 +39,7 @@
             this.flowLayoutPanelVerwacht = new System.Windows.Forms.FlowLayoutPanel();
             this.SearchFilm = new System.Windows.Forms.TextBox();
             this.flowLayoutPanelSearch = new System.Windows.Forms.FlowLayoutPanel();
+            this.GenreFilter = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.PopcornPlaza_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Zwarte_Balk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rode_Balk)).BeginInit();
@@ -147,7 +148,7 @@
             // SearchFilm
             // 
             this.SearchFilm.BackColor = System.Drawing.SystemColors.Desktop;
-            this.SearchFilm.Location = new System.Drawing.Point(847, 50);
+            this.SearchFilm.Location = new System.Drawing.Point(123, 46);
             this.SearchFilm.Name = "SearchFilm";
             this.SearchFilm.Size = new System.Drawing.Size(148, 22);
             this.SearchFilm.TabIndex = 13;
@@ -155,16 +156,31 @@
             // 
             // flowLayoutPanelSearch
             // 
-            this.flowLayoutPanelSearch.HorizontalScroll.Maximum = 0;
-            this.flowLayoutPanelSearch.AutoScroll = false;
-            this.flowLayoutPanelSearch.VerticalScroll.Visible = false;
             this.flowLayoutPanelSearch.AutoScroll = true;
             this.flowLayoutPanelSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanelSearch.Location = new System.Drawing.Point(847, 78);
+            this.flowLayoutPanelSearch.Location = new System.Drawing.Point(123, 81);
             this.flowLayoutPanelSearch.Name = "flowLayoutPanelSearch";
             this.flowLayoutPanelSearch.Size = new System.Drawing.Size(185, 219);
             this.flowLayoutPanelSearch.TabIndex = 14;
             this.flowLayoutPanelSearch.Visible = false;
+            // 
+            // GenreFilter
+            // 
+            this.GenreFilter.AccessibleName = "";
+            this.GenreFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GenreFilter.FormattingEnabled = true;
+            this.GenreFilter.Items.AddRange(new object[] {
+            "Alle",
+            "Actie",
+            "Comedy",
+            "Familie",
+            "Horror"});
+            this.GenreFilter.Location = new System.Drawing.Point(119, 373);
+            this.GenreFilter.Name = "GenreFilter";
+            this.GenreFilter.Size = new System.Drawing.Size(121, 26);
+            this.GenreFilter.TabIndex = 15;
+            this.GenreFilter.Text = "Genre";
+            this.GenreFilter.SelectedIndexChanged += new System.EventHandler(this.Homepage_Load);
             // 
             // Homepage
             // 
@@ -172,6 +188,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1108, 761);
+            this.Controls.Add(this.GenreFilter);
             this.Controls.Add(this.flowLayoutPanelSearch);
             this.Controls.Add(this.SearchFilm);
             this.Controls.Add(this.flowLayoutPanelVerwacht);
@@ -209,5 +226,6 @@
 
         private System.Windows.Forms.TextBox SearchFilm;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelSearch;
+        private System.Windows.Forms.ComboBox GenreFilter;
     }
 }

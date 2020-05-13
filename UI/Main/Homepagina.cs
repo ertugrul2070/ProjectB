@@ -18,49 +18,57 @@ namespace UI
             InitializeComponent();
         }
 
-        private void Homepage_Load(object sender, EventArgs e)
+        public void Homepage_Load(object sender, EventArgs e)
+        {
+            var today = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            flowLayoutPanelActueel.Controls.Clear();
+            flowLayoutPanelVerwacht.Controls.Clear();
+            Order_Films(flowLayoutPanelActueel, x => x < today);
+            Order_Films(flowLayoutPanelVerwacht, x => x > today);          
+        }
+        public void Order_Films(FlowLayoutPanel label, Func<DateTime, bool> f)
         {
             XmlDocument doc = new XmlDocument();
             doc.Load("Films.xml");
             int afilm = 0;
             foreach (XmlNode node in doc.DocumentElement)
             {
-                string name = node.Attributes[0].InnerText;
-                var today = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+                string naam = node.Attributes[0].InnerText;
                 List<string> dataUrl = new List<string>();
                 foreach (XmlNode child in node.ChildNodes)
                 {
                     dataUrl.Add(child.InnerText);
                 }
-                PictureBox l = addlabel(afilm, name, dataUrl);
                 var mDate = Convert.ToDateTime(dataUrl[3]);
-                if (mDate < today)
+                bool comp = false;
+                if (label == flowLayoutPanelSearch)
                 {
-                    flowLayoutPanelActueel.Controls.Add(l);
+                    comp = naam.Contains(SearchFilm.Text.ToUpper());
                 }
-                else
+                Console.WriteLine("HAHA bongalonga");
+                Console.WriteLine(dataUrl[5]);
+                bool GenreFilt = ((string)GenreFilter.SelectedItem == dataUrl[5]);
+                if (GenreFilter.SelectedItem == null ||(string)GenreFilter.SelectedItem == "Alle")
                 {
-                    flowLayoutPanelVerwacht.Controls.Add(l);
+                    GenreFilt = true;
                 }
-                l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
-                afilm = afilm + 1;
-                
-                if (flowLayoutPanelActueel.Controls.Count > 5)
-                {
-                    flowLayoutPanelActueel.AutoScroll = true;
+                if (f(mDate) &&  GenreFilt || comp)
+                { 
+                    PictureBox l = addlabel(afilm, naam, dataUrl);
+                    label.Controls.Add(l);
+                    l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
                 }
-                if (flowLayoutPanelVerwacht.Controls.Count > 5)
+                if (label.Controls.Count > 5)
                 {
-                    flowLayoutPanelVerwacht.AutoScroll = true;
+                    label.AutoScroll = true;
                 }
             }
         }
-        public static string chosenName = "";
-        public static string chosenPic = "";
-        public static string chosenLink = "";
-
-        private void labelDoubleClick(object sender, EventArgs e)
-        {
+        public void labelDoubleClick(object sender, EventArgs e)
+           {
+            string chosenName = "";
+            string chosenPic = "";
+            string chosenLink = "";
             PictureBox currentlabel = (PictureBox)sender;
 
             chosenName = currentlabel.Text;
@@ -72,7 +80,7 @@ namespace UI
 
         }
 
-        PictureBox addlabel(int i, string name, List<string> dataUrl)
+        public PictureBox addlabel(int i, string name, List<string> dataUrl)
         {
 
             PictureBox l = new PictureBox();
@@ -108,45 +116,22 @@ namespace UI
 
         }
 
-        private void SearchFilm_KeyDown(object sender, KeyEventArgs e)
+        public void SearchFilm_KeyDown(object sender, KeyEventArgs e)
         {
             flowLayoutPanelSearch.Controls.Clear();
             flowLayoutPanelSearch.Visible = false;
-            string nameFilm = SearchFilm.Text;
             if (e.KeyCode == Keys.Enter && SearchFilm.Text != "")
-            {
-                nameFilm = char.ToUpper(nameFilm[0]) + nameFilm.Substring(1);
-                Search_Film(nameFilm);
-            }
-        }
-
-        private void Search_Film(string nameFilm)
-        {
-            XmlDocument doc = new XmlDocument();
-            doc.Load("Films.xml");
-            int afilm = 0;
-            foreach (XmlNode node in doc.DocumentElement)
-            {
-                string naam = node.Attributes[0].InnerText;
-                if (naam.Contains(nameFilm))
+            {              
+                Order_Films(flowLayoutPanelSearch, x => false);
+                if(flowLayoutPanelSearch.Controls.Count > 0)
                 {
-                    List<string> dataUrl = new List<string>();
-                    foreach (XmlNode child in node.ChildNodes)
-                    {
-                        dataUrl.Add(child.InnerText);
-                    }
-                    PictureBox l = addlabel(afilm, naam, dataUrl);
-                    flowLayoutPanelSearch.Controls.Add(l);
-                    l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
+                    flowLayoutPanelSearch.Visible = true;
+                }
+                else
+                {
+                    flowLayoutPanelSearch.Visible = false;
                 }
             }
-            if (flowLayoutPanelSearch.Controls.Count < 1 || nameFilm == "")
-            {
-                flowLayoutPanelSearch.Controls.Clear();
-            } else
-            {
-                flowLayoutPanelSearch.Visible = true;
-            }
-        }
+        }        
     }
 }
