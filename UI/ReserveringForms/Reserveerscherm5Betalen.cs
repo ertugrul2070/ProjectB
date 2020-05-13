@@ -22,14 +22,17 @@ namespace UI
         private void Next_Click(object sender, EventArgs e)
         {
 
-             if (SurnameField.Text.Length < 13 || SurnameField.Text.Length > 19)
+            char[] chars = NameField.Text.ToCharArray();
+
+            if (SurnameField.Text.Length < 13 || SurnameField.Text.Length > 19)
             {
                 MessageBox.Show("Uw pasnummer moet tussen de 13 en 19 tekens zijn.");
             }
-            else if (NameField.Text.Length != 3)
+            else if (NameField.Text.Length != 3 || (chars[0] < '0' || chars[0] > '9') || (chars[1] < '0' || chars[1] > '9') || (chars[2] < '0' || chars[2] > '9'))
             {
                 MessageBox.Show("Uw CVV nummer moet 3 cijfers hebben.");
             }
+
 
             else
             {
