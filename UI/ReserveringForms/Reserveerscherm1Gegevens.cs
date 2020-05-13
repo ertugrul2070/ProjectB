@@ -27,6 +27,8 @@ namespace UI
         public Reserveerscherm1Gegevens()
         {
             InitializeComponent();
+            pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
+
         }
         private void Reserveerscherm1Gegevens_Load(object sender, EventArgs e)
         {
@@ -39,6 +41,11 @@ namespace UI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Reserveerscherm4Snacks nextForm = new Reserveerscherm4Snacks();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
+
             throw new System.NotImplementedException();
         }
 
@@ -118,7 +125,7 @@ namespace UI
             {
                 Program._ReservationSession.CurrentReservation.AddCustomer(EmailField.Text, genderBox.Text, NameField.Text, SurnameField.Text,
                AddressField.Text, PostcodeField.Text, CityField.Text, Int32.Parse(PhonenumberField.Text));
-                Reserveerschem2Tickets nextForm = new Reserveerschem2Tickets();
+                Reserveerscherm5Betalen nextForm = new Reserveerscherm5Betalen();
                 this.Hide();
                 nextForm.ShowDialog();
                 this.Close();

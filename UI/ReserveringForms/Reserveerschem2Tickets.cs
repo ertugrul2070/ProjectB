@@ -15,6 +15,7 @@ namespace UI
         public Reserveerschem2Tickets()
         {
             InitializeComponent();
+            pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
         }
 
         private void City_Click(object sender, EventArgs e)
@@ -48,7 +49,7 @@ namespace UI
 
             else
             {
-                Reserveerscherm7Tijden nextForm = new Reserveerscherm7Tijden();
+                Reserveerscherm3Stoelen nextForm = new Reserveerscherm3Stoelen();
                 this.Hide();
                 nextForm.ShowDialog();
                 this.Close();
@@ -60,7 +61,7 @@ namespace UI
 
         private void Back_Click(object sender, EventArgs e)
         {
-            Reserveerscherm1Gegevens nextForm = new Reserveerscherm1Gegevens();
+            Reserveerscherm7Tijden nextForm = new Reserveerscherm7Tijden();
             this.Hide();
             nextForm.ShowDialog();
             this.Close();

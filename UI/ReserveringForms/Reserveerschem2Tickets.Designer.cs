@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reserveerschem2Tickets));
             this.FormLoad = new System.Windows.Forms.Panel();
+            this.tickets = new System.Windows.Forms.Label();
             this.Next = new System.Windows.Forms.Button();
             this.Price3 = new System.Windows.Forms.Label();
             this.Price2 = new System.Windows.Forms.Label();
@@ -44,14 +46,15 @@
             this.red_bovenkant = new System.Windows.Forms.Panel();
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
-            this.tickets = new System.Windows.Forms.Label();
+            this.pbMovie = new System.Windows.Forms.PictureBox();
             this.FormLoad.SuspendLayout();
             this.red_bovenkant.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).BeginInit();
             this.SuspendLayout();
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
             this.FormLoad.Controls.Add(this.tickets);
             this.FormLoad.Controls.Add(this.Next);
             this.FormLoad.Controls.Add(this.Price3);
@@ -70,9 +73,19 @@
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
             this.FormLoad.TabIndex = 9;
             // 
+            // tickets
+            // 
+            this.tickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.tickets.ForeColor = System.Drawing.Color.Red;
+            this.tickets.Location = new System.Drawing.Point(57, 45);
+            this.tickets.Name = "tickets";
+            this.tickets.Size = new System.Drawing.Size(285, 21);
+            this.tickets.TabIndex = 23;
+            this.tickets.Text = "LET OP: MAXIMAAL 6 TICKETS IN TOTAAL PER BESTELLING";
+            // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
             this.Next.Location = new System.Drawing.Point(209, 259);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -142,7 +155,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
             this.Back.Location = new System.Drawing.Point(18, 259);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -203,21 +216,23 @@
             this.Red_onderkant.Size = new System.Drawing.Size(801, 32);
             this.Red_onderkant.TabIndex = 11;
             // 
-            // tickets
+            // pbMovie
             // 
-            this.tickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tickets.ForeColor = System.Drawing.Color.Red;
-            this.tickets.Location = new System.Drawing.Point(57, 45);
-            this.tickets.Name = "tickets";
-            this.tickets.Size = new System.Drawing.Size(285, 21);
-            this.tickets.TabIndex = 23;
-            this.tickets.Text = "LET OP: MAXIMAAL 6 TICKETS IN TOTAAL PER BESTELLING";
+            this.pbMovie.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pbMovie.InitialImage = ((System.Drawing.Image) (resources.GetObject("pbMovie.InitialImage")));
+            this.pbMovie.Location = new System.Drawing.Point(23, 66);
+            this.pbMovie.Name = "pbMovie";
+            this.pbMovie.Size = new System.Drawing.Size(117, 166);
+            this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbMovie.TabIndex = 16;
+            this.pbMovie.TabStop = false;
             // 
             // Reserveerschem2Tickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbMovie);
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
             this.Controls.Add(this.FormLoad);
@@ -227,8 +242,8 @@
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
             this.red_bovenkant.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize) (this.pbMovie)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         private System.Windows.Forms.Button Back;
@@ -241,15 +256,15 @@
         private System.Windows.Forms.Button Next;
         private System.Windows.Forms.Label Normal;
         private System.Windows.Forms.TextBox NormalField;
+        private System.Windows.Forms.PictureBox pbMovie;
         private System.Windows.Forms.Label Price1;
         private System.Windows.Forms.Label Price2;
         private System.Windows.Forms.Label Price3;
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
         private System.Windows.Forms.Label Senior;
+        private System.Windows.Forms.Label tickets;
 
         #endregion
-
-        private System.Windows.Forms.Label tickets;
     }
 }

@@ -15,6 +15,8 @@ namespace UI
         public Reserveerscherm5Betalen()
         {
             InitializeComponent();
+            pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
+
         }
 
         private void Next_Click(object sender, EventArgs e)
@@ -52,6 +54,14 @@ namespace UI
         private void jaarBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Reserveerscherm4Snacks nextForm = new Reserveerscherm4Snacks();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
         }
     }
 }
