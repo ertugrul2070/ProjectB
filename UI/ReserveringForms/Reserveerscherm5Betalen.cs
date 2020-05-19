@@ -24,7 +24,12 @@ namespace UI
 
             char[] chars = NameField.Text.ToCharArray();
 
-            if (SurnameField.Text.Length < 13 || SurnameField.Text.Length > 19)
+            if (SurnameField.Text == "" || NameField.Text == "" || dagBox.Text == "" || maandBox.Text == "" || jaarBox.Text == "")
+            {
+                MessageBox.Show("Vul alle velden in AUB");
+            }
+
+            else if (SurnameField.Text.Length < 13 || SurnameField.Text.Length > 19)
             {
                 MessageBox.Show("Uw pasnummer moet tussen de 13 en 19 tekens zijn.");
             }

@@ -69,7 +69,7 @@
             this.Films_Knop.Name = "Films_Knop";
             this.Films_Knop.Size = new System.Drawing.Size(100, 28);
             this.Films_Knop.TabIndex = 4;
-            this.Films_Knop.Text = "Films";
+            this.Films_Knop.Text = "Home";
             this.Films_Knop.UseVisualStyleBackColor = false;
             this.Films_Knop.Click += new System.EventHandler(this.Films_Knop_Click);
             // 
