@@ -52,7 +52,10 @@ namespace UI
             chosenName = currentlabel.Text;
             chosenPic = currentlabel.ImageLocation;
             chosenLink = currentlabel.Name;
-            
+
+            Program._ReservationSession.CurrentReservation.movie = chosenName;
+            Program._ReservationSession.CurrentReservation.dataUrl = chosenPic;
+
             FilmDetails frm2 = new FilmDetails(chosenName,chosenPic, chosenLink);
             frm2.Show();
         }

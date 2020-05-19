@@ -33,6 +33,7 @@
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
             this.Receipt1 = new System.Windows.Forms.Panel();
+            this.btnDeleteItem = new System.Windows.Forms.Button();
             this.rtbTotaal = new System.Windows.Forms.RichTextBox();
             this.rtbBon = new System.Windows.Forms.RichTextBox();
             this.Receipt = new System.Windows.Forms.Label();
@@ -58,12 +59,11 @@
             this.Information = new System.Windows.Forms.Label();
             this.Next = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnDeleteItem = new System.Windows.Forms.Button();
+            this.pbMovie = new System.Windows.Forms.PictureBox();
             this.red_bovenkant.SuspendLayout();
             this.Receipt1.SuspendLayout();
             this.FormLoad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -106,6 +106,17 @@
             this.Receipt1.Name = "Receipt1";
             this.Receipt1.Size = new System.Drawing.Size(207, 334);
             this.Receipt1.TabIndex = 15;
+            // 
+            // btnDeleteItem
+            // 
+            this.btnDeleteItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDeleteItem.Location = new System.Drawing.Point(0, 304);
+            this.btnDeleteItem.Name = "btnDeleteItem";
+            this.btnDeleteItem.Size = new System.Drawing.Size(204, 27);
+            this.btnDeleteItem.TabIndex = 36;
+            this.btnDeleteItem.Text = "Verwijder laatste item";
+            this.btnDeleteItem.UseVisualStyleBackColor = false;
+            this.btnDeleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
             // 
             // rtbTotaal
             // 
@@ -371,51 +382,41 @@
             this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
-            // pictureBox1
+            // pbMovie
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 69);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 166);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnDeleteItem
-            // 
-            this.btnDeleteItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDeleteItem.Location = new System.Drawing.Point(0, 304);
-            this.btnDeleteItem.Name = "btnDeleteItem";
-            this.btnDeleteItem.Size = new System.Drawing.Size(204, 27);
-            this.btnDeleteItem.TabIndex = 36;
-            this.btnDeleteItem.Text = "Verwijder laatste item";
-            this.btnDeleteItem.UseVisualStyleBackColor = false;
-            this.btnDeleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
+            this.pbMovie.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pbMovie.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbMovie.InitialImage")));
+            this.pbMovie.Location = new System.Drawing.Point(21, 69);
+            this.pbMovie.Name = "pbMovie";
+            this.pbMovie.Size = new System.Drawing.Size(117, 166);
+            this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMovie.TabIndex = 17;
+            this.pbMovie.TabStop = false;
             // 
             // Reserveerscherm4Snacks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbMovie);
             this.Controls.Add(this.FormLoad);
             this.Controls.Add(this.Receipt1);
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
             this.Name = "Reserveerscherm4Snacks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reserveerscherm4Snacks";
+            this.Text = "POPCORN PLAZA";
             this.red_bovenkant.ResumeLayout(false);
             this.Receipt1.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Panel black_panel;
+        private System.Windows.Forms.Button btnDeleteItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label Drink1;
         private System.Windows.Forms.Label Drinks;
@@ -424,7 +425,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Next;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbMovie;
         private System.Windows.Forms.Label Popcorn;
         private System.Windows.Forms.Label Popcorn1;
         private System.Windows.Forms.Label Popcorn2;
@@ -433,6 +434,8 @@
         private System.Windows.Forms.Panel Receipt1;
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
+        private System.Windows.Forms.RichTextBox rtbBon;
+        private System.Windows.Forms.RichTextBox rtbTotaal;
         private System.Windows.Forms.ComboBox Soort1;
         private System.Windows.Forms.ComboBox Soort2;
         private System.Windows.Forms.ComboBox Soort3;
@@ -444,9 +447,5 @@
         private System.Windows.Forms.Button Toevoegen6;
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox rtbBon;
-        private System.Windows.Forms.RichTextBox rtbTotaal;
-        private System.Windows.Forms.Button btnDeleteItem;
     }
 }

@@ -27,6 +27,8 @@ namespace UI
         public Reserveerscherm1Gegevens()
         {
             InitializeComponent();
+            pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
+
         }
         private void Reserveerscherm1Gegevens_Load(object sender, EventArgs e)
         {
@@ -39,6 +41,11 @@ namespace UI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Reserveerscherm4Snacks nextForm = new Reserveerscherm4Snacks();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
+
             throw new System.NotImplementedException();
         }
 
@@ -97,18 +104,31 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            if (genderBox.Text != "" && NameField.Text != "" && SurnameField.Text != "" && AddressField.Text != "" && PostcodeField.Text != "" && CityField.Text != "" && PhonenumberField.Text != "" && EmailField.Text != "")
+            char[] chars = PostcodeField.Text.ToCharArray();
+
+
+            if (genderBox.Text == "" || NameField.Text == "" || SurnameField.Text == "" || AddressField.Text == "" || PostcodeField.Text == "" || CityField.Text == "" || PhonenumberField.Text == "" || EmailField.Text == "")
+            {
+                MessageBox.Show("Vul alle velden in AUB");
+            }
+
+
+            
+
+            else if ((chars[0] < '0' || chars[0] > '9') || (chars[1] < '0' || chars[1] > '9') || (chars[2] < '0' || chars[2] > '9') || (chars[3] < '0' || chars[3] > '9') ||
+            (chars[4] < 'A' || chars[4] > 'Z') || (chars[5] < 'A' || chars[5] > 'Z') || PostcodeField.Text.Length < 6)
+                {
+                    MessageBox.Show("Postcode is onjuist.");
+                }
+
+            else
             {
                 Program._ReservationSession.CurrentReservation.AddCustomer(EmailField.Text, genderBox.Text, NameField.Text, SurnameField.Text,
-                AddressField.Text, PostcodeField.Text, CityField.Text, Int32.Parse(PhonenumberField.Text));
-                Reserveerschem2Tickets nextForm = new Reserveerschem2Tickets();
+               AddressField.Text, PostcodeField.Text, CityField.Text, Int32.Parse(PhonenumberField.Text));
+                Reserveerscherm5Betalen nextForm = new Reserveerscherm5Betalen();
                 this.Hide();
                 nextForm.ShowDialog();
                 this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Vul alle velden in AUB");
             }
         }
 
@@ -274,6 +294,11 @@ namespace UI
             CityField.Text = city;
             PhonenumberField.Text = phonenumber;
             EmailField.Text = email;
+        }
+
+        private void genderBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

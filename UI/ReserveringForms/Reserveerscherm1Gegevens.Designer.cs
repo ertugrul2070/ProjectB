@@ -31,6 +31,7 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reserveerscherm1Gegevens));
             this.red_bovenkant = new System.Windows.Forms.Panel();
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
@@ -46,6 +47,7 @@ namespace UI
             this.Email = new System.Windows.Forms.Label();
             this.Information = new System.Windows.Forms.Label();
             this.FormLoad = new System.Windows.Forms.Panel();
+            this.genderBox = new System.Windows.Forms.ComboBox();
             this.EmailField = new System.Windows.Forms.TextBox();
             this.PhonenumberField = new System.Windows.Forms.TextBox();
             this.CityField = new System.Windows.Forms.TextBox();
@@ -55,9 +57,10 @@ namespace UI
             this.NameField = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.genderBox = new System.Windows.Forms.ComboBox();
+            this.pbMovie = new System.Windows.Forms.PictureBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -220,6 +223,20 @@ namespace UI
             this.FormLoad.TabIndex = 8;
             this.FormLoad.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // genderBox
+            // 
+            this.genderBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.genderBox.FormattingEnabled = true;
+            this.genderBox.Items.AddRange(new object[] {
+            "Man",
+            "Vrouw",
+            "Anders",
+            "Wil ik niet zeggen"});
+            this.genderBox.Location = new System.Drawing.Point(157, 43);
+            this.genderBox.Name = "genderBox";
+            this.genderBox.Size = new System.Drawing.Size(100, 21);
+            this.genderBox.TabIndex = 30;
+            // 
             // EmailField
             // 
             this.EmailField.Location = new System.Drawing.Point(157, 218);
@@ -246,6 +263,7 @@ namespace UI
             // PostcodeField
             // 
             this.PostcodeField.Location = new System.Drawing.Point(157, 145);
+            this.PostcodeField.MaxLength = 6;
             this.PostcodeField.Name = "PostcodeField";
             this.PostcodeField.Size = new System.Drawing.Size(100, 20);
             this.PostcodeField.TabIndex = 25;
@@ -293,34 +311,34 @@ namespace UI
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // genderBox
+            // pbMovie
             // 
-            this.genderBox.FormattingEnabled = true;
-            this.genderBox.Items.AddRange(new object[] {
-            "Man",
-            "Vrouw",
-            "Anders",
-            "WIl ik niet zeggen"});
-            this.genderBox.Location = new System.Drawing.Point(157, 48);
-            this.genderBox.Name = "genderBox";
-            this.genderBox.Size = new System.Drawing.Size(100, 21);
-            this.genderBox.TabIndex = 29;
+            this.pbMovie.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pbMovie.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbMovie.InitialImage")));
+            this.pbMovie.Location = new System.Drawing.Point(37, 83);
+            this.pbMovie.Name = "pbMovie";
+            this.pbMovie.Size = new System.Drawing.Size(117, 166);
+            this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbMovie.TabIndex = 16;
+            this.pbMovie.TabStop = false;
             // 
             // Reserveerscherm1Gegevens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbMovie);
             this.Controls.Add(this.FormLoad);
             this.Controls.Add(this.red_bovenkant);
             this.Controls.Add(this.Red_onderkant);
             this.Name = "Reserveerscherm1Gegevens";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reserveerscherm1Gegevens";
+            this.Text = "POPCORN PLAZA";
             this.Load += new System.EventHandler(this.Reserveerscherm1Gegevens_Load);
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,9 +355,11 @@ namespace UI
         public System.Windows.Forms.TextBox EmailField;
         private System.Windows.Forms.Panel FormLoad;
         private System.Windows.Forms.Label Gender;
+        private System.Windows.Forms.ComboBox genderBox;
         private System.Windows.Forms.Label Information;
         public System.Windows.Forms.TextBox NameField;
         private System.Windows.Forms.Button Next;
+        private System.Windows.Forms.PictureBox pbMovie;
         private System.Windows.Forms.Label Phonenumber;
         public System.Windows.Forms.TextBox PhonenumberField;
         private System.Windows.Forms.Label Postcode;
@@ -351,7 +371,5 @@ namespace UI
         private System.Windows.Forms.Label UserName;
 
         #endregion
-
-        private System.Windows.Forms.ComboBox genderBox;
     }
 }

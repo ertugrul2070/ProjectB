@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // nButton
@@ -51,7 +51,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.flowLayoutPanel1.Controls.Add(this.label2);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(198, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -106,13 +106,14 @@
             this.Controls.Add(this.label1);
             this.Name = "FilmDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FilmDetails";
+            this.Text = "POPCORN PLAZA";
             this.Load += new System.EventHandler(this.FilmDetails_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

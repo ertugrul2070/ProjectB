@@ -19,6 +19,7 @@ namespace UI
         public Reserveerscherm4Snacks()
         {
             InitializeComponent();
+            pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
             UpdateTotaal();
             FillSnackDict();
         }
@@ -46,8 +47,9 @@ namespace UI
         private void Next_Click(object sender, EventArgs e)
         {
             // stuur de snacklijst door naar reservation administration
+            Program._ReservationSession.CurrentReservation.chosenSnacks = snacks;
 
-            Reserveerscherm5Betalen nextForm = new Reserveerscherm5Betalen();
+            Reserveerscherm1Gegevens nextForm = new Reserveerscherm1Gegevens();
             this.Hide();
             nextForm.ShowDialog();
             this.Close();
@@ -88,7 +90,7 @@ namespace UI
         {
             if (Soort2.SelectedIndex > -1)
             {
-                string snack = "Popcorn " + Soort3.Text + " Middel";
+                string snack = "Popcorn " + Soort2.Text + " Middel";
                 AddSnackToList(snack);
                 totaal += 4.5;
                 UpdateTotaal();

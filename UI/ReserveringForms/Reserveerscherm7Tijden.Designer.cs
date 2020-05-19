@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reserveerscherm7Tijden));
             this.red_bovenkant = new System.Windows.Forms.Panel();
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
@@ -41,8 +42,10 @@
             this.Date = new System.Windows.Forms.Label();
             this.Next = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
+            this.pbMovie = new System.Windows.Forms.PictureBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).BeginInit();
             this.SuspendLayout();
             // 
             // red_bovenkant
@@ -75,7 +78,7 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
             this.FormLoad.Controls.Add(this.cbTime);
             this.FormLoad.Controls.Add(this.cbDate);
             this.FormLoad.Controls.Add(this.cbCity);
@@ -94,29 +97,28 @@
             // cbTime
             // 
             this.cbTime.FormattingEnabled = true;
-            this.cbTime.Items.AddRange(new object[] {"14:45", "16:00", "17:35", "19:00", "21:30", "23:15"});
-            this.cbTime.Location = new System.Drawing.Point(251, 104);
+            this.cbTime.Location = new System.Drawing.Point(244, 104);
             this.cbTime.Name = "cbTime";
-            this.cbTime.Size = new System.Drawing.Size(85, 21);
-            this.cbTime.TabIndex = 25;
+            this.cbTime.Size = new System.Drawing.Size(93, 21);
+            this.cbTime.TabIndex = 28;
             // 
             // cbDate
             // 
             this.cbDate.FormattingEnabled = true;
-            this.cbDate.Items.AddRange(new object[] {"13/08/2020", "15/08/2020", "19/08/2020", "25/08/2020", "01/09/2020"});
-            this.cbDate.Location = new System.Drawing.Point(148, 104);
+            this.cbDate.Location = new System.Drawing.Point(140, 104);
             this.cbDate.Name = "cbDate";
-            this.cbDate.Size = new System.Drawing.Size(85, 21);
-            this.cbDate.TabIndex = 24;
+            this.cbDate.Size = new System.Drawing.Size(93, 21);
+            this.cbDate.TabIndex = 27;
+            this.cbDate.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // cbCity
             // 
             this.cbCity.FormattingEnabled = true;
-            this.cbCity.Items.AddRange(new object[] {"Rotterdam", "Amsterdam", "Den Haag", "Leiden", "Groningen"});
-            this.cbCity.Location = new System.Drawing.Point(46, 104);
+            this.cbCity.Location = new System.Drawing.Point(38, 104);
             this.cbCity.Name = "cbCity";
-            this.cbCity.Size = new System.Drawing.Size(85, 21);
-            this.cbCity.TabIndex = 23;
+            this.cbCity.Size = new System.Drawing.Size(93, 21);
+            this.cbCity.TabIndex = 26;
+            this.cbCity.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Cinema
             // 
@@ -152,7 +154,7 @@
             // 
             // Next
             // 
-            this.Next.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (253)))), ((int) (((byte) (254)))), ((int) (((byte) (91)))));
+            this.Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
             this.Next.Location = new System.Drawing.Point(219, 259);
             this.Next.Name = "Next";
             this.Next.Size = new System.Drawing.Size(118, 37);
@@ -163,7 +165,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (204)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
+            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Back.Location = new System.Drawing.Point(18, 259);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -172,20 +174,34 @@
             this.Back.UseVisualStyleBackColor = false;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
+            // pbMovie
+            // 
+            this.pbMovie.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pbMovie.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbMovie.InitialImage")));
+            this.pbMovie.Location = new System.Drawing.Point(34, 70);
+            this.pbMovie.Name = "pbMovie";
+            this.pbMovie.Size = new System.Drawing.Size(117, 166);
+            this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMovie.TabIndex = 19;
+            this.pbMovie.TabStop = false;
+            // 
             // Reserveerscherm7Tijden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbMovie);
             this.Controls.Add(this.FormLoad);
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
             this.Name = "Reserveerscherm7Tijden";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reserveerscherm7Tijden";
+            this.Text = "POPCORN PLAZA";
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Button Back;
@@ -198,6 +214,7 @@
         private System.Windows.Forms.Panel FormLoad;
         private System.Windows.Forms.Label Information;
         private System.Windows.Forms.Button Next;
+        private System.Windows.Forms.PictureBox pbMovie;
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
         private System.Windows.Forms.Label Time;
