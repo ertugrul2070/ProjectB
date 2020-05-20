@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using Engine.ViewModels;
+using MySql.Data.MySqlClient;
 
 namespace UI
 {
     public partial class Overzicht : Form
     {
+        DatabaseConnection dbc = new DatabaseConnection();
+
         public Overzicht()
         {
             InitializeComponent();
@@ -20,7 +24,7 @@ namespace UI
 
         private void Overzicht_Load(object sender, EventArgs e)
         {
-            XmlDocument doc = new XmlDocument();
+            /*XmlDocument doc = new XmlDocument();
             doc.Load("Films.xml");
             int afilm = 0;
             foreach (XmlNode node in doc.DocumentElement)
@@ -40,34 +44,67 @@ namespace UI
                 l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
                 afilm = afilm + 1;
                 }
+            }*/
+
+
+            try
+            {
+                dbc.cnn.Open();
+
+                string getMoviesQuery = "SELECT * FROM mydb.movies";
+                MySqlCommand command = new MySqlCommand(getMoviesQuery, dbc.cnn);
+
+                MySqlDataReader dataReader = command.ExecuteReader();
+                List<string> str = new List<string>();
+
+                while (dataReader.Read())
+                {
+                    string name = dataReader.GetString("name");
+                    string cover = dataReader.GetString("cover");
+                    int id = Convert.ToInt32(dataReader.GetString("idmovies"));
+                    PictureBox l = addlabel(name, cover, id);
+                    filmPanel1.Controls.Add(l);
+                    l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
+                }
+               
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                dbc.cnn.Close();
+            }
+
         }
         public static string chosenName = "";
         public static string chosenPic = "";
-        public static string chosenLink = "";
+        public static string chosenId = "";
         
         private void labelDoubleClick(object sender, EventArgs e)
         {
             PictureBox currentlabel = (PictureBox)sender;
             chosenName = currentlabel.Text;
             chosenPic = currentlabel.ImageLocation;
-            chosenLink = currentlabel.Name;
+            chosenId = currentlabel.Name;
 
             Program._ReservationSession.CurrentReservation.movie = chosenName;
             Program._ReservationSession.CurrentReservation.dataUrl = chosenPic;
 
-            FilmDetails frm2 = new FilmDetails(chosenName,chosenPic, chosenLink);
+            FilmDetails frm2 = new FilmDetails(chosenName,chosenPic, chosenId);
             frm2.Show();
         }
 
-        PictureBox addlabel(int i, string name, List<string> dataUrl)
+        PictureBox addlabel(string name, string cover, int id)
         {
 
             PictureBox l = new PictureBox();
-            l.Name = dataUrl[4];
+            l.Name = id.ToString();
             l.Text = name;
             l.BackColor = Color.Green;
-            l.ImageLocation = dataUrl[1];
+            l.ImageLocation = cover;
             l.Width = 135;
             l.Height = 191;
             l.SizeMode = PictureBoxSizeMode.Zoom;
