@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using Engine.ViewModels;
+using MySql.Data.MySqlClient;
 
 namespace UI
 {
     public partial class Overzicht : Form
     {
+        DatabaseConnection dbc = new DatabaseConnection();
+
         public Overzicht()
         {
             InitializeComponent();
@@ -20,7 +24,7 @@ namespace UI
 
         private void Overzicht_Load(object sender, EventArgs e)
         {
-            XmlDocument doc = new XmlDocument();
+            /*XmlDocument doc = new XmlDocument();
             doc.Load("Films.xml");
             int afilm = 0;
             foreach (XmlNode node in doc.DocumentElement)
@@ -40,7 +44,43 @@ namespace UI
                 l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
                 afilm = afilm + 1;
                 }
+            }*/
+
+
+
+
+            
+
+            try
+            {
+                dbc.cnn.Open();
+
+                string getMoviesQuery = "SELECT * FROM mydb.movies";
+                MySqlCommand command = new MySqlCommand(getMoviesQuery, dbc.cnn);
+
+                MySqlDataReader dataReader = command.ExecuteReader();
+                List<string> str = new List<string>();
+
+                while (dataReader.Read())
+                {
+                    string name = dataReader.GetString("name");
+                    string cover = dataReader.GetString("cover");
+                    PictureBox l = addlabel(name, cover);
+                    filmPanel1.Controls.Add(l);
+                    l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
+                }
+               
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                dbc.cnn.Close();
+            }
+
         }
         public static string chosenName = "";
         public static string chosenPic = "";
@@ -60,14 +100,14 @@ namespace UI
             frm2.Show();
         }
 
-        PictureBox addlabel(int i, string name, List<string> dataUrl)
+        PictureBox addlabel(string name, string cover)
         {
 
             PictureBox l = new PictureBox();
-            l.Name = dataUrl[4];
+            l.Name = "https://www.youtube.com/embed/BIhNsAtPbPI";
             l.Text = name;
             l.BackColor = Color.Green;
-            l.ImageLocation = dataUrl[1];
+            l.ImageLocation = cover;
             l.Width = 135;
             l.Height = 191;
             l.SizeMode = PictureBoxSizeMode.Zoom;
