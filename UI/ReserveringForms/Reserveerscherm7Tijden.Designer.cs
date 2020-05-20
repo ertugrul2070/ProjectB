@@ -96,6 +96,7 @@
             // 
             // cbTime
             // 
+            this.cbTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTime.FormattingEnabled = true;
             this.cbTime.Location = new System.Drawing.Point(244, 104);
             this.cbTime.Name = "cbTime";
@@ -104,6 +105,7 @@
             // 
             // cbDate
             // 
+            this.cbDate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDate.FormattingEnabled = true;
             this.cbDate.Location = new System.Drawing.Point(140, 104);
             this.cbDate.Name = "cbDate";
@@ -113,6 +115,7 @@
             // 
             // cbCity
             // 
+            this.cbCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCity.FormattingEnabled = true;
             this.cbCity.Location = new System.Drawing.Point(38, 104);
             this.cbCity.Name = "cbCity";

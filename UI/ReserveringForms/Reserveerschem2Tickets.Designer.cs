@@ -171,6 +171,7 @@
             this.NormalField.Size = new System.Drawing.Size(96, 20);
             this.NormalField.TabIndex = 2;
             this.NormalField.Text = "0";
+            this.NormalField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NormalField_KeyPress);
             // 
             // ChildField
             // 
@@ -179,6 +180,7 @@
             this.ChildField.Size = new System.Drawing.Size(96, 20);
             this.ChildField.TabIndex = 1;
             this.ChildField.Text = "0";
+            this.ChildField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ChildField_KeyPress);
             // 
             // BoomerField
             // 
@@ -187,6 +189,7 @@
             this.BoomerField.Size = new System.Drawing.Size(96, 20);
             this.BoomerField.TabIndex = 0;
             this.BoomerField.Text = "0";
+            this.BoomerField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BoomerField_KeyPress);
             // 
             // red_bovenkant
             // 

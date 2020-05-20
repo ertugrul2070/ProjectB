@@ -38,14 +38,35 @@ namespace UI
         {
             addTickets();
 
-            if (Convert.ToInt32(NormalField.Text) < 0 || Convert.ToInt32(ChildField.Text) < 0 || Convert.ToInt32(BoomerField.Text) < 0)
-            {
-                MessageBox.Show("Kies aub tussen 1 en 6 tickets.");
+            System.Text.RegularExpressions.Regex regularExpression = new System.Text.RegularExpressions.Regex(@"^[0-6]$");
 
-               
+
+            if (NormalField.Text == "" && ChildField.Text == "" && BoomerField.Text == "")
+            {
+                MessageBox.Show("Vul uw aantal tickets in AUB.");
+                NormalField.Text = "0";
+                ChildField.Text = "0";
+                BoomerField.Text = "0";
             }
-            
-            
+
+            else if (NormalField.Text == "" || ChildField.Text == "" || BoomerField.Text == "")
+            {
+                NormalField.Text = "0";
+                ChildField.Text = "0";
+                BoomerField.Text = "0";
+            }
+
+
+            else if (!regularExpression.IsMatch(NormalField.Text) || !regularExpression.IsMatch(ChildField.Text) || !regularExpression.IsMatch(BoomerField.Text))
+            {
+                MessageBox.Show("Kies tussen 1 en 6 tickets");
+            }
+
+            else if((Convert.ToInt32(NormalField.Text) + Convert.ToInt32(ChildField.Text) + Convert.ToInt32(BoomerField.Text)) > 6 ||
+                (Convert.ToInt32(NormalField.Text) + Convert.ToInt32(ChildField.Text) + Convert.ToInt32(BoomerField.Text)) < 1)
+            {
+                MessageBox.Show("Kies tussen 1 en 6 tickets");
+            }
 
             else
             {
@@ -55,8 +76,10 @@ namespace UI
                 this.Close();
             }
 
- 
-            
+           
+
+
+
         }
 
         private void Back_Click(object sender, EventArgs e)
@@ -103,6 +126,32 @@ namespace UI
         private void Information_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void NormalField_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void ChildField_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void BoomerField_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            
         }
     }
 }
