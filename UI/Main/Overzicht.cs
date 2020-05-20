@@ -47,10 +47,6 @@ namespace UI
             }*/
 
 
-
-
-            
-
             try
             {
                 dbc.cnn.Open();
@@ -65,7 +61,8 @@ namespace UI
                 {
                     string name = dataReader.GetString("name");
                     string cover = dataReader.GetString("cover");
-                    PictureBox l = addlabel(name, cover);
+                    int id = Convert.ToInt32(dataReader.GetString("idmovies"));
+                    PictureBox l = addlabel(name, cover, id);
                     filmPanel1.Controls.Add(l);
                     l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
                 }
@@ -84,27 +81,27 @@ namespace UI
         }
         public static string chosenName = "";
         public static string chosenPic = "";
-        public static string chosenLink = "";
+        public static string chosenId = "";
         
         private void labelDoubleClick(object sender, EventArgs e)
         {
             PictureBox currentlabel = (PictureBox)sender;
             chosenName = currentlabel.Text;
             chosenPic = currentlabel.ImageLocation;
-            chosenLink = currentlabel.Name;
+            chosenId = currentlabel.Name;
 
             Program._ReservationSession.CurrentReservation.movie = chosenName;
             Program._ReservationSession.CurrentReservation.dataUrl = chosenPic;
 
-            FilmDetails frm2 = new FilmDetails(chosenName,chosenPic, chosenLink);
+            FilmDetails frm2 = new FilmDetails(chosenName,chosenPic, chosenId);
             frm2.Show();
         }
 
-        PictureBox addlabel(string name, string cover)
+        PictureBox addlabel(string name, string cover, int id)
         {
 
             PictureBox l = new PictureBox();
-            l.Name = "https://www.youtube.com/embed/BIhNsAtPbPI";
+            l.Name = id.ToString();
             l.Text = name;
             l.BackColor = Color.Green;
             l.ImageLocation = cover;
