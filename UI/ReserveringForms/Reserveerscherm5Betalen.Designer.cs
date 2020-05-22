@@ -274,7 +274,7 @@
             this.pbMovie.Location = new System.Drawing.Point(49, 72);
             this.pbMovie.Name = "pbMovie";
             this.pbMovie.Size = new System.Drawing.Size(117, 166);
-            this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMovie.TabIndex = 18;
             this.pbMovie.TabStop = false;
             // 

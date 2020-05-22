@@ -113,13 +113,11 @@ namespace UI
             }
 
 
-            
 
-            else if ((chars[0] < '0' || chars[0] > '9') || (chars[1] < '0' || chars[1] > '9') || (chars[2] < '0' || chars[2] > '9') || (chars[3] < '0' || chars[3] > '9') ||
-            (chars[4] < 'A' || chars[4] > 'Z') || (chars[5] < 'A' || chars[5] > 'Z') || PostcodeField.Text.Length < 6)
-                {
-                    MessageBox.Show("Postcode is onjuist.");
-                }
+            else if (!isPostcodeValid(chars))
+            {
+                MessageBox.Show("Postcode is onjuist.");
+            }
 
             else
             {
@@ -167,7 +165,14 @@ namespace UI
 
             if (genderBox.Text != "" && NameField.Text != "" && SurnameField.Text != "" && AddressField.Text != "" && PostcodeField.Text != "" && CityField.Text != "" && PhonenumberField.Text != "" && EmailField.Text != "")
             {
-                RegisterUser(userEmail);
+                if (!isPostcodeValid(PostcodeField.Text.ToCharArray()))
+                {
+                    RegisterUser(userEmail);
+                }
+                else
+                {
+                    MessageBox.Show("Postcode is onjuist.");
+                }
             }
             else
             {
@@ -296,9 +301,17 @@ namespace UI
             EmailField.Text = email;
         }
 
-        private void genderBox_SelectedIndexChanged(object sender, EventArgs e)
+        private bool isPostcodeValid(char[] chars)
         {
-
+            if ((chars[0] < '0' || chars[0] > '9') || (chars[1] < '0' || chars[1] > '9') || (chars[2] < '0' || chars[2] > '9') || (chars[3] < '0' || chars[3] > '9') ||
+            (chars[4] < 'A' || chars[4] > 'Z') || (chars[5] < 'A' || chars[5] > 'Z') || PostcodeField.Text.Length < 6)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

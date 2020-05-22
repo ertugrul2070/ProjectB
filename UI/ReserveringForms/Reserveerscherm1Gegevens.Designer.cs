@@ -318,7 +318,7 @@ namespace UI
             this.pbMovie.Location = new System.Drawing.Point(37, 83);
             this.pbMovie.Name = "pbMovie";
             this.pbMovie.Size = new System.Drawing.Size(117, 166);
-            this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMovie.TabIndex = 16;
             this.pbMovie.TabStop = false;
             // 
