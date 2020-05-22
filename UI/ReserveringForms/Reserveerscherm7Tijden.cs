@@ -26,14 +26,14 @@ namespace UI
             {
                 dbcr.cnn.Open();
 
-                string selectQuery = "SELECT * FROM `mydb`.`cinema`";
+                string selectQuery = "SELECT * FROM `mydb`.`movies`";
                 MySqlCommand command = new MySqlCommand(selectQuery, dbcr.cnn);
 
                 MySqlDataReader dataReader = command.ExecuteReader();
 
                 while (dataReader.Read())
                 {
-                    string cinema = dataReader.GetString("place");
+                    string cinema = dataReader.GetString("name");
 
                     cbCity.Items.Add(cinema);
                 }
@@ -76,7 +76,7 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            if (cbCity.SelectedIndex > -1 && cbDate.SelectedIndex > -1 && cbTime.SelectedIndex > -1)
+            if (cbCity.SelectedIndex > -1/* && cbDate.SelectedIndex > -1 && cbTime.SelectedIndex > -1*/)
             {
                 Program._ReservationSession.CurrentReservation.AddPlaceDateTime(cbCity.Text, cbDate.Text, cbTime.Text);
 
@@ -117,9 +117,9 @@ namespace UI
 
                 while (dataReader.Read())
                 {
-                    string cinema = dataReader.GetString("date");
+                    //string cinema = dataReader.GetString("trailer");
 
-                    cbDate.Items.Add(cinema.Remove(10));
+                    //cbDate.Items.Add(cinema.Remove(10));
                 }
             }
             catch (Exception)
