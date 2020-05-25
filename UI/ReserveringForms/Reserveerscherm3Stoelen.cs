@@ -13,10 +13,14 @@ namespace UI
 {
     public partial class Reserveerscherm3Stoelen : Form
     {
+        string greyPersonIcon = "https://i.imgur.com/8gjqlK3.png";
+        string greenPersonIcon = "https://i.imgur.com/7QQILej.png";
+        string redPersonIcon = "https://i.imgur.com/ts4EBwu.png";
         public Reserveerscherm3Stoelen()
         {
             InitializeComponent();
             pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
+            
         }
 
         private void Information_Click(object sender, EventArgs e)
@@ -34,54 +38,10 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            int abc = Program._ReservationSession.CurrentReservation.ticketDictionary.Count;
-            bool check = true;
-
-            int [] cbarray = { CB1.SelectedIndex, CB2.SelectedIndex, CB3.SelectedIndex, CB4.SelectedIndex, CB5.SelectedIndex, CB6.SelectedIndex };
-
-
-            for (int i = 0; i < abc; i++)
-            {
-                if (cbarray[i] > -1)
-                {
-                    check = check && true;
-
-                }
-
-                else
-                {
-                    check = check && false;
-                }
-            }
-
-            if (check)
-            {
-
-                string[] CB = { CB1.Text, CB2.Text, CB3.Text, CB4.Text, CB5.Text, CB6.Text };
-
-                if (CB.Length != CB.Distinct().Count())
-                {
-                    MessageBox.Show("U heeft dubbele stoelen gekozen. Kies opnieuw.");
-                }
-
-
-                else
-                {
-                    Reserveerscherm4Snacks nextForm = new Reserveerscherm4Snacks();
-                    this.Hide();
-                    nextForm.ShowDialog();
-                    this.Close();
-                }
-
-            }
-
-            else
-            {
-                MessageBox.Show("Kies voor elke ticket een stoel.");
-            }
-
-            
-            
+            Reserveerscherm4Snacks nextForm = new Reserveerscherm4Snacks();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
         }
 
         private void FormLoad_Paint(object sender, PaintEventArgs e)
@@ -103,51 +63,39 @@ namespace UI
 
         private void Reserveerscherm3Stoelen_Load(object sender, EventArgs e)
         {
-            
-            int acb = Program._ReservationSession.CurrentReservation.ticketDictionary.Count;
-
-            switch (acb)
+            PictureBox[] pics = {pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10, 
+                pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16, pictureBox17, pictureBox18,
+                pictureBox19,pictureBox20,pictureBox21,pictureBox22,pictureBox23,pictureBox24,pictureBox25,pictureBox26,pictureBox27,
+                pictureBox28,pictureBox29,pictureBox30,pictureBox31,pictureBox32,pictureBox33,pictureBox34,pictureBox35,pictureBox36,
+                pictureBox37,pictureBox38,pictureBox39,pictureBox40,pictureBox41,pictureBox42,pictureBox43,pictureBox44,pictureBox45,pictureBox46,pictureBox47,pictureBox48,pictureBox49,pictureBox50};
+            foreach(PictureBox c in pics)
             {
-                case 1:
-                    CB1.Visible = true;
-                    break;
-
-                case 2:
-                    CB1.Visible = true;
-                    CB2.Visible = true;
-                    break;
-                case 3:
-                    CB1.Visible = true;
-                    CB2.Visible = true;
-                    CB3.Visible = true;
-                    break;
-                case 4:
-                    CB1.Visible = true;
-                    CB2.Visible = true;
-                    CB3.Visible = true;
-                    CB4.Visible = true;
-                    break;
-                case 5:
-                    CB1.Visible = true;
-                    CB2.Visible = true;
-                    CB3.Visible = true;
-                    CB4.Visible = true;
-                    CB5.Visible = true;
-                    break;
-
-                default:
-                    CB1.Visible = true;
-                    CB2.Visible = true;
-                    CB3.Visible = true;
-                    CB4.Visible = true;
-                    CB5.Visible = true;
-                    CB6.Visible = true;
-                    break;
+                c.ImageLocation = greyPersonIcon;
             }
-               
-          
+
         }
 
-       
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            PictureBox pic = (PictureBox)sender;
+            if (pic.ImageLocation == greenPersonIcon)
+            {
+                pic.ImageLocation = greyPersonIcon;
+            }
+            else
+            {
+                pic.ImageLocation = greenPersonIcon;
+            }
+        }
     }
 }
