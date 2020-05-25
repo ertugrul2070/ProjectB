@@ -121,11 +121,13 @@
             // 
             // Information
             // 
+            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Information.Location = new System.Drawing.Point(154, 8);
             this.Information.Name = "Information";
             this.Information.Size = new System.Drawing.Size(88, 21);
-            this.Information.TabIndex = 18;
+            this.Information.TabIndex = 15;
             this.Information.Text = "Tickets";
+            this.Information.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Information.Click += new System.EventHandler(this.Information_Click);
             // 
             // Senior
@@ -155,7 +157,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Back.BackColor = System.Drawing.Color.Red;
             this.Back.Location = new System.Drawing.Point(18, 259);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);

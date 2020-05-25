@@ -120,5 +120,10 @@ namespace UI
         {
             
         }
+
+        private void Reserveerscherm7Tijden_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

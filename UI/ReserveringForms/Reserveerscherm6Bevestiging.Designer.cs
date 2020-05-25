@@ -211,9 +211,10 @@
             // 
             // Information
             // 
+            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Information.Location = new System.Drawing.Point(145, 14);
             this.Information.Name = "Information";
-            this.Information.Size = new System.Drawing.Size(88, 21);
+            this.Information.Size = new System.Drawing.Size(104, 21);
             this.Information.TabIndex = 18;
             this.Information.Text = "Bevestiging";
             // 
@@ -243,7 +244,7 @@
             // 
             // Terug
             // 
-            this.Terug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.Terug.BackColor = System.Drawing.Color.Red;
             this.Terug.Location = new System.Drawing.Point(88, 347);
             this.Terug.Name = "Terug";
             this.Terug.Size = new System.Drawing.Size(161, 37);

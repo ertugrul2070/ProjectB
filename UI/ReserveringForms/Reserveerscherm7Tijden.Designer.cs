@@ -93,7 +93,7 @@
             // cbDate
             // 
             this.cbDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.cbDate.Location = new System.Drawing.Point(35, 105);
+            this.cbDate.Location = new System.Drawing.Point(50, 104);
             this.cbDate.MaxDate = new System.DateTime(2020, 5, 31, 0, 0, 0, 0);
             this.cbDate.MinDate = new System.DateTime(2020, 5, 23, 0, 0, 0, 0);
             this.cbDate.Name = "cbDate";
@@ -106,7 +106,7 @@
             // cbTime
             // 
             this.cbTime.FormattingEnabled = true;
-            this.cbTime.Location = new System.Drawing.Point(196, 104);
+            this.cbTime.Location = new System.Drawing.Point(213, 104);
             this.cbTime.Name = "cbTime";
             this.cbTime.Size = new System.Drawing.Size(93, 21);
             this.cbTime.TabIndex = 28;
@@ -114,15 +114,16 @@
             // 
             // Information
             // 
-            this.Information.Location = new System.Drawing.Point(138, 12);
+            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Information.Location = new System.Drawing.Point(146, 12);
             this.Information.Name = "Information";
-            this.Information.Size = new System.Drawing.Size(88, 21);
+            this.Information.Size = new System.Drawing.Size(102, 21);
             this.Information.TabIndex = 18;
             this.Information.Text = "Reserveren";
             // 
             // Time
             // 
-            this.Time.Location = new System.Drawing.Point(210, 79);
+            this.Time.Location = new System.Drawing.Point(242, 79);
             this.Time.Name = "Time";
             this.Time.Size = new System.Drawing.Size(79, 21);
             this.Time.TabIndex = 11;
@@ -130,7 +131,7 @@
             // 
             // Date
             // 
-            this.Date.Location = new System.Drawing.Point(57, 79);
+            this.Date.Location = new System.Drawing.Point(69, 79);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(79, 21);
             this.Date.TabIndex = 10;
@@ -149,7 +150,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Back.BackColor = System.Drawing.Color.Red;
             this.Back.Location = new System.Drawing.Point(18, 259);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -181,6 +182,7 @@
             this.Name = "Reserveerscherm7Tijden";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POPCORN PLAZA";
+            this.Load += new System.EventHandler(this.Reserveerscherm7Tijden_Load);
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).EndInit();

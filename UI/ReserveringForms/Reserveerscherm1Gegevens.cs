@@ -111,7 +111,7 @@ namespace UI
 
             if (genderBox.Text == "" || NameField.Text == "" || SurnameField.Text == "" || AddressField.Text == "" || PostcodeField.Text == "" || CityField.Text == "" || PhonenumberField.Text == "" || EmailField.Text == "")
             {
-                MessageBox.Show("Vul alle velden in AUB");
+                MessageBox.Show("Vul alle velden in AUB.");
             }
 
             else if (!theEmailPattern.IsMatch(EmailField.Text))
@@ -181,7 +181,7 @@ namespace UI
             }
             else
             {
-                MessageBox.Show("Vul alle velden in AUB");
+                MessageBox.Show("Vul alle velden in AUB.");
             }
         }
 
@@ -253,11 +253,11 @@ namespace UI
 
                     if (command.ExecuteNonQuery() == 1)
                     {
-                        MessageBox.Show("User Added");
+                        MessageBox.Show("Gebruiker toegevoegd.");
                     }
                     else
                     {
-                        MessageBox.Show("ERROR");
+                        MessageBox.Show("Er is iets fout gegaan. Probeer opnieuw.");
                     }
                 }
                 catch (Exception)
@@ -272,7 +272,7 @@ namespace UI
             }
             else
             {
-                MessageBox.Show("USER ALREADY EXISTS, TRY LOGGING IN");
+                MessageBox.Show("Deze gebruiker bestaat al. Probeer in te loggen.");
             }
         }
 

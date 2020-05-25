@@ -59,13 +59,13 @@ namespace UI
 
             else if (!regularExpression.IsMatch(NormalField.Text) || !regularExpression.IsMatch(ChildField.Text) || !regularExpression.IsMatch(BoomerField.Text))
             {
-                MessageBox.Show("Kies tussen 1 en 6 tickets");
+                MessageBox.Show("Kies tussen 1 en 6 tickets.");
             }
 
             else if((Convert.ToInt32(NormalField.Text) + Convert.ToInt32(ChildField.Text) + Convert.ToInt32(BoomerField.Text)) > 6 ||
                 (Convert.ToInt32(NormalField.Text) + Convert.ToInt32(ChildField.Text) + Convert.ToInt32(BoomerField.Text)) < 1)
             {
-                MessageBox.Show("Kies tussen 1 en 6 tickets");
+                MessageBox.Show("Kies tussen 1 en 6 tickets.");
             }
 
             else
