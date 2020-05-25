@@ -86,7 +86,7 @@ namespace UI
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            
         }
 
         private void genderBox_TextChanged(object sender, EventArgs e)

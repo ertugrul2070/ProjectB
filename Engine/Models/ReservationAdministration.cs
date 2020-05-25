@@ -13,7 +13,6 @@ namespace Engine.Models
         public string movie;
         public string dataUrl;
 
-        public string location;
         public string date;
         public string time;
 
@@ -30,9 +29,8 @@ namespace Engine.Models
            this.custommer = new Custommer(email, gender, name, surname, streetadress, postcode, city, phonenumber);
         }
 
-        public void AddPlaceDateTime(string location, string date, string time)
+        public void AddPlaceDateTime(string date, string time)
         {
-            this.location = location;
             this.date = date;
             this.time = time;
         }
