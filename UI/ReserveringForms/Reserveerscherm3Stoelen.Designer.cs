@@ -247,16 +247,17 @@
             // 
             this.label16.AccessibleName = "";
             this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.White;
+            this.label16.BackColor = System.Drawing.Color.Red;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(154, 34);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(43, 13);
+            this.label16.Size = new System.Drawing.Size(49, 13);
             this.label16.TabIndex = 84;
             this.label16.Text = "Scherm";
             // 
             // pictureBox51
             // 
-            this.pictureBox51.BackColor = System.Drawing.Color.DarkRed;
+            this.pictureBox51.BackColor = System.Drawing.Color.Red;
             this.pictureBox51.Location = new System.Drawing.Point(44, 24);
             this.pictureBox51.Name = "pictureBox51";
             this.pictureBox51.Size = new System.Drawing.Size(274, 32);
@@ -917,7 +918,8 @@
             // 
             // Information
             // 
-            this.Information.Location = new System.Drawing.Point(154, 8);
+            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Information.Location = new System.Drawing.Point(147, 6);
             this.Information.Name = "Information";
             this.Information.Size = new System.Drawing.Size(88, 21);
             this.Information.TabIndex = 18;
@@ -937,7 +939,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Back.BackColor = System.Drawing.Color.Red;
             this.Back.Location = new System.Drawing.Point(18, 294);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -967,6 +969,7 @@
             // 
             // Receipt
             // 
+            this.Receipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Receipt.Location = new System.Drawing.Point(87, 8);
             this.Receipt.Name = "Receipt";
             this.Receipt.Size = new System.Drawing.Size(88, 21);
@@ -1023,10 +1026,9 @@
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.FormLoad);
             this.Controls.Add(this.red_bovenkant);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reserveerscherm3Stoelen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Popcorn Plaza";
+            this.Text = "POPCORN PLAZA";
             this.Load += new System.EventHandler(this.Reserveerscherm3Stoelen_Load);
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
