@@ -104,6 +104,8 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
+            System.Text.RegularExpressions.Regex theEmailPattern = new System.Text.RegularExpressions.Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*" + "@" + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))\z");
+
             char[] chars = PostcodeField.Text.ToCharArray();
 
 
@@ -112,9 +114,12 @@ namespace UI
                 MessageBox.Show("Vul alle velden in AUB");
             }
 
+            else if (!theEmailPattern.IsMatch(EmailField.Text))
+                {
+                    MessageBox.Show("Email is onjuist");
+                }
 
-
-            else if (!isPostcodeValid(chars))
+                else if (!isPostcodeValid(chars))
             {
                 MessageBox.Show("Postcode is onjuist.");
             }

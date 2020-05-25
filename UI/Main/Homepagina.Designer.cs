@@ -56,6 +56,7 @@
             // Films_Knop
             // 
             this.Films_Knop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Films_Knop.Cursor = System.Windows.Forms.Cursors.Default;
             this.Films_Knop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Films_Knop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Films_Knop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,6 +123,7 @@
             // flowLayoutPanelActueel
             // 
             this.flowLayoutPanelActueel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.flowLayoutPanelActueel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.flowLayoutPanelActueel.Location = new System.Drawing.Point(13, 105);
             this.flowLayoutPanelActueel.Name = "flowLayoutPanelActueel";
             this.flowLayoutPanelActueel.Size = new System.Drawing.Size(787, 161);
@@ -130,6 +132,7 @@
             // flowLayoutPanelVerwacht
             // 
             this.flowLayoutPanelVerwacht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.flowLayoutPanelVerwacht.Cursor = System.Windows.Forms.Cursors.Hand;
             this.flowLayoutPanelVerwacht.Location = new System.Drawing.Point(12, 382);
             this.flowLayoutPanelVerwacht.Name = "flowLayoutPanelVerwacht";
             this.flowLayoutPanelVerwacht.Size = new System.Drawing.Size(787, 161);
