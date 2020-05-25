@@ -17,7 +17,6 @@ namespace UI
     
     public partial class Reserveerscherm7Tijden : Form
     {
-        public int ide = FilmDetails.chosenId;
         DatabaseConnection dbcr = Program.dbc;
         public Reserveerscherm7Tijden()
         {
@@ -27,7 +26,7 @@ namespace UI
             try
             {
                 dbcr.cnn.Open();
-                string selectQuery = $"SELECT time FROM mydb.time WHERE idtime = (SELECT time_idtime FROM mydb.movie_time WHERE movie_idmovie = '{FilmDetails.chosenId}')";
+                string selectQuery = $"SELECT time FROM mydb.time WHERE idtime = (SELECT time_idtime FROM mydb.movie_time WHERE movie_idmovie = '1')";
                 MySqlCommand command = new MySqlCommand(selectQuery, dbcr.cnn);
 
                 MySqlDataReader dataReader = command.ExecuteReader();
