@@ -18,6 +18,8 @@ namespace Engine.Models
         public string date;
         public string time;
 
+        public Dictionary<string, string> Seats;
+
 
         
 
@@ -45,6 +47,11 @@ namespace Engine.Models
         {
             this.date = date;
             this.time = time;
+        }
+
+        public void AddSeats(Dictionary<string, string> seats)
+        {
+            this.Seats = seats;
         }
 
         public void AddTickets(string ID, double price)
