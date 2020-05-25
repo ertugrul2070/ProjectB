@@ -64,7 +64,7 @@ namespace UI
                     int id = Convert.ToInt32(dataReader.GetString("idmovies"));
                     PictureBox l = addlabel(name, cover, id);
                     filmPanel1.Controls.Add(l);
-                    l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
+                    l.Click += new System.EventHandler(this.labelClick);
                 }
                
             }
@@ -83,7 +83,7 @@ namespace UI
         public static string chosenPic = "";
         public static string chosenId = "";
         
-        private void labelDoubleClick(object sender, EventArgs e)
+        private void labelClick(object sender, EventArgs e)
         {
             PictureBox currentlabel = (PictureBox)sender;
             chosenName = currentlabel.Text;
@@ -132,6 +132,11 @@ namespace UI
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+        }
+
+        private void filmPanel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

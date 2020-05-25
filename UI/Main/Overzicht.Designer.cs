@@ -73,7 +73,7 @@
             // 
             this.Binnenkort_Tekst.AutoSize = true;
             this.Binnenkort_Tekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Binnenkort_Tekst.Location = new System.Drawing.Point(260, 357);
+            this.Binnenkort_Tekst.Location = new System.Drawing.Point(302, 357);
             this.Binnenkort_Tekst.Name = "Binnenkort_Tekst";
             this.Binnenkort_Tekst.Size = new System.Drawing.Size(210, 26);
             this.Binnenkort_Tekst.TabIndex = 14;
@@ -86,6 +86,7 @@
             this.filmPanel1.Name = "filmPanel1";
             this.filmPanel1.Size = new System.Drawing.Size(807, 201);
             this.filmPanel1.TabIndex = 18;
+            this.filmPanel1.Click += new System.EventHandler(this.filmPanel1_Click);
             this.filmPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.filmPanel1_Paint);
             // 
             // PopcornPlaza_Logo
