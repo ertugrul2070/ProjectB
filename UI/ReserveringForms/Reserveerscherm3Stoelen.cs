@@ -13,6 +13,7 @@ namespace UI
 {
     public partial class Reserveerscherm3Stoelen : Form
     {
+        public int Amount = 0;
         string greyPersonIcon = "https://i.imgur.com/8gjqlK3.png";
         string greenPersonIcon = "https://i.imgur.com/7QQILej.png";
         string redPersonIcon = "https://i.imgur.com/ts4EBwu.png";
@@ -88,13 +89,21 @@ namespace UI
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             PictureBox pic = (PictureBox)sender;
+            
+
             if (pic.ImageLocation == greenPersonIcon)
             {
                 pic.ImageLocation = greyPersonIcon;
+                Amount--;
+            }
+            else if (Amount >= Program._ReservationSession.CurrentReservation.TicketAmount)
+            {
+                MessageBox.Show($"U heeft al {Program._ReservationSession.CurrentReservation.TicketAmount} besteld ");
             }
             else
             {
                 pic.ImageLocation = greenPersonIcon;
+                Amount++;
             }
         }
     }

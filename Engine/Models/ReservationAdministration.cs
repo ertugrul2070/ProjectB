@@ -9,6 +9,7 @@ namespace Engine.Models
         public string[] reservations;
         public Custommer custommer;
         public Dictionary<string, double> ticketDictionary= new Dictionary<string, double>();
+        public int TicketAmount;
 
         public string movie;
         public string dataUrl;
@@ -49,6 +50,7 @@ namespace Engine.Models
         public void AddTickets(string ID, double price)
         {
             ticketDictionary.Add(ID, price);
+            TicketAmount++;
         }
 
     }
