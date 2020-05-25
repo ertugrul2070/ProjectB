@@ -14,8 +14,10 @@ using MySql.Data.MySqlClient;
 
 namespace UI
 {
+    
     public partial class Reserveerscherm7Tijden : Form
     {
+        public int ide = FilmDetails.chosenId;
         DatabaseConnection dbcr = Program.dbc;
         public Reserveerscherm7Tijden()
         {
@@ -25,7 +27,7 @@ namespace UI
             try
             {
                 dbcr.cnn.Open();
-                string selectQuery = "SELECT time FROM mydb.time WHERE idtime = (SELECT time_idtime FROM mydb.movie_time WHERE movie_idmovie = '1')";
+                string selectQuery = $"SELECT time FROM mydb.time WHERE idtime = (SELECT time_idtime FROM mydb.movie_time WHERE movie_idmovie = '{FilmDetails.chosenId}')";
                 MySqlCommand command = new MySqlCommand(selectQuery, dbcr.cnn);
 
                 MySqlDataReader dataReader = command.ExecuteReader();
@@ -34,7 +36,7 @@ namespace UI
                 {
                     string cinema = dataReader.GetString("time");
 
-                    cbTime.Items.Add(cinema);
+                    cbTime.Items.Add(cinema.Remove(cinema.Length - 3));
                 }
             }
             catch (Exception)
