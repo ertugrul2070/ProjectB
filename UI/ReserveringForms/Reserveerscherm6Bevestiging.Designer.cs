@@ -260,9 +260,10 @@
             this.Controls.Add(this.FormLoad);
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reserveerscherm6Bevestiging";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POPCORN PLAZA";
+            this.Text = "Popcorn Plaza";
             this.Load += new System.EventHandler(this.Reserveerscherm6Bevestiging_Load);
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);

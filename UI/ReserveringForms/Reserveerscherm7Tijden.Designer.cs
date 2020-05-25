@@ -194,9 +194,10 @@
             this.Controls.Add(this.FormLoad);
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reserveerscherm7Tijden";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POPCORN PLAZA";
+            this.Text = "Popcorn Plaza";
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).EndInit();

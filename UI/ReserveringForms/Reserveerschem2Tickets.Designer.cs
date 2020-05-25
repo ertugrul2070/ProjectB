@@ -236,9 +236,10 @@
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
             this.Controls.Add(this.FormLoad);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reserveerschem2Tickets";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POPCORN PLAZA";
+            this.Text = "Popcorn Plaza";
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
             this.red_bovenkant.ResumeLayout(false);
