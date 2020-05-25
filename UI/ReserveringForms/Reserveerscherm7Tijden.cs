@@ -25,8 +25,7 @@ namespace UI
             try
             {
                 dbcr.cnn.Open();
-
-                string selectQuery = "SELECT * FROM `mydb`.`time`";
+                string selectQuery = "SELECT time FROM mydb.time WHERE idtime = (SELECT time_idtime FROM mydb.movie_time WHERE movie_idmovie = '1')";
                 MySqlCommand command = new MySqlCommand(selectQuery, dbcr.cnn);
 
                 MySqlDataReader dataReader = command.ExecuteReader();
@@ -35,7 +34,7 @@ namespace UI
                 {
                     string cinema = dataReader.GetString("time");
 
-                    cbTime.Items.Add(cinema.Remove(5));
+                    cbTime.Items.Add(cinema);
                 }
             }
             catch (Exception)
@@ -46,6 +45,10 @@ namespace UI
             {
                 dbcr.cnn.Close();
             }
+
+            cbDate.Value = DateTime.Today;
+            cbDate.MinDate = DateTime.Today;
+            cbDate.MaxDate = DateTime.Today.AddDays(7);
         }
 
         void Fillcombo()
