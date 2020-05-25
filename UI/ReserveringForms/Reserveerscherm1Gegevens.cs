@@ -86,7 +86,7 @@ namespace UI
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            
         }
 
         private void genderBox_TextChanged(object sender, EventArgs e)
@@ -104,17 +104,22 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
+            System.Text.RegularExpressions.Regex theEmailPattern = new System.Text.RegularExpressions.Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*" + "@" + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))\z");
+
             char[] chars = PostcodeField.Text.ToCharArray();
 
 
             if (genderBox.Text == "" || NameField.Text == "" || SurnameField.Text == "" || AddressField.Text == "" || PostcodeField.Text == "" || CityField.Text == "" || PhonenumberField.Text == "" || EmailField.Text == "")
             {
-                MessageBox.Show("Vul alle velden in AUB");
+                MessageBox.Show("Vul alle velden in AUB.");
             }
 
+            else if (!theEmailPattern.IsMatch(EmailField.Text))
+                {
+                    MessageBox.Show("Email is onjuist");
+                }
 
-
-            else if (!isPostcodeValid(chars))
+                else if (!isPostcodeValid(chars))
             {
                 MessageBox.Show("Postcode is onjuist.");
             }
@@ -176,7 +181,7 @@ namespace UI
             }
             else
             {
-                MessageBox.Show("Vul alle velden in AUB");
+                MessageBox.Show("Vul alle velden in AUB.");
             }
         }
 
@@ -248,11 +253,11 @@ namespace UI
 
                     if (command.ExecuteNonQuery() == 1)
                     {
-                        MessageBox.Show("User Added");
+                        MessageBox.Show("Gebruiker toegevoegd.");
                     }
                     else
                     {
-                        MessageBox.Show("ERROR");
+                        MessageBox.Show("Er is iets fout gegaan. Probeer opnieuw.");
                     }
                 }
                 catch (Exception)
@@ -267,7 +272,7 @@ namespace UI
             }
             else
             {
-                MessageBox.Show("USER ALREADY EXISTS, TRY LOGGING IN");
+                MessageBox.Show("Deze gebruiker bestaat al. Probeer in te loggen.");
             }
         }
 

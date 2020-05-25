@@ -198,6 +198,7 @@
             // 
             // Information
             // 
+            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Information.Location = new System.Drawing.Point(154, 12);
             this.Information.Name = "Information";
             this.Information.Size = new System.Drawing.Size(88, 21);
@@ -287,9 +288,10 @@
             this.Controls.Add(this.FormLoad);
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reserveerscherm5Betalen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POPCORN PLAZA";
+            this.Text = "Popcorn Plaza";
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();

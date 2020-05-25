@@ -211,9 +211,10 @@
             // 
             // Information
             // 
+            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Information.Location = new System.Drawing.Point(145, 14);
             this.Information.Name = "Information";
-            this.Information.Size = new System.Drawing.Size(88, 21);
+            this.Information.Size = new System.Drawing.Size(104, 21);
             this.Information.TabIndex = 18;
             this.Information.Text = "Bevestiging";
             // 
@@ -243,7 +244,7 @@
             // 
             // Terug
             // 
-            this.Terug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(91)))));
+            this.Terug.BackColor = System.Drawing.Color.Red;
             this.Terug.Location = new System.Drawing.Point(88, 347);
             this.Terug.Name = "Terug";
             this.Terug.Size = new System.Drawing.Size(161, 37);
@@ -260,9 +261,10 @@
             this.Controls.Add(this.FormLoad);
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reserveerscherm6Bevestiging";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POPCORN PLAZA";
+            this.Text = "Popcorn Plaza";
             this.Load += new System.EventHandler(this.Reserveerscherm6Bevestiging_Load);
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);

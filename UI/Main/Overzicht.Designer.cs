@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Overzicht));
             this.PopcornPlaza_Tekst = new System.Windows.Forms.Label();
             this.Films_Knop = new System.Windows.Forms.Button();
             this.Binnenkort_Tekst = new System.Windows.Forms.Label();
@@ -56,6 +57,7 @@
             // Films_Knop
             // 
             this.Films_Knop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Films_Knop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Films_Knop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Films_Knop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Films_Knop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -72,7 +74,7 @@
             // 
             this.Binnenkort_Tekst.AutoSize = true;
             this.Binnenkort_Tekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Binnenkort_Tekst.Location = new System.Drawing.Point(260, 357);
+            this.Binnenkort_Tekst.Location = new System.Drawing.Point(302, 357);
             this.Binnenkort_Tekst.Name = "Binnenkort_Tekst";
             this.Binnenkort_Tekst.Size = new System.Drawing.Size(210, 26);
             this.Binnenkort_Tekst.TabIndex = 14;
@@ -80,10 +82,12 @@
             // 
             // filmPanel1
             // 
+            this.filmPanel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.filmPanel1.Location = new System.Drawing.Point(12, 404);
             this.filmPanel1.Name = "filmPanel1";
             this.filmPanel1.Size = new System.Drawing.Size(807, 201);
             this.filmPanel1.TabIndex = 18;
+            this.filmPanel1.Click += new System.EventHandler(this.filmPanel1_Click);
             this.filmPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.filmPanel1_Paint);
             // 
             // PopcornPlaza_Logo
@@ -141,9 +145,10 @@
             this.Controls.Add(this.PopcornPlaza_Tekst);
             this.Controls.Add(this.Zwarte_Balk);
             this.Controls.Add(this.Rode_Balk);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Overzicht";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POPCORN PLAZA";
+            this.Text = "Popcorn Plaza";
             this.Load += new System.EventHandler(this.Overzicht_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PopcornPlaza_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Zwarte_Balk)).EndInit();

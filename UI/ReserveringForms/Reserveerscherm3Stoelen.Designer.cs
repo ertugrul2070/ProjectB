@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reserveerscherm3Stoelen));
             this.FormLoad = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox51 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -105,9 +107,8 @@
             this.pbMovie = new System.Windows.Forms.PictureBox();
             this.black_panel = new System.Windows.Forms.Panel();
             this.red_bovenkant = new System.Windows.Forms.Panel();
-            this.pictureBox51 = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.FormLoad.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).BeginInit();
@@ -161,7 +162,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).BeginInit();
             this.red_bovenkant.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).BeginInit();
             this.SuspendLayout();
             // 
             // FormLoad
@@ -242,6 +242,27 @@
             this.FormLoad.Size = new System.Drawing.Size(360, 334);
             this.FormLoad.TabIndex = 12;
             this.FormLoad.Paint += new System.Windows.Forms.PaintEventHandler(this.FormLoad_Paint);
+            // 
+            // label16
+            // 
+            this.label16.AccessibleName = "";
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Red;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(154, 34);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 13);
+            this.label16.TabIndex = 84;
+            this.label16.Text = "Scherm";
+            // 
+            // pictureBox51
+            // 
+            this.pictureBox51.BackColor = System.Drawing.Color.Red;
+            this.pictureBox51.Location = new System.Drawing.Point(44, 24);
+            this.pictureBox51.Name = "pictureBox51";
+            this.pictureBox51.Size = new System.Drawing.Size(274, 32);
+            this.pictureBox51.TabIndex = 83;
+            this.pictureBox51.TabStop = false;
             // 
             // label15
             // 
@@ -897,7 +918,8 @@
             // 
             // Information
             // 
-            this.Information.Location = new System.Drawing.Point(154, 8);
+            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Information.Location = new System.Drawing.Point(147, 6);
             this.Information.Name = "Information";
             this.Information.Size = new System.Drawing.Size(88, 21);
             this.Information.TabIndex = 18;
@@ -917,7 +939,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Back.BackColor = System.Drawing.Color.Red;
             this.Back.Location = new System.Drawing.Point(18, 294);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -947,6 +969,7 @@
             // 
             // Receipt
             // 
+            this.Receipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Receipt.Location = new System.Drawing.Point(87, 8);
             this.Receipt.Name = "Receipt";
             this.Receipt.Size = new System.Drawing.Size(88, 21);
@@ -993,26 +1016,6 @@
             this.red_bovenkant.Size = new System.Drawing.Size(828, 54);
             this.red_bovenkant.TabIndex = 11;
             // 
-            // pictureBox51
-            // 
-            this.pictureBox51.BackColor = System.Drawing.Color.DarkRed;
-            this.pictureBox51.Location = new System.Drawing.Point(44, 24);
-            this.pictureBox51.Name = "pictureBox51";
-            this.pictureBox51.Size = new System.Drawing.Size(274, 32);
-            this.pictureBox51.TabIndex = 83;
-            this.pictureBox51.TabStop = false;
-            // 
-            // label16
-            // 
-            this.label16.AccessibleName = "";
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(154, 34);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(43, 13);
-            this.label16.TabIndex = 84;
-            this.label16.Text = "Scherm";
-            // 
             // Reserveerscherm3Stoelen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1029,6 +1032,7 @@
             this.Load += new System.EventHandler(this.Reserveerscherm3Stoelen_Load);
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).EndInit();
@@ -1082,7 +1086,6 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).EndInit();
             this.red_bovenkant.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).EndInit();
             this.ResumeLayout(false);
 
         }
