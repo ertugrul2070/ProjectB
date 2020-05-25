@@ -12,9 +12,13 @@ namespace Engine.Models
 
         public string movie;
         public string dataUrl;
+        public string MovieId;
 
         public string date;
         public string time;
+
+
+        
 
         public List<string> chosenSnacks = new List<string>();
 
@@ -27,6 +31,13 @@ namespace Engine.Models
             int phonenumber)
         {
            this.custommer = new Custommer(email, gender, name, surname, streetadress, postcode, city, phonenumber);
+        }
+
+        public void AddMovie(string moviename, string moviepic, string movieid)
+        {
+            this.MovieId = movieid;
+            this.dataUrl = moviepic;
+            this.movie = moviename;
         }
 
         public void AddPlaceDateTime(string date, string time)
