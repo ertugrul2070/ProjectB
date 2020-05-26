@@ -129,6 +129,7 @@
             // 
             // flowLayoutPanelActueel
             // 
+            this.flowLayoutPanelActueel.AutoScroll = true;
             this.flowLayoutPanelActueel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.flowLayoutPanelActueel.Location = new System.Drawing.Point(17, 129);
             this.flowLayoutPanelActueel.Margin = new System.Windows.Forms.Padding(4);
@@ -138,6 +139,7 @@
             // 
             // flowLayoutPanelVerwacht
             // 
+            this.flowLayoutPanelVerwacht.AutoScroll = true;
             this.flowLayoutPanelVerwacht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.flowLayoutPanelVerwacht.Location = new System.Drawing.Point(16, 470);
             this.flowLayoutPanelVerwacht.Margin = new System.Windows.Forms.Padding(4);
@@ -152,7 +154,7 @@
             this.SearchFilm.Name = "SearchFilm";
             this.SearchFilm.Size = new System.Drawing.Size(148, 22);
             this.SearchFilm.TabIndex = 13;
-            this.SearchFilm.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchFilm_KeyDown);
+            this.SearchFilm.Visible = false;
             // 
             // flowLayoutPanelSearch
             // 
@@ -170,11 +172,13 @@
             this.GenreFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GenreFilter.FormattingEnabled = true;
             this.GenreFilter.Items.AddRange(new object[] {
-            "Alle",
-            "Actie",
+            "alle",
+            "yes",
+            "Adventure",
+            "Horror",
             "Comedy",
-            "Familie",
-            "Horror"});
+            "Fantasy",
+            "Romance"});
             this.GenreFilter.Location = new System.Drawing.Point(119, 373);
             this.GenreFilter.Name = "GenreFilter";
             this.GenreFilter.Size = new System.Drawing.Size(121, 26);
