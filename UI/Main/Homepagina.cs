@@ -72,8 +72,9 @@ namespace UI
             chosenName = currentlabel.Text;
             chosenPic = currentlabel.ImageLocation;
             chosenLink = currentlabel.Name;
-
-            FilmDetails frm2 = new FilmDetails(chosenName,chosenPic,chosenLink);
+/*            Program._ReservationSession.CurrentReservation.AddMovie(chosenName, chosenPic, chosenId);
+*/
+            FilmDetails frm2 = new FilmDetails();
             frm2.Show();
 
         }
