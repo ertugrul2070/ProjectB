@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registreerscherm));
             this.Red_onderkant = new System.Windows.Forms.Panel();
             this.black_panel = new System.Windows.Forms.Panel();
             this.FormLoad = new System.Windows.Forms.Panel();
@@ -62,7 +63,7 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
             this.FormLoad.Controls.Add(this.btnrRegister);
             this.FormLoad.Controls.Add(this.txtPassword2);
             this.FormLoad.Controls.Add(this.txtPassword);
@@ -116,7 +117,7 @@
             // 
             // Information
             // 
-            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Information.Location = new System.Drawing.Point(41, 12);
             this.Information.Name = "Information";
             this.Information.Size = new System.Drawing.Size(161, 25);
@@ -141,13 +142,15 @@
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.FormLoad);
             this.Controls.Add(this.red_bovenkant);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registreerscherm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registreerscherm";
+            this.Text = "Popcorn Plaza";
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
             this.red_bovenkant.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Panel black_panel;

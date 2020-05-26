@@ -93,7 +93,7 @@ namespace UI
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Back.BackColor = System.Drawing.Color.Red;
             this.Back.Location = new System.Drawing.Point(18, 247);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -186,9 +186,10 @@ namespace UI
             // 
             // Information
             // 
-            this.Information.Location = new System.Drawing.Point(154, 8);
+            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Information.Location = new System.Drawing.Point(139, 9);
             this.Information.Name = "Information";
-            this.Information.Size = new System.Drawing.Size(73, 21);
+            this.Information.Size = new System.Drawing.Size(103, 21);
             this.Information.TabIndex = 18;
             this.Information.Text = "Gegevens";
             this.Information.Click += new System.EventHandler(this.label1_Click_1);
@@ -331,9 +332,10 @@ namespace UI
             this.Controls.Add(this.FormLoad);
             this.Controls.Add(this.red_bovenkant);
             this.Controls.Add(this.Red_onderkant);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reserveerscherm1Gegevens";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POPCORN PLAZA";
+            this.Text = "Popcorn Plaza";
             this.Load += new System.EventHandler(this.Reserveerscherm1Gegevens_Load);
             this.red_bovenkant.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);

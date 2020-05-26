@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
             this.Actueel_Tekst = new System.Windows.Forms.Label();
             this.Films_Knop = new System.Windows.Forms.Button();
             this.PopcornPlaza_Tekst = new System.Windows.Forms.Label();
@@ -56,6 +57,7 @@
             // Films_Knop
             // 
             this.Films_Knop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Films_Knop.Cursor = System.Windows.Forms.Cursors.Default;
             this.Films_Knop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Films_Knop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Films_Knop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -64,7 +66,7 @@
             this.Films_Knop.Name = "Films_Knop";
             this.Films_Knop.Size = new System.Drawing.Size(75, 23);
             this.Films_Knop.TabIndex = 4;
-            this.Films_Knop.Text = "Home";
+            this.Films_Knop.Text = "Startpagina";
             this.Films_Knop.UseVisualStyleBackColor = false;
             this.Films_Knop.Click += new System.EventHandler(this.Films_Knop_Click);
             // 
@@ -122,6 +124,7 @@
             // flowLayoutPanelActueel
             // 
             this.flowLayoutPanelActueel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.flowLayoutPanelActueel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.flowLayoutPanelActueel.Location = new System.Drawing.Point(13, 105);
             this.flowLayoutPanelActueel.Name = "flowLayoutPanelActueel";
             this.flowLayoutPanelActueel.Size = new System.Drawing.Size(787, 161);
@@ -130,6 +133,7 @@
             // flowLayoutPanelVerwacht
             // 
             this.flowLayoutPanelVerwacht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.flowLayoutPanelVerwacht.Cursor = System.Windows.Forms.Cursors.Hand;
             this.flowLayoutPanelVerwacht.Location = new System.Drawing.Point(12, 382);
             this.flowLayoutPanelVerwacht.Name = "flowLayoutPanelVerwacht";
             this.flowLayoutPanelVerwacht.Size = new System.Drawing.Size(787, 161);
@@ -150,9 +154,10 @@
             this.Controls.Add(this.Zwarte_Balk);
             this.Controls.Add(this.Rode_Balk);
             this.Controls.Add(this.Actueel_Tekst);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Homepage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POPCORN PLAZA";
+            this.Text = "Popcorn Plaza";
             this.Load += new System.EventHandler(this.Homepage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PopcornPlaza_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Zwarte_Balk)).EndInit();

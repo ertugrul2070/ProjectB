@@ -121,11 +121,13 @@
             // 
             // Information
             // 
+            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Information.Location = new System.Drawing.Point(154, 8);
             this.Information.Name = "Information";
             this.Information.Size = new System.Drawing.Size(88, 21);
-            this.Information.TabIndex = 18;
+            this.Information.TabIndex = 15;
             this.Information.Text = "Tickets";
+            this.Information.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Information.Click += new System.EventHandler(this.Information_Click);
             // 
             // Senior
@@ -155,7 +157,7 @@
             // 
             // Back
             // 
-            this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Back.BackColor = System.Drawing.Color.Red;
             this.Back.Location = new System.Drawing.Point(18, 259);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(118, 37);
@@ -171,6 +173,7 @@
             this.NormalField.Size = new System.Drawing.Size(96, 20);
             this.NormalField.TabIndex = 2;
             this.NormalField.Text = "0";
+            this.NormalField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NormalField_KeyPress);
             // 
             // ChildField
             // 
@@ -179,6 +182,7 @@
             this.ChildField.Size = new System.Drawing.Size(96, 20);
             this.ChildField.TabIndex = 1;
             this.ChildField.Text = "0";
+            this.ChildField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ChildField_KeyPress);
             // 
             // BoomerField
             // 
@@ -187,6 +191,7 @@
             this.BoomerField.Size = new System.Drawing.Size(96, 20);
             this.BoomerField.TabIndex = 0;
             this.BoomerField.Text = "0";
+            this.BoomerField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BoomerField_KeyPress);
             // 
             // red_bovenkant
             // 
@@ -236,9 +241,10 @@
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
             this.Controls.Add(this.FormLoad);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reserveerschem2Tickets";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POPCORN PLAZA";
+            this.Text = "Popcorn Plaza";
             this.FormLoad.ResumeLayout(false);
             this.FormLoad.PerformLayout();
             this.red_bovenkant.ResumeLayout(false);

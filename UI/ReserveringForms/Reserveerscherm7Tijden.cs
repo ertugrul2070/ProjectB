@@ -14,6 +14,7 @@ using MySql.Data.MySqlClient;
 
 namespace UI
 {
+    
     public partial class Reserveerscherm7Tijden : Form
     {
         DatabaseConnection dbcr = Program.dbc;
@@ -25,17 +26,16 @@ namespace UI
             try
             {
                 dbcr.cnn.Open();
-
-                string selectQuery = "SELECT * FROM `mydb`.`movies`";
+                string selectQuery = $"SELECT time FROM mydb.time WHERE idtime = (SELECT time_idtime FROM mydb.movie_time WHERE movie_idmovie = '{Program._ReservationSession.CurrentReservation.MovieId}')";
                 MySqlCommand command = new MySqlCommand(selectQuery, dbcr.cnn);
 
                 MySqlDataReader dataReader = command.ExecuteReader();
 
                 while (dataReader.Read())
                 {
-                    string cinema = dataReader.GetString("name");
+                    string cinema = dataReader.GetString("time");
 
-                    cbCity.Items.Add(cinema);
+                    cbTime.Items.Add(cinema.Remove(cinema.Length - 3));
                 }
             }
             catch (Exception)
@@ -46,7 +46,10 @@ namespace UI
             {
                 dbcr.cnn.Close();
             }
-            
+
+            cbDate.Value = DateTime.Today;
+            cbDate.MinDate = DateTime.Today;
+            cbDate.MaxDate = DateTime.Today.AddDays(7);
         }
 
         void Fillcombo()
@@ -76,9 +79,9 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            if (cbCity.SelectedIndex > -1/* && cbDate.SelectedIndex > -1 && cbTime.SelectedIndex > -1*/)
+            if (cbTime.SelectedIndex > -1)
             {
-                Program._ReservationSession.CurrentReservation.AddPlaceDateTime(cbCity.Text, cbDate.Text, cbTime.Text);
+                Program._ReservationSession.CurrentReservation.AddPlaceDateTime(cbDate.Text, cbTime.Text);
 
                 Reserveerschem2Tickets nextForm = new Reserveerschem2Tickets();
                 this.Hide();
@@ -104,60 +107,24 @@ namespace UI
         {
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                dbcr.cnn.Open();
-
-                string selectQuery = "SELECT * FROM `mydb`.`time`";
-                MySqlCommand command = new MySqlCommand(selectQuery, dbcr.cnn);
-
-                MySqlDataReader dataReader = command.ExecuteReader();
-
-                while (dataReader.Read())
-                {
-                    //string cinema = dataReader.GetString("trailer");
-
-                    //cbDate.Items.Add(cinema.Remove(10));
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                dbcr.cnn.Close();
-            }
-        }
-
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            try
-            {
-                dbcr.cnn.Open();
+            
+        }
 
-                string selectQuery = "SELECT * FROM `mydb`.`time`";
-                MySqlCommand command = new MySqlCommand(selectQuery, dbcr.cnn);
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
 
-                MySqlDataReader dataReader = command.ExecuteReader();
+        }
 
-                while (dataReader.Read())
-                {
-                    string cinema = dataReader.GetString("time");
+        private void cbTime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
 
-                    cbTime.Items.Add(cinema.Remove(5));
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                dbcr.cnn.Close();
-            }
+        private void Reserveerscherm7Tijden_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

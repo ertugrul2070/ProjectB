@@ -76,13 +76,13 @@ namespace UI
             {
                 string snack = "Popcorn " + Soort1.Text + " Klein";
                 AddSnackToList(snack);
-                totaal += 3.5;
+                totaal += 3.50;
                 UpdateTotaal();
                 UpdateBon();
             }
             else
             {
-                MessageBox.Show("Kies een smaak");
+                MessageBox.Show("Kies een smaak.");
             }
         }
 
@@ -92,13 +92,13 @@ namespace UI
             {
                 string snack = "Popcorn " + Soort2.Text + " Middel";
                 AddSnackToList(snack);
-                totaal += 4.5;
+                totaal += 4.50;
                 UpdateTotaal();
                 UpdateBon();
             }
             else
             {
-                MessageBox.Show("Kies een smaak");
+                MessageBox.Show("Kies een smaak.");
             }
         }
 
@@ -108,20 +108,20 @@ namespace UI
             {
                 string snack = "Popcorn " + Soort3.Text + " Groot";
                 AddSnackToList(snack);
-                totaal += 5.5;
+                totaal += 5.50;
                 UpdateTotaal();
                 UpdateBon();
             }
             else
             {
-                MessageBox.Show("Kies een smaak");
+                MessageBox.Show("Kies een smaak.");
             }
         }
 
         private void Toevoegen4_Click(object sender, EventArgs e)
         {
             AddSnackToList("Cola");
-            totaal += 3.5;
+            totaal += 3.50;
             UpdateTotaal();
             UpdateBon();
         }
@@ -129,7 +129,7 @@ namespace UI
         private void Toevoegen5_Click(object sender, EventArgs e)
         {
             AddSnackToList("Fanta");
-            totaal += 3.5;
+            totaal += 3.50;
             UpdateTotaal();
             UpdateBon();
         }
@@ -137,7 +137,7 @@ namespace UI
         private void Toevoegen6_Click(object sender, EventArgs e)
         {
             AddSnackToList("Water");
-            totaal += 2.5;
+            totaal += 2.50;
             UpdateTotaal();
             UpdateBon();
         }
@@ -149,7 +149,7 @@ namespace UI
 
         private void UpdateTotaal()
         {
-            rtbTotaal.Text = "TOTAAL : €" + totaal.ToString("0.##");
+            rtbTotaal.Text = "TOTAAL : €" + totaal.ToString("#,##0.00");
         }
 
         private void UpdateBon()
@@ -159,18 +159,18 @@ namespace UI
 
         private void FillSnackDict()
         {
-            snackDict.Add("Popcorn Zoet Klein", 3.5);
-            snackDict.Add("Popcorn Zout Klein", 3.5);
-            snackDict.Add("Popcorn Mix Klein", 3.5);
-            snackDict.Add("Popcorn Zoet Middel", 4.5);
-            snackDict.Add("Popcorn Zout Middel", 4.5);
-            snackDict.Add("Popcorn Mix Middel", 4.5);
-            snackDict.Add("Popcorn Zoet Groot", 5.5);
-            snackDict.Add("Popcorn Zout Groot", 5.5);
-            snackDict.Add("Popcorn Mix Groot", 5.5);
-            snackDict.Add("Cola", 3.5);
-            snackDict.Add("Fanta", 3.5);
-            snackDict.Add("Water", 2.5);
+            snackDict.Add("Popcorn Zoet Klein", 3.50);
+            snackDict.Add("Popcorn Zout Klein", 3.50);
+            snackDict.Add("Popcorn Mix Klein", 3.50);
+            snackDict.Add("Popcorn Zoet Middel", 4.50);
+            snackDict.Add("Popcorn Zout Middel", 4.50);
+            snackDict.Add("Popcorn Mix Middel", 4.50);
+            snackDict.Add("Popcorn Zoet Groot", 5.50);
+            snackDict.Add("Popcorn Zout Groot", 5.50);
+            snackDict.Add("Popcorn Mix Groot", 5.50);
+            snackDict.Add("Cola", 3.50);
+            snackDict.Add("Fanta", 3.50);
+            snackDict.Add("Water", 2.50);
         }
 
         private void btnDeleteItem_Click(object sender, EventArgs e)

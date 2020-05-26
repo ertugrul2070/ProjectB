@@ -9,13 +9,19 @@ namespace Engine.Models
         public string[] reservations;
         public Custommer custommer;
         public Dictionary<string, double> ticketDictionary= new Dictionary<string, double>();
+        public int TicketAmount;
 
         public string movie;
         public string dataUrl;
+        public string MovieId;
 
-        public string location;
         public string date;
         public string time;
+
+        public Dictionary<string, string> Seats;
+
+
+        
 
         public List<string> chosenSnacks = new List<string>();
 
@@ -30,16 +36,28 @@ namespace Engine.Models
            this.custommer = new Custommer(email, gender, name, surname, streetadress, postcode, city, phonenumber);
         }
 
-        public void AddPlaceDateTime(string location, string date, string time)
+        public void AddMovie(string moviename, string moviepic, string movieid)
         {
-            this.location = location;
+            this.MovieId = movieid;
+            this.dataUrl = moviepic;
+            this.movie = moviename;
+        }
+
+        public void AddPlaceDateTime(string date, string time)
+        {
             this.date = date;
             this.time = time;
+        }
+
+        public void AddSeats(Dictionary<string, string> seats)
+        {
+            this.Seats = seats;
         }
 
         public void AddTickets(string ID, double price)
         {
             ticketDictionary.Add(ID, price);
+            TicketAmount++;
         }
 
     }
