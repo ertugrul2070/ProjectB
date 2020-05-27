@@ -14,7 +14,7 @@ using MySql.Data.MySqlClient;
 
 namespace UI
 {
-    
+
     public partial class Reserveerscherm7Tijden : Form
     {
         DatabaseConnection dbcr = Program.dbc;
@@ -26,15 +26,14 @@ namespace UI
             try
             {
                 dbcr.cnn.Open();
-
-                string selectQuery = "SELECT * FROM `mydb`.`cinema`";
+                string selectQuery = $"SELECT time FROM mydb.time WHERE idtime = (SELECT time_idtime FROM mydb.movie_time WHERE movie_idmovie = '{Program._ReservationSession.CurrentReservation.MovieId}')";
                 MySqlCommand command = new MySqlCommand(selectQuery, dbcr.cnn);
 
                 MySqlDataReader dataReader = command.ExecuteReader();
 
                 while (dataReader.Read())
                 {
-                    string cinema = dataReader.GetString("place");
+                    string cinema = dataReader.GetString("time");
 
                     cbTime.Items.Add(cinema.Remove(cinema.Length - 3));
                 }
@@ -55,7 +54,7 @@ namespace UI
 
         void Fillcombo()
         {
-            
+
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -80,7 +79,7 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            if (cbCity.SelectedIndex > -1 && cbDate.SelectedIndex > -1 && cbTime.SelectedIndex > -1)
+            if (cbTime.SelectedIndex > -1)
             {
                 Program._ReservationSession.CurrentReservation.AddPlaceDateTime(cbDate.Text, cbTime.Text);
 
@@ -110,29 +109,17 @@ namespace UI
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            
+
         }
 
-                while (dataReader.Read())
-                {
-                    string cinema = dataReader.GetString("date");
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
 
-                    cbDate.Items.Add(cinema.Remove(10));
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                dbcr.cnn.Close();
-            }
         }
 
         private void cbTime_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Reserveerscherm7Tijden_Load(object sender, EventArgs e)
