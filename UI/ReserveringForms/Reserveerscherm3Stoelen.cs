@@ -148,7 +148,7 @@ namespace UI
             }
             else if (Amount >= Program._ReservationSession.CurrentReservation.TicketAmount)
             {
-                MessageBox.Show($"U heeft al {Program._ReservationSession.CurrentReservation.TicketAmount} besteld.");
+                MessageBox.Show($"U heeft al {Program._ReservationSession.CurrentReservation.TicketAmount} stoelen geselecteerd.");
             }
             else
             {
