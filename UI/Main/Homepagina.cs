@@ -36,7 +36,7 @@ namespace UI
 
                 MySqlDataReader dataReader = command.ExecuteReader();
                 List<string> str = new List<string>();
-
+                
                 while (dataReader.Read())
                 {
                     string name = dataReader.GetString("name");
