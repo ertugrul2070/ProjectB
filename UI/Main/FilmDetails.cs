@@ -20,12 +20,11 @@ namespace UI
         public string chosenName;
         public string chosenPic;
         public string chosenId;
-        public FilmDetails(string filmName,string filmPic, string filmId)
+        public FilmDetails()
         {
-            
-            this.chosenName = filmName;
-            this.chosenPic = filmPic;
-            this.chosenId = filmId;
+            this.chosenName = Program._ReservationSession.CurrentReservation.movie;
+            this.chosenPic = Program._ReservationSession.CurrentReservation.dataUrl;
+            this.chosenId = Program._ReservationSession.CurrentReservation.MovieId;
             InitializeComponent();
         }
 
@@ -92,6 +91,16 @@ namespace UI
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

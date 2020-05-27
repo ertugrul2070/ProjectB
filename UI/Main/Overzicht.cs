@@ -86,14 +86,13 @@ namespace UI
         private void labelClick(object sender, EventArgs e)
         {
             PictureBox currentlabel = (PictureBox)sender;
+            
             chosenName = currentlabel.Text;
             chosenPic = currentlabel.ImageLocation;
             chosenId = currentlabel.Name;
+            Program._ReservationSession.CurrentReservation.AddMovie(chosenName, chosenPic, chosenId);
 
-            Program._ReservationSession.CurrentReservation.movie = chosenName;
-            Program._ReservationSession.CurrentReservation.dataUrl = chosenPic;
-
-            FilmDetails frm2 = new FilmDetails(chosenName,chosenPic, chosenId);
+            FilmDetails frm2 = new FilmDetails();
             frm2.Show();
         }
 

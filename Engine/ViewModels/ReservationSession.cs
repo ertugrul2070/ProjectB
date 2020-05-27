@@ -20,6 +20,7 @@ namespace Engine.ViewModels
             CurrentReservation = new ReservationAdministration();
             CurrentReservation.AddCustomer("hhh@hotmail.com","Male", "Homer", "Simpson", 
                 "Pyong Yang 17", "321312","Parkweg", 061345665);
+            CurrentReservation.AddMovie("3", "No Time To Die", "https://www.youtube.com/embed/KK8FHdFluOQ");
 
         }
     }
