@@ -50,5 +50,10 @@ namespace UI
         {
             
         }
+
+        private void Thanks_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
