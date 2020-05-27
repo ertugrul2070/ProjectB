@@ -19,7 +19,7 @@ namespace UI
         public int Amount = 0;
         public Dictionary<string, string> seats = new Dictionary<string, string>();
         string greyPersonIcon = "https://i.imgur.com/8gjqlK3.png";
-        string greenPersonIcon = "https://i.imgur.com/7QQILej.png";
+        string greenPersonIcon = "https://i.imgur.com/G5KLPoO.png";
         string redPersonIcon = "https://i.imgur.com/ts4EBwu.png";
 
         public Reserveerscherm3Stoelen()
@@ -148,7 +148,7 @@ namespace UI
             }
             else if (Amount >= Program._ReservationSession.CurrentReservation.TicketAmount)
             {
-                MessageBox.Show($"U heeft al {Program._ReservationSession.CurrentReservation.TicketAmount} besteld.");
+                MessageBox.Show($"U heeft al {Program._ReservationSession.CurrentReservation.TicketAmount} stoelen geselecteerd.");
             }
             else
             {
