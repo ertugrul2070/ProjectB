@@ -92,7 +92,8 @@ namespace UI
 
         private void addTickets()
         {
-
+            Program._ReservationSession.CurrentReservation.ticketDictionary = new Dictionary<string, double>();
+            Program._ReservationSession.CurrentReservation.TicketAmount = 0;
             if (Int32.TryParse(NormalField.Text, out int x))
             {
                 for (int i = 1; i <= x; i++)

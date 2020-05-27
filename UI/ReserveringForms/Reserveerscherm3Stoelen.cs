@@ -77,6 +77,50 @@ namespace UI
 
         private void Reserveerscherm3Stoelen_Load(object sender, EventArgs e)
         {
+            label18.Text = "";
+            label19.Text = "";
+            int normal = 0, elder = 0, child = 0;
+            double normalD = 0.0, elderD = 0.0, childD = 0.0;
+            foreach( KeyValuePair<string, double> kvp in Program._ReservationSession.CurrentReservation.ticketDictionary )
+            {
+                if(kvp.Value == 12.00)
+                {
+                    normal++;
+                    normalD+= 12.0;
+                }
+                else if (kvp.Value == 8.00)
+                {
+                    elder++;
+                    elderD += 8.00;
+
+                }
+                else if (kvp.Value == 6.00)
+                {
+                    child++;
+                    childD += 6.00;
+                }
+
+            }
+            if(normal > 0)
+            {
+                label18.Text += $"Normaal:\n";
+                label19.Text += $"{normalD}\n";
+            }
+            if (child > 0)
+            {
+                label18.Text += $"Kind:\n";
+                label19.Text += $"{child}\n";
+            }
+            if (elder > 0)
+            {
+                label18.Text += $"Ouder:\n";
+                label19.Text += $"{elder}\n";
+            }
+            label22.Text = Program._ReservationSession.CurrentReservation.date;
+            label24.Text = Program._ReservationSession.CurrentReservation.time;
+            label25.Text = $"Totaal aantal tickets: {Program._ReservationSession.CurrentReservation.TicketAmount}";
+            
+
             /*try
             {
                 dbcr.cnn.Open();
@@ -163,6 +207,26 @@ namespace UI
                 seats.Add(pic.Name, pic.Name);
                 Amount++;
             }
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
