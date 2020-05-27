@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Overzicht));
             this.PopcornPlaza_Tekst = new System.Windows.Forms.Label();
             this.Films_Knop = new System.Windows.Forms.Button();
             this.Binnenkort_Tekst = new System.Windows.Forms.Label();
@@ -144,9 +145,10 @@
             this.Controls.Add(this.PopcornPlaza_Tekst);
             this.Controls.Add(this.Zwarte_Balk);
             this.Controls.Add(this.Rode_Balk);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Overzicht";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POPCORN PLAZA";
+            this.Text = "Popcorn Plaza";
             this.Load += new System.EventHandler(this.Overzicht_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PopcornPlaza_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Zwarte_Balk)).EndInit();

@@ -405,9 +405,10 @@
             this.Controls.Add(this.Receipt1);
             this.Controls.Add(this.Red_onderkant);
             this.Controls.Add(this.red_bovenkant);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reserveerscherm4Snacks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POPCORN PLAZA";
+            this.Text = "Popcorn Plaza";
             this.red_bovenkant.ResumeLayout(false);
             this.Receipt1.ResumeLayout(false);
             this.FormLoad.ResumeLayout(false);
