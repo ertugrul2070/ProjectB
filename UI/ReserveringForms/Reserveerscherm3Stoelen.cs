@@ -20,7 +20,7 @@ namespace UI
         public Dictionary<string, string> seats = new Dictionary<string, string>();
         string greyPersonIcon = "https://i.imgur.com/8gjqlK3.png";
         string greenPersonIcon = "https://i.imgur.com/G5KLPoO.png";
-        string redPersonIcon = "https://i.imgur.com/ts4EBwu.png";
+        string redPersonIcon = "https://i.imgur.com/F2olJZ5.png";
 
         public Reserveerscherm3Stoelen()
         {
