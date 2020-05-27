@@ -125,6 +125,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.ImageLocation = "https://i.imgur.com/OnxfcML.jpg";
             this.pictureBox1.Location = new System.Drawing.Point(25, 74);
             this.pictureBox1.Name = "pictureBox1";

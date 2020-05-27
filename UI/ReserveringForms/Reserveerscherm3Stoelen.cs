@@ -19,8 +19,8 @@ namespace UI
         public int Amount = 0;
         public Dictionary<string, string> seats = new Dictionary<string, string>();
         string greyPersonIcon = "https://i.imgur.com/8gjqlK3.png";
-        string greenPersonIcon = "https://i.imgur.com/7QQILej.png";
-        string redPersonIcon = "https://i.imgur.com/ts4EBwu.png";
+        string greenPersonIcon = "https://i.imgur.com/G5KLPoO.png";
+        string redPersonIcon = "https://i.imgur.com/F2olJZ5.png";
 
         public Reserveerscherm3Stoelen()
         {
@@ -44,11 +44,18 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            Program._ReservationSession.CurrentReservation.AddSeats(seats);
-            Reserveerscherm4Snacks nextForm = new Reserveerscherm4Snacks();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            if (Program._ReservationSession.CurrentReservation.TicketAmount == Amount)
+            {
+                Program._ReservationSession.CurrentReservation.AddSeats(seats);
+                Reserveerscherm4Snacks nextForm = new Reserveerscherm4Snacks();
+                this.Hide();
+                nextForm.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show($"U heeft {Amount} stoelen gekozen, u moet er {Program._ReservationSession.CurrentReservation.TicketAmount} kiezen");
+            }
         }
 
         private void FormLoad_Paint(object sender, PaintEventArgs e)
@@ -148,7 +155,7 @@ namespace UI
             }
             else if (Amount >= Program._ReservationSession.CurrentReservation.TicketAmount)
             {
-                MessageBox.Show($"U heeft al {Program._ReservationSession.CurrentReservation.TicketAmount} besteld.");
+                MessageBox.Show($"U heeft al {Program._ReservationSession.CurrentReservation.TicketAmount} stoelen geselecteerd.");
             }
             else
             {

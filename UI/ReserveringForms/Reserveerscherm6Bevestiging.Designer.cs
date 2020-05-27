@@ -36,7 +36,6 @@
             this.lblExtra = new System.Windows.Forms.RichTextBox();
             this.extras = new System.Windows.Forms.Label();
             this.lblStoelen = new System.Windows.Forms.Label();
-            this.lblPlaats = new System.Windows.Forms.Label();
             this.lblTijd = new System.Windows.Forms.Label();
             this.lblZaal = new System.Windows.Forms.Label();
             this.lblFilm = new System.Windows.Forms.Label();
@@ -45,7 +44,6 @@
             this.pbMovie = new System.Windows.Forms.PictureBox();
             this.Zaal = new System.Windows.Forms.Label();
             this.Information = new System.Windows.Forms.Label();
-            this.Plaats = new System.Windows.Forms.Label();
             this.Tijd = new System.Windows.Forms.Label();
             this.Film = new System.Windows.Forms.Label();
             this.Terug = new System.Windows.Forms.Button();
@@ -88,7 +86,6 @@
             this.FormLoad.Controls.Add(this.lblExtra);
             this.FormLoad.Controls.Add(this.extras);
             this.FormLoad.Controls.Add(this.lblStoelen);
-            this.FormLoad.Controls.Add(this.lblPlaats);
             this.FormLoad.Controls.Add(this.lblTijd);
             this.FormLoad.Controls.Add(this.lblZaal);
             this.FormLoad.Controls.Add(this.lblFilm);
@@ -97,31 +94,30 @@
             this.FormLoad.Controls.Add(this.pbMovie);
             this.FormLoad.Controls.Add(this.Zaal);
             this.FormLoad.Controls.Add(this.Information);
-            this.FormLoad.Controls.Add(this.Plaats);
             this.FormLoad.Controls.Add(this.Tijd);
             this.FormLoad.Controls.Add(this.Film);
             this.FormLoad.Controls.Add(this.Terug);
-            this.FormLoad.Location = new System.Drawing.Point(220, 58);
+            this.FormLoad.Location = new System.Drawing.Point(196, 58);
             this.FormLoad.Name = "FormLoad";
-            this.FormLoad.Size = new System.Drawing.Size(360, 390);
+            this.FormLoad.Size = new System.Drawing.Size(445, 390);
             this.FormLoad.TabIndex = 17;
             // 
             // lblExtra
             // 
             this.lblExtra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
             this.lblExtra.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblExtra.Location = new System.Drawing.Point(206, 166);
+            this.lblExtra.Location = new System.Drawing.Point(206, 144);
             this.lblExtra.Name = "lblExtra";
             this.lblExtra.ReadOnly = true;
             this.lblExtra.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.lblExtra.Size = new System.Drawing.Size(151, 133);
+            this.lblExtra.Size = new System.Drawing.Size(223, 155);
             this.lblExtra.TabIndex = 32;
             this.lblExtra.Text = "|";
             // 
             // extras
             // 
             this.extras.AutoSize = true;
-            this.extras.Location = new System.Drawing.Point(157, 166);
+            this.extras.Location = new System.Drawing.Point(154, 141);
             this.extras.Name = "extras";
             this.extras.Size = new System.Drawing.Size(44, 13);
             this.extras.TabIndex = 30;
@@ -130,25 +126,16 @@
             // lblStoelen
             // 
             this.lblStoelen.AutoSize = true;
-            this.lblStoelen.Location = new System.Drawing.Point(203, 141);
+            this.lblStoelen.Location = new System.Drawing.Point(203, 120);
             this.lblStoelen.Name = "lblStoelen";
             this.lblStoelen.Size = new System.Drawing.Size(9, 13);
             this.lblStoelen.TabIndex = 29;
             this.lblStoelen.Text = "|";
             // 
-            // lblPlaats
-            // 
-            this.lblPlaats.AutoSize = true;
-            this.lblPlaats.Location = new System.Drawing.Point(203, 120);
-            this.lblPlaats.Name = "lblPlaats";
-            this.lblPlaats.Size = new System.Drawing.Size(9, 13);
-            this.lblPlaats.TabIndex = 28;
-            this.lblPlaats.Text = "|";
-            // 
             // lblTijd
             // 
             this.lblTijd.AutoSize = true;
-            this.lblTijd.Location = new System.Drawing.Point(203, 99);
+            this.lblTijd.Location = new System.Drawing.Point(203, 78);
             this.lblTijd.Name = "lblTijd";
             this.lblTijd.Size = new System.Drawing.Size(9, 13);
             this.lblTijd.TabIndex = 27;
@@ -157,7 +144,7 @@
             // lblZaal
             // 
             this.lblZaal.AutoSize = true;
-            this.lblZaal.Location = new System.Drawing.Point(203, 78);
+            this.lblZaal.Location = new System.Drawing.Point(203, 99);
             this.lblZaal.Name = "lblZaal";
             this.lblZaal.Size = new System.Drawing.Size(9, 13);
             this.lblZaal.TabIndex = 26;
@@ -174,7 +161,7 @@
             // 
             // Stoelen
             // 
-            this.Stoelen.Location = new System.Drawing.Point(154, 141);
+            this.Stoelen.Location = new System.Drawing.Point(154, 120);
             this.Stoelen.Name = "Stoelen";
             this.Stoelen.Size = new System.Drawing.Size(57, 21);
             this.Stoelen.TabIndex = 24;
@@ -182,12 +169,12 @@
             // 
             // Thanks
             // 
-            this.Thanks.Location = new System.Drawing.Point(157, 302);
+            this.Thanks.Location = new System.Drawing.Point(19, 239);
             this.Thanks.Name = "Thanks";
-            this.Thanks.Size = new System.Drawing.Size(181, 42);
+            this.Thanks.Size = new System.Drawing.Size(181, 91);
             this.Thanks.TabIndex = 23;
-            this.Thanks.Text = "Hartelijk dank voor uw reservering. Wij wensen u alvast een prettige voorstelling" +
-    "!";
+            this.Thanks.Text = resources.GetString("Thanks.Text");
+            this.Thanks.Click += new System.EventHandler(this.Thanks_Click);
             // 
             // pbMovie
             // 
@@ -203,7 +190,7 @@
             // 
             // Zaal
             // 
-            this.Zaal.Location = new System.Drawing.Point(154, 78);
+            this.Zaal.Location = new System.Drawing.Point(154, 99);
             this.Zaal.Name = "Zaal";
             this.Zaal.Size = new System.Drawing.Size(42, 21);
             this.Zaal.TabIndex = 22;
@@ -218,17 +205,9 @@
             this.Information.TabIndex = 18;
             this.Information.Text = "Bevestiging";
             // 
-            // Plaats
-            // 
-            this.Plaats.Location = new System.Drawing.Point(154, 120);
-            this.Plaats.Name = "Plaats";
-            this.Plaats.Size = new System.Drawing.Size(42, 21);
-            this.Plaats.TabIndex = 12;
-            this.Plaats.Text = "Plaats:";
-            // 
             // Tijd
             // 
-            this.Tijd.Location = new System.Drawing.Point(154, 99);
+            this.Tijd.Location = new System.Drawing.Point(154, 78);
             this.Tijd.Name = "Tijd";
             this.Tijd.Size = new System.Drawing.Size(42, 21);
             this.Tijd.TabIndex = 11;
@@ -281,12 +260,10 @@
         private System.Windows.Forms.Label Information;
         private System.Windows.Forms.RichTextBox lblExtra;
         private System.Windows.Forms.Label lblFilm;
-        private System.Windows.Forms.Label lblPlaats;
         private System.Windows.Forms.Label lblStoelen;
         private System.Windows.Forms.Label lblTijd;
         private System.Windows.Forms.Label lblZaal;
         private System.Windows.Forms.PictureBox pbMovie;
-        private System.Windows.Forms.Label Plaats;
         private System.Windows.Forms.Panel red_bovenkant;
         private System.Windows.Forms.Panel Red_onderkant;
         private System.Windows.Forms.Label Stoelen;

@@ -23,6 +23,7 @@ namespace UI
         public string city;
         public string phonenumber;
         public string email;
+        public bool loggedIn = false;
 
         public Reserveerscherm1Gegevens()
         {
@@ -119,9 +120,13 @@ namespace UI
                     MessageBox.Show("Email is onjuist");
                 }
 
-                else if (!isPostcodeValid(chars))
+            else if (!isPostcodeValid(chars))
             {
                 MessageBox.Show("Postcode is onjuist.");
+            }
+            else if (!loggedIn && userExists())
+            {
+                MessageBox.Show("Er bestaat al een gebruiker met dit email adres. Probeer in te loggen om verder te gaan");
             }
 
             else
@@ -170,62 +175,26 @@ namespace UI
 
             if (genderBox.Text != "" && NameField.Text != "" && SurnameField.Text != "" && AddressField.Text != "" && PostcodeField.Text != "" && CityField.Text != "" && PhonenumberField.Text != "" && EmailField.Text != "")
             {
-                if (!isPostcodeValid(PostcodeField.Text.ToCharArray()))
+                if (userExists())
                 {
-                    RegisterUser(userEmail);
+                    if (isPostcodeValid(PostcodeField.Text.ToCharArray()))
+                    {
+                        RegisterUser(userEmail);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Postcode is onjuist.");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Postcode is onjuist.");
+                    MessageBox.Show("Er bestaat al een email met dit account, log in om door te gaan");
                 }
             }
             else
             {
                 MessageBox.Show("Vul alle velden in AUB.");
             }
-        }
-
-        private bool CheckIfUserExists(string inputEmail)
-        {
-            try
-            {
-                dbc.cnn.Open();
-
-                string selectQuery = "SELECT * FROM `mydb`.`customers`";
-                MySqlCommand command = new MySqlCommand(selectQuery, dbc.cnn);
-
-                MySqlDataReader dataReader = command.ExecuteReader();
-
-                while (dataReader.Read())
-                {
-                    string email = dataReader.GetString("email");
-
-                    listEmails.Add(email);
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            finally
-            {
-                dbc.cnn.Close();
-            }
-
-            bool inDatabase = false;
-
-
-
-            foreach (string mail in listEmails)
-            {
-                if (mail == inputEmail)
-                {
-                    inDatabase = true;
-                }
-            }
-
-            return inDatabase;
         }
 
         private void RegisterUser(string userEmail)
@@ -239,7 +208,7 @@ namespace UI
             string city = CityField.Text;
             string phonenumber = PhonenumberField.Text;
 
-            if (!CheckIfUserExists(userEmail))
+            if (!userExists())
             {
                 PasswordScreen();
 
@@ -286,6 +255,7 @@ namespace UI
         {
             Loginscherm lgn = new Loginscherm(this);
             lgn.ShowDialog();
+            loggedIn = lgn.loggedIn;
 
             if (lgn.loggedIn)
             {
@@ -317,6 +287,41 @@ namespace UI
             {
                 return true;
             }
+        }
+
+        private bool userExists()
+        {
+            bool ex = false;
+
+            try
+            {
+                dbc.cnn.Open();
+
+                string query = "SELECT email FROM mydb.customers;";
+
+                MySqlCommand command = new MySqlCommand(query, dbc.cnn);
+
+                MySqlDataReader dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    if (EmailField.Text == dataReader.GetString("email"))
+                    {
+                        ex = true;
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+            finally
+            {
+                dbc.cnn.Close();
+            }
+            return ex;
         }
     }
 }

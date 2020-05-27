@@ -153,6 +153,15 @@ namespace UI
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            PictureBox currentlabel = (PictureBox)sender;
+
+            chosenName = "1917";
+            chosenPic = "https://media.pathe.nl/thumb/180x254/gfx_content/posterhr/1917_ps_1_jpg_sd-high_Copyright-2019-WW-Entertainment-2.jpeg";
+            chosenId = "13";
+            Program._ReservationSession.CurrentReservation.AddMovie(chosenName, chosenPic, chosenId);
+
+            FilmDetails frm2 = new FilmDetails();
+            frm2.Show();
         }
 
         private void filmPanel1_Click(object sender, EventArgs e)
