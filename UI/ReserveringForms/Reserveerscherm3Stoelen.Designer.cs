@@ -419,6 +419,7 @@
             // E10
             // 
             this.E10.BackColor = System.Drawing.Color.White;
+            this.E10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.E10.Location = new System.Drawing.Point(297, 246);
             this.E10.Name = "E10";
             this.E10.Size = new System.Drawing.Size(22, 22);
@@ -429,6 +430,7 @@
             // E9
             // 
             this.E9.BackColor = System.Drawing.Color.White;
+            this.E9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.E9.Location = new System.Drawing.Point(269, 246);
             this.E9.Name = "E9";
             this.E9.Size = new System.Drawing.Size(22, 22);
@@ -439,6 +441,7 @@
             // E8
             // 
             this.E8.BackColor = System.Drawing.Color.White;
+            this.E8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.E8.Location = new System.Drawing.Point(241, 246);
             this.E8.Name = "E8";
             this.E8.Size = new System.Drawing.Size(22, 22);
@@ -449,6 +452,7 @@
             // E7
             // 
             this.E7.BackColor = System.Drawing.Color.White;
+            this.E7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.E7.Location = new System.Drawing.Point(213, 246);
             this.E7.Name = "E7";
             this.E7.Size = new System.Drawing.Size(22, 22);
@@ -459,6 +463,7 @@
             // E6
             // 
             this.E6.BackColor = System.Drawing.Color.White;
+            this.E6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.E6.Location = new System.Drawing.Point(185, 246);
             this.E6.Name = "E6";
             this.E6.Size = new System.Drawing.Size(22, 22);
@@ -469,6 +474,7 @@
             // E5
             // 
             this.E5.BackColor = System.Drawing.Color.White;
+            this.E5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.E5.Location = new System.Drawing.Point(157, 246);
             this.E5.Name = "E5";
             this.E5.Size = new System.Drawing.Size(22, 22);
@@ -479,6 +485,7 @@
             // E4
             // 
             this.E4.BackColor = System.Drawing.Color.White;
+            this.E4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.E4.Location = new System.Drawing.Point(129, 246);
             this.E4.Name = "E4";
             this.E4.Size = new System.Drawing.Size(22, 22);
@@ -489,6 +496,7 @@
             // E3
             // 
             this.E3.BackColor = System.Drawing.Color.White;
+            this.E3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.E3.Location = new System.Drawing.Point(101, 246);
             this.E3.Name = "E3";
             this.E3.Size = new System.Drawing.Size(22, 22);
@@ -499,6 +507,7 @@
             // E2
             // 
             this.E2.BackColor = System.Drawing.Color.White;
+            this.E2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.E2.Location = new System.Drawing.Point(72, 246);
             this.E2.Name = "E2";
             this.E2.Size = new System.Drawing.Size(22, 22);
@@ -509,6 +518,7 @@
             // E1
             // 
             this.E1.BackColor = System.Drawing.Color.White;
+            this.E1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.E1.Location = new System.Drawing.Point(44, 246);
             this.E1.Name = "E1";
             this.E1.Size = new System.Drawing.Size(22, 22);
@@ -519,6 +529,7 @@
             // D10
             // 
             this.D10.BackColor = System.Drawing.Color.White;
+            this.D10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.D10.Location = new System.Drawing.Point(297, 206);
             this.D10.Name = "D10";
             this.D10.Size = new System.Drawing.Size(22, 22);
@@ -529,6 +540,7 @@
             // D9
             // 
             this.D9.BackColor = System.Drawing.Color.White;
+            this.D9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.D9.Location = new System.Drawing.Point(269, 206);
             this.D9.Name = "D9";
             this.D9.Size = new System.Drawing.Size(22, 22);
@@ -539,6 +551,7 @@
             // D8
             // 
             this.D8.BackColor = System.Drawing.Color.White;
+            this.D8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.D8.Location = new System.Drawing.Point(241, 206);
             this.D8.Name = "D8";
             this.D8.Size = new System.Drawing.Size(22, 22);
@@ -549,6 +562,7 @@
             // D7
             // 
             this.D7.BackColor = System.Drawing.Color.White;
+            this.D7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.D7.Location = new System.Drawing.Point(213, 206);
             this.D7.Name = "D7";
             this.D7.Size = new System.Drawing.Size(22, 22);
@@ -559,6 +573,7 @@
             // D6
             // 
             this.D6.BackColor = System.Drawing.Color.White;
+            this.D6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.D6.Location = new System.Drawing.Point(185, 206);
             this.D6.Name = "D6";
             this.D6.Size = new System.Drawing.Size(22, 22);
@@ -569,6 +584,7 @@
             // D5
             // 
             this.D5.BackColor = System.Drawing.Color.White;
+            this.D5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.D5.Location = new System.Drawing.Point(157, 206);
             this.D5.Name = "D5";
             this.D5.Size = new System.Drawing.Size(22, 22);
@@ -579,6 +595,7 @@
             // D4
             // 
             this.D4.BackColor = System.Drawing.Color.White;
+            this.D4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.D4.Location = new System.Drawing.Point(129, 206);
             this.D4.Name = "D4";
             this.D4.Size = new System.Drawing.Size(22, 22);
@@ -589,6 +606,7 @@
             // D3
             // 
             this.D3.BackColor = System.Drawing.Color.White;
+            this.D3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.D3.Location = new System.Drawing.Point(101, 206);
             this.D3.Name = "D3";
             this.D3.Size = new System.Drawing.Size(22, 22);
@@ -599,6 +617,7 @@
             // D2
             // 
             this.D2.BackColor = System.Drawing.Color.White;
+            this.D2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.D2.Location = new System.Drawing.Point(72, 206);
             this.D2.Name = "D2";
             this.D2.Size = new System.Drawing.Size(22, 22);
@@ -609,6 +628,7 @@
             // D1
             // 
             this.D1.BackColor = System.Drawing.Color.White;
+            this.D1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.D1.Location = new System.Drawing.Point(44, 206);
             this.D1.Name = "D1";
             this.D1.Size = new System.Drawing.Size(22, 22);
@@ -619,6 +639,7 @@
             // C10
             // 
             this.C10.BackColor = System.Drawing.Color.White;
+            this.C10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.C10.Location = new System.Drawing.Point(297, 162);
             this.C10.Name = "C10";
             this.C10.Size = new System.Drawing.Size(22, 22);
@@ -629,6 +650,7 @@
             // C9
             // 
             this.C9.BackColor = System.Drawing.Color.White;
+            this.C9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.C9.Location = new System.Drawing.Point(269, 162);
             this.C9.Name = "C9";
             this.C9.Size = new System.Drawing.Size(22, 22);
@@ -639,6 +661,7 @@
             // C8
             // 
             this.C8.BackColor = System.Drawing.Color.White;
+            this.C8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.C8.Location = new System.Drawing.Point(241, 162);
             this.C8.Name = "C8";
             this.C8.Size = new System.Drawing.Size(22, 22);
@@ -649,6 +672,7 @@
             // C7
             // 
             this.C7.BackColor = System.Drawing.Color.White;
+            this.C7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.C7.Location = new System.Drawing.Point(213, 162);
             this.C7.Name = "C7";
             this.C7.Size = new System.Drawing.Size(22, 22);
@@ -659,6 +683,7 @@
             // C6
             // 
             this.C6.BackColor = System.Drawing.Color.White;
+            this.C6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.C6.Location = new System.Drawing.Point(185, 162);
             this.C6.Name = "C6";
             this.C6.Size = new System.Drawing.Size(22, 22);
@@ -669,6 +694,7 @@
             // C5
             // 
             this.C5.BackColor = System.Drawing.Color.White;
+            this.C5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.C5.Location = new System.Drawing.Point(157, 162);
             this.C5.Name = "C5";
             this.C5.Size = new System.Drawing.Size(22, 22);
@@ -679,6 +705,7 @@
             // C4
             // 
             this.C4.BackColor = System.Drawing.Color.White;
+            this.C4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.C4.Location = new System.Drawing.Point(129, 162);
             this.C4.Name = "C4";
             this.C4.Size = new System.Drawing.Size(22, 22);
@@ -689,6 +716,7 @@
             // C3
             // 
             this.C3.BackColor = System.Drawing.Color.White;
+            this.C3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.C3.Location = new System.Drawing.Point(101, 162);
             this.C3.Name = "C3";
             this.C3.Size = new System.Drawing.Size(22, 22);
@@ -699,6 +727,7 @@
             // C2
             // 
             this.C2.BackColor = System.Drawing.Color.White;
+            this.C2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.C2.Location = new System.Drawing.Point(72, 162);
             this.C2.Name = "C2";
             this.C2.Size = new System.Drawing.Size(22, 22);
@@ -709,6 +738,7 @@
             // C1
             // 
             this.C1.BackColor = System.Drawing.Color.White;
+            this.C1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.C1.Location = new System.Drawing.Point(44, 162);
             this.C1.Name = "C1";
             this.C1.Size = new System.Drawing.Size(22, 22);
@@ -719,6 +749,7 @@
             // B10
             // 
             this.B10.BackColor = System.Drawing.Color.White;
+            this.B10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B10.Location = new System.Drawing.Point(297, 122);
             this.B10.Name = "B10";
             this.B10.Size = new System.Drawing.Size(22, 22);
@@ -729,6 +760,7 @@
             // B9
             // 
             this.B9.BackColor = System.Drawing.Color.White;
+            this.B9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B9.Location = new System.Drawing.Point(269, 122);
             this.B9.Name = "B9";
             this.B9.Size = new System.Drawing.Size(22, 22);
@@ -739,6 +771,7 @@
             // B8
             // 
             this.B8.BackColor = System.Drawing.Color.White;
+            this.B8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B8.Location = new System.Drawing.Point(241, 122);
             this.B8.Name = "B8";
             this.B8.Size = new System.Drawing.Size(22, 22);
@@ -749,6 +782,7 @@
             // B7
             // 
             this.B7.BackColor = System.Drawing.Color.White;
+            this.B7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B7.Location = new System.Drawing.Point(213, 122);
             this.B7.Name = "B7";
             this.B7.Size = new System.Drawing.Size(22, 22);
@@ -759,6 +793,7 @@
             // B6
             // 
             this.B6.BackColor = System.Drawing.Color.White;
+            this.B6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B6.Location = new System.Drawing.Point(185, 122);
             this.B6.Name = "B6";
             this.B6.Size = new System.Drawing.Size(22, 22);
@@ -769,6 +804,7 @@
             // B5
             // 
             this.B5.BackColor = System.Drawing.Color.White;
+            this.B5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B5.Location = new System.Drawing.Point(157, 122);
             this.B5.Name = "B5";
             this.B5.Size = new System.Drawing.Size(22, 22);
@@ -779,6 +815,7 @@
             // B4
             // 
             this.B4.BackColor = System.Drawing.Color.White;
+            this.B4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B4.Location = new System.Drawing.Point(129, 122);
             this.B4.Name = "B4";
             this.B4.Size = new System.Drawing.Size(22, 22);
@@ -789,6 +826,7 @@
             // B3
             // 
             this.B3.BackColor = System.Drawing.Color.White;
+            this.B3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B3.Location = new System.Drawing.Point(101, 122);
             this.B3.Name = "B3";
             this.B3.Size = new System.Drawing.Size(22, 22);
@@ -799,6 +837,7 @@
             // B2
             // 
             this.B2.BackColor = System.Drawing.Color.White;
+            this.B2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B2.Location = new System.Drawing.Point(72, 122);
             this.B2.Name = "B2";
             this.B2.Size = new System.Drawing.Size(22, 22);
@@ -809,6 +848,7 @@
             // B1
             // 
             this.B1.BackColor = System.Drawing.Color.White;
+            this.B1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.B1.Location = new System.Drawing.Point(44, 122);
             this.B1.Name = "B1";
             this.B1.Size = new System.Drawing.Size(22, 22);
@@ -819,6 +859,7 @@
             // A10
             // 
             this.A10.BackColor = System.Drawing.Color.White;
+            this.A10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A10.Location = new System.Drawing.Point(297, 80);
             this.A10.Name = "A10";
             this.A10.Size = new System.Drawing.Size(22, 22);
@@ -829,6 +870,7 @@
             // A9
             // 
             this.A9.BackColor = System.Drawing.Color.White;
+            this.A9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A9.Location = new System.Drawing.Point(269, 80);
             this.A9.Name = "A9";
             this.A9.Size = new System.Drawing.Size(22, 22);
@@ -839,6 +881,7 @@
             // A8
             // 
             this.A8.BackColor = System.Drawing.Color.White;
+            this.A8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A8.Location = new System.Drawing.Point(241, 80);
             this.A8.Name = "A8";
             this.A8.Size = new System.Drawing.Size(22, 22);
@@ -849,6 +892,7 @@
             // A7
             // 
             this.A7.BackColor = System.Drawing.Color.White;
+            this.A7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A7.Location = new System.Drawing.Point(213, 80);
             this.A7.Name = "A7";
             this.A7.Size = new System.Drawing.Size(22, 22);
@@ -859,6 +903,7 @@
             // A6
             // 
             this.A6.BackColor = System.Drawing.Color.White;
+            this.A6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A6.Location = new System.Drawing.Point(185, 80);
             this.A6.Name = "A6";
             this.A6.Size = new System.Drawing.Size(22, 22);
@@ -869,6 +914,7 @@
             // A5
             // 
             this.A5.BackColor = System.Drawing.Color.White;
+            this.A5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A5.Location = new System.Drawing.Point(157, 80);
             this.A5.Name = "A5";
             this.A5.Size = new System.Drawing.Size(22, 22);
@@ -879,6 +925,7 @@
             // A4
             // 
             this.A4.BackColor = System.Drawing.Color.White;
+            this.A4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A4.Location = new System.Drawing.Point(129, 80);
             this.A4.Name = "A4";
             this.A4.Size = new System.Drawing.Size(22, 22);
@@ -889,6 +936,7 @@
             // A3
             // 
             this.A3.BackColor = System.Drawing.Color.White;
+            this.A3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A3.Location = new System.Drawing.Point(101, 80);
             this.A3.Name = "A3";
             this.A3.Size = new System.Drawing.Size(22, 22);
@@ -899,6 +947,7 @@
             // A2
             // 
             this.A2.BackColor = System.Drawing.Color.White;
+            this.A2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A2.Location = new System.Drawing.Point(72, 80);
             this.A2.Name = "A2";
             this.A2.Size = new System.Drawing.Size(22, 22);
@@ -909,6 +958,7 @@
             // A1
             // 
             this.A1.BackColor = System.Drawing.Color.White;
+            this.A1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A1.Location = new System.Drawing.Point(44, 80);
             this.A1.Name = "A1";
             this.A1.Size = new System.Drawing.Size(22, 22);
