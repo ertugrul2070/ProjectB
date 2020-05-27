@@ -35,10 +35,13 @@ namespace UI
 
         private void InitializeLabels()
         {
+            var rand = new Random();
             pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
 
             lblFilm.Text = Program._ReservationSession.CurrentReservation.movie;
             lblTijd.Text = Program._ReservationSession.CurrentReservation.time;
+            lblZaal.Text = $"Zaal {rand.Next(11)}";
+            lblStoelen.Text = String.Join(",", Program._ReservationSession.CurrentReservation.Seats.Values.ToArray());
 
             lblExtra.Text = String.Join(",\n",Program._ReservationSession.CurrentReservation.chosenSnacks.ToArray());
         }
