@@ -171,7 +171,7 @@
             // 
             this.Thanks.Location = new System.Drawing.Point(19, 239);
             this.Thanks.Name = "Thanks";
-            this.Thanks.Size = new System.Drawing.Size(181, 75);
+            this.Thanks.Size = new System.Drawing.Size(181, 91);
             this.Thanks.TabIndex = 23;
             this.Thanks.Text = resources.GetString("Thanks.Text");
             this.Thanks.Click += new System.EventHandler(this.Thanks_Click);
