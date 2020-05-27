@@ -31,12 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Overzicht));
             this.PopcornPlaza_Tekst = new System.Windows.Forms.Label();
             this.Films_Knop = new System.Windows.Forms.Button();
-            this.Binnenkort_Tekst = new System.Windows.Forms.Label();
+            this.Nu_lb = new System.Windows.Forms.Label();
             this.filmPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.PopcornPlaza_Logo = new System.Windows.Forms.PictureBox();
             this.Zwarte_Balk = new System.Windows.Forms.PictureBox();
             this.Rode_Balk = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Binn_lb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PopcornPlaza_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Zwarte_Balk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rode_Balk)).BeginInit();
@@ -70,15 +71,17 @@
             this.Films_Knop.UseVisualStyleBackColor = false;
             this.Films_Knop.Click += new System.EventHandler(this.Films_Knop_Click);
             // 
-            // Binnenkort_Tekst
+            // Nu_lb
             // 
-            this.Binnenkort_Tekst.AutoSize = true;
-            this.Binnenkort_Tekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Binnenkort_Tekst.Location = new System.Drawing.Point(302, 357);
-            this.Binnenkort_Tekst.Name = "Binnenkort_Tekst";
-            this.Binnenkort_Tekst.Size = new System.Drawing.Size(210, 26);
-            this.Binnenkort_Tekst.TabIndex = 14;
-            this.Binnenkort_Tekst.Text = "Nu in de bioscoop:";
+            this.Nu_lb.AutoSize = true;
+            this.Nu_lb.BackColor = System.Drawing.Color.Red;
+            this.Nu_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nu_lb.ForeColor = System.Drawing.Color.White;
+            this.Nu_lb.Location = new System.Drawing.Point(292, 347);
+            this.Nu_lb.Name = "Nu_lb";
+            this.Nu_lb.Size = new System.Drawing.Size(46, 26);
+            this.Nu_lb.TabIndex = 14;
+            this.Nu_lb.Text = "NU";
             // 
             // filmPanel1
             // 
@@ -122,6 +125,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.ImageLocation = "https://i.imgur.com/OnxfcML.jpg";
             this.pictureBox1.Location = new System.Drawing.Point(25, 74);
             this.pictureBox1.Name = "pictureBox1";
@@ -131,15 +135,26 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // Binn_lb
+            // 
+            this.Binn_lb.AutoSize = true;
+            this.Binn_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Binn_lb.Location = new System.Drawing.Point(412, 347);
+            this.Binn_lb.Name = "Binn_lb";
+            this.Binn_lb.Size = new System.Drawing.Size(166, 26);
+            this.Binn_lb.TabIndex = 20;
+            this.Binn_lb.Text = "BINNENKORT";
+            // 
             // Overzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(831, 618);
+            this.Controls.Add(this.Binn_lb);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.filmPanel1);
-            this.Controls.Add(this.Binnenkort_Tekst);
+            this.Controls.Add(this.Nu_lb);
             this.Controls.Add(this.Films_Knop);
             this.Controls.Add(this.PopcornPlaza_Logo);
             this.Controls.Add(this.PopcornPlaza_Tekst);
@@ -159,7 +174,7 @@
 
         }
 
-        private System.Windows.Forms.Label Binnenkort_Tekst;
+        private System.Windows.Forms.Label Nu_lb;
         private System.Windows.Forms.FlowLayoutPanel filmPanel1;
         private System.Windows.Forms.Button Films_Knop;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -169,5 +184,7 @@
         private System.Windows.Forms.PictureBox Zwarte_Balk;
 
         #endregion
+
+        private System.Windows.Forms.Label Binn_lb;
     }
 }

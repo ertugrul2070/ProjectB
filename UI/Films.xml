@@ -13,6 +13,7 @@
         </desc>
         <date>12-11-2020</date>
         <link>https://www.youtube.com/embed/BIhNsAtPbPI</link>
+        <genre>"Actie"</genre>
     </films>
     <films name="WONDER WOMAN 1984">
         <year>2012</year>
@@ -24,6 +25,7 @@
         </desc>
         <date>15-06-2020</date>
         <link>https://www.youtube.com/embed/sfM7_JLk-84</link>
+        <genre>"Actie"</genre>
     </films>
     <films name="COMÉDIE FRANÇAISE: ÉLECTRA/ORESTES">
         <year>2020</year>
@@ -33,6 +35,7 @@
         </desc>
         <date>15-06-2020</date>
         <link>https://www.youtube.com/embed/LvO6OV74Xh0</link>
+        <genre>"Comedy"</genre>
     </films>
     <films name="MULAN">
         <year>2020</year>
@@ -45,6 +48,7 @@
         </desc>
         <date>23-07-2020</date>
         <link>https://www.youtube.com/embed/KK8FHdFluOQ</link>
+        <genre>"Familie"</genre>
     </films>
     <films name="BLOODSHOT">
         <year>2020</year>
@@ -57,6 +61,7 @@
         </desc>
         <date>12-03-2020</date>
         <link>https://www.youtube.com/embed/vOUVVDWdXbo</link>
+        <genre>"Actie"</genre>
     </films>
     <films name="GRETA">
         <year>2020</year>
@@ -69,6 +74,7 @@
         </desc>
         <date>7-05-2020</date>
         <link>https://www.youtube.com/embed/WAEoJkL_8zU</link>
+        <genre>Comedy</genre>
     </films>
     <films name="RUNDFUNK: DE FILM">
         <year>2020</year>
@@ -78,6 +84,7 @@
         </desc>
         <date>4-06-2020</date>
         <link>https://www.youtube.com/embed/dR8jUzLI5_E</link>
+        <genre>Comedy</genre>
     </films>
     <films name="HONEY BOY">
         <year>2020</year>
@@ -87,6 +94,7 @@
         </desc>
         <date>4-06-2020</date>
         <link>https://www.youtube.com/embed/5RR8WTQzwSk</link>
+        <genre>Horror</genre>
     </films>
     <films name="THE SECRET: DARE TO DREAM">
         <year>2020</year>
@@ -96,5 +104,6 @@
         </desc>
         <date>11-06-2020</date>
         <link>https://www.youtube.com/embed/de_NYbCoM2I</link>
+        <genre>Familie</genre>
     </films>
 </root>
