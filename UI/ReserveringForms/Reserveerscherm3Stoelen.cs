@@ -44,11 +44,18 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            Program._ReservationSession.CurrentReservation.AddSeats(seats);
-            Reserveerscherm4Snacks nextForm = new Reserveerscherm4Snacks();
-            this.Hide();
-            nextForm.ShowDialog();
-            this.Close();
+            if (Program._ReservationSession.CurrentReservation.TicketAmount == Amount)
+            {
+                Program._ReservationSession.CurrentReservation.AddSeats(seats);
+                Reserveerscherm4Snacks nextForm = new Reserveerscherm4Snacks();
+                this.Hide();
+                nextForm.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show($"U heeft {Amount} stoelen gekozen, u moet er {Program._ReservationSession.CurrentReservation.TicketAmount} kiezen");
+            }
         }
 
         private void FormLoad_Paint(object sender, PaintEventArgs e)
