@@ -16,6 +16,7 @@ namespace UI
     public partial class Overzicht : Form
     {
         DatabaseConnection dbc = new DatabaseConnection();
+        public int Soon_movies = 0;
 
         public Overzicht()
         {
@@ -24,29 +25,6 @@ namespace UI
 
         private void Overzicht_Load(object sender, EventArgs e)
         {
-            /*XmlDocument doc = new XmlDocument();
-            doc.Load("Films.xml");
-            int afilm = 0;
-            foreach (XmlNode node in doc.DocumentElement)
-            {
-                string name = node.Attributes[0].InnerText;
-                var today = Convert.ToDateTime(DateTime.Now.ToShortDateString());
-                List<string> dataUrl = new List<string>();
-                foreach (XmlNode child in node.ChildNodes)
-                {
-                    dataUrl.Add(child.InnerText);
-                    
-                }
-                var mDate = Convert.ToDateTime(dataUrl[3]);
-                if (mDate > today) { 
-                PictureBox l = addlabel(afilm, name, dataUrl);
-                filmPanel1.Controls.Add(l);
-                l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
-                afilm = afilm + 1;
-                }
-            }*/
-
-
             try
             {
                 dbc.cnn.Open();
@@ -55,18 +33,34 @@ namespace UI
                 MySqlCommand command = new MySqlCommand(getMoviesQuery, dbc.cnn);
 
                 MySqlDataReader dataReader = command.ExecuteReader();
-                List<string> str = new List<string>();
-
                 while (dataReader.Read())
                 {
+                    
                     string name = dataReader.GetString("name");
                     string cover = dataReader.GetString("cover");
+
                     int id = Convert.ToInt32(dataReader.GetString("idmovies"));
-                    PictureBox l = addlabel(name, cover, id);
-                    filmPanel1.Controls.Add(l);
-                    l.Click += new System.EventHandler(this.labelClick);
+                    DateTime date = dataReader.GetDateTime("releaseDate");
+                    DateTime today = DateTime.Today;
+
+                    if (Soon_movies == 0)
+                    {
+                        if (date > today.AddMonths(-1) && date < today)
+                        {
+                            PictureBox l = addlabel(name, cover, id);
+                            filmPanel1.Controls.Add(l);
+                            l.Click += new System.EventHandler(this.labelClick);
+                        }
+                    } else
+                    {
+                        if (date > today)
+                        {
+                            PictureBox l = addlabel(name, cover, id);
+                            filmPanel1.Controls.Add(l);
+                            l.Click += new System.EventHandler(this.labelClick);
+                        }
+                    }                    
                 }
-               
             }
             catch (Exception)
             {
@@ -77,8 +71,37 @@ namespace UI
             {
                 dbc.cnn.Close();
             }
-
+            Binn_lb.Click += new EventHandler(BinnenkortLB_Click);
+            Nu_lb.Click += new EventHandler(NuLB_Click);
         }
+
+        void BinnenkortLB_Click(object sender, EventArgs e)
+        {
+            Nu_lb.BackColor = Color.Transparent;
+            Nu_lb.ForeColor = Color.Black;
+
+            Soon_movies = 1;
+            filmPanel1.Controls.Clear();
+            Overzicht_Load(sender, e);
+
+            Binn_lb.BackColor = Color.Red;
+            Binn_lb.ForeColor = Color.White;
+           
+        }
+        void NuLB_Click(object sender, EventArgs e)
+        {
+
+            Binn_lb.BackColor = Color.Transparent;
+            Binn_lb.ForeColor = Color.Black;
+
+            Soon_movies = 0;
+            filmPanel1.Controls.Clear();
+            Overzicht_Load(sender, e);
+
+            Nu_lb.BackColor = Color.Red;
+            Nu_lb.ForeColor = Color.White;
+        }
+
         public static string chosenName = "";
         public static string chosenPic = "";
         public static string chosenId = "";
@@ -107,7 +130,6 @@ namespace UI
             l.Width = 135;
             l.Height = 191;
             l.SizeMode = PictureBoxSizeMode.Zoom;
-            //l.Location = new Point(start, end);
             l.Margin = new Padding(13);
 
             return l;
@@ -131,6 +153,15 @@ namespace UI
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            PictureBox currentlabel = (PictureBox)sender;
+
+            chosenName = "1917";
+            chosenPic = "https://media.pathe.nl/thumb/180x254/gfx_content/posterhr/1917_ps_1_jpg_sd-high_Copyright-2019-WW-Entertainment-2.jpeg";
+            chosenId = "13";
+            Program._ReservationSession.CurrentReservation.AddMovie(chosenName, chosenPic, chosenId);
+
+            FilmDetails frm2 = new FilmDetails();
+            frm2.Show();
         }
 
         private void filmPanel1_Click(object sender, EventArgs e)
