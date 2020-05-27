@@ -116,9 +116,9 @@ namespace UI
             }
 
             else if (!theEmailPattern.IsMatch(EmailField.Text))
-                {
+            {
                     MessageBox.Show("Email is onjuist");
-                }
+            }
 
             else if (!isPostcodeValid(chars))
             {
@@ -127,6 +127,11 @@ namespace UI
             else if (!loggedIn && userExists())
             {
                 MessageBox.Show("Er bestaat al een gebruiker met dit email adres. Probeer in te loggen om verder te gaan");
+            }
+            else if (!loggedIn && !userExists())
+            {
+                RegisterUser(EmailField.Text);
+                MessageBox.Show("Done");
             }
 
             else
@@ -175,10 +180,11 @@ namespace UI
 
             if (genderBox.Text != "" && NameField.Text != "" && SurnameField.Text != "" && AddressField.Text != "" && PostcodeField.Text != "" && CityField.Text != "" && PhonenumberField.Text != "" && EmailField.Text != "")
             {
-                if (userExists())
+                if (!userExists())
                 {
                     if (isPostcodeValid(PostcodeField.Text.ToCharArray()))
                     {
+                        PasswordScreen();
                         RegisterUser(userEmail);
                     }
                     else
@@ -208,40 +214,43 @@ namespace UI
             string city = CityField.Text;
             string phonenumber = PhonenumberField.Text;
 
-            if (!userExists())
+            string query;
+            try
             {
-                PasswordScreen();
+                dbc.cnn.Open();
 
-                try
+                if (_password == null)
                 {
-                    dbc.cnn.Open();
+                    query = "INSERT INTO `mydb`.`customers` (`firstName`, `lastName`, `gender`, `adress`, `zipCode`, `city`, `phoneNumber`, `email`) VALUES ('" + firstName + "', '" + lastName + "', '" + gender + "', '" + inputAddress + "', '" + zipcode + "', '" + city + "', '" + phonenumber + "', '" + userEmail + "');";
+                }
+                else
+                {
+                    query = "INSERT INTO `mydb`.`customers` (`firstName`, `lastName`, `gender`, `adress`, `zipCode`, `city`, `phoneNumber`, `email`, `password`) VALUES ('" + firstName + "', '" + lastName + "', '" + gender + "', '" + inputAddress + "', '" + zipcode + "', '" + city + "', '" + phonenumber + "', '" + userEmail + "', '" + _password + "');";
+                }
 
-                    string query = "INSERT INTO `mydb`.`customers` (`firstName`, `lastName`, `gender`, `adress`, `zipCode`, `city`, `phoneNumber`, `email`, `password`) VALUES ('"+ firstName + "', '"+ lastName + "', '"+ gender + "', '"+ inputAddress + "', '"+ zipcode + "', '"+ city + "', '"+ phonenumber +"', '" + userEmail + "', '"+ _password +"');";
+                MySqlCommand command = new MySqlCommand(query, dbc.cnn);
 
-                    MySqlCommand command = new MySqlCommand(query, dbc.cnn);
-
-                    if (command.ExecuteNonQuery() == 1)
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    if (_password != null)
                     {
                         MessageBox.Show("Gebruiker toegevoegd.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Er is iets fout gegaan. Probeer opnieuw.");
+                        loggedIn = true;
                     }
                 }
-                catch (Exception)
+                else
                 {
-
-                    throw;
-                }
-                finally
-                {
-                    dbc.cnn.Close();
+                    MessageBox.Show("Er is iets fout gegaan. Probeer opnieuw.");
                 }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Deze gebruiker bestaat al. Probeer in te loggen.");
+
+                throw;
+            }
+            finally
+            {
+                dbc.cnn.Close();
             }
         }
 
@@ -297,7 +306,7 @@ namespace UI
             {
                 dbc.cnn.Open();
 
-                string query = "SELECT email FROM mydb.customers;";
+                string query = "SELECT * FROM mydb.customers;";
 
                 MySqlCommand command = new MySqlCommand(query, dbc.cnn);
 
@@ -305,7 +314,9 @@ namespace UI
 
                 while (dataReader.Read())
                 {
-                    if (EmailField.Text == dataReader.GetString("email"))
+                    var ordinal = dataReader.GetOrdinal("password");
+
+                    if (EmailField.Text == dataReader.GetString("email") && !dataReader.IsDBNull(ordinal))
                     {
                         ex = true;
                     }

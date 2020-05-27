@@ -41,8 +41,7 @@ namespace UI
             lblFilm.Text = Program._ReservationSession.CurrentReservation.movie;
             lblTijd.Text = Program._ReservationSession.CurrentReservation.time;
             lblZaal.Text = $"Zaal {rand.Next(11)}";
-            lblStoelen.Text = String.Join(",", Program._ReservationSession.CurrentReservation.Seats.Values.ToArray());
-
+            lblStoelen.Text = String.Join(", ", Program._ReservationSession.CurrentReservation.Seats.Values.ToArray());
             lblExtra.Text = String.Join(",\n",Program._ReservationSession.CurrentReservation.chosenSnacks.ToArray());
         }
 
