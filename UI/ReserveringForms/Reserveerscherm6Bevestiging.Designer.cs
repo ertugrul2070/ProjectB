@@ -169,12 +169,12 @@
             // 
             // Thanks
             // 
-            this.Thanks.Location = new System.Drawing.Point(157, 302);
+            this.Thanks.Location = new System.Drawing.Point(19, 239);
             this.Thanks.Name = "Thanks";
-            this.Thanks.Size = new System.Drawing.Size(181, 42);
+            this.Thanks.Size = new System.Drawing.Size(181, 75);
             this.Thanks.TabIndex = 23;
-            this.Thanks.Text = "Hartelijk dank voor uw reservering. Wij wensen u alvast een prettige voorstelling" +
-    "!";
+            this.Thanks.Text = resources.GetString("Thanks.Text");
+            this.Thanks.Click += new System.EventHandler(this.Thanks_Click);
             // 
             // pbMovie
             // 
