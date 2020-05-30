@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml;
 using Engine.ViewModels;
 using MySql.Data.MySqlClient;
+using UI.Administratie;
 
 namespace UI
 {
@@ -167,6 +168,14 @@ namespace UI
         private void filmPanel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void medewerkersLoginBtn_Click(object sender, EventArgs e)
+        {
+            AdminLogin nextForm = new AdminLogin();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
         }
     }
 }

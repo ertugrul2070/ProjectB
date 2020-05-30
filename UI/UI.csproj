@@ -88,6 +88,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administratie\AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administratie\AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administratie\AdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administratie\AdminMain.Designer.cs">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\FilmDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +174,9 @@
     <Compile Include="ReserveringForms\Reserveerscherm7Tijden.Designer.cs">
       <DependentUpon>Reserveerscherm7Tijden.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administratie\AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main\FilmDetails.resx">
       <DependentUpon>FilmDetails.cs</DependentUpon>
     </EmbeddedResource>
