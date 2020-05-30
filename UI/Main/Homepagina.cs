@@ -8,73 +8,95 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using Engine.ViewModels;
+using MySql.Data.MySqlClient;
 
 namespace UI
 {
     public partial class Homepage : Form
     {
+        DatabaseConnection dbc = new DatabaseConnection();
         public Homepage()
         {
             InitializeComponent();
         }
 
-        private void Homepage_Load(object sender, EventArgs e)
+        public void Homepage_Load(object sender, EventArgs e)
         {
-            XmlDocument doc = new XmlDocument();
-            doc.Load("Films.xml");
-            int afilm = 0;
-            foreach (XmlNode node in doc.DocumentElement)
+            var today = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            try
+            { 
+
+                flowLayoutPanelActueel.Controls.Clear();
+                flowLayoutPanelVerwacht.Controls.Clear();
+                dbc.cnn.Open();
+
+                string getMoviesQuery = "SELECT * FROM mydb.movies";
+                MySqlCommand command = new MySqlCommand(getMoviesQuery, dbc.cnn);
+
+                MySqlDataReader dataReader = command.ExecuteReader();
+                List<string> str = new List<string>();
+                
+                while (dataReader.Read())
+                {
+                    string name = dataReader.GetString("name");
+                    string cover = dataReader.GetString("cover");
+                    int id = Convert.ToInt32(dataReader.GetString("idmovies"));
+                    DateTime released = dataReader.GetDateTime("releaseDate");
+                    int genreid = dataReader.GetInt32("genre_idgenre");
+                    PictureBox l = addlabel(name, cover, id);
+                    if (genreCheck(genreid) || GenreFilter.SelectedIndex == 0 || GenreFilter.SelectedItem == null)
+                    {
+                        if (today >= released)
+                        {
+                            flowLayoutPanelActueel.Controls.Add(l);
+                        }
+                        else
+                        {
+                            flowLayoutPanelVerwacht.Controls.Add(l);
+                        }
+                        l.Click += new System.EventHandler(this.labelClick);
+                    }
+                }
+
+            }
+            catch (Exception)
             {
-                string name = node.Attributes[0].InnerText;
-                var today = Convert.ToDateTime(DateTime.Now.ToShortDateString());
-                List<string> dataUrl = new List<string>();
-                foreach (XmlNode child in node.ChildNodes)
-                {
-                    dataUrl.Add(child.InnerText);
-                }
-                PictureBox l = addlabel(afilm, name, dataUrl);
-                var mDate = Convert.ToDateTime(dataUrl[3]);
-                if (mDate > today)
-                {
-                    flowLayoutPanelActueel.Controls.Add(l);
-                }
-                else
-                {
-                    flowLayoutPanelVerwacht.Controls.Add(l);
-                }
-                l.Click += new System.EventHandler(this.labelDoubleClick);
-                afilm = afilm + 1;
+
+                throw;
+            }
+            finally
+            {
+                dbc.cnn.Close();
             }
         }
         public static string chosenName = "";
         public static string chosenPic = "";
-        public static string chosenLink = "";
-
-        private void labelDoubleClick(object sender, EventArgs e)
-        {
+        public static string chosenId = "";
+        public void labelClick(object sender, EventArgs e)
+           {
             PictureBox currentlabel = (PictureBox)sender;
 
             chosenName = currentlabel.Text;
             chosenPic = currentlabel.ImageLocation;
-            chosenLink = currentlabel.Name;
-/*            Program._ReservationSession.CurrentReservation.AddMovie(chosenName, chosenPic, chosenId);
-*/
+            chosenId = currentlabel.Name;
+            Program._ReservationSession.CurrentReservation.AddMovie(chosenName, chosenPic, chosenId);
+            
             FilmDetails frm2 = new FilmDetails();
             frm2.Show();
 
         }
 
-        PictureBox addlabel(int i, string name, List<string> dataUrl)
+        PictureBox addlabel(string name, string cover, int id)
         {
 
             PictureBox l = new PictureBox();
-            l.Name = dataUrl[4];
+            l.Name = id.ToString();
             l.Text = name;
             l.BackColor = Color.Green;
-            l.ImageLocation = dataUrl[1];
-            //l.Width = 135;
-            //l.Height = 191;
-            l.Size = new System.Drawing.Size(105, 150);
+            l.ImageLocation = cover;
+            l.Width = 135;
+            l.Height = 191;
             l.SizeMode = PictureBoxSizeMode.Zoom;
             //l.Location = new Point(start, end);
             l.Margin = new Padding(13);
@@ -100,9 +122,34 @@ namespace UI
 
         }
 
-        private void Actueel_1_Tekst_Click(object sender, EventArgs e)
+        public bool genreCheck(int genre)
         {
-
+            if (genre == GenreFilter.SelectedIndex)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
+
+        /*public void SearchFilm_KeyDown(object sender, KeyEventArgs e)
+        {
+            flowLayoutPanelSearch.Controls.Clear();
+            flowLayoutPanelSearch.Visible = false;
+            if (e.KeyCode == Keys.Enter && SearchFilm.Text != "")
+            {              
+                Order_Films(flowLayoutPanelSearch, x => false);
+                if(flowLayoutPanelSearch.Controls.Count > 0)
+                {
+                    flowLayoutPanelSearch.Visible = true;
+                }
+                else
+                {
+                    flowLayoutPanelSearch.Visible = false;
+                }
+            }
+        }*/        
     }
 }

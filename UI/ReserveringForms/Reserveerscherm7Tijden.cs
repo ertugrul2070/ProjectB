@@ -14,7 +14,7 @@ using MySql.Data.MySqlClient;
 
 namespace UI
 {
-    
+
     public partial class Reserveerscherm7Tijden : Form
     {
         DatabaseConnection dbcr = Program.dbc;
@@ -54,7 +54,7 @@ namespace UI
 
         void Fillcombo()
         {
-            
+
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -109,7 +109,7 @@ namespace UI
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -119,7 +119,7 @@ namespace UI
 
         private void cbTime_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Reserveerscherm7Tijden_Load(object sender, EventArgs e)
