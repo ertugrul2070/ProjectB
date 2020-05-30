@@ -42,7 +42,7 @@ namespace UI
                 {
                     flowLayoutPanelVerwacht.Controls.Add(l);
                 }
-                l.DoubleClick += new System.EventHandler(this.labelDoubleClick);
+                l.Click += new System.EventHandler(this.labelDoubleClick);
                 afilm = afilm + 1;
             }
         }

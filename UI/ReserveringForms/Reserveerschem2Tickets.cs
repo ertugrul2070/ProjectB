@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace UI
 {
@@ -34,8 +35,10 @@ namespace UI
         }
         
         
-        private void Next_Click(object sender, EventArgs e)
+        private void Next_Click(object sender, EventArgs e) 
         {
+            MySqlDataReader dataReader = command.ExecuteReader();
+
             addTickets();
 
             System.Text.RegularExpressions.Regex regularExpression = new System.Text.RegularExpressions.Regex(@"^[0-6]$");
@@ -67,6 +70,13 @@ namespace UI
             {
                 MessageBox.Show("Kies tussen 1 en 6 tickets.");
             }
+
+
+            else if(Convert.ToInt32(dataReader.GetString("pegi")) > 12)
+            {
+                MessageBox.Show("Deze film is niet geschikt voor kinderen.");
+            }
+
 
             else
             {
