@@ -7,16 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Engine.ViewModels;
 using MySql.Data.MySqlClient;
 
 namespace UI
 {
+
     public partial class Reserveerschem2Tickets : Form
     {
+        DatabaseConnection dbc = new DatabaseConnection();
+
         public Reserveerschem2Tickets()
         {
             InitializeComponent();
             pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
+            
         }
 
         private void City_Click(object sender, EventArgs e)
@@ -35,9 +40,33 @@ namespace UI
         }
         
         
-        private void Next_Click(object sender, EventArgs e) 
+        private void Next_Click(object sender, EventArgs e)
         {
-            MySqlDataReader dataReader = command.ExecuteReader();
+            List<string> dataList = new List<string>();
+            try
+            {
+                dbc.cnn.Open();
+                string selectQuery = "SELECT * FROM mydb.movies WHERE name = (SELECT name FROM mydb.movies WHERE idmovies = " + Program._ReservationSession.CurrentReservation.MovieId + ")";
+                MySqlCommand command = new MySqlCommand(selectQuery, dbc.cnn);
+
+                MySqlDataReader dataReader = command.ExecuteReader();
+                
+
+                while (dataReader.Read())
+                {
+                    string pegi = dataReader.GetString("pegi");
+                    dataList.Add(pegi);
+                }
+                dbc.cnn.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                dbc.cnn.Close();
+            }
 
             addTickets();
 
@@ -72,11 +101,10 @@ namespace UI
             }
 
 
-            else if(Convert.ToInt32(dataReader.GetString("pegi")) > 12)
+            else if (ChildField.Text != "0" && Convert.ToInt32(dataList[0]) > 12)
             {
                 MessageBox.Show("Deze film is niet geschikt voor kinderen.");
             }
-
 
             else
             {
