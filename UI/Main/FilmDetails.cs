@@ -20,13 +20,11 @@ namespace UI
         public string chosenName;
         public string chosenPic;
         public string chosenId;
-        public string ChosenPegi;
         public FilmDetails()
         {
             this.chosenName = Program._ReservationSession.CurrentReservation.movie;
             this.chosenPic = Program._ReservationSession.CurrentReservation.dataUrl;
             this.chosenId = Program._ReservationSession.CurrentReservation.MovieId;
-           
             InitializeComponent();
         }
 
@@ -35,13 +33,9 @@ namespace UI
             label1.Text = chosenName;
             pictureBox1.ImageLocation = chosenPic;
 
-
             dbc.cnn.Open();
 
             string getMovieDesc = "SELECT * FROM mydb.movies WHERE name = (SELECT name FROM mydb.movies WHERE idmovies = " + chosenId + ")";
-
-            
-
             MySqlCommand command = new MySqlCommand(getMovieDesc, dbc.cnn);
 
             MySqlDataReader dataReader = command.ExecuteReader();
@@ -56,7 +50,7 @@ namespace UI
                 dataList.Add(pegi);
             }
             label2.Text = dataList[0];
-            label5.Text = dataList[2];
+            label5.Text = "Pegi: " + dataList[2];
             //YTplayer.Movie = chosenLink;
             var embed = "<html><head>" +
                         "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"/>" +
@@ -65,7 +59,24 @@ namespace UI
                         "frameborder = \"0\" allow = \"autoplay; encrypted-media\" allowfullscreen></iframe>" +
                         "</body></html>";
             this.webBrowser2.DocumentText = string.Format(embed, dataList[1]);
+            /* XmlDocument doc = new XmlDocument();
+             doc.Load("Films.xml");
+             foreach (XmlNode node in doc.DocumentElement)
+             {
+                 string name = node.Attributes[0].InnerText;
+                 foreach (XmlNode child in node.ChildNodes[2])
+                 {
+                     if (name == chosenName)
+                     {
+                         label2.Text = child.InnerText;
+                     }
+                 }
+             }*/
+
             
+            
+
+            //label2.Text = getMoviesQuery;
 
         }
 
