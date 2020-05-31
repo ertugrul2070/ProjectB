@@ -16,6 +16,7 @@ namespace UI.Administratie
     {
         DatabaseConnection dbc = new DatabaseConnection();
         List<string> CountGenres = new List<string>();
+        List<string> CountGenders = new List<string>();
         public AdminMain()
         {
             InitializeComponent();
@@ -57,6 +58,45 @@ namespace UI.Administratie
             pieChart1.Series["Pie1"].Points.AddXY("Comedy", CountGenres[3]);
             pieChart1.Series["Pie1"].Points.AddXY("Fantasy", CountGenres[4]);
             pieChart1.Series["Pie1"].Points.AddXY("Romance", CountGenres[5]);
+
+            var genders = new List<string> { "Man", "Vrouw", "Anders" , "Wil ik niet zeggen"};
+            for (int i = 0; i < 4; i++)
+            {
+                string selectQuery = "SELECT COUNT(idUsers) FROM mydb.customers WHERE gender = '" + genders[i] +"'";
+                try
+                {
+                    dbc.cnn.Open();
+
+
+                    MySqlCommand command = new MySqlCommand(selectQuery, dbc.cnn);
+
+                    MySqlDataReader dataReader = command.ExecuteReader();
+
+                    while (dataReader.Read())
+                    {
+                        string gender = dataReader.GetString("COUNT(idUsers)");
+                        CountGenders.Add(gender);
+                    }
+
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    dbc.cnn.Close();
+                }
+
+            }
+            int cGen = 0;
+            pieChart2.Titles.Add("Gebruiker geslacht");
+            foreach (string gender in genders)
+            {
+                pieChart2.Series["Pie2"].Points.AddXY(gender, CountGenders[cGen]);
+                cGen++;
+            }
+            
 
         }
 
