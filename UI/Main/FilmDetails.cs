@@ -44,10 +44,13 @@ namespace UI
             {
                 string name = dataReader.GetString("description");
                 string link = dataReader.GetString("trailer");
+                string pegi = dataReader.GetString("pegi");
                 dataList.Add(name);
                 dataList.Add(link);
+                dataList.Add(pegi);
             }
             label2.Text = dataList[0];
+            label5.Text = "Pegi: " + dataList[2];
             //YTplayer.Movie = chosenLink;
             var embed = "<html><head>" +
                         "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"/>" +

@@ -8,12 +8,13 @@ namespace Engine.Models
         public string[] custommers;
         public string[] reservations;
         public Custommer custommer;
-        public Dictionary<string, double> ticketDictionary= new Dictionary<string, double>();
+        public Dictionary<string, double> ticketDictionary;
         public int TicketAmount;
 
         public string movie;
         public string dataUrl;
         public string MovieId;
+
 
         public string date;
         public string time;
