@@ -43,6 +43,7 @@
             this.dateBegin = new System.Windows.Forms.DateTimePicker();
             this.dateEind = new System.Windows.Forms.DateTimePicker();
             this.timeFilterLabel = new System.Windows.Forms.Label();
+            this.filterDatum = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.PopcornPlaza_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Zwarte_Balk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rode_Balk)).BeginInit();
@@ -161,7 +162,7 @@
             this.SearchFilm.Name = "SearchFilm";
             this.SearchFilm.Size = new System.Drawing.Size(148, 22);
             this.SearchFilm.TabIndex = 13;
-            this.SearchFilm.Visible = false;
+            this.SearchFilm.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchFilm_KeyDown);
             // 
             // flowLayoutPanelSearch
             // 
@@ -227,12 +228,23 @@
             this.timeFilterLabel.TabIndex = 19;
             this.timeFilterLabel.Text = "tot";
             // 
+            // filterDatum
+            // 
+            this.filterDatum.AutoSize = true;
+            this.filterDatum.Location = new System.Drawing.Point(761, 76);
+            this.filterDatum.Name = "filterDatum";
+            this.filterDatum.Size = new System.Drawing.Size(104, 21);
+            this.filterDatum.TabIndex = 20;
+            this.filterDatum.Text = "Filter datum";
+            this.filterDatum.UseVisualStyleBackColor = true;
+            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1108, 761);
+            this.Controls.Add(this.filterDatum);
             this.Controls.Add(this.timeFilterLabel);
             this.Controls.Add(this.dateEind);
             this.Controls.Add(this.dateBegin);
@@ -278,5 +290,6 @@
         private System.Windows.Forms.DateTimePicker dateBegin;
         private System.Windows.Forms.DateTimePicker dateEind;
         private System.Windows.Forms.Label timeFilterLabel;
+        private System.Windows.Forms.CheckBox filterDatum;
     }
 }

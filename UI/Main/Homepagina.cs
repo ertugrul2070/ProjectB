@@ -74,7 +74,7 @@ namespace UI
                     PictureBox l = addlabel(name, cover, id);
                     if (genreCheck(genreid) || GenreFilter.SelectedIndex == 0 || GenreFilter.SelectedItem == null)
                     {
-                        if (dateBegin != null && dateBegin.Value <= released && dateEind.Value >= released)
+                        if (filterDatum.Checked && dateBegin.Value <= released && dateEind.Value >= released || filterDatum.Checked == false)
                         {
                             if (today >= released)
                             {
@@ -164,22 +164,53 @@ namespace UI
             }
         }
 
-        /*public void SearchFilm_KeyDown(object sender, KeyEventArgs e)
+        public void SearchFilm_KeyDown(object sender, KeyEventArgs e)
         {
             flowLayoutPanelSearch.Controls.Clear();
             flowLayoutPanelSearch.Visible = false;
             if (e.KeyCode == Keys.Enter && SearchFilm.Text != "")
-            {              
-                Order_Films(flowLayoutPanelSearch, x => false);
-                if(flowLayoutPanelSearch.Controls.Count > 0)
+            {
+
+                try
                 {
-                    flowLayoutPanelSearch.Visible = true;
+                dbc.cnn.Open();
+                
+                string getMoviesQuery = "SELECT * FROM mydb.movies";
+                MySqlCommand command = new MySqlCommand(getMoviesQuery, dbc.cnn);
+                MySqlDataReader dataReader = command.ExecuteReader();
+
+                    while (dataReader.Read())
+                    {
+                        string name = dataReader.GetString("name");
+                        string cover = dataReader.GetString("cover");
+                        int id = Convert.ToInt32(dataReader.GetString("idmovies"));
+                        string text = SearchFilm.Text.ToUpper();
+                        if (name.Contains(text))
+                        {
+                            PictureBox l = addlabel(name, cover, id);
+                            flowLayoutPanelSearch.Controls.Add(l);
+                            l.Click += new System.EventHandler(this.labelClick);
+                        }
+
+                        if (flowLayoutPanelSearch.Controls.Count > 0)
+                        {
+                            flowLayoutPanelSearch.Visible = true;
+                        }
+                        else
+                        {
+                            flowLayoutPanelSearch.Visible = false;
+                        }
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    flowLayoutPanelSearch.Visible = false;
+                    throw;
+                }
+                finally
+                {
+                    dbc.cnn.Close();
                 }
             }
-        }*/        
+        }       
     }
 }
