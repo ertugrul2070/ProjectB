@@ -23,9 +23,37 @@ namespace UI
 
         public void Homepage_Load(object sender, EventArgs e)
         {
+            GenreFilter.Items.Clear();
+            GenreFilter.Items.Add("alle");
+            try
+            {
+                dbc.cnn.Open();
+                string getGenresQuery = "SELECT * FROM mydb.genre";
+                MySqlCommand command = new MySqlCommand(getGenresQuery, dbc.cnn);
+                MySqlDataReader dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    string genreName = dataReader.GetString("GenreName");
+                    GenreFilter.Items.Add(genreName);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                dbc.cnn.Close();
+                OrderMovies(sender, e);
+            }
+        }
+
+        public void OrderMovies(object sender, EventArgs e) 
+        {
             var today = Convert.ToDateTime(DateTime.Now.ToShortDateString());
             try
-            { 
+            {
 
                 flowLayoutPanelActueel.Controls.Clear();
                 flowLayoutPanelVerwacht.Controls.Clear();
@@ -35,8 +63,7 @@ namespace UI
                 MySqlCommand command = new MySqlCommand(getMoviesQuery, dbc.cnn);
 
                 MySqlDataReader dataReader = command.ExecuteReader();
-                List<string> str = new List<string>();
-                
+
                 while (dataReader.Read())
                 {
                     string name = dataReader.GetString("name");
@@ -47,15 +74,18 @@ namespace UI
                     PictureBox l = addlabel(name, cover, id);
                     if (genreCheck(genreid) || GenreFilter.SelectedIndex == 0 || GenreFilter.SelectedItem == null)
                     {
-                        if (today >= released)
+                        if (dateBegin != null && dateBegin.Value <= released && dateEind.Value >= released)
                         {
-                            flowLayoutPanelActueel.Controls.Add(l);
+                            if (today >= released)
+                            {
+                                flowLayoutPanelActueel.Controls.Add(l);
+                            }
+                            else
+                            {
+                                flowLayoutPanelVerwacht.Controls.Add(l);
+                            }
+                            l.Click += new System.EventHandler(this.labelClick);
                         }
-                        else
-                        {
-                            flowLayoutPanelVerwacht.Controls.Add(l);
-                        }
-                        l.Click += new System.EventHandler(this.labelClick);
                     }
                 }
 
