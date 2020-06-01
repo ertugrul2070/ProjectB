@@ -95,7 +95,7 @@ namespace UI
 
         private void Back_Click(object sender, EventArgs e)
         {
-            Reserveerschem2Tickets nextForm = new Reserveerschem2Tickets();
+            FilmDetails nextForm = new FilmDetails();
             this.Hide();
             nextForm.ShowDialog();
             this.Close();
