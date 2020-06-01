@@ -92,7 +92,6 @@
             // 
             // cbDate
             // 
-            this.cbDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.cbDate.Location = new System.Drawing.Point(50, 104);
             this.cbDate.MaxDate = new System.DateTime(2020, 5, 31, 0, 0, 0, 0);
             this.cbDate.MinDate = new System.DateTime(2020, 5, 23, 0, 0, 0, 0);

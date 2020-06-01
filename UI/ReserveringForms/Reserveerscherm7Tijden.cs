@@ -46,10 +46,9 @@ namespace UI
             {
                 dbcr.cnn.Close();
             }
-
-            cbDate.Value = DateTime.Today;
-            cbDate.MinDate = DateTime.Today;
             cbDate.MaxDate = DateTime.Today.AddDays(7);
+            cbDate.MinDate = DateTime.Today.Date;
+            cbDate.Value = DateTime.Today.Date;
         }
 
         void Fillcombo()
