@@ -67,6 +67,30 @@ namespace UI
             {
                 dbc.cnn.Close();
             }
+            int takenseats = 0;
+            try
+            {
+                dbc.cnn.Open();
+                string selectQuery = $"SELECT * FROM mydb.seat WHERE idseat IN (SELECT seats_idseats FROM mydb.cinemahall WHERE movie_time_idmovie_time = (SELECT idmovie_time FROM mydb.movie_time WHERE movie_idmovie = '{Program._ReservationSession.CurrentReservation.MovieId}' AND date = '{Program._ReservationSession.CurrentReservation.date}'))";
+                MySqlCommand command = new MySqlCommand(selectQuery, dbc.cnn);
+
+                MySqlDataReader dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    string seat = dataReader.GetString("seat");
+                    takenseats++;
+                    
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                dbc.cnn.Close();
+            }
 
             addTickets();
 
@@ -105,6 +129,13 @@ namespace UI
             {
                 MessageBox.Show("Deze film is niet geschikt voor kinderen.");
             }
+
+            else if((takenseats + Program._ReservationSession.CurrentReservation.TicketAmount) >= 50)
+            {
+                MessageBox.Show($"Er zijn geen genoeg plekken. Voor deze film zijn er nog {50 - takenseats} over");
+            }
+
+           
 
             else
             {

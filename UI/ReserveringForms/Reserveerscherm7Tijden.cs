@@ -23,33 +23,7 @@ namespace UI
             InitializeComponent();
             pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
 
-            try
-            {
-                dbcr.cnn.Open();
-                string selectQuery = $"SELECT time FROM mydb.time WHERE idtime IN (SELECT time_idtime FROM mydb.movie_time WHERE movie_idmovie = '{Program._ReservationSession.CurrentReservation.MovieId}')";
-                string selectQueryDate = $"SELECT date FROM mydb.movie_time WHERE movie_idmovie = '{Program._ReservationSession.CurrentReservation.MovieId}'";
-                MySqlCommand command = new MySqlCommand(selectQuery, dbcr.cnn);
-
-                MySqlDataReader dataReader = command.ExecuteReader();
-                List<string> time = new List<string>();
-                while (dataReader.Read())
-                {
-                    string cinema = dataReader.GetString("time");
-                    time.Add(cinema);
-                }
-                foreach(string t in time)
-                {
-                    cbTime.Items.Add(t.Remove(t.Length - 3));
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                dbcr.cnn.Close();
-            }
+            
             try
             {
                 dbcr.cnn.Open();
@@ -60,13 +34,16 @@ namespace UI
                 List<string> date = new List<string>();
                 while (dataReader.Read())
                 {
-                    string cinema = dataReader.GetString("date");
-                    date.Add(cinema);
+                    DateTime cinema = dataReader.GetDateTime("date");
+                    if(DateTime.Now < cinema)
+                    {
+                        date.Add(cinema.ToString("yyyy-MM-dd"));
+                    }
                 }
-      /*          foreach (string t in date)
+                foreach (string t in date)
                 {
-                    cbTime.Items.Add(t.Remove(t.Length - 3));
-                }*/
+                    cbDate.Items.Add(t);
+                }
             }
             catch (Exception)
             {
@@ -76,10 +53,6 @@ namespace UI
             {
                 dbcr.cnn.Close();
             }
-
-            cbDate.MaxDate = DateTime.Today.AddDays(7);
-            cbDate.MinDate = DateTime.Today.Date;
-            cbDate.Value = DateTime.Today.Date;
         
         }
 
@@ -156,6 +129,43 @@ namespace UI
         private void Reserveerscherm7Tijden_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbTime.Items.Clear();
+            cbTime.Text = "";
+            try
+            {
+                dbcr.cnn.Open();
+                string selectQuery = $"SELECT time FROM mydb.time WHERE idtime IN (SELECT time_idtime FROM mydb.movie_time WHERE movie_idmovie = '{Program._ReservationSession.CurrentReservation.MovieId}' AND date = '{cbDate.Text}')";
+                MySqlCommand command = new MySqlCommand(selectQuery, dbcr.cnn);
+
+                MySqlDataReader dataReader = command.ExecuteReader();
+                List<string> time = new List<string>();
+                while (dataReader.Read())
+                {
+                    string cinema = dataReader.GetString("time");
+                    time.Add(cinema);
+                }
+                foreach (string t in time)
+                {
+                    cbTime.Items.Add(t.Remove(t.Length - 3));
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                dbcr.cnn.Close();
+            }
+        }
+
+        private void cbDate_SelectedValueChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

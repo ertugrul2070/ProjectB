@@ -33,7 +33,6 @@
             this.black_panel = new System.Windows.Forms.Panel();
             this.Red_onderkant = new System.Windows.Forms.Panel();
             this.FormLoad = new System.Windows.Forms.Panel();
-            this.cbDate = new System.Windows.Forms.DateTimePicker();
             this.cbTime = new System.Windows.Forms.ComboBox();
             this.Information = new System.Windows.Forms.Label();
             this.Time = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.Next = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.pbMovie = new System.Windows.Forms.PictureBox();
+            this.cbDate = new System.Windows.Forms.ComboBox();
             this.red_bovenkant.SuspendLayout();
             this.FormLoad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).BeginInit();
@@ -90,20 +90,9 @@
             this.FormLoad.TabIndex = 17;
             this.FormLoad.Paint += new System.Windows.Forms.PaintEventHandler(this.FormLoad_Paint);
             // 
-            // cbDate
-            // 
-            this.cbDate.Location = new System.Drawing.Point(50, 104);
-            this.cbDate.MaxDate = new System.DateTime(2020, 5, 31, 0, 0, 0, 0);
-            this.cbDate.MinDate = new System.DateTime(2020, 5, 23, 0, 0, 0, 0);
-            this.cbDate.Name = "cbDate";
-            this.cbDate.Size = new System.Drawing.Size(86, 20);
-            this.cbDate.TabIndex = 29;
-            this.cbDate.UseWaitCursor = true;
-            this.cbDate.Value = new System.DateTime(2020, 5, 25, 0, 0, 0, 0);
-            this.cbDate.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
             // cbTime
             // 
+            this.cbTime.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbTime.FormattingEnabled = true;
             this.cbTime.Location = new System.Drawing.Point(213, 104);
             this.cbTime.Name = "cbTime";
@@ -169,6 +158,16 @@
             this.pbMovie.TabIndex = 19;
             this.pbMovie.TabStop = false;
             // 
+            // cbDate
+            // 
+            this.cbDate.FormattingEnabled = true;
+            this.cbDate.Location = new System.Drawing.Point(55, 104);
+            this.cbDate.Name = "cbDate";
+            this.cbDate.Size = new System.Drawing.Size(93, 21);
+            this.cbDate.TabIndex = 30;
+            this.cbDate.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cbDate.SelectedValueChanged += new System.EventHandler(this.cbDate_SelectedValueChanged);
+            // 
             // Reserveerscherm7Tijden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,6 +202,6 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker cbDate;
+        private System.Windows.Forms.ComboBox cbDate;
     }
 }
