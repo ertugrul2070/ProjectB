@@ -235,6 +235,7 @@
             this.filterDatum.TabIndex = 20;
             this.filterDatum.Text = "Filter datum";
             this.filterDatum.UseVisualStyleBackColor = true;
+            this.filterDatum.CheckedChanged += new System.EventHandler(this.OrderMovies);
             // 
             // Homepage
             // 

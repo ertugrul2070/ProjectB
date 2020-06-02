@@ -153,7 +153,10 @@ namespace UI
         }
         private void datumFilterChanged(object sender, EventArgs e)
         {
-            OrderMovies(sender, e);
+            if (filterDatum.Checked)
+            {
+                OrderMovies(sender, e);
+            }
         }
 
         public void SearchFilm_KeyDown(object sender, KeyEventArgs e)
