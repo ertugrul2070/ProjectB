@@ -28,36 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.selectPanel = new System.Windows.Forms.Panel();
+            this.pieChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pieChart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.containerPanele = new System.Windows.Forms.Panel();
             this.LoguitBtn = new System.Windows.Forms.Button();
             this.SnacksBtn = new System.Windows.Forms.Button();
             this.FilmsBtn = new System.Windows.Forms.Button();
             this.GebruikersBtn = new System.Windows.Forms.Button();
             this.PaneelBtn = new System.Windows.Forms.Button();
-            this.containerPanel = new System.Windows.Forms.Panel();
-            this.panelChart = new System.Windows.Forms.Panel();
-            this.panelPie2 = new System.Windows.Forms.Panel();
-            this.pieChart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panelPie1 = new System.Windows.Forms.Panel();
-            this.pieChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.RTBdata = new System.Windows.Forms.RichTextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cLastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
-            this.containerPanel.SuspendLayout();
-            this.panelChart.SuspendLayout();
-            this.panelPie2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pieChart2)).BeginInit();
-            this.panelPie1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pieChart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pieChart2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,6 +72,51 @@
             this.selectPanel.Size = new System.Drawing.Size(10, 50);
             this.selectPanel.TabIndex = 1;
             // 
+            // pieChart1
+            // 
+            this.pieChart1.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(210)))), ((int)(((byte)(65)))));
+            this.pieChart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea3.Name = "ChartArea1";
+            this.pieChart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.pieChart1.Legends.Add(legend3);
+            this.pieChart1.Location = new System.Drawing.Point(483, 12);
+            this.pieChart1.Name = "pieChart1";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "Pie1";
+            this.pieChart1.Series.Add(series3);
+            this.pieChart1.Size = new System.Drawing.Size(262, 207);
+            this.pieChart1.TabIndex = 0;
+            this.pieChart1.Text = "chart1";
+            // 
+            // pieChart2
+            // 
+            this.pieChart2.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(210)))), ((int)(((byte)(65)))));
+            this.pieChart2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea4.Name = "ChartArea1";
+            this.pieChart2.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.pieChart2.Legends.Add(legend4);
+            this.pieChart2.Location = new System.Drawing.Point(206, 12);
+            this.pieChart2.Name = "pieChart2";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Legend = "Legend1";
+            series4.Name = "Pie2";
+            this.pieChart2.Series.Add(series4);
+            this.pieChart2.Size = new System.Drawing.Size(262, 207);
+            this.pieChart2.TabIndex = 1;
+            this.pieChart2.Text = "chart1";
+            // 
+            // containerPanele
+            // 
+            this.containerPanele.Location = new System.Drawing.Point(206, 225);
+            this.containerPanele.Name = "containerPanele";
+            this.containerPanele.Size = new System.Drawing.Size(539, 224);
+            this.containerPanele.TabIndex = 2;
+            // 
             // LoguitBtn
             // 
             this.LoguitBtn.FlatAppearance.BorderSize = 0;
@@ -97,6 +131,7 @@
             this.LoguitBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.LoguitBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.LoguitBtn.UseVisualStyleBackColor = true;
+            this.LoguitBtn.Click += new System.EventHandler(this.LoguitBtn_Click);
             // 
             // SnacksBtn
             // 
@@ -162,130 +197,21 @@
             this.PaneelBtn.UseVisualStyleBackColor = true;
             this.PaneelBtn.Click += new System.EventHandler(this.PaneelBtn_Click);
             // 
-            // containerPanel
-            // 
-            this.containerPanel.Controls.Add(this.panelChart);
-            this.containerPanel.Controls.Add(this.panelPie2);
-            this.containerPanel.Controls.Add(this.panelPie1);
-            this.containerPanel.Location = new System.Drawing.Point(206, 12);
-            this.containerPanel.Name = "containerPanel";
-            this.containerPanel.Size = new System.Drawing.Size(548, 437);
-            this.containerPanel.TabIndex = 1;
-            // 
-            // panelChart
-            // 
-            this.panelChart.Controls.Add(this.listView1);
-            this.panelChart.Controls.Add(this.RTBdata);
-            this.panelChart.Location = new System.Drawing.Point(3, 227);
-            this.panelChart.Name = "panelChart";
-            this.panelChart.Size = new System.Drawing.Size(542, 207);
-            this.panelChart.TabIndex = 1;
-            // 
-            // panelPie2
-            // 
-            this.panelPie2.Controls.Add(this.pieChart2);
-            this.panelPie2.Location = new System.Drawing.Point(277, 3);
-            this.panelPie2.Name = "panelPie2";
-            this.panelPie2.Size = new System.Drawing.Size(268, 218);
-            this.panelPie2.TabIndex = 1;
-            // 
-            // pieChart2
-            // 
-            this.pieChart2.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(210)))), ((int)(((byte)(65)))));
-            this.pieChart2.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea1.Name = "ChartArea1";
-            this.pieChart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.pieChart2.Legends.Add(legend1);
-            this.pieChart2.Location = new System.Drawing.Point(3, 3);
-            this.pieChart2.Name = "pieChart2";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Pie2";
-            this.pieChart2.Series.Add(series1);
-            this.pieChart2.Size = new System.Drawing.Size(262, 207);
-            this.pieChart2.TabIndex = 1;
-            this.pieChart2.Text = "chart1";
-            // 
-            // panelPie1
-            // 
-            this.panelPie1.Controls.Add(this.pieChart1);
-            this.panelPie1.Location = new System.Drawing.Point(3, 3);
-            this.panelPie1.Name = "panelPie1";
-            this.panelPie1.Size = new System.Drawing.Size(268, 218);
-            this.panelPie1.TabIndex = 0;
-            // 
-            // pieChart1
-            // 
-            this.pieChart1.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(210)))), ((int)(((byte)(65)))));
-            this.pieChart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea2.Name = "ChartArea1";
-            this.pieChart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.pieChart1.Legends.Add(legend2);
-            this.pieChart1.Location = new System.Drawing.Point(3, 3);
-            this.pieChart1.Name = "pieChart1";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Pie1";
-            this.pieChart1.Series.Add(series2);
-            this.pieChart1.Size = new System.Drawing.Size(262, 207);
-            this.pieChart1.TabIndex = 0;
-            this.pieChart1.Text = "chart1";
-            // 
-            // RTBdata
-            // 
-            this.RTBdata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(41)))));
-            this.RTBdata.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.RTBdata.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.RTBdata.Location = new System.Drawing.Point(3, 3);
-            this.RTBdata.Name = "RTBdata";
-            this.RTBdata.Size = new System.Drawing.Size(536, 201);
-            this.RTBdata.TabIndex = 0;
-            this.RTBdata.Text = "";
-            // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(41)))));
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.chName,
-            this.cLastName});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(536, 201);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // chName
-            // 
-            this.chName.Text = "Name";
-            // 
-            // cLastName
-            // 
-            this.cLastName.Text = "Lastname";
-            // 
             // AdminMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(766, 461);
-            this.Controls.Add(this.containerPanel);
+            this.Controls.Add(this.containerPanele);
+            this.Controls.Add(this.pieChart2);
+            this.Controls.Add(this.pieChart1);
             this.Controls.Add(this.panel1);
             this.Name = "AdminMain";
             this.Text = "AdminMain";
             this.panel1.ResumeLayout(false);
-            this.containerPanel.ResumeLayout(false);
-            this.panelChart.ResumeLayout(false);
-            this.panelPie2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pieChart2)).EndInit();
-            this.panelPie1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pieChart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pieChart2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -299,15 +225,8 @@
         private System.Windows.Forms.Button GebruikersBtn;
         private System.Windows.Forms.Button PaneelBtn;
         private System.Windows.Forms.Panel selectPanel;
-        private System.Windows.Forms.Panel containerPanel;
-        private System.Windows.Forms.Panel panelChart;
-        private System.Windows.Forms.Panel panelPie2;
-        private System.Windows.Forms.Panel panelPie1;
         private System.Windows.Forms.DataVisualization.Charting.Chart pieChart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart pieChart2;
-        private System.Windows.Forms.RichTextBox RTBdata;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader chName;
-        private System.Windows.Forms.ColumnHeader cLastName;
+        private System.Windows.Forms.Panel containerPanele;
     }
 }

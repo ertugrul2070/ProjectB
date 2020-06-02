@@ -17,8 +17,8 @@ namespace UI.Administratie
     public partial class AdminMain : Form
     {
         DatabaseConnection dbc = new DatabaseConnection();
-        List<string> CountGenres = new List<string>();
-        List<string> CountGenders = new List<string>();
+        
+        
         public AdminMain()
         {
             InitializeComponent();
@@ -26,30 +26,41 @@ namespace UI.Administratie
             PaneelBtn_Click(null, new EventArgs());
 
         }
-
+        bool c1exists = false;
+        bool c2exists = false;
         private void PaneelBtn_Click(object sender, EventArgs e)
         {
             
             selectPanel.Height = PaneelBtn.Height - 25;
             selectPanel.Top = PaneelBtn.Top + 11;
 
-            containerPanel.Controls.Clear();
-
-            Panel p1 = CreatePanel(268, 218, 3, 3, "panelPie1");
-            Panel p2 = CreatePanel(268, 218, 3, 277, "panelPie2");
-
-            containerPanel.Controls.Add(p1);
-            containerPanel.Controls.Add(p2);
+            pieChart1.Visible = true;
+            pieChart2.Visible = true;
+            containerPanele.Controls.Clear();
+            containerPanele.Height = 224;
+            containerPanele.Width = 539;
+            containerPanele.Top = 225;
+            containerPanele.Left = 206;
 
             //Load data for chart 1
-            for (int i = 1; i < 7; i++)
+            List<string> CountGenres = new List<string>();
+            var genres = new List<string> { "Science Fiction", "Adventure", "Horror", "Comedy", "Fantasy", "Romance" };
+            
+            if (pieChart2.Series["Pie2"].Points.Count() > 0)
+            {
+                c1exists = true;
+            }   
+            else
+            {
+
+                for (int i = 1; i < 7; i++)
             {
 
                 string selectQuery = "SELECT COUNT(genre_idgenre) FROM mydb.movies WHERE genre_idgenre = " + i;
                 try
                 {
                     dbc.cnn.Open();
-
+                    
                     MySqlCommand command = new MySqlCommand(selectQuery, dbc.cnn);
 
                     MySqlDataReader dataReader = command.ExecuteReader();
@@ -59,8 +70,6 @@ namespace UI.Administratie
                         string genreName = dataReader.GetString("COUNT(genre_idgenre)");
                         CountGenres.Add(genreName);
                     }
-
-
                 }
                 catch (Exception)
                 {
@@ -72,43 +81,49 @@ namespace UI.Administratie
                 }
 
             }
-            var genres = new List<string> { "Science Fiction", "Adventure", "Horror", "Comedy", "Fantasy", "Romance" };
-            Chart c1 = CreateChart(262, 207, 3, 3, "pieChart1", "Pie1", CountGenres, genres);
-            c1.Parent = p1;
+            
+            
+            FillChart("Genres", "Pie1",CountGenres, genres, pieChart1, c1exists);
+            }
+
 
             //Load data for chart 2
             var genders = new List<string> { "Man", "Vrouw", "Anders", "Wil ik niet zeggen" };
-            for (int i = 0; i < 4; i++)
+            List<string> CountGenders = new List<string>();
+            if (pieChart2.Series["Pie2"].Points.Count() > 0)
             {
-                string selectQuery = "SELECT COUNT(idUsers) FROM mydb.customers WHERE gender = '" + genders[i] + "'";
-                try
+                c2exists = true;
+            }
+            else
+            {
+                for (int i = 0; i < 4; i++)
                 {
-                    dbc.cnn.Open();
-
-                    MySqlCommand command = new MySqlCommand(selectQuery, dbc.cnn);
-                    MySqlDataReader dataReader = command.ExecuteReader();
-
-                    while (dataReader.Read())
+                    string selectQuery = "SELECT COUNT(idUsers) FROM mydb.customers WHERE gender = '" + genders[i] + "'";
+                    try
                     {
-                        string gender = dataReader.GetString("COUNT(idUsers)");
-                        CountGenders.Add(gender);
+                        dbc.cnn.Open();
+
+                        MySqlCommand command = new MySqlCommand(selectQuery, dbc.cnn);
+                        MySqlDataReader dataReader = command.ExecuteReader();
+
+                        while (dataReader.Read())
+                        {
+                            string gender = dataReader.GetString("COUNT(idUsers)");
+                            CountGenders.Add(gender);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+                    finally
+                    {
+                        dbc.cnn.Close();
                     }
 
-
                 }
-                catch (Exception)
-                {
-                    throw;
-                }
-                finally
-                {
-                    dbc.cnn.Close();
-                }
-
+                FillChart("Geslacht", "Pie2", CountGenders, genders, pieChart2, c2exists);
             }
-            Chart c2 = CreateChart(262, 207, 3, 3, "pieChart2", "Pie2", CountGenders, genders);
-            c2.Parent = p2;
-            c2.Show();
         }
 
         private void GebruikersBtn_Click(object sender, EventArgs e)
@@ -116,13 +131,21 @@ namespace UI.Administratie
             
             selectPanel.Height = GebruikersBtn.Height - 25;
             selectPanel.Top = GebruikersBtn.Top + 11;
-            panelPie1.Visible = false;
-            panelPie2.Visible = false;
-            panelChart.Visible = false;
-            containerPanel.Controls.Clear();
-            ListView CLW = CreateListView(containerPanel.Height, containerPanel.Width);
+
+            pieChart1.Visible = false;
+            pieChart2.Visible = false;
+
+            containerPanele.Controls.Clear();
+
+            containerPanele.Height = 537;
+            containerPanele.Width = 539;
+            containerPanele.Top = 11;
+            containerPanele.Left = 206;
+
+
+            ListView CLW = CreateListView(containerPanele.Height, containerPanele.Width);
             CLW.Clear();
-            containerPanel.Controls.Add(CLW);
+            containerPanele.Controls.Add(CLW);
 
             string selectQuery = "SELECT * FROM mydb.customers";
 
@@ -180,12 +203,15 @@ namespace UI.Administratie
         {   
             selectPanel.Height = FilmsBtn.Height - 25;
             selectPanel.Top = FilmsBtn.Top + 11;
-            panelPie1.Visible = false;
-            panelPie2.Visible = false;
-            panelChart.Visible = false;
-            containerPanel.Controls.Clear();
-            ListView CLW = CreateListView(containerPanel.Height, containerPanel.Width);
-            containerPanel.Controls.Add(CLW);
+            pieChart1.Visible = false;
+            pieChart2.Visible = false;
+            containerPanele.Controls.Clear();
+            containerPanele.Height = 537;
+            containerPanele.Width = 539;
+            containerPanele.Top = 11;
+            containerPanele.Left = 206;
+            ListView CLW = CreateListView(containerPanele.Height, containerPanele.Width);
+            containerPanele.Controls.Add(CLW);
 
             string selectQuery = "SELECT * FROM mydb.movies INNER JOIN mydb.Genre ON mydb.movies.genre_idgenre=mydb.Genre.idgenre;";
 
@@ -212,7 +238,6 @@ namespace UI.Administratie
                     mPegi.Add(movPegi);
                     mGenre.Add(movGenre);
                     custCount++;
-
                 }
 
                 CLW.Columns.Add("Naam", 200);
@@ -243,12 +268,15 @@ namespace UI.Administratie
         {
             selectPanel.Height = SnacksBtn.Height - 25;
             selectPanel.Top = SnacksBtn.Top + 15;
-            panelPie1.Visible = false;
-            panelChart.Visible = false;
-            panelPie2.Visible = false;
-            containerPanel.Controls.Clear();
-            ListView CLW = CreateListView(containerPanel.Height, containerPanel.Width);
-            containerPanel.Controls.Add(CLW);
+            pieChart1.Visible = false;
+            pieChart2.Visible = false;
+            containerPanele.Controls.Clear();
+            containerPanele.Height = 537;
+            containerPanele.Width = 539;
+            containerPanele.Top = 11;
+            containerPanele.Left = 206;
+            ListView CLW = CreateListView(containerPanele.Height, containerPanele.Width);
+            containerPanele.Controls.Add(CLW);
 
             string selectQuery = "SELECT * FROM mydb.snackcatelogus";
 
@@ -326,29 +354,31 @@ namespace UI.Administratie
             return pnl;
         }
 
-        Chart CreateChart(int height, int width, int left, int top, string name, string serieName,  List<string> value, List<string> title)
+        private void FillChart(string Chartnaam, string serieName,  List<string> value, List<string> title, Chart var, bool exists)
         {
-            Chart chrt = new Chart();
-
-            chrt.Name = name;
-            chrt.Titles.Add("aaaaaaaaaaaaaaaaaaaa");
-            chrt.Size = new Size(height, width);
-            chrt.Location = new Point(top, left);
-            chrt.Series.Add(serieName);
-            chrt.Series[serieName].ChartType = SeriesChartType.Pie;
-            chrt.Series[serieName].SetDefault(true);
-            chrt.Series[serieName].Enabled = true;
-            chrt.Visible = true;
-
-            int cGen = 0;
-            foreach (string val in value)
-            {
-                chrt.Series[serieName].Points.AddXY(title[cGen], val);
-                cGen++;
+   
+            if (!exists)
+                {   
+                    var.Titles.Add(Chartnaam);
+                int cGen = 0;
+                foreach (string val in value)
+                {
+                    var.Series[serieName].Points.AddXY(title[cGen], val);
+                    cGen++;
+                }
             }
-            
+            else
+            {
+                var.Series[serieName].Points.AddXY("", "");
+            }
+        }
 
-            return chrt;
+        private void LoguitBtn_Click(object sender, EventArgs e)
+        {
+            Overzicht nextForm = new Overzicht();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
         }
     }
 }
