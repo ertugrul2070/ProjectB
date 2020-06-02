@@ -59,7 +59,6 @@
             this.Actueel_Tekst.Size = new System.Drawing.Size(105, 29);
             this.Actueel_Tekst.TabIndex = 1;
             this.Actueel_Tekst.Text = "Actueel";
-            this.Actueel_Tekst.Click += new System.EventHandler(this.label1_Click);
             // 
             // Films_Knop
             // 
@@ -70,7 +69,7 @@
             this.Films_Knop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Films_Knop.ForeColor = System.Drawing.SystemColors.Window;
             this.Films_Knop.Location = new System.Drawing.Point(16, 46);
-            this.Films_Knop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Films_Knop.Margin = new System.Windows.Forms.Padding(4);
             this.Films_Knop.Name = "Films_Knop";
             this.Films_Knop.Size = new System.Drawing.Size(100, 28);
             this.Films_Knop.TabIndex = 4;
@@ -89,7 +88,6 @@
             this.PopcornPlaza_Tekst.Size = new System.Drawing.Size(152, 25);
             this.PopcornPlaza_Tekst.TabIndex = 9;
             this.PopcornPlaza_Tekst.Text = "Popcorn Plaza";
-            this.PopcornPlaza_Tekst.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // Verwacht_Tekst
             // 
@@ -105,7 +103,7 @@
             // PopcornPlaza_Logo
             // 
             this.PopcornPlaza_Logo.Location = new System.Drawing.Point(16, 0);
-            this.PopcornPlaza_Logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PopcornPlaza_Logo.Margin = new System.Windows.Forms.Padding(4);
             this.PopcornPlaza_Logo.Name = "PopcornPlaza_Logo";
             this.PopcornPlaza_Logo.Size = new System.Drawing.Size(55, 48);
             this.PopcornPlaza_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -116,7 +114,7 @@
             // 
             this.Zwarte_Balk.BackColor = System.Drawing.SystemColors.MenuText;
             this.Zwarte_Balk.Location = new System.Drawing.Point(0, 44);
-            this.Zwarte_Balk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Zwarte_Balk.Margin = new System.Windows.Forms.Padding(4);
             this.Zwarte_Balk.Name = "Zwarte_Balk";
             this.Zwarte_Balk.Size = new System.Drawing.Size(1116, 30);
             this.Zwarte_Balk.TabIndex = 3;
@@ -126,7 +124,7 @@
             // 
             this.Rode_Balk.BackColor = System.Drawing.SystemColors.Desktop;
             this.Rode_Balk.Location = new System.Drawing.Point(0, 0);
-            this.Rode_Balk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Rode_Balk.Margin = new System.Windows.Forms.Padding(4);
             this.Rode_Balk.Name = "Rode_Balk";
             this.Rode_Balk.Size = new System.Drawing.Size(1116, 62);
             this.Rode_Balk.TabIndex = 2;
@@ -138,7 +136,7 @@
             this.flowLayoutPanelActueel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.flowLayoutPanelActueel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.flowLayoutPanelActueel.Location = new System.Drawing.Point(17, 129);
-            this.flowLayoutPanelActueel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanelActueel.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanelActueel.Name = "flowLayoutPanelActueel";
             this.flowLayoutPanelActueel.Size = new System.Drawing.Size(1075, 276);
             this.flowLayoutPanelActueel.TabIndex = 11;
@@ -149,7 +147,7 @@
             this.flowLayoutPanelVerwacht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.flowLayoutPanelVerwacht.Cursor = System.Windows.Forms.Cursors.Hand;
             this.flowLayoutPanelVerwacht.Location = new System.Drawing.Point(16, 470);
-            this.flowLayoutPanelVerwacht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanelVerwacht.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanelVerwacht.Name = "flowLayoutPanelVerwacht";
             this.flowLayoutPanelVerwacht.Size = new System.Drawing.Size(1076, 276);
             this.flowLayoutPanelVerwacht.TabIndex = 12;
@@ -171,7 +169,7 @@
             this.flowLayoutPanelSearch.Location = new System.Drawing.Point(123, 81);
             this.flowLayoutPanelSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanelSearch.Name = "flowLayoutPanelSearch";
-            this.flowLayoutPanelSearch.Size = new System.Drawing.Size(185, 219);
+            this.flowLayoutPanelSearch.Size = new System.Drawing.Size(219, 259);
             this.flowLayoutPanelSearch.TabIndex = 14;
             this.flowLayoutPanelSearch.Visible = false;
             // 
@@ -205,7 +203,7 @@
             this.dateBegin.TabIndex = 16;
             this.dateBegin.UseWaitCursor = true;
             this.dateBegin.Value = new System.DateTime(2020, 6, 1, 14, 22, 41, 0);
-            this.dateBegin.ValueChanged += new System.EventHandler(this.OrderMovies);
+            this.dateBegin.ValueChanged += new System.EventHandler(this.datumFilterChanged);
             // 
             // dateEind
             // 
@@ -216,7 +214,7 @@
             this.dateEind.TabIndex = 17;
             this.dateEind.UseWaitCursor = true;
             this.dateEind.Value = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
-            this.dateEind.ValueChanged += new System.EventHandler(this.OrderMovies);
+            this.dateEind.ValueChanged += new System.EventHandler(this.datumFilterChanged);
             // 
             // timeFilterLabel
             // 
@@ -260,7 +258,7 @@
             this.Controls.Add(this.Zwarte_Balk);
             this.Controls.Add(this.Rode_Balk);
             this.Controls.Add(this.Actueel_Tekst);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Homepage";
             this.Text = "Popcorn Plaza";
             this.Load += new System.EventHandler(this.Homepage_Load);

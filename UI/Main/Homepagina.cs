@@ -133,12 +133,6 @@ namespace UI
 
             return l;
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Films_Knop_Click(object sender, EventArgs e)
         {
             Overzicht nextForm = new Overzicht();
@@ -146,12 +140,6 @@ namespace UI
             nextForm.ShowDialog();
             this.Close();
         }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         public bool genreCheck(int genre)
         {
             if (genre == GenreFilter.SelectedIndex)
@@ -161,6 +149,13 @@ namespace UI
             else
             {
                 return false;
+            }
+        }
+        private void datumFilterChanged(object sender, EventArgs e)
+        {
+            if (filterDatum.Checked == true)
+            {
+                OrderMovies(sender, e);
             }
         }
 
@@ -211,6 +206,6 @@ namespace UI
                     dbc.cnn.Close();
                 }
             }
-        }       
+        }
     }
 }
