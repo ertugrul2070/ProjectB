@@ -44,6 +44,7 @@
             this.dateEind = new System.Windows.Forms.DateTimePicker();
             this.timeFilterLabel = new System.Windows.Forms.Label();
             this.filterDatum = new System.Windows.Forms.CheckBox();
+            this.Zoeken_tekst = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PopcornPlaza_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Zwarte_Balk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rode_Balk)).BeginInit();
@@ -154,8 +155,8 @@
             // 
             // SearchFilm
             // 
-            this.SearchFilm.BackColor = System.Drawing.SystemColors.Desktop;
-            this.SearchFilm.Location = new System.Drawing.Point(123, 46);
+            this.SearchFilm.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.SearchFilm.Location = new System.Drawing.Point(139, 100);
             this.SearchFilm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchFilm.Name = "SearchFilm";
             this.SearchFilm.Size = new System.Drawing.Size(148, 22);
@@ -166,7 +167,7 @@
             // 
             this.flowLayoutPanelSearch.AutoScroll = true;
             this.flowLayoutPanelSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanelSearch.Location = new System.Drawing.Point(123, 81);
+            this.flowLayoutPanelSearch.Location = new System.Drawing.Point(128, 129);
             this.flowLayoutPanelSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanelSearch.Name = "flowLayoutPanelSearch";
             this.flowLayoutPanelSearch.Size = new System.Drawing.Size(219, 259);
@@ -237,18 +238,29 @@
             this.filterDatum.UseVisualStyleBackColor = true;
             this.filterDatum.CheckedChanged += new System.EventHandler(this.OrderMovies);
             // 
+            // Zoeken_tekst
+            // 
+            this.Zoeken_tekst.AutoSize = true;
+            this.Zoeken_tekst.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Zoeken_tekst.Location = new System.Drawing.Point(161, 78);
+            this.Zoeken_tekst.Name = "Zoeken_tekst";
+            this.Zoeken_tekst.Size = new System.Drawing.Size(68, 20);
+            this.Zoeken_tekst.TabIndex = 21;
+            this.Zoeken_tekst.Text = "Zoeken";
+            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1108, 761);
+            this.Controls.Add(this.flowLayoutPanelSearch);
+            this.Controls.Add(this.Zoeken_tekst);
             this.Controls.Add(this.filterDatum);
             this.Controls.Add(this.timeFilterLabel);
             this.Controls.Add(this.dateEind);
             this.Controls.Add(this.dateBegin);
             this.Controls.Add(this.GenreFilter);
-            this.Controls.Add(this.flowLayoutPanelSearch);
             this.Controls.Add(this.SearchFilm);
             this.Controls.Add(this.flowLayoutPanelVerwacht);
             this.Controls.Add(this.flowLayoutPanelActueel);
@@ -290,5 +302,6 @@
         private System.Windows.Forms.DateTimePicker dateEind;
         private System.Windows.Forms.Label timeFilterLabel;
         private System.Windows.Forms.CheckBox filterDatum;
+        private System.Windows.Forms.Label Zoeken_tekst;
     }
 }
