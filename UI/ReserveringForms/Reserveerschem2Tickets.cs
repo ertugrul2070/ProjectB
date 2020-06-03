@@ -7,15 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Engine.ViewModels;
+using MySql.Data.MySqlClient;
 
 namespace UI
 {
+
     public partial class Reserveerschem2Tickets : Form
     {
+        DatabaseConnection dbc = new DatabaseConnection();
+
         public Reserveerschem2Tickets()
         {
             InitializeComponent();
             pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
+            
         }
 
         private void City_Click(object sender, EventArgs e)
@@ -36,6 +42,56 @@ namespace UI
         
         private void Next_Click(object sender, EventArgs e)
         {
+            List<string> dataList = new List<string>();
+            try
+            {
+                dbc.cnn.Open();
+                string selectQuery = "SELECT * FROM mydb.movies WHERE name = (SELECT name FROM mydb.movies WHERE idmovies = " + Program._ReservationSession.CurrentReservation.MovieId + ")";
+                MySqlCommand command = new MySqlCommand(selectQuery, dbc.cnn);
+
+                MySqlDataReader dataReader = command.ExecuteReader();
+                
+
+                while (dataReader.Read())
+                {
+                    string pegi = dataReader.GetString("pegi");
+                    dataList.Add(pegi);
+                }
+                dbc.cnn.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                dbc.cnn.Close();
+            }
+            int takenseats = 0;
+            try
+            {
+                dbc.cnn.Open();
+                string selectQuery = $"SELECT * FROM mydb.seat WHERE idseat IN (SELECT seats_idseats FROM mydb.cinemahall WHERE movie_time_idmovie_time = (SELECT idmovie_time FROM mydb.movie_time WHERE movie_idmovie = '{Program._ReservationSession.CurrentReservation.MovieId}' AND date = '{Program._ReservationSession.CurrentReservation.date}'))";
+                MySqlCommand command = new MySqlCommand(selectQuery, dbc.cnn);
+
+                MySqlDataReader dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    string seat = dataReader.GetString("seat");
+                    takenseats++;
+                    
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                dbc.cnn.Close();
+            }
+
             addTickets();
 
             System.Text.RegularExpressions.Regex regularExpression = new System.Text.RegularExpressions.Regex(@"^[0-6]$");
@@ -67,6 +123,19 @@ namespace UI
             {
                 MessageBox.Show("Kies tussen 1 en 6 tickets.");
             }
+
+
+            else if (ChildField.Text != "0" && Convert.ToInt32(dataList[0]) > 12)
+            {
+                MessageBox.Show("Deze film is niet geschikt voor kinderen.");
+            }
+
+            else if((takenseats + Program._ReservationSession.CurrentReservation.TicketAmount) >= 50)
+            {
+                MessageBox.Show($"Er zijn geen genoeg plekken. Voor deze film zijn er nog {50 - takenseats} over");
+            }
+
+           
 
             else
             {

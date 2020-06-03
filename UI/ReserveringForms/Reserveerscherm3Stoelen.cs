@@ -21,6 +21,7 @@ namespace UI
         string greyPersonIcon = "https://i.imgur.com/8gjqlK3.png";
         string greenPersonIcon = "https://i.imgur.com/G5KLPoO.png";
         string redPersonIcon = "https://i.imgur.com/F2olJZ5.png";
+        List<string> takenSeats = new List<string>();
 
         public Reserveerscherm3Stoelen()
         {
@@ -119,21 +120,20 @@ namespace UI
             label22.Text = Program._ReservationSession.CurrentReservation.date;
             label24.Text = Program._ReservationSession.CurrentReservation.time;
             label25.Text = $"Totaal aantal tickets: {Program._ReservationSession.CurrentReservation.TicketAmount}";
-            
 
-            /*try
+
+            try
             {
                 dbcr.cnn.Open();
-                string selectQuery = $"SELECT * FROM mydb.seats WHERE idseats = (SELECT seats_idseats FROM mydb.cinemahall WHERE movie_time_idmovie_time = (SELECT idmovie_time FROM mydb.movie_time WHERE movie_idmovie = '{Program._ReservationSession.CurrentReservation.MovieId}'))";
+                string selectQuery = $"SELECT * FROM mydb.seat WHERE idseat IN (SELECT seats_idseats FROM mydb.cinemahall WHERE movie_time_idmovie_time = (SELECT idmovie_time FROM mydb.movie_time WHERE movie_idmovie = '{Program._ReservationSession.CurrentReservation.MovieId}' AND date = '{Program._ReservationSession.CurrentReservation.date}'))";
                 MySqlCommand command = new MySqlCommand(selectQuery, dbcr.cnn);
 
                 MySqlDataReader dataReader = command.ExecuteReader();
-
+                
                 while (dataReader.Read())
                 {
-                    string row = dataReader.GetString("row");
-                    string number = dataReader.GetString("number");
-                    MessageBox.Show(row + number);
+                    string seat = dataReader.GetString("seat");
+                    takenSeats.Add(seat);
                 }
             }
             catch (Exception)
@@ -143,13 +143,21 @@ namespace UI
             finally
             {
                 dbcr.cnn.Close();
-            }*/
+            }
             var pics = new PictureBox[] { A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, E1, E2, E3, E4, E5, E6, E7, E8, E9, E10 };
             Dictionary<PictureBox, string> dictionary = new Dictionary<PictureBox, string>();
             foreach (PictureBox c in pics)
             {
                 c.ImageLocation = greyPersonIcon;
+                foreach(string s in takenSeats)
+                {
+                    if(c.Name == s)
+                    {
+                        c.ImageLocation = redPersonIcon;
+                    }
+                }
             }
+            
             for (int i = 0; i < pics.Length; i++)
             {
                 if(i < 10)
@@ -188,24 +196,28 @@ namespace UI
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            PictureBox pic = (PictureBox)sender;
             
+            PictureBox pic = (PictureBox)sender;
+            if (pic.ImageLocation != redPersonIcon)
+            {
 
-            if (pic.ImageLocation == greenPersonIcon)
-            {
-                pic.ImageLocation = greyPersonIcon;
-                seats.Remove(pic.Name);
-                Amount--;
-            }
-            else if (Amount >= Program._ReservationSession.CurrentReservation.TicketAmount)
-            {
-                MessageBox.Show($"U heeft al {Program._ReservationSession.CurrentReservation.TicketAmount} stoelen geselecteerd.");
-            }
-            else
-            {
-                pic.ImageLocation = greenPersonIcon;
-                seats.Add(pic.Name, pic.Name);
-                Amount++;
+
+                if (pic.ImageLocation == greenPersonIcon)
+                {
+                    pic.ImageLocation = greyPersonIcon;
+                    seats.Remove(pic.Name);
+                    Amount--;
+                }
+                else if (Amount >= Program._ReservationSession.CurrentReservation.TicketAmount)
+                {
+                    MessageBox.Show($"U heeft al {Program._ReservationSession.CurrentReservation.TicketAmount} stoelen geselecteerd.");
+                }
+                else
+                {
+                    pic.ImageLocation = greenPersonIcon;
+                    seats.Add(pic.Name, pic.Name);
+                    Amount++;
+                }
             }
         }
 

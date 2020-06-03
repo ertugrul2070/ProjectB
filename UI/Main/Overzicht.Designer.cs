@@ -76,6 +76,7 @@
             // 
             this.Nu_lb.AutoSize = true;
             this.Nu_lb.BackColor = System.Drawing.Color.Red;
+            this.Nu_lb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Nu_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nu_lb.ForeColor = System.Drawing.Color.White;
             this.Nu_lb.Location = new System.Drawing.Point(292, 347);
@@ -139,6 +140,7 @@
             // Binn_lb
             // 
             this.Binn_lb.AutoSize = true;
+            this.Binn_lb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Binn_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Binn_lb.Location = new System.Drawing.Point(412, 347);
             this.Binn_lb.Name = "Binn_lb";
