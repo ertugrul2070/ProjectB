@@ -35,6 +35,7 @@ namespace UI.Administratie
             selectPanel.Top = PaneelBtn.Top + 11;
 
             pieChart1.Visible = true;
+            panelPanel.Visible = true;
             pieChart2.Visible = true;
             containerPanele.Controls.Clear();
             containerPanele.Height = 224;
@@ -56,12 +57,12 @@ namespace UI.Administratie
                 for (int i = 1; i < 7; i++)
             {
 
-                string selectQuery = "SELECT COUNT(genre_idgenre) FROM mydb.movies WHERE genre_idgenre = " + i;
+                string selectQueryyyy = "SELECT COUNT(genre_idgenre) FROM mydb.movies WHERE genre_idgenre = " + i;
                 try
                 {
                     dbc.cnn.Open();
                     
-                    MySqlCommand command = new MySqlCommand(selectQuery, dbc.cnn);
+                    MySqlCommand command = new MySqlCommand(selectQueryyyy, dbc.cnn);
 
                     MySqlDataReader dataReader = command.ExecuteReader();
 
@@ -98,12 +99,12 @@ namespace UI.Administratie
             {
                 for (int i = 0; i < 4; i++)
                 {
-                    string selectQuery = "SELECT COUNT(idUsers) FROM mydb.customers WHERE gender = '" + genders[i] + "'";
+                    string selectQueryy = "SELECT COUNT(idUsers) FROM mydb.customers WHERE gender = '" + genders[i] + "'";
                     try
                     {
                         dbc.cnn.Open();
 
-                        MySqlCommand command = new MySqlCommand(selectQuery, dbc.cnn);
+                        MySqlCommand command = new MySqlCommand(selectQueryy, dbc.cnn);
                         MySqlDataReader dataReader = command.ExecuteReader();
 
                         while (dataReader.Read())
@@ -124,6 +125,72 @@ namespace UI.Administratie
                 }
                 FillChart("Geslacht", "Pie2", CountGenders, genders, pieChart2, c2exists);
             }
+
+            //Listview Reservations
+            ListView CLW = CreateListView(3, 3, containerPanele.Height, containerPanele.Width);
+            CLW.Clear();
+            panelPanel.Controls.Add(CLW);
+
+            string selectQuery = "SELECT customers.firstName, customers.lastName, movies.name, movie_time.date, time.time FROM mydb.reservation_zaal " +
+            "INNER JOIN mydb.reservations ON mydb.reservation_zaal.reservering_idreservering = mydb.reservations.idreservations " +
+            "INNER JOIN mydb.customers ON mydb.reservations.customer_idcustomer = mydb.customers.idUsers " +
+            "INNER JOIN mydb.cinemahall ON mydb.reservation_zaal.cinemahall_idcinemahall = mydb.cinemahall.idCinemahall " +
+            "INNER JOIN mydb.movie_time ON mydb.cinemahall.movie_time_idmovie_time = mydb.movie_time.idmovie_time " +
+            "INNER JOIN mydb.movies ON mydb.movie_time.movie_idmovie = mydb.movies.idmovies " +
+            "INNER JOIN mydb.time ON mydb.movie_time.time_idtime = mydb.time.idtime";
+
+            List<string> pFirstName = new List<string>();
+            List<string> pLastName = new List<string>();
+            List<string> pName = new List<string>();
+            List<string> pDate = new List<string>();
+            List<string> time = new List<string>();
+            try
+            {
+                dbc.cnn.Open();
+
+                MySqlCommand command = new MySqlCommand(selectQuery, dbc.cnn);
+
+                MySqlDataReader dataReader = command.ExecuteReader();
+                int custCount = 0;
+                while (dataReader.Read())
+                {
+                    string fn = dataReader.GetString("firstName");
+                    string ln = dataReader.GetString("lastName");
+                    string nm = dataReader.GetString("name");
+                    DateTime dt = Convert.ToDateTime(dataReader.GetString("date"));
+                    string tm = dataReader.GetString("time");
+                    pFirstName.Add(fn);
+                    pLastName.Add(ln);
+                    pName.Add(nm);
+                    pDate.Add(dt.ToString("yyyy-MM-dd"));
+                    time.Add(tm);
+                    custCount++;
+                }
+
+                CLW.Columns.Add("Naam", 200);
+                CLW.Columns.Add("AchterNaam", 200);
+                CLW.Columns.Add("FilmNaam", 200);
+                CLW.Columns.Add("Datum", 200);
+                CLW.Columns.Add("Reserveer Tijd", 200);
+
+                for (int i = 0; i < custCount; i++)
+                {
+                    ListViewItem item = new ListViewItem(pFirstName[i]);
+                    item.SubItems.Add(pLastName[i]);
+                    item.SubItems.Add(pName[i]);
+                    item.SubItems.Add(pDate[i]);
+                    item.SubItems.Add(time[i]);
+                    CLW.Items.Add(item);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                dbc.cnn.Close();
+            }
         }
 
         private void GebruikersBtn_Click(object sender, EventArgs e)
@@ -133,17 +200,17 @@ namespace UI.Administratie
             selectPanel.Top = GebruikersBtn.Top + 11;
 
             pieChart1.Visible = false;
+            panelPanel.Visible = false;
             pieChart2.Visible = false;
-
             containerPanele.Controls.Clear();
-
             containerPanele.Height = 537;
             containerPanele.Width = 539;
             containerPanele.Top = 11;
             containerPanele.Left = 206;
 
 
-            ListView CLW = CreateListView(containerPanele.Height, containerPanele.Width);
+            ListView CLW = CreateListView(3, 3, containerPanele.Height, containerPanele.Width);
+
             CLW.Clear();
             containerPanele.Controls.Add(CLW);
 
@@ -204,13 +271,14 @@ namespace UI.Administratie
             selectPanel.Height = FilmsBtn.Height - 25;
             selectPanel.Top = FilmsBtn.Top + 11;
             pieChart1.Visible = false;
+            panelPanel.Visible = false;
             pieChart2.Visible = false;
             containerPanele.Controls.Clear();
             containerPanele.Height = 537;
             containerPanele.Width = 539;
             containerPanele.Top = 11;
             containerPanele.Left = 206;
-            ListView CLW = CreateListView(containerPanele.Height, containerPanele.Width);
+            ListView CLW = CreateListView(3, 3, containerPanele.Height, containerPanele.Width);
             containerPanele.Controls.Add(CLW);
 
             string selectQuery = "SELECT * FROM mydb.movies INNER JOIN mydb.Genre ON mydb.movies.genre_idgenre=mydb.Genre.idgenre;";
@@ -230,11 +298,11 @@ namespace UI.Administratie
                 while (dataReader.Read())
                 {
                     string movName = dataReader.GetString("name");
-                    string movReleaseDate = dataReader.GetString("releaseDate");
+                    DateTime movReleaseDate = Convert.ToDateTime(dataReader.GetString("releaseDate"));
                     string movPegi = dataReader.GetString("pegi");
                     string movGenre = dataReader.GetString("genreName");
                     mName.Add(movName);
-                    mReleaseDate.Add(movReleaseDate);
+                    mReleaseDate.Add(movReleaseDate.ToString("yyyy-MM-dd"));
                     mPegi.Add(movPegi);
                     mGenre.Add(movGenre);
                     custCount++;
@@ -269,13 +337,14 @@ namespace UI.Administratie
             selectPanel.Height = SnacksBtn.Height - 25;
             selectPanel.Top = SnacksBtn.Top + 15;
             pieChart1.Visible = false;
+            panelPanel.Visible = false;
             pieChart2.Visible = false;
             containerPanele.Controls.Clear();
             containerPanele.Height = 537;
             containerPanele.Width = 539;
             containerPanele.Top = 11;
             containerPanele.Left = 206;
-            ListView CLW = CreateListView(containerPanele.Height, containerPanele.Width);
+            ListView CLW = CreateListView(3, 3, containerPanele.Height, containerPanele.Width);
             containerPanele.Controls.Add(CLW);
 
             string selectQuery = "SELECT * FROM mydb.snackcatelogus";
@@ -325,12 +394,12 @@ namespace UI.Administratie
             }
         }
 
-            ListView CreateListView(int Height, int Width)
+            ListView CreateListView(int top, int left, int Height, int Width)
         {
             ListView lv1 = new ListView();
 
             lv1.Font = new Font("Century Gothic", 12, FontStyle.Bold);
-            lv1.Location = new Point(3, 3);
+            lv1.Location = new Point(top, left);
             lv1.Name = "custData";
             lv1.Size = new Size(Width - 20, Height - 20);
             lv1.View = View.Details;
