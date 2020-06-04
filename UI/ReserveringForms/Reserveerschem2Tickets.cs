@@ -71,7 +71,7 @@ namespace UI
             try
             {
                 dbc.cnn.Open();
-                string selectQuery = $"SELECT * FROM mydb.seat WHERE idseat IN (SELECT seats_idseats FROM mydb.cinemahall WHERE movie_time_idmovie_time = (SELECT idmovie_time FROM mydb.movie_time WHERE movie_idmovie = '{Program._ReservationSession.CurrentReservation.MovieId}' AND date = '{Program._ReservationSession.CurrentReservation.date}'))";
+                string selectQuery = $"SELECT * FROM mydb.seat WHERE idseat IN (SELECT seats_idseats FROM mydb.cinemahall WHERE movie_time_idmovie_time = (SELECT idmovie_time FROM mydb.movie_time WHERE movie_idmovie = '{Program._ReservationSession.CurrentReservation.MovieId}' AND date = '{Program._ReservationSession.CurrentReservation.date}' AND time_idtime = (SELECT idtime FROM mydb.time WHERE time = '{Program._ReservationSession.CurrentReservation.time}')))";
                 MySqlCommand command = new MySqlCommand(selectQuery, dbc.cnn);
 
                 MySqlDataReader dataReader = command.ExecuteReader();

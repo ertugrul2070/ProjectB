@@ -40,6 +40,7 @@ namespace UI
                         date.Add(cinema.ToString("yyyy-MM-dd"));
                     }
                 }
+                date = date.Distinct().ToList();
                 foreach (string t in date)
                 {
                     cbDate.Items.Add(t);
