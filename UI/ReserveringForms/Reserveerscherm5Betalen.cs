@@ -41,6 +41,8 @@ namespace UI
 
             else
             {
+                Program._ReservationSession.CurrentReservation.ReservationToDatabase();
+
                 Reserveerscherm6Bevestiging nextForm = new Reserveerscherm6Bevestiging();
                 this.Hide();
                 nextForm.ShowDialog();
