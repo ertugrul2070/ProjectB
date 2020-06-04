@@ -71,8 +71,11 @@ namespace Engine.Models
 
                 ExecuteSqlQuery($"INSERT INTO `mydb`.`reservations` (`customer_idcustomer`, `date`) VALUES ('{GetCustomerID()}', '{this.date}');");
                 resID = GetReservationID();
-                //ExecuteSqlQuery($"INSERT INTO `mydb`.`reservation_snack` (`snackcatelogus_idsnackcatelogus`, reservation_idreservation) VALUES('1', '2');");
-                ExecuteSqlQuery($"INSERT INTO `mydb`.`reservation_zaal` (reservering_idreservering, cinemahall_idcinemahall) VALUES ('{this.zaal}', '{resID}');");
+                int movietimeID = GetMovietimeID();
+
+                foreach(KeyValuePair<string, string> s in Seats){
+                    ExecuteSqlQuery($"INSERT INTO `mydb`.`cinemahall` (seats_idseats, movie_time_idmovie_time, salon) VALUES ('{s.Value}','{movietimeID}', '{this.zaal}');");
+                }
 
                 //ExecuteSqlQuery($"");
             }
@@ -126,6 +129,23 @@ namespace Engine.Models
         {
             MySqlCommand command = new MySqlCommand(query, dbc.cnn);
             command.ExecuteNonQuery();
+        }
+
+        private int GetMovietimeID()
+        {
+            string query = $"SELECT * FROM mydb.time WHERE time = '{this.time}';";
+            MySqlCommand command = new MySqlCommand(query, dbc.cnn);
+            MySqlDataReader dataReader = command.ExecuteReader();
+
+            int id = 0;
+
+            while (dataReader.Read())
+            {
+                id = (int)dataReader.GetInt32("idtime");
+            }
+
+            dataReader.Close();
+            return id;
         }
 
     }
