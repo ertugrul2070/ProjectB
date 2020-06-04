@@ -71,8 +71,10 @@ namespace Engine.Models
 
                 ExecuteSqlQuery($"INSERT INTO `mydb`.`reservations` (`customer_idcustomer`, `date`) VALUES ('{GetCustomerID()}', '{this.date}');");
                 resID = GetReservationID();
+                
                 int movietimeID = GetMovietimeID();
                 List<int> seatID = GetSeatID();
+                
                 foreach (var id in seatID)
                 {
                     ExecuteSqlQuery($"INSERT INTO `mydb`.`cinemahall` (seats_idseats, movie_time_idmovie_time, salon) VALUES ('{id}','{movietimeID}', '{this.zaal}');");
@@ -133,7 +135,7 @@ namespace Engine.Models
 
         private int GetMovietimeID()
         {
-            string query = $"SELECT * FROM mydb.time WHERE time = '{this.time}';";
+            string query = $"SELECT idmovie_time FROM mydb.movie_time WHERE movie_idmovie = '{this.MovieId}' AND date = '{this.date}';";
             MySqlCommand command = new MySqlCommand(query, dbc.cnn);
             MySqlDataReader dataReader = command.ExecuteReader();
 
@@ -141,7 +143,7 @@ namespace Engine.Models
 
             while (dataReader.Read())
             {
-                id = (int)dataReader.GetInt32("idtime");
+                id = (int)dataReader.GetInt32("idmovie_time");
             }
 
             dataReader.Close();

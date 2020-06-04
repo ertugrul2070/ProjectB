@@ -30,7 +30,6 @@ namespace UI
 
         private void Next_Click(object sender, EventArgs e)
         {
-            Program._ReservationSession.CurrentReservation.ReservationToDatabase();
             this.Close();
         }
 
