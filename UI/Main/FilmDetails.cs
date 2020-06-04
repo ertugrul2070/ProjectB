@@ -59,24 +59,7 @@ namespace UI
                         "frameborder = \"0\" allow = \"autoplay; encrypted-media\" allowfullscreen></iframe>" +
                         "</body></html>";
             this.webBrowser2.DocumentText = string.Format(embed, dataList[1]);
-            /* XmlDocument doc = new XmlDocument();
-             doc.Load("Films.xml");
-             foreach (XmlNode node in doc.DocumentElement)
-             {
-                 string name = node.Attributes[0].InnerText;
-                 foreach (XmlNode child in node.ChildNodes[2])
-                 {
-                     if (name == chosenName)
-                     {
-                         label2.Text = child.InnerText;
-                     }
-                 }
-             }*/
-
             
-            
-
-            //label2.Text = getMoviesQuery;
 
         }
 

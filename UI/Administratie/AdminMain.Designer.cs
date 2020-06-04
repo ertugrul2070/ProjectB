@@ -35,6 +35,7 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.addMovie = new System.Windows.Forms.Button();
             this.selectPanel = new System.Windows.Forms.Panel();
             this.LoguitBtn = new System.Windows.Forms.Button();
             this.SnacksBtn = new System.Windows.Forms.Button();
@@ -53,6 +54,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(210)))), ((int)(((byte)(65)))));
+            this.panel1.Controls.Add(this.addMovie);
             this.panel1.Controls.Add(this.selectPanel);
             this.panel1.Controls.Add(this.LoguitBtn);
             this.panel1.Controls.Add(this.SnacksBtn);
@@ -64,6 +66,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 552);
             this.panel1.TabIndex = 0;
+            // 
+            // addMovie
+            // 
+            this.addMovie.FlatAppearance.BorderSize = 0;
+            this.addMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMovie.Image = global::UI.Properties.Resources.plus__1_;
+            this.addMovie.Location = new System.Drawing.Point(97, 144);
+            this.addMovie.Name = "addMovie";
+            this.addMovie.Size = new System.Drawing.Size(100, 75);
+            this.addMovie.TabIndex = 5;
+            this.addMovie.Text = "Add Films";
+            this.addMovie.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.addMovie.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.addMovie.UseVisualStyleBackColor = true;
+            this.addMovie.Click += new System.EventHandler(this.addMovie_Click);
             // 
             // selectPanel
             // 
@@ -111,9 +129,9 @@
             this.FilmsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FilmsBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FilmsBtn.Image = global::UI.Properties.Resources.cinema;
-            this.FilmsBtn.Location = new System.Drawing.Point(0, 150);
+            this.FilmsBtn.Location = new System.Drawing.Point(0, 144);
             this.FilmsBtn.Name = "FilmsBtn";
-            this.FilmsBtn.Size = new System.Drawing.Size(200, 75);
+            this.FilmsBtn.Size = new System.Drawing.Size(100, 75);
             this.FilmsBtn.TabIndex = 2;
             this.FilmsBtn.Text = "Films";
             this.FilmsBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -238,5 +256,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart pieChart2;
         private System.Windows.Forms.Panel containerPanele;
         private System.Windows.Forms.Panel panelPanel;
+        private System.Windows.Forms.Button addMovie;
     }
 }

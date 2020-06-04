@@ -449,5 +449,14 @@ namespace UI.Administratie
             nextForm.ShowDialog();
             this.Close();
         }
+
+        private void addMovie_Click(object sender, EventArgs e)
+        {
+
+            AdminAddFilms nextForm = new AdminAddFilms();
+            this.Hide();
+            nextForm.ShowDialog();
+            this.Close();
+        }
     }
 }
