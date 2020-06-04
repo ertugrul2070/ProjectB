@@ -17,7 +17,7 @@ namespace UI
     {
         DatabaseConnection dbcr = Program.dbc;
         public int Amount = 0;
-        public Dictionary<string, string> seats = new Dictionary<string, string>();
+        public List<string> seats = new List<string>();
         string greyPersonIcon = "https://i.imgur.com/8gjqlK3.png";
         string greenPersonIcon = "https://i.imgur.com/G5KLPoO.png";
         string redPersonIcon = "https://i.imgur.com/F2olJZ5.png";
@@ -215,7 +215,7 @@ namespace UI
                 else
                 {
                     pic.ImageLocation = greenPersonIcon;
-                    seats.Add(pic.Name, pic.Name);
+                    seats.Add(pic.Name);
                     Amount++;
                 }
             }

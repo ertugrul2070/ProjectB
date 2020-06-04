@@ -23,7 +23,7 @@ namespace Engine.Models
         public string date;
         public string time;
 
-        public Dictionary<string, string> Seats;
+        public List<string> Seats;
 
         public List<string> chosenSnacks = new List<string>();
 
@@ -51,7 +51,7 @@ namespace Engine.Models
             this.time = time;
         }
 
-        public void AddSeats(Dictionary<string, string> seats)
+        public void AddSeats(List<string> seats)
         {
             this.Seats = seats;
         }
@@ -72,11 +72,11 @@ namespace Engine.Models
                 ExecuteSqlQuery($"INSERT INTO `mydb`.`reservations` (`customer_idcustomer`, `date`) VALUES ('{GetCustomerID()}', '{this.date}');");
                 resID = GetReservationID();
                 int movietimeID = GetMovietimeID();
-
-                foreach(KeyValuePair<string, string> s in Seats){
-                    ExecuteSqlQuery($"INSERT INTO `mydb`.`cinemahall` (seats_idseats, movie_time_idmovie_time, salon) VALUES ('{s.Value}','{movietimeID}', '{this.zaal}');");
-                }
-
+                List<int> seatID = GetSeatID();
+                foreach (var id in seatID)
+                {
+                    ExecuteSqlQuery($"INSERT INTO `mydb`.`cinemahall` (seats_idseats, movie_time_idmovie_time, salon) VALUES ('{id}','{movietimeID}', '{this.zaal}');");
+                }                
                 //ExecuteSqlQuery($"");
             }
             catch (System.Exception)
@@ -148,5 +148,25 @@ namespace Engine.Models
             return id;
         }
 
+        private List<int> GetSeatID()
+        {
+            List<int> seatIDs = new List<int>();
+
+            foreach (var i in Seats)
+            {
+                string query = $"SELECT idseat FROM mydb.seat WHERE seat = '{i}';";
+                MySqlCommand command = new MySqlCommand(query, dbc.cnn);
+                MySqlDataReader dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    seatIDs.Add(dataReader.GetInt32("idseat"));
+                }
+
+                dataReader.Close();
+            }
+
+            return seatIDs;
+        }
     }
 }
