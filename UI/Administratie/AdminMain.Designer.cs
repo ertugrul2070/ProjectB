@@ -235,6 +235,7 @@
             this.Controls.Add(this.pieChart1);
             this.Controls.Add(this.panel1);
             this.Name = "AdminMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMain";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pieChart1)).EndInit();

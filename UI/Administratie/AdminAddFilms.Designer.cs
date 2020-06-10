@@ -235,6 +235,7 @@
             this.Controls.Add(this.UserName);
             this.Controls.Add(this.NameField);
             this.Name = "AdminAddFilms";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminAddFilms";
             this.ResumeLayout(false);
             this.PerformLayout();

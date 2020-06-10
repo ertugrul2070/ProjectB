@@ -139,7 +139,7 @@
             // 
             this.SearchFilm.BackColor = System.Drawing.SystemColors.HighlightText;
             this.SearchFilm.Location = new System.Drawing.Point(104, 81);
-            this.SearchFilm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchFilm.Margin = new System.Windows.Forms.Padding(2);
             this.SearchFilm.Name = "SearchFilm";
             this.SearchFilm.Size = new System.Drawing.Size(112, 20);
             this.SearchFilm.TabIndex = 13;
@@ -150,7 +150,7 @@
             this.flowLayoutPanelSearch.AutoScroll = true;
             this.flowLayoutPanelSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanelSearch.Location = new System.Drawing.Point(96, 105);
-            this.flowLayoutPanelSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanelSearch.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanelSearch.Name = "flowLayoutPanelSearch";
             this.flowLayoutPanelSearch.Size = new System.Drawing.Size(165, 211);
             this.flowLayoutPanelSearch.TabIndex = 14;
@@ -170,7 +170,7 @@
             "Fantasy",
             "Romance"});
             this.GenreFilter.Location = new System.Drawing.Point(727, 77);
-            this.GenreFilter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GenreFilter.Margin = new System.Windows.Forms.Padding(2);
             this.GenreFilter.Name = "GenreFilter";
             this.GenreFilter.Size = new System.Drawing.Size(92, 23);
             this.GenreFilter.TabIndex = 15;
@@ -180,7 +180,7 @@
             // dateBegin
             // 
             this.dateBegin.Location = new System.Drawing.Point(532, 80);
-            this.dateBegin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateBegin.Margin = new System.Windows.Forms.Padding(2);
             this.dateBegin.MinDate = new System.DateTime(2020, 6, 1, 0, 0, 0, 0);
             this.dateBegin.Name = "dateBegin";
             this.dateBegin.Size = new System.Drawing.Size(67, 20);
@@ -192,7 +192,7 @@
             // dateEind
             // 
             this.dateEind.Location = new System.Drawing.Point(622, 80);
-            this.dateEind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateEind.Margin = new System.Windows.Forms.Padding(2);
             this.dateEind.MinDate = new System.DateTime(2020, 6, 1, 0, 0, 0, 0);
             this.dateEind.Name = "dateEind";
             this.dateEind.Size = new System.Drawing.Size(68, 20);
@@ -216,7 +216,7 @@
             // 
             this.filterDatum.AutoSize = true;
             this.filterDatum.Location = new System.Drawing.Point(571, 62);
-            this.filterDatum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.filterDatum.Margin = new System.Windows.Forms.Padding(2);
             this.filterDatum.Name = "filterDatum";
             this.filterDatum.Size = new System.Drawing.Size(80, 17);
             this.filterDatum.TabIndex = 20;
@@ -270,6 +270,7 @@
             this.Controls.Add(this.Rode_Balk);
             this.Controls.Add(this.Actueel_Tekst);
             this.Name = "Homepage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Popcorn Plaza";
             this.Load += new System.EventHandler(this.Homepage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Zwarte_Balk)).EndInit();

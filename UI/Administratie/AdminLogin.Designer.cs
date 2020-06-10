@@ -47,10 +47,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.Location = new System.Drawing.Point(118, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(364, 92);
+            this.label1.Size = new System.Drawing.Size(375, 84);
             this.label1.TabIndex = 1;
             this.label1.Text = "       PopcornPlaza \r\nMederwerkers Login";
             // 
@@ -119,6 +119,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.adminEmailTB);
             this.Name = "AdminLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminLogin";
             this.Load += new System.EventHandler(this.AdminLogin_Load);
             this.ResumeLayout(false);
