@@ -118,11 +118,11 @@
             // Information
             // 
             this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Information.Location = new System.Drawing.Point(41, 12);
+            this.Information.Location = new System.Drawing.Point(102, 15);
             this.Information.Name = "Information";
             this.Information.Size = new System.Drawing.Size(161, 25);
             this.Information.TabIndex = 19;
-            this.Information.Text = "Kies een wachtwoord";
+            this.Information.Text = "Login";
             // 
             // red_bovenkant
             // 
