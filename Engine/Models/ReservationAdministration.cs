@@ -64,6 +64,30 @@ namespace Engine.Models
 
         public void ReservationToDatabase()
         {
+            string selectQuery = "SELECT * FROM mydb.cinemahall ORDER BY idcinemahall DESC LIMIT 1";
+            List<int> kk = new List<int>();
+
+            try
+            {
+                dbc.cnn.Open();
+
+                MySqlCommand command = new MySqlCommand(selectQuery, dbc.cnn);
+                MySqlDataReader dataReader = command.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    int chId = Convert.ToInt32(dataReader.GetString("idcinemahall"));
+                    kk.Add(chId);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                dbc.cnn.Close();
+            }
 
             try
             {
@@ -77,9 +101,11 @@ namespace Engine.Models
                 
                 foreach (var id in seatID)
                 {
-                    
-                    ExecuteSqlQuery($"INSERT INTO `mydb`.`cinemahall` (seats_idseats, movie_time_idmovie_time, salon) VALUES ('{id}','{movietimeID}', '{this.zaal}');");
-                }                
+                    kk[0] = kk[0] + 1;
+                    ExecuteSqlQuery($"INSERT INTO `mydb`.`cinemahall` (idcinemahall, seats_idseats, movie_time_idmovie_time, salon) VALUES ('{kk[0]}','{id}','{movietimeID}', '{this.zaal}');");
+                    /*                    ExecuteSqlQuery($"INSERT INTO `mydb`.`cinemahall` (idcinemahall, seats_idseats, movie_time_idmovie_time, salon) VALUES ('{Convert.ToInt32(kk[0]}','3','8', '2');");
+                    */
+                }
                 //ExecuteSqlQuery($"");
             }
             catch (System.Exception)
