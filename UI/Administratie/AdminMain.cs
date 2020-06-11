@@ -454,9 +454,8 @@ namespace UI.Administratie
         {
 
             AdminAddFilms nextForm = new AdminAddFilms();
-            this.Hide();
             nextForm.ShowDialog();
-            this.Close();
+            
         }
     }
 }
