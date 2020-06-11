@@ -128,10 +128,7 @@ namespace UI
             {
                 MessageBox.Show("Er bestaat al een gebruiker met dit emailadres. Probeer in te loggen om verder te gaan.");
             }
-            else if (!loggedIn && !userExists())
-            {
-                RegisterUser(EmailField.Text);
-            }
+
 
             else
             {
