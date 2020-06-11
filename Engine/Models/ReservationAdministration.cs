@@ -77,6 +77,7 @@ namespace Engine.Models
                 
                 foreach (var id in seatID)
                 {
+                    
                     ExecuteSqlQuery($"INSERT INTO `mydb`.`cinemahall` (seats_idseats, movie_time_idmovie_time, salon) VALUES ('{id}','{movietimeID}', '{this.zaal}');");
                 }                
                 //ExecuteSqlQuery($"");
