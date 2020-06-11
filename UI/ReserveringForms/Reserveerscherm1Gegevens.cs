@@ -131,7 +131,6 @@ namespace UI
             else if (!loggedIn && !userExists())
             {
                 RegisterUser(EmailField.Text);
-                MessageBox.Show("Gelukt.");
             }
 
             else
