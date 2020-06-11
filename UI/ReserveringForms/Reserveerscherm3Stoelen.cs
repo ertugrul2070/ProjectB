@@ -55,7 +55,7 @@ namespace UI
             }
             else
             {
-                MessageBox.Show($"U heeft {Amount} stoelen gekozen, u moet er {Program._ReservationSession.CurrentReservation.TicketAmount} kiezen");
+                MessageBox.Show($"U heeft {Amount} stoelen gekozen, u moet er {Program._ReservationSession.CurrentReservation.TicketAmount} kiezen.");
             }
         }
 

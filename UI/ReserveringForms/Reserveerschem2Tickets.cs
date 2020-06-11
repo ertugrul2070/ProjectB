@@ -132,7 +132,7 @@ namespace UI
 
             else if((takenseats + Program._ReservationSession.CurrentReservation.TicketAmount) >= 50)
             {
-                MessageBox.Show($"Er zijn geen genoeg plekken. Voor deze film zijn er nog {50 - takenseats} over");
+                MessageBox.Show($"Er zijn geen genoeg plekken. Voor deze film zijn er nog {50 - takenseats} over.");
             }
 
            

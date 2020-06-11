@@ -56,7 +56,7 @@
             // 
             // UserName
             // 
-            this.UserName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.UserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(210)))), ((int)(((byte)(65)))));
             this.UserName.Location = new System.Drawing.Point(27, 48);
             this.UserName.Name = "UserName";
@@ -66,7 +66,7 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(210)))), ((int)(((byte)(65)))));
             this.label1.Location = new System.Drawing.Point(27, 90);
             this.label1.Name = "label1";
@@ -85,7 +85,7 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(210)))), ((int)(((byte)(65)))));
             this.label2.Location = new System.Drawing.Point(27, 133);
             this.label2.Name = "label2";
@@ -95,7 +95,7 @@
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(210)))), ((int)(((byte)(65)))));
             this.label3.Location = new System.Drawing.Point(27, 172);
             this.label3.Name = "label3";
@@ -112,7 +112,7 @@
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(210)))), ((int)(((byte)(65)))));
             this.label4.Location = new System.Drawing.Point(27, 212);
             this.label4.Name = "label4";
@@ -129,7 +129,7 @@
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(210)))), ((int)(((byte)(65)))));
             this.label5.Location = new System.Drawing.Point(27, 252);
             this.label5.Name = "label5";
@@ -139,7 +139,7 @@
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(210)))), ((int)(((byte)(65)))));
             this.label6.Location = new System.Drawing.Point(27, 292);
             this.label6.Name = "label6";
@@ -167,7 +167,7 @@
             this.GebruikersBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(210)))), ((int)(((byte)(65)))));
             this.GebruikersBtn.FlatAppearance.BorderSize = 0;
             this.GebruikersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GebruikersBtn.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.GebruikersBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.GebruikersBtn.Location = new System.Drawing.Point(112, 511);
             this.GebruikersBtn.Name = "GebruikersBtn";
             this.GebruikersBtn.Size = new System.Drawing.Size(151, 44);
@@ -203,13 +203,13 @@
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(210)))), ((int)(((byte)(65)))));
             this.label7.Location = new System.Drawing.Point(133, 318);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(130, 21);
             this.label7.TabIndex = 48;
-            this.label7.Text = "Descriptie";
+            this.label7.Text = "Omschrijving";
             // 
             // AdminAddFilms
             // 

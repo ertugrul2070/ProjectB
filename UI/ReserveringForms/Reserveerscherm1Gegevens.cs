@@ -117,7 +117,7 @@ namespace UI
 
             else if (!theEmailPattern.IsMatch(EmailField.Text))
             {
-                    MessageBox.Show("Email is onjuist");
+                    MessageBox.Show("Email is onjuist.");
             }
 
             else if (!isPostcodeValid(chars))
@@ -126,12 +126,12 @@ namespace UI
             }
             else if (!loggedIn && userExists())
             {
-                MessageBox.Show("Er bestaat al een gebruiker met dit email adres. Probeer in te loggen om verder te gaan");
+                MessageBox.Show("Er bestaat al een gebruiker met dit emailadres. Probeer in te loggen om verder te gaan.");
             }
             else if (!loggedIn && !userExists())
             {
                 RegisterUser(EmailField.Text);
-                MessageBox.Show("Done");
+                MessageBox.Show("Gelukt.");
             }
 
             else
@@ -194,7 +194,7 @@ namespace UI
                 }
                 else
                 {
-                    MessageBox.Show("Er bestaat al een email met dit account, log in om door te gaan");
+                    MessageBox.Show("Er bestaat al een account met dit emailadres, log in om door te gaan.");
                 }
             }
             else

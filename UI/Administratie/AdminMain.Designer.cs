@@ -71,13 +71,13 @@
             // 
             this.addMovie.FlatAppearance.BorderSize = 0;
             this.addMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMovie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addMovie.Image = global::UI.Properties.Resources.plus__1_;
-            this.addMovie.Location = new System.Drawing.Point(97, 144);
+            this.addMovie.Location = new System.Drawing.Point(88, 144);
             this.addMovie.Name = "addMovie";
-            this.addMovie.Size = new System.Drawing.Size(100, 75);
+            this.addMovie.Size = new System.Drawing.Size(109, 75);
             this.addMovie.TabIndex = 5;
-            this.addMovie.Text = "Add Films";
+            this.addMovie.Text = "Toevoegen";
             this.addMovie.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.addMovie.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.addMovie.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@
             // 
             this.LoguitBtn.FlatAppearance.BorderSize = 0;
             this.LoguitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoguitBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoguitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoguitBtn.Image = global::UI.Properties.Resources.logout;
             this.LoguitBtn.Location = new System.Drawing.Point(0, 477);
             this.LoguitBtn.Name = "LoguitBtn";
@@ -111,7 +111,7 @@
             // 
             this.SnacksBtn.FlatAppearance.BorderSize = 0;
             this.SnacksBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SnacksBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SnacksBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SnacksBtn.Image = global::UI.Properties.Resources.snack;
             this.SnacksBtn.Location = new System.Drawing.Point(0, 225);
             this.SnacksBtn.Name = "SnacksBtn";
@@ -127,7 +127,7 @@
             // 
             this.FilmsBtn.FlatAppearance.BorderSize = 0;
             this.FilmsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FilmsBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FilmsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FilmsBtn.Image = global::UI.Properties.Resources.cinema;
             this.FilmsBtn.Location = new System.Drawing.Point(0, 144);
             this.FilmsBtn.Name = "FilmsBtn";
@@ -143,7 +143,7 @@
             // 
             this.GebruikersBtn.FlatAppearance.BorderSize = 0;
             this.GebruikersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GebruikersBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GebruikersBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GebruikersBtn.Image = global::UI.Properties.Resources.user;
             this.GebruikersBtn.Location = new System.Drawing.Point(0, 75);
             this.GebruikersBtn.Name = "GebruikersBtn";
@@ -159,7 +159,7 @@
             // 
             this.PaneelBtn.FlatAppearance.BorderSize = 0;
             this.PaneelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PaneelBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PaneelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PaneelBtn.Image = global::UI.Properties.Resources.home;
             this.PaneelBtn.Location = new System.Drawing.Point(0, 0);
             this.PaneelBtn.Name = "PaneelBtn";

@@ -26,7 +26,7 @@ namespace UI
 
             if (SurnameField.Text == "" || NameField.Text == "" || dagBox.Text == "" || maandBox.Text == "" || jaarBox.Text == "")
             {
-                MessageBox.Show("Vul alle velden in AUB");
+                MessageBox.Show("Vul alle velden in AUB.");
             }
 
             else if (SurnameField.Text.Length < 13 || SurnameField.Text.Length > 19)
