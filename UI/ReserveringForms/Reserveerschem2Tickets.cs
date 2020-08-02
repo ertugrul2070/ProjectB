@@ -24,10 +24,7 @@ namespace UI
             
         }
 
-        private void City_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void Gender_Click(object sender, EventArgs e)
         {

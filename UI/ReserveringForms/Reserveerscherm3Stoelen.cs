@@ -64,18 +64,6 @@ namespace UI
             
         }
 
-        private void Schermtekst_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void S1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-        
-       
-
         private void Reserveerscherm3Stoelen_Load(object sender, EventArgs e)
         {
             label18.Text = "";
@@ -184,10 +172,7 @@ namespace UI
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void label11_Click(object sender, EventArgs e)
         {

@@ -57,30 +57,12 @@ namespace UI
         
         }
 
-        void Fillcombo()
-        {
-
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void FormLoad_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void Next_Click(object sender, EventArgs e)
         {
@@ -105,21 +87,6 @@ namespace UI
             this.Hide();
             nextForm.ShowDialog();
             this.Close();
-        }
-
-
-        private void cbCity_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void cbTime_SelectedIndexChanged(object sender, EventArgs e)
