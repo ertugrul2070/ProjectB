@@ -36,7 +36,7 @@ namespace UI
             {     
                 connection.cnn.Open();
 
-                string query = "SELECT COUNT(*) as account FROM `mydb`.`customers` WHERE email = '"+ inputtedEmail +"' AND password = '"+ inputtedPassword +"';";
+                string query = "SELECT COUNT(*) as account FROM `errowdesign_popcornplaza`.`customers` WHERE email = '" + inputtedEmail +"' AND password = '"+ inputtedPassword +"';";
                 MySqlCommand command = new MySqlCommand(query, connection.cnn);
 
                 MySqlDataReader reader = command.ExecuteReader();
@@ -75,7 +75,7 @@ namespace UI
 
         public void SendUserData(string email, string password)
         {
-            string query = "SELECT * FROM `mydb`.`customers` WHERE email = '" + email + "' AND password = '" + password + "';";
+            string query = "SELECT * FROM `errowdesign_popcornplaza`.`customers` WHERE email = '" + email + "' AND password = '" + password + "';";
             MySqlCommand command = new MySqlCommand(query, connection.cnn);
 
             MySqlDataReader dataReader = command.ExecuteReader();

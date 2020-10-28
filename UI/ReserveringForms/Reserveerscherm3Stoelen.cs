@@ -119,12 +119,12 @@ namespace UI
             label22.Text = Program._ReservationSession.CurrentReservation.date;
             label24.Text = Program._ReservationSession.CurrentReservation.time;
             label25.Text = $"Totaal aantal tickets: {Program._ReservationSession.CurrentReservation.TicketAmount}";
-            
+
 
             /*try
             {
                 dbcr.cnn.Open();
-                string selectQuery = $"SELECT * FROM mydb.seats WHERE idseats = (SELECT seats_idseats FROM mydb.cinemahall WHERE movie_time_idmovie_time = (SELECT idmovie_time FROM mydb.movie_time WHERE movie_idmovie = '{Program._ReservationSession.CurrentReservation.MovieId}'))";
+                string selectQuery = $"SELECT * FROM errowdesign_popcornplaza.seats WHERE idseats = (SELECT seats_idseats FROM errowdesign_popcornplaza.cinemahall WHERE movie_time_idmovie_time = (SELECT idmovie_time FROM errowdesign_popcornplaza.movie_time WHERE movie_idmovie = '{Program._ReservationSession.CurrentReservation.MovieId}'))";
                 MySqlCommand command = new MySqlCommand(selectQuery, dbcr.cnn);
 
                 MySqlDataReader dataReader = command.ExecuteReader();

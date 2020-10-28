@@ -31,7 +31,7 @@ namespace UI
                 flowLayoutPanelVerwacht.Controls.Clear();
                 dbc.cnn.Open();
 
-                string getMoviesQuery = "SELECT * FROM mydb.movies";
+                string getMoviesQuery = "SELECT * FROM errowdesign_popcornplaza.movies";
                 MySqlCommand command = new MySqlCommand(getMoviesQuery, dbc.cnn);
 
                 MySqlDataReader dataReader = command.ExecuteReader();

@@ -216,7 +216,7 @@ namespace UI
                 {
                     dbc.cnn.Open();
 
-                    string query = "INSERT INTO `mydb`.`customers` (`firstName`, `lastName`, `gender`, `adress`, `zipCode`, `city`, `phoneNumber`, `email`, `password`) VALUES ('"+ firstName + "', '"+ lastName + "', '"+ gender + "', '"+ inputAddress + "', '"+ zipcode + "', '"+ city + "', '"+ phonenumber +"', '" + userEmail + "', '"+ _password +"');";
+                    string query = "INSERT INTO `errowdesign_popcornplaza`.`customers` (`firstName`, `lastName`, `gender`, `adress`, `zipCode`, `city`, `phoneNumber`, `email`, `password`) VALUES ('" + firstName + "', '"+ lastName + "', '"+ gender + "', '"+ inputAddress + "', '"+ zipcode + "', '"+ city + "', '"+ phonenumber +"', '" + userEmail + "', '"+ _password +"');";
 
                     MySqlCommand command = new MySqlCommand(query, dbc.cnn);
 
@@ -297,7 +297,7 @@ namespace UI
             {
                 dbc.cnn.Open();
 
-                string query = "SELECT email FROM mydb.customers;";
+                string query = "SELECT email FROM errowdesign_popcornplaza.customers;";
 
                 MySqlCommand command = new MySqlCommand(query, dbc.cnn);
 

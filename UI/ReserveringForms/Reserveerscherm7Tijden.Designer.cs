@@ -94,13 +94,13 @@
             // 
             this.cbDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.cbDate.Location = new System.Drawing.Point(50, 104);
-            this.cbDate.MaxDate = new System.DateTime(2020, 5, 31, 0, 0, 0, 0);
-            this.cbDate.MinDate = new System.DateTime(2020, 5, 23, 0, 0, 0, 0);
+            this.cbDate.MaxDate = new System.DateTime(2020, 11, 3, 0, 0, 0, 0);
+            this.cbDate.MinDate = new System.DateTime(2020, 10, 28, 0, 0, 0, 0);
             this.cbDate.Name = "cbDate";
             this.cbDate.Size = new System.Drawing.Size(86, 20);
             this.cbDate.TabIndex = 29;
             this.cbDate.UseWaitCursor = true;
-            this.cbDate.Value = new System.DateTime(2020, 5, 25, 0, 0, 0, 0);
+            this.cbDate.Value = new System.DateTime(2020, 10, 28, 0, 0, 0, 0);
             this.cbDate.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // cbTime

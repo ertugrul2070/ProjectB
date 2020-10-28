@@ -35,7 +35,7 @@ namespace UI
 
             dbc.cnn.Open();
 
-            string getMovieDesc = "SELECT * FROM mydb.movies WHERE name = (SELECT name FROM mydb.movies WHERE idmovies = " + chosenId + ")";
+            string getMovieDesc = "SELECT * FROM errowdesign_popcornplaza.movies WHERE name = (SELECT name FROM errowdesign_popcornplaza.movies WHERE idmovies = " + chosenId + ")";
             MySqlCommand command = new MySqlCommand(getMovieDesc, dbc.cnn);
 
             MySqlDataReader dataReader = command.ExecuteReader();

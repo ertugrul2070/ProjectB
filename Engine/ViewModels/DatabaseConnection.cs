@@ -18,10 +18,10 @@ namespace Engine.ViewModels
 
             var builder = new MySqlConnectionStringBuilder
             {
-                Server = "popcornplaza.mysql.database.azure.com",
+                Server = "web0078.zxcs.nl",
                 Port = 3306,
-                UserID = "popcorncoder@popcornplaza",
-                Password = "PopcornPlaza69",
+                UserID = "errowdesign_popcornplaza",
+                Password = "Welkom123",
             };
 
             cnn = new MySqlConnection(builder.ConnectionString);

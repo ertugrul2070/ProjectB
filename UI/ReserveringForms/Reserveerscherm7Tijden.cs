@@ -26,7 +26,7 @@ namespace UI
             try
             {
                 dbcr.cnn.Open();
-                string selectQuery = $"SELECT time FROM mydb.time WHERE idtime = (SELECT time_idtime FROM mydb.movie_time WHERE movie_idmovie = '{Program._ReservationSession.CurrentReservation.MovieId}')";
+                string selectQuery = $"SELECT time FROM errowdesign_popcornplaza.time WHERE idtime = (SELECT time_idtime FROM errowdesign_popcornplaza.movie_time WHERE movie_idmovie = '{Program._ReservationSession.CurrentReservation.MovieId}')";
                 MySqlCommand command = new MySqlCommand(selectQuery, dbcr.cnn);
 
                 MySqlDataReader dataReader = command.ExecuteReader();
