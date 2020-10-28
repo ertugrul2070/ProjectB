@@ -44,10 +44,13 @@ namespace UI
             {
                 string name = dataReader.GetString("description");
                 string link = dataReader.GetString("trailer");
+                string pegi = dataReader.GetString("pegi");
                 dataList.Add(name);
                 dataList.Add(link);
+                dataList.Add(pegi);
             }
             label2.Text = dataList[0];
+            label5.Text = "Pegi: " + dataList[2];
             //YTplayer.Movie = chosenLink;
             var embed = "<html><head>" +
                         "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"/>" +
@@ -56,24 +59,7 @@ namespace UI
                         "frameborder = \"0\" allow = \"autoplay; encrypted-media\" allowfullscreen></iframe>" +
                         "</body></html>";
             this.webBrowser2.DocumentText = string.Format(embed, dataList[1]);
-            /* XmlDocument doc = new XmlDocument();
-             doc.Load("Films.xml");
-             foreach (XmlNode node in doc.DocumentElement)
-             {
-                 string name = node.Attributes[0].InnerText;
-                 foreach (XmlNode child in node.ChildNodes[2])
-                 {
-                     if (name == chosenName)
-                     {
-                         label2.Text = child.InnerText;
-                     }
-                 }
-             }*/
-
             
-            
-
-            //label2.Text = getMoviesQuery;
 
         }
 

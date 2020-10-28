@@ -38,6 +38,7 @@
             this.Rode_Balk = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Binn_lb = new System.Windows.Forms.Label();
+            this.medewerkersLoginBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PopcornPlaza_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Zwarte_Balk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rode_Balk)).BeginInit();
@@ -75,6 +76,7 @@
             // 
             this.Nu_lb.AutoSize = true;
             this.Nu_lb.BackColor = System.Drawing.Color.Red;
+            this.Nu_lb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Nu_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nu_lb.ForeColor = System.Drawing.Color.White;
             this.Nu_lb.Location = new System.Drawing.Point(292, 347);
@@ -138,6 +140,7 @@
             // Binn_lb
             // 
             this.Binn_lb.AutoSize = true;
+            this.Binn_lb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Binn_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Binn_lb.Location = new System.Drawing.Point(412, 347);
             this.Binn_lb.Name = "Binn_lb";
@@ -145,12 +148,29 @@
             this.Binn_lb.TabIndex = 20;
             this.Binn_lb.Text = "BINNENKORT";
             // 
+            // medewerkersLoginBtn
+            // 
+            this.medewerkersLoginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.medewerkersLoginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.medewerkersLoginBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.medewerkersLoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.medewerkersLoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medewerkersLoginBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.medewerkersLoginBtn.Location = new System.Drawing.Point(747, 33);
+            this.medewerkersLoginBtn.Name = "medewerkersLoginBtn";
+            this.medewerkersLoginBtn.Size = new System.Drawing.Size(84, 23);
+            this.medewerkersLoginBtn.TabIndex = 21;
+            this.medewerkersLoginBtn.Text = "Medewerkers";
+            this.medewerkersLoginBtn.UseVisualStyleBackColor = false;
+            this.medewerkersLoginBtn.Click += new System.EventHandler(this.medewerkersLoginBtn_Click);
+            // 
             // Overzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(831, 618);
+            this.Controls.Add(this.medewerkersLoginBtn);
             this.Controls.Add(this.Binn_lb);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.filmPanel1);
@@ -186,5 +206,6 @@
         #endregion
 
         private System.Windows.Forms.Label Binn_lb;
+        private System.Windows.Forms.Button medewerkersLoginBtn;
     }
 }

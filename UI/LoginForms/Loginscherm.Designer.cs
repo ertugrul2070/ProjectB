@@ -62,7 +62,7 @@
             // 
             // FormLoad
             // 
-            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (246)))), ((int) (((byte) (242)))), ((int) (((byte) (90)))));
+            this.FormLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(242)))), ((int)(((byte)(90)))));
             this.FormLoad.Controls.Add(this.btnLogin);
             this.FormLoad.Controls.Add(this.txtPassword);
             this.FormLoad.Controls.Add(this.txtEmail);
@@ -90,6 +90,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(215, 20);
             this.txtPassword.TabIndex = 23;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtEmail
             // 
@@ -116,12 +117,12 @@
             // 
             // Information
             // 
-            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.Information.Location = new System.Drawing.Point(41, 12);
+            this.Information.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Information.Location = new System.Drawing.Point(102, 15);
             this.Information.Name = "Information";
             this.Information.Size = new System.Drawing.Size(161, 25);
             this.Information.TabIndex = 19;
-            this.Information.Text = "Kies een wachtwoord";
+            this.Information.Text = "Login";
             // 
             // red_bovenkant
             // 
@@ -148,6 +149,7 @@
             this.FormLoad.PerformLayout();
             this.red_bovenkant.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Panel black_panel;

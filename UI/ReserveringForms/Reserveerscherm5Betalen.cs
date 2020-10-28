@@ -26,7 +26,7 @@ namespace UI
 
             if (SurnameField.Text == "" || NameField.Text == "" || dagBox.Text == "" || maandBox.Text == "" || jaarBox.Text == "")
             {
-                MessageBox.Show("Vul alle velden in AUB");
+                MessageBox.Show("Vul alle velden in AUB.");
             }
 
             else if (SurnameField.Text.Length < 13 || SurnameField.Text.Length > 19)
@@ -41,6 +41,8 @@ namespace UI
 
             else
             {
+                Program._ReservationSession.CurrentReservation.ReservationToDatabase();
+
                 Reserveerscherm6Bevestiging nextForm = new Reserveerscherm6Bevestiging();
                 this.Hide();
                 nextForm.ShowDialog();

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace UI
 {
     public partial class Reserveerscherm6Bevestiging : Form
@@ -28,21 +29,20 @@ namespace UI
         
 
         private void Next_Click(object sender, EventArgs e)
-        { 
-            
+        {
             this.Close();
         }
 
         private void InitializeLabels()
         {
             var rand = new Random();
+            int zaal = rand.Next(1, 11);
             pbMovie.ImageLocation = Program._ReservationSession.CurrentReservation.dataUrl;
 
             lblFilm.Text = Program._ReservationSession.CurrentReservation.movie;
             lblTijd.Text = Program._ReservationSession.CurrentReservation.time;
-            lblZaal.Text = $"Zaal {rand.Next(11)}";
-            lblStoelen.Text = String.Join(",", Program._ReservationSession.CurrentReservation.Seats.Values.ToArray());
-
+            lblZaal.Text = $"Zaal {Program._ReservationSession.CurrentReservation.zaal}";
+            lblStoelen.Text = String.Join(", ", Program._ReservationSession.CurrentReservation.Seats.ToArray());
             lblExtra.Text = String.Join(",\n",Program._ReservationSession.CurrentReservation.chosenSnacks.ToArray());
         }
 
